@@ -8,9 +8,8 @@ import Image from 'next/image';
 import { LineDivider } from '../components/LineDivider/LineDivider';
 import Link from 'next/link';
 import { Button, IconButton } from '@mui/material';
-import Grid2 from '@mui/material/Unstable_Grid2';
-import { UilChatBubbleUser } from '@iconscout/react-unicons';
 import WireframeLogo from '../public/logo_wireframe.svg';
+// @ts-ignore
 import { UilAngleDoubleDown } from '@iconscout/react-unicons';
 import WebBrowserGraphic from '../public/web_browser.svg';
 import ConsultantGraphic from '../public/consultant.svg';
