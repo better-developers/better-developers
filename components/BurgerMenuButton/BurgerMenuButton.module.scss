@@ -1,0 +1,13 @@
+﻿@import "../../styles/theme";
+
+.container {
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+
+  fill: $color-primary;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

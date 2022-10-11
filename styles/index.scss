@@ -1,0 +1,26 @@
+@import "theme";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $color-background;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $color-white;
+    font-family: $font-family;
+    line-height: 2;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-family: $font-family-semibold;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}

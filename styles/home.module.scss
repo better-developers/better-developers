@@ -1,0 +1,109 @@
+@import './theme';
+
+.bannerVideo {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(50%) contrast(80%) ;
+  z-index: -1;
+}
+
+.section {
+  width: 100vw;
+  position: relative;
+  padding: spacing(12) 0;
+}
+
+.bannerSection {
+  width: 100vw;
+  position: relative;
+}
+
+.mainSection {
+  display: flex;
+  height: 100%;
+  padding: 0 15%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: spacing(8);
+  text-align: center;
+  
+  p {
+    font-size: 1.3em;
+  }
+}
+
+.highlightBetterDevelopers {
+  color: $color-primary;
+  font-family: $font-family-extrabold;
+}
+
+.splitBox {
+  display: grid;
+  align-items: start;
+  grid-template-areas:  "text image";
+  grid-template-columns: 1fr 1fr;
+  
+  gap: spacing(1) spacing(8) ;
+  text-align: justify;
+  
+  .image {
+    text-align: center;
+    align-self: center;
+    grid-area: image;
+  }
+
+  .text {
+    grid-area: text; 
+  }
+  
+}
+
+.splitBoxReverse {
+  height: 300px;
+  display: grid;
+  align-content: center;
+  grid-template-areas:  "image title"
+                        "image description";
+  grid-template-columns: 1fr 1fr;
+  gap: spacing(8);
+  text-align: justify;
+  
+  .image {
+    text-align: center;
+    align-self: center;
+     grid-area: image;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .title {
+    grid-area: title;
+  }
+}
+
+.contactForm {
+  display: flex;
+  gap: spacing(4);
+  flex-direction: column;  
+  margin: 0 spacing(50);
+}
+
+.input {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+  border-radius: 5px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}

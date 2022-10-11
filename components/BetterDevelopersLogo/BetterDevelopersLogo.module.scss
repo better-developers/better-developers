@@ -1,0 +1,22 @@
+﻿.container {
+	cursor: pointer;
+	transition: opacity 200ms ease-in-out;
+	
+	fill: #A4DDEA;
+	opacity: 1;
+	
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.underline {
+	transition: width 200ms ease-in-out;
+}
+
+.st1 {
+	fill:none;
+	stroke:#A4DDEA;
+	stroke-width:3;
+	stroke-miterlimit:10;
+}

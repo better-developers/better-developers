@@ -1,0 +1,12 @@
+﻿@import "../../styles/theme";
+
+.divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: $color-background;
+  transform: rotate(180deg);
+}
