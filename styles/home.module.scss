@@ -58,33 +58,30 @@
   }
 
   .text {
-    grid-area: text; 
+    grid-area: text;
+    align-self: center;
   }
   
 }
 
 .splitBoxReverse {
-  height: 300px;
   display: grid;
-  align-content: center;
-  grid-template-areas:  "image title"
-                        "image description";
+  align-items: start;
+  grid-template-areas:  "image text";
   grid-template-columns: 1fr 1fr;
-  gap: spacing(8);
+
+  gap: spacing(1) spacing(8) ;
   text-align: justify;
-  
+
   .image {
     text-align: center;
     align-self: center;
-     grid-area: image;
+    grid-area: image;
   }
 
-  .description {
-    grid-area: description;
-  }
-
-  .title {
-    grid-area: title;
+  .text {
+    grid-area: text;
+    align-self: center;
   }
 }
 
@@ -106,4 +103,15 @@
   border: none;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.imageHover {
+  opacity: 0.8;
+  scale: 0.9;
+  transition: opacity 300ms, scale 300ms;
+  
+  &:hover {
+    opacity: 1;
+    scale: 1;
+  }
 }

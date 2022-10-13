@@ -13,6 +13,8 @@ import WireframeLogo from '../public/logo_wireframe.svg';
 import { UilAngleDoubleDown } from '@iconscout/react-unicons';
 import WebBrowserGraphic from '../public/web_browser.svg';
 import ConsultantGraphic from '../public/consultant.svg';
+import DatingAppMockup from '../public/dating-app.svg';
+import PapyrusSystem from '../public/papyrus.png';
 import { Box, Stack } from '@mui/system';
 
 const Home: NextPage = () => {
@@ -62,18 +64,12 @@ const Home: NextPage = () => {
                                     Better Developers.
                                 </span>
                             </h2>
-                            <p className={styles.description}>
+                            <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
-                                </span>
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
+                                    Better Developers består af dygtige og specialiserede
+                                    softwareudviklere med fokus på web. Derudover har vi kontakt til
+                                    et stort netværk af freelance konsulenter, som vi kan trække på,
+                                    alt efter hvad opgaven kræver.
                                 </span>
                             </p>
                         </span>
@@ -89,10 +85,11 @@ const Home: NextPage = () => {
                             <h3>End-to-End Projekter</h3>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
+                                    Går du med et projekt i tankerne? En idé der kan skabe værdi for
+                                    din virsomhed? Så lad os hjælpe dig med at tage den idé og føre
+                                    den ud i vireligheden. Vi har mange års erfaring med
+                                    produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den
+                                    gode dialog og åbenhed.
                                 </span>
                             </p>
                         </span>
@@ -102,24 +99,16 @@ const Home: NextPage = () => {
                     </div>
                     <div className={styles.splitBoxReverse}>
                         <div className={styles.image}>
-                            <Image src={ConsultantGraphic} width={200} />
+                            <Image src={ConsultantGraphic} height={300} width={300} />
                         </div>
                         <span className={styles.text}>
                             <h3>Konsulenter</h3>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
-                                </span>
-                                <br />
-                                <br />
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
+                                    Vi har et hold af skarpe konsulenter der står klar til at hjælpe
+                                    med lige netop jeres opgaver. En vigtig del af vores opgave er
+                                    at fnde lige netop den kandidat der passer bedst til jeres
+                                    virksomhed.
                                 </span>
                             </p>
                         </span>
@@ -130,22 +119,9 @@ const Home: NextPage = () => {
                         <div>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
+                                    Vi har meget erfaring med de nyeste teknologier indenfor WEB og
+                                    vi deler meget gerne ud af viden.
                                 </span>
-                                <br />
-                                <br />
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
-                                </span>
-                                <br />
-                                <br />
-                                <Link href="">Her</Link>
                             </p>
                         </div>
                     </div>
@@ -156,71 +132,91 @@ const Home: NextPage = () => {
                 <SectionContent>
                     <h2>Cases</h2>
                     <div className={styles.splitBox}>
-                        <h3>sad</h3>
-                        <div className={styles.image}></div>
-                        <div>
+                        <div className={styles.image}>
+                            <Image className={styles.imageHover} src={PapyrusSystem} />
+                        </div>
+                        <span className={styles.text}>
+                            <h3>
+                                Web Assembly og SignalR gør det lettere at samarbejde om LaTeX
+                                dokumenter
+                            </h3>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
+                                    Hvad der før i tiden skulle køres lokalt på enkelte maskiner,
+                                    kan nu ved hjælp af Web Assembly og SignalR gøres i en
+                                    webbrowser uden komplicerede installationer. Papyrus er et
+                                    projekt der bringer de nyeste teknologier sammen i fin forening
+                                    og skaber noget der er større end de enkelte dele. Ved at bringe
+                                    selve dokument genereringen ud til klienterne, så kunne
+                                    hastigheden øges med 900% ift. konkurenterne. Dette forbedrede
+                                    brugeroplevelsen og dermed produktiviteten for brugerne af
+                                    Papyrus.
                                 </span>
                                 <br />
                                 <br />
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
-                                </span>
+                                <i>
+                                    Projektet er skrevet i React med en .NET core backend. Pga.
+                                    projektets høje kompleksitet og lange levetid, så er backenden
+                                    baseret på en onion arkitektur med mediator pattern for at følge
+                                    SOLID og clean code principperne.
+                                </i>
                             </p>
-                        </div>
+                        </span>
                     </div>
                     <div className={styles.splitBoxReverse}>
-                        <div className={styles.image}>sda</div>
-                        <h3>sad</h3>
-                        <div>
+                        <div className={styles.image}>
+                            <Image
+                                className={styles.imageHover}
+                                src={DatingAppMockup}
+                                height={500}
+                            />
+                        </div>
+                        <span className={styles.text}>
+                            <h3>Interaktiv frontend skaber højere engagement på dating PWA</h3>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
+                                    Markedet er mættet med dating apps, derfor er det vigtigt at
+                                    skille sig ud. Konceptet bag denne dating app er at der kun
+                                    forekommer ét match om dagen. Derfor var det vigtigt at skabe en
+                                    platform der var meget interaktiv da det var med til at holde
+                                    brugerne engagerede i PWA’en.
                                 </span>
                                 <br />
                                 <br />
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
-                                </span>
+                                <i>
+                                    Projektet er et koncept udviklet i React med en .NET core
+                                    backend.
+                                </i>
                             </p>
-                        </div>
+                        </span>
                     </div>
                     <div className={styles.splitBox}>
-                        <h3>sad</h3>
+                        <h3>
+                            Triangulering af offentlige wifi-signaler skaber heatmap af
+                            befolkningstæthed
+                        </h3>
                         <div className={styles.image}></div>
                         <div>
                             <p>
                                 <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                                    accusamus accusantium amet animi asperiores atque autem corporis
-                                    dignissimos eum eveniet fugit iste nam nesciunt obcaecati
-                                    officia porro repudiandae, sapiente vitae.
+                                    Mange institutioner har et behov for at kende
+                                    befolkningstætheden eller personers bevægelse igennem en
+                                    bygning. Ved hjælp af wifi-signaler kunne folks bevægelser
+                                    estimeres hvorefter der på frontend kunne skabes et heatmap af
+                                    tæthederne. Projektet var derfor en kombination af hardware,
+                                    software, embedded og web udvikling. Systemet var lavet således
+                                    at tre Raspberry Pi's blev brugt til at triangulere WiFi
+                                    transmissioner. Disse blev derefter omdannet til lokations data
+                                    ved en knn-algoritme. Herefter blev de sendt til en backend der
+                                    kunne levere data til en frontend, som i sidste ende viste
+                                    brugeren et heatmap over befolkningstætheden.
                                 </span>
                                 <br />
                                 <br />
-                                <span>
-                                    Architecto delectus dolor dolore doloremque dolores ducimus, ea
-                                    error ex, excepturi in maiores modi nobis nostrum obcaecati odio
-                                    omnis placeat praesentium qui quidem repellendus sapiente
-                                    tempora tenetur voluptas voluptate voluptates.
-                                </span>
-                                <br />
-                                <br />
-                                <Link href="">Her</Link>
+                                <i>
+                                    Projektet er et koncept udviklet i Vue med en .NET core backend
+                                    med RaspBerry Pi baserede wifi sniffers.
+                                </i>
                             </p>
                         </div>
                     </div>
