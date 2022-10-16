@@ -21,13 +21,13 @@ const Home: NextPage = () => {
     return (
         <>
             <video className={styles.bannerVideo} src="/video/jellyfish.mp4" loop autoPlay muted />
-            <section className={styles.bannerSection} style={{ height: '100vh' }}>
+            <section className={styles.bannerSection} style={{minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                 <section className={styles.bannerSection} style={{ height: '600px' }}>
                     <SectionContent className={styles.mainSection}>
                         <h1>Fra idé til forretningsværdi</h1>
                         <p>
                             Vi hjælper med at omdanne idéer til konkrete professionelle
-                            IT-projekter, der skaber <b>værdi</b> for jer.{' '}
+                            IT-projekter, der skaber <b>værdi</b> for jer.
                         </p>
                     </SectionContent>
                     <WaveDivider />
@@ -114,16 +114,17 @@ const Home: NextPage = () => {
                         </span>
                     </div>
                     <div className={styles.splitBox}>
-                        <h3>Rådgivning</h3>
+                        
                         <div className={styles.image}></div>
-                        <div>
+                        <span className={styles.text}>
+                            <h3>Rådgivning</h3>
                             <p>
                                 <span>
                                     Vi har meget erfaring med de nyeste teknologier indenfor WEB og
                                     vi deler meget gerne ud af viden.
                                 </span>
                             </p>
-                        </div>
+                        </span>
                     </div>
                 </SectionContent>
             </section>
@@ -191,25 +192,26 @@ const Home: NextPage = () => {
                         </span>
                     </div>
                     <div className={styles.splitBox}>
-                        <h3>
-                            Triangulering af offentlige wifi-signaler skaber heatmap af
-                            befolkningstæthed
-                        </h3>
+                        
                         <div className={styles.image}></div>
-                        <div>
+                        <span className={styles.text}>
+                            <h3>
+                                Triangulering af offentlige wifi-signaler skaber heatmap af
+                                befolkningstæthed
+                            </h3>
                             <p>
                                 <span>
-                                    Mange institutioner har et behov for at kende
-                                    befolkningstætheden eller personers bevægelse igennem en
-                                    bygning. Ved hjælp af wifi-signaler kunne folks bevægelser
-                                    estimeres hvorefter der på frontend kunne skabes et heatmap af
-                                    tæthederne. Projektet var derfor en kombination af hardware,
-                                    software, embedded og web udvikling. Systemet var lavet således
-                                    at tre Raspberry Pi's blev brugt til at triangulere WiFi
-                                    transmissioner. Disse blev derefter omdannet til lokations data
-                                    ved en knn-algoritme. Herefter blev de sendt til en backend der
-                                    kunne levere data til en frontend, som i sidste ende viste
-                                    brugeren et heatmap over befolkningstætheden.
+                                    {`Mange institutioner har et behov for at kende
+                                        befolkningstætheden eller personers bevægelse igennem en
+                                        bygning. Ved hjælp af wifi-signaler kunne folks bevægelser
+                                        estimeres hvorefter der på frontend kunne skabes et heatmap af
+                                        tæthederne. Projektet var derfor en kombination af hardware,
+                                        software, embedded og web udvikling. Systemet var lavet således
+                                        at tre Raspberry Pi's blev brugt til at triangulere WiFi
+                                        transmissioner. Disse blev derefter omdannet til lokations data
+                                        ved en knn-algoritme. Herefter blev de sendt til en backend der
+                                        kunne levere data til en frontend, som i sidste ende viste
+                                        brugeren et heatmap over befolkningstætheden.` }
                                 </span>
                                 <br />
                                 <br />
@@ -218,7 +220,7 @@ const Home: NextPage = () => {
                                     med RaspBerry Pi baserede wifi sniffers.
                                 </i>
                             </p>
-                        </div>
+                        </span>
                     </div>
                 </SectionContent>
             </section>

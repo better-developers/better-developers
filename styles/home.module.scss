@@ -45,6 +45,14 @@
 .splitBox {
   display: grid;
   align-items: start;
+  @media only screen
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    grid-template-areas:  "text" "image";
+    grid-template-columns: auto;
+    gap: spacing(10);
+  }
   grid-template-areas:  "text image";
   grid-template-columns: 1fr 1fr;
   
@@ -67,6 +75,16 @@
 .splitBoxReverse {
   display: grid;
   align-items: start;
+  @media only screen
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+    grid-template-areas:  "text"
+                          "image" ;
+    grid-template-columns: auto;
+    gap: spacing(10);
+  }
   grid-template-areas:  "image text";
   grid-template-columns: 1fr 1fr;
 
@@ -88,8 +106,7 @@
 .contactForm {
   display: flex;
   gap: spacing(4);
-  flex-direction: column;  
-  margin: 0 spacing(50);
+  flex-direction: column;
 }
 
 .input {
