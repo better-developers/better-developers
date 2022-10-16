@@ -232,6 +232,7 @@ const Home: NextPage = () => {
                         method="POST"
                         id="contactForm"
                         name="contactForm"
+                        action="sendmail.php"
                         className={styles.contactForm}
                         noValidate>
                         <input
