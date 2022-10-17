@@ -1,10 +1,11 @@
 ﻿<?PHP
-$sender = 'viktor.lundsgaard@betterdevelopers.dk';
-$recipient = 'vik.lund.and@gmail.com';
+$sender = $_POST['email'];
+$name = $_POST['name'];
+$recipient = 'viktor@betterdevelopers.dk';
 
-$subject = " {$_POST['subject']} ";
-$message = "From: {$_POST['email']}\nName: {$_POST['name']}\nMessage:\n{$_POST['message']}";
-$headers = 'From:' . $sender;
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+$headers = 'From: ' . $name . "< " . $sender . ">" . "\r\n" . 'Reply-To: ' . $sender;
 
 if (mail($recipient, $subject, $message, $headers))
 {

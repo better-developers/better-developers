@@ -1,4 +1,6 @@
 @import "theme";
+@import "fonts";
+
 html {
     scroll-behavior: smooth;
 }
@@ -18,7 +20,7 @@ body {
 
 h1 {
     font-size: $font-size-h1;
-    font-family: $font-family-semibold;
+    font-weight: $font-weight-semibold;
     text-align: center;
     
     @media only screen
