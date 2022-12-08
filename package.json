@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.4",
     "@iconscout/react-unicons": "^1.1.6",
     "@mui/material": "^5.10.8",
+    "framer-motion": "^7.6.19",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

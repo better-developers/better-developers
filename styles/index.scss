@@ -13,9 +13,12 @@ body {
 * {
     margin: 0;
     padding: 0;
-    color: $color-white;
     font-family: $font-family;
     line-height: 2;
+}
+
+p, h1, h2, h3, h4 {
+    color: $color-white;
 }
 
 h1 {

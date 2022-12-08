@@ -4,6 +4,9 @@ import { GoogleAnalytcs } from '../components/GoogleAnalytics/GoogleAnalytcs';
 import { NavBar } from '../components/NavBar/NavBar';
 import "../styles/index.scss"
 import {PageContent} from "../components/PageContent/PageContent";
+import {FacebookPixel} from "../components/FacebookPixel/FacebookPixel";
+import {HubspotPixel} from "../components/HubspotPixel/HubspotPixel";
+import {ActiveCampaign} from "../components/ActiveCampaign/ActiveCampaign";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -11,9 +14,15 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <title>Better Developers</title>
             </Head>
-            <GoogleAnalytcs />
+            
             <NavBar />
             <Component {...pageProps} />
+
+            {/* Analytics */}
+            <GoogleAnalytcs />
+            <FacebookPixel />
+            <HubspotPixel/>
+            <ActiveCampaign/>
         </>
     );
 }

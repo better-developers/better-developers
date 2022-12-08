@@ -9,19 +9,26 @@ import { LineDivider } from '../components/LineDivider/LineDivider';
 import Link from 'next/link';
 import { Button, IconButton } from '@mui/material';
 import WireframeLogo from '../public/logo_wireframe.svg';
-// @ts-ignore
 import { UilAngleDoubleDown } from '@iconscout/react-unicons';
 import WebBrowserGraphic from '../public/web_browser.svg';
 import ConsultantGraphic from '../public/consultant.svg';
 import DatingAppMockup from '../public/dating-app.svg';
 import PapyrusSystem from '../public/papyrus.png';
 import { Box, Stack } from '@mui/system';
+import { ContactSection } from '../components/ContactSection/ContactSection';
 
 const Home: NextPage = () => {
     return (
         <>
             <video className={styles.bannerVideo} src="/video/jellyfish.mp4" loop autoPlay muted />
-            <section className={styles.bannerSection} style={{minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+            <section
+                className={styles.bannerSection}
+                style={{
+                    minHeight: '100vh',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                }}>
                 <section className={styles.bannerSection} style={{ height: '600px' }}>
                     <SectionContent className={styles.mainSection}>
                         <h1>Fra idé til forretningsværdi</h1>
@@ -46,7 +53,7 @@ const Home: NextPage = () => {
 
                 <Box textAlign={'center'}>
                     <IconButton href={'#who-are-we'}>
-                        <UilAngleDoubleDown size={80} />
+                        <UilAngleDoubleDown color={'white'} size={80} />
                     </IconButton>
                 </Box>
             </section>
@@ -114,7 +121,6 @@ const Home: NextPage = () => {
                         </span>
                     </div>
                     <div className={styles.splitBox}>
-                        
                         <div className={styles.image}></div>
                         <span className={styles.text}>
                             <h3>Rådgivning</h3>
@@ -192,7 +198,6 @@ const Home: NextPage = () => {
                         </span>
                     </div>
                     <div className={styles.splitBox}>
-                        
                         <div className={styles.image}></div>
                         <span className={styles.text}>
                             <h3>
@@ -211,7 +216,7 @@ const Home: NextPage = () => {
                                         transmissioner. Disse blev derefter omdannet til lokations data
                                         ved en knn-algoritme. Herefter blev de sendt til en backend der
                                         kunne levere data til en frontend, som i sidste ende viste
-                                        brugeren et heatmap over befolkningstætheden.` }
+                                        brugeren et heatmap over befolkningstætheden.`}
                                 </span>
                                 <br />
                                 <br />
@@ -224,57 +229,8 @@ const Home: NextPage = () => {
                     </div>
                 </SectionContent>
             </section>
-            <section className={styles.section}>
-                <LineDivider />
-                <SectionContent>
-                    <h2 style={{ textAlign: 'center' }}>Lad os skabe noget sammen</h2>
-                    <form
-                        method="POST"
-                        id="contactForm"
-                        name="contactForm"
-                        action="sendmail.php"
-                        className={styles.contactForm}
-                        noValidate>
-                        <input
-                            type="text"
-                            className={styles.input}
-                            name="name"
-                            id="name"
-                            placeholder="Fulde navn"
-                        />
 
-                        <input
-                            type="email"
-                            className={styles.input}
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                        />
-
-                        <input
-                            type="text"
-                            className={styles.input}
-                            name="subject"
-                            id="subject"
-                            placeholder="Emne"
-                        />
-
-                        <textarea
-                            name="message"
-                            className={styles.input}
-                            id="message"
-                            cols={30}
-                            rows={8}
-                            placeholder="Skriv din besked her..."
-                            style={{ height: 'inherit' }}
-                        />
-
-                        <Button variant={'outlined'} type="submit">
-                            Send
-                        </Button>
-                    </form>
-                </SectionContent>
-            </section>
+            <ContactSection />
         </>
     );
 };
