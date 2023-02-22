@@ -8,7 +8,7 @@ export const NavBar = () => {
     return (
         <nav className={styles.navbar}>
             <BetterDevelopersLogo onClick={() => router.push('/')} />
-            <BurgerMenuButton onClick={() => console.log('Clicked burger menu')} />
+            {/*<BurgerMenuButton onClick={() => console.log('Clicked burger menu')} />*/}
         </nav>
     );
 };

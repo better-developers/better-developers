@@ -5,10 +5,11 @@ import { SkillsCarousel } from '../components/SkillsCarousel/SkillsCarousel';
 import { WaveDivider } from '../components/WaveDivider/WaveDivider';
 import { blue } from '@mui/material/colors';
 import Image from 'next/image';
+import FutureImage from 'next/future/image';
 import { LineDivider } from '../components/LineDivider/LineDivider';
 import Link from 'next/link';
 import { Button, IconButton } from '@mui/material';
-import WireframeLogo from '../public/logo_wireframe.svg';
+import WireframeLogo from '../public/bd-wireframe.svg';
 import { UilAngleDoubleDown } from '@iconscout/react-unicons';
 import WebBrowserGraphic from '../public/web_browser.svg';
 import ConsultantGraphic from '../public/consultant.svg';
@@ -16,11 +17,41 @@ import DatingAppMockup from '../public/dating-app.svg';
 import PapyrusSystem from '../public/papyrus.png';
 import { Box, Stack } from '@mui/system';
 import { ContactSection } from '../components/ContactSection/ContactSection';
+import VisualElementOne from '../public/assets/asset-1.svg';
+import VisualElementTwo from '../public/assets/asset-3.svg';
+import VisualElementThree from '../public/assets/asset-7.svg';
+import VisualElementFour from '../public/assets/asset-12.svg';
+import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+
+const useParallax = (value: MotionValue<number>, distance: number) => {
+    return useTransform(value, [0, 1], [-distance, distance]);
+};
 
 const Home: NextPage = () => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({ target: ref });
+    const y1 = useParallax(scrollYProgress, 300);
+    const y2 = useParallax(scrollYProgress, 400);
+    const y3 = useParallax(scrollYProgress, 200);
+
     return (
-        <>
+        <div ref={ref}>
             <video className={styles.bannerVideo} src="/video/jellyfish.mp4" loop autoPlay muted />
+
+            <motion.div className={styles.visualElementContainer} style={{ y: y1 }}>
+                <FutureImage src={VisualElementOne} className={styles.visualElementOne} />
+            </motion.div>
+            <motion.div className={styles.visualElementContainer} style={{ y: y2 }}>
+                <FutureImage src={VisualElementTwo} className={styles.visualElementTwo} />
+            </motion.div>
+            <motion.div className={styles.visualElementContainer} style={{ y: y3 }}>
+                <FutureImage src={VisualElementThree} className={styles.visualElementThree} />
+            </motion.div>
+            <motion.div className={styles.visualElementContainer} style={{ y: y3 }}>
+                <FutureImage src={VisualElementFour} className={styles.visualElementFour} />
+            </motion.div>
+
             <section
                 className={styles.bannerSection}
                 style={{
@@ -29,7 +60,7 @@ const Home: NextPage = () => {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                 }}>
-                <section className={styles.bannerSection} style={{ height: '600px' }}>
+                <section className={styles.bannerSection} style={{ height: '500px' }}>
                     <SectionContent className={styles.mainSection}>
                         <h1>Fra idé til forretningsværdi</h1>
                         <p>
@@ -37,7 +68,6 @@ const Home: NextPage = () => {
                             IT-projekter, der skaber <b>værdi</b> for jer.
                         </p>
                     </SectionContent>
-                    <WaveDivider />
                 </section>
 
                 <section className={styles.bannerSection}>
@@ -62,7 +92,7 @@ const Home: NextPage = () => {
                 <SectionContent>
                     <div className={styles.splitBox}>
                         <div className={styles.image}>
-                            <Image src={WireframeLogo} height={300} />
+                            <Image src={WireframeLogo} height={200} />
                         </div>
                         <span className={styles.text}>
                             <h2>
@@ -231,7 +261,7 @@ const Home: NextPage = () => {
             </section>
 
             <ContactSection />
-        </>
+        </div>
     );
 };
 
