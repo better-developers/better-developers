@@ -1,10 +1,7 @@
-﻿@import "../../styles/theme";
-
-.sectionContent {
-  display: flex;
-  flex-direction: column;
-  gap: spacing(4);
-  padding: 0  $section-margin;
-  height: 100%;
-  
+﻿.sectionContent {
+    display: flex;
+    flex-direction: column;
+    // gap: spacing(4);
+    padding: 0 $section-margin;
+    height: 100%;
 }

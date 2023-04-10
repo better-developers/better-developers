@@ -1,7 +1,7 @@
-﻿import styles from '../../styles/home.module.scss';
+﻿import { Button } from '@chakra-ui/react';
+import styles from '../../styles/home.module.scss';
 import { LineDivider } from '../LineDivider/LineDivider';
 import { SectionContent } from '../SectionContent/SectionContent';
-import { Button } from '@mui/material';
 
 export const ContactSection = () => (
     <section className={styles.section} id={'contact-us'}>

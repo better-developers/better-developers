@@ -1,10 +1,8 @@
 ﻿import { Autoplay } from 'swiper';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
 import styles from './SkillsCarousel.module.scss';
 
-import ReactIcon from '../../public/logos/react.svg';
 import AndroidIcon from '../../public/logos/android logo.svg';
 import AngularIcon from '../../public/logos/angular.svg';
 import CsharpIcon from '../../public/logos/csharp.svg';
@@ -15,8 +13,8 @@ import HtmlIcon from '../../public/logos/html.svg';
 import JavaIcon from '../../public/logos/java.svg';
 import JavascriptIcon from '../../public/logos/javascript.svg';
 import PythonIcon from '../../public/logos/python.svg';
+import ReactIcon from '../../public/logos/react.svg';
 import TypescriptIcon from '../../public/logos/typescript.svg';
-import { IconButton, Tooltip } from '@mui/material';
 import { LogoSlide } from './LogoSlide/LogoSlide';
 
 export const SkillsCarousel = () => {
@@ -62,7 +60,7 @@ export const SkillsCarousel = () => {
                 <LogoSlide src={PythonIcon} tooltip={'Python'} />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-                <LogoSlide src={GraphqlIcon} tooltip={'GraphQl'} />
+                <LogoSlide src={GraphqlIcon} tooltip={'GraphQL'} />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
                 <LogoSlide src={AndroidIcon} tooltip={'Android'} />

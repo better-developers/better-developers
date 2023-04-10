@@ -1,11 +1,9 @@
-﻿@import "../../styles/theme";
-
-.divider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  border-top: 1px $color-white solid;
-  opacity: 0.2;
-  width: 100%
+﻿.divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    // border-top: 1px $color-white solid;
+    opacity: 0.2;
+    width: 100%;
 }
