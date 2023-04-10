@@ -1,34 +1,34 @@
 {
-  "name": "better-developers",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@iconscout/react-unicons": "^1.1.6",
-    "@mui/material": "^5.10.8",
-    "framer-motion": "^7.6.19",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "^1.55.0",
-    "swiper": "^8.4.3"
-  },
-  "devDependencies": {
-    "@types/node": "18.7.14",
-    "@types/react": "18.0.18",
-    "@types/react-dom": "18.0.6",
-    "autoprefixer": "^10.4.12",
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
-    "postcss": "^8.4.17",
-    "prettier": "^2.7.1",
-    "typescript": "4.8.2"
-  }
+    "name": "better-developers",
+    "version": "2.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && next export",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.10.4",
+        "@emotion/styled": "^11.10.4",
+        "@iconscout/react-unicons": "^1.1.6",
+        "@mui/material": "^5.10.8",
+        "framer-motion": "^7.6.19",
+        "next": "12.2.5",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sass": "^1.55.0",
+        "swiper": "^8.4.3"
+    },
+    "devDependencies": {
+        "@types/node": "18.7.14",
+        "@types/react": "18.0.18",
+        "@types/react-dom": "18.0.6",
+        "autoprefixer": "^10.4.12",
+        "eslint": "8.23.0",
+        "eslint-config-next": "12.2.5",
+        "postcss": "^8.4.17",
+        "prettier": "^2.7.1",
+        "typescript": "4.8.2"
+    }
 }
