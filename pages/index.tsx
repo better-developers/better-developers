@@ -6,8 +6,8 @@ import logoWireframe from '../public/logo-wireframe.png';
 
 const Home: NextPage = () => {
     return (
-        <Flex flexDir="column" gap="5em">
-            <Flex height="60vh" width="100%" alignItems="end">
+        <Flex flexDir="column" gap="10em">
+            <Flex height="65vh" width="100%" alignItems="end" position="relative">
                 <Box
                     bgImage="url('/hero.png')"
                     backgroundSize="cover"
@@ -18,13 +18,13 @@ const Home: NextPage = () => {
                     clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
                 />
 
-                <Flex width="100%" justifyContent="space-between" px="15vw">
+                <Flex width="100%" justifyContent="space-between" px="15vw" paddingBottom="48px">
                     <Flex flexDir="column" gap="1.5em">
                         <Flex flexDir="column">
-                            <Heading fontSize="3em" fontWeight="500" mixBlendMode="overlay">
+                            <Heading fontSize="4em" fontWeight="500" mixBlendMode="overlay">
                                 Et konsulenthus af
                             </Heading>
-                            <Heading fontSize="3em" fontWeight="700" mixBlendMode="overlay">
+                            <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay">
                                 udviklere.
                             </Heading>
                         </Flex>
@@ -37,6 +37,7 @@ const Home: NextPage = () => {
                             Call to action
                         </Button>
                     </Flex>
+
                     <Image src={computerPic} alt="Computer image"></Image>
                 </Flex>
             </Flex>
