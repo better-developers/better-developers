@@ -22,24 +22,24 @@ export const NavBar = () => {
                 </Stack>
 
                 <Stack direction="row" spacing="42px" fontWeight="bold">
-                    <Link href="/" alignSelf="center">
+                    <Link href="/services" alignSelf="center">
                         Services
                     </Link>
-                    <Link href="/" alignSelf="center">
+                    <Link href="/cases" alignSelf="center">
                         Cases
                     </Link>
-                    <Link href="/" alignSelf="center">
+                    <Link href="/businesses" alignSelf="center">
                         Brancher
                     </Link>
-                    <Link href="/" alignSelf="center">
+                    <Link href="/about" alignSelf="center">
                         Om os
                     </Link>
-                    <Link href="/" alignSelf="center">
+                    <Link href="/career" alignSelf="center">
                         Karriere
                     </Link>
 
                     <Button colorScheme="brand" variant="solid">
-                        Estimer projekt
+                        <Link href="/estimate">Estimer projekt</Link>
                     </Button>
                 </Stack>
             </Flex>
