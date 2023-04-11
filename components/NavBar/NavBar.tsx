@@ -7,7 +7,15 @@ export const NavBar = () => {
 
     return (
         <nav>
-            <Flex position="fixed" alignItems="center" justifyContent="space-between" textColor="white" w="100%" px="15vw" py="12">
+            <Flex
+                position="fixed"
+                alignItems="center"
+                justifyContent="space-between"
+                textColor="white"
+                w="100%"
+                px="15vw"
+                py="12"
+                zIndex="100">
                 <Stack direction="row" spacing="24px" alignItems="center">
                     <BetterDevelopersLogo onClick={() => router.push('/')} />
                     <Heading size="md">Better Developers</Heading>
