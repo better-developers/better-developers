@@ -43,25 +43,27 @@ const Home: NextPage = () => {
             </Flex>
 
             <Flex gap="5em" px="15vw">
-                <Flex flexDir="column">
+                <Flex flexDir="column" gap="1em" flex="1">
                     <Heading>Projekter</Heading>
-                    <Text>
+                    <Text textAlign="justify">
                         Vi har mange års erfaring med produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den gode dialog og
                         åbenhed.
                     </Text>
                 </Flex>
 
-                <Flex flexDir="column">
+                <Flex flexDir="column" gap="1em" flex="1">
                     <Heading>Konsulenter</Heading>
-                    <Text>
+                    <Text textAlign="justify">
                         Vi har et hold af skarpe konsulenter der står klar til at hjælpe med lige netop jeres opgaver. En vigtig del af
                         vores opgave er at fnde lige netop den kandidat der passer bedst til jeres virksomhed.
                     </Text>
                 </Flex>
 
-                <Flex flexDir="column">
+                <Flex flexDir="column" gap="1em" flex="1">
                     <Heading>Rådgivning</Heading>
-                    <Text>Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.</Text>
+                    <Text textAlign="justify">
+                        Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
+                    </Text>
                 </Flex>
             </Flex>
 
