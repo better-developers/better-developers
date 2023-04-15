@@ -67,9 +67,9 @@ const Home: NextPage = () => {
                 </Flex>
             </Flex>
 
-            <Grid templateColumns="2fr 1fr" gap="6" px="15vw">
-                <Flex flexDir="column">
-                    <Heading>Længere titel til at beskrive fordelene ved BD </Heading>
+            <Grid templateColumns="2fr 1fr" gap="60" px="15vw">
+                <Flex flexDir="column" gap="8">
+                    <Heading width="80%">Længere titel til at beskrive fordelene ved BD </Heading>
                     <Text>
                         Vi har mange års erfaring med produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den gode dialog og
                         åbenhed.
