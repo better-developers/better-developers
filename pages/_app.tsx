@@ -7,7 +7,7 @@ import { GoogleAnalytcs } from '../components/GoogleAnalytics/GoogleAnalytcs';
 import { HubspotPixel } from '../components/HubspotPixel/HubspotPixel';
 import { NavBar } from '../components/NavBar/NavBar';
 import '../styles/index.scss';
-import theme from '../styles/theme';
+import theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (

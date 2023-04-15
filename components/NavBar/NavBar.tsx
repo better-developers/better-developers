@@ -8,7 +8,8 @@ export const NavBar = () => {
     return (
         <nav>
             <Flex
-                position="fixed"
+                // position="fixed"
+                position="absolute"
                 alignItems="center"
                 justifyContent="space-between"
                 textColor="white"
@@ -38,7 +39,7 @@ export const NavBar = () => {
                         Karriere
                     </Link>
 
-                    <Button colorScheme="brand" variant="solid">
+                    <Button variant="brand">
                         <Link href="/estimate">Estimer projekt</Link>
                     </Button>
                 </Stack>
