@@ -7,7 +7,7 @@ import logoWireframe from '../public/logo-wireframe.png';
 const Home: NextPage = () => {
     return (
         <Flex flexDir="column" gap="10em" paddingBottom="8em">
-            <Flex height="65vh" width="100%" alignItems="end" position="relative">
+            <Flex height="650px" width="100%" alignItems="end" position="relative">
                 <Box
                     bgImage="url('/hero.png')"
                     backgroundSize="cover"
