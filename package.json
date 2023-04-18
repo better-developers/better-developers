@@ -6,6 +6,7 @@
         "dev": "next dev",
         "build": "next build && next export",
         "start": "next start",
+        "format": "prettier --write .",
         "lint": "next lint",
         "theme": "chakra-cli tokens ./theme/index.ts",
         "theme:watch": "chakra-cli tokens ./theme/index.ts --watch"
