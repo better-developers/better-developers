@@ -10,7 +10,7 @@ type LogoSlideProps = {
 export const LogoSlide: FC<LogoSlideProps> = ({ tooltip, src }) => (
     <Tooltip title={tooltip}>
         <IconButton aria-label="" color="secondary">
-            <Image src={src} />
+            <Image src={src} alt="" />
         </IconButton>
     </Tooltip>
 );
