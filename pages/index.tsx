@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import FAQ from '../components/FAQ/FAQ';
 import computerPic from '../public/hero-comp.png';
 import logoWireframe from '../public/logo-wireframe.png';
 
@@ -78,6 +79,10 @@ const Home: NextPage = () => {
 
                 <Image src={logoWireframe} alt="Logo wireframe"></Image>
             </Grid>
+
+            <Box px="30vw">
+                <FAQ />
+            </Box>
         </Flex>
     );
 };
