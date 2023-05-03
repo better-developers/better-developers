@@ -1,5 +1,11 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 import { buttonTheme } from './button';
+import { Open_Sans } from 'next/font/google';
+import { textTheme } from './text';
+import { headingTheme } from './heading';
+import { cardTheme } from './card';
+
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 const config: ThemeConfig = {
     initialColorMode: 'light',
@@ -8,7 +14,13 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
     config,
+    fonts: {
+        body: openSans.style.fontFamily,
+        heading: openSans.style.fontFamily,
+        mono: openSans.style.fontFamily,
+    },
     colors: {
+        primaryFontColor: '#425466',
         brand: {
             50: '#fff0dd',
             100: '#ffd5b1',
@@ -22,7 +34,7 @@ const theme = extendTheme({
             900: '#1e0a00',
         },
     },
-    components: { Button: buttonTheme },
+    components: { Button: buttonTheme, Text: textTheme, Heading: headingTheme, Card: cardTheme },
 });
 
 export default theme;
