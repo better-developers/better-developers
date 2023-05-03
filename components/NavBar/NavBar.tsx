@@ -1,6 +1,7 @@
 ﻿import { Button, Flex, Heading, Link, Stack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
+import { useScroll } from 'framer-motion';
 
 export const NavBar = () => {
     const router = useRouter();
@@ -8,8 +9,8 @@ export const NavBar = () => {
     return (
         <nav>
             <Flex
-                // position="fixed"
-                position="absolute"
+                position="fixed"
+                // position="absolute"
                 alignItems="center"
                 justifyContent="space-between"
                 textColor="white"
