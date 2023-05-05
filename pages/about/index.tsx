@@ -208,22 +208,22 @@ const About: React.FC = () => {
                         <Heading fontWeight={600}>Følg med</Heading>
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={2}>
-                        <Center>
-                            <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
+                            <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
                                     <Image src={Linkedin1} alt="linkedin" />
                                 </Card>
-                            </Link>
-                        </Center>
+                            </Center>
+                        </Link>
                     </SectionItem>
                     <SectionItem colSpan={2}>
-                        <Center>
-                            <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
+                            <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
                                     <Image src={Linkedin2} alt="linkedin" />
                                 </Card>
-                            </Link>
-                        </Center>
+                            </Center>
+                        </Link>
                     </SectionItem>
                 </Section>
                 <Section py={24}>
