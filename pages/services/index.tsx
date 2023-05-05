@@ -2,6 +2,8 @@ import { Box, Button, Center, Flex, Grid, Heading, Link, Stack, Text } from '@ch
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
+import HeroComp from '../../public/hero-comp.png';
+import Image from 'next/image';
 
 const Services: React.FC = () => {
     return (
@@ -58,6 +60,7 @@ const Services: React.FC = () => {
                         <SectionItem colStart={2} colEnd={4} mb={24}>
                             <Stack gap={8}>
                                 <Flex flexDir="column">
+                                    <Text variant="brandHighlight">Services</Text>
                                     <Heading fontSize="4em" fontWeight="400" color="black">
                                         Software services tilpasset dine behov
                                     </Heading>
@@ -74,7 +77,9 @@ const Services: React.FC = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <img src={'/hero-comp.png'} alt="Computer image" width="80%" />
+                                <Box w="80%">
+                                    <Image src={HeroComp} alt="Computer image" />
+                                </Box>
                             </Stack>
                         </SectionItem>
                     </Section>
@@ -85,7 +90,7 @@ const Services: React.FC = () => {
                             Vores kerne tjenester indenfor software udvikling
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
                             porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
@@ -93,7 +98,7 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={32} bgColor="blue.800">
+                <Section py={32} bgColor="blue.800" id="end-to-end">
                     <SectionItem colStart={2} colSpan={2}>
                         <Stack gap={4}>
                             <Heading color="white">End-to-end projekter</Heading>
@@ -111,14 +116,18 @@ const Services: React.FC = () => {
                     </SectionItem>
                     <SectionItem colSpan={2}>
                         <Center>
-                            <img src={'/hero-comp.png'} alt="Computer image" width="70%" />
+                            <Box w="70%">
+                                <Image src={HeroComp} alt="Computer image" />
+                            </Box>
                         </Center>
                     </SectionItem>
                 </Section>
-                <Section py={32}>
+                <Section py={32} id="consultants">
                     <SectionItem colStart={2} colSpan={2}>
                         <Center>
-                            <img src={'/hero-comp.png'} alt="Computer image" width="70%" />
+                            <Box w="70%">
+                                <Image src={HeroComp} alt="Computer image" />
+                            </Box>
                         </Center>
                     </SectionItem>
                     <SectionItem colSpan={2}>

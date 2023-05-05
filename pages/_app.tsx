@@ -8,6 +8,7 @@ import { HubspotPixel } from '../components/HubspotPixel/HubspotPixel';
 import { NavBar } from '../components/NavBar/NavBar';
 import '../styles/index.scss';
 import theme from '../theme';
+import { Footer } from '../components/Footer/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <ChakraProvider theme={theme}>
                 <NavBar />
                 <Component {...pageProps} />
+                <Footer />
             </ChakraProvider>
 
             {/* Analytics */}

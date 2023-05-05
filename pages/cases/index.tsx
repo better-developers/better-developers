@@ -1,9 +1,11 @@
 import { Flex, Stack, Heading, Button, Center, Text, Box, Link, Card, Grid, GridItem } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
+import HeroComp from '../../public/hero-comp.png';
 import { CaseCard } from '../../components/CaseCard/CaseCard';
 
 const Cases: NextPage = () => {
@@ -130,6 +132,7 @@ const Cases: NextPage = () => {
                         <SectionItem colStart={2} colEnd={4} mb={24}>
                             <Stack gap={8}>
                                 <Flex flexDir="column">
+                                    <Text variant="brandHighlight">Cases</Text>
                                     <Heading fontSize="4em" fontWeight="400" color="black">
                                         Reelle virksomheder med reelle udfordringer
                                     </Heading>
@@ -146,7 +149,9 @@ const Cases: NextPage = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <img src={'/hero-comp.png'} alt="Computer image" width="80%" />
+                                <Box w="80%">
+                                    <Image src={HeroComp} alt="Computer image" />
+                                </Box>
                             </Stack>
                         </SectionItem>
                     </Section>
@@ -157,7 +162,7 @@ const Cases: NextPage = () => {
                             Vores tidligere samarbejder indenfor softwareuvikling
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
                             porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.

@@ -4,6 +4,7 @@ import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLo
 import { Variants, backIn, motion, useScroll, useViewportScroll } from 'framer-motion';
 import { useState } from 'react';
 import { NavBarContainer } from './NavBar.styles';
+import NextLink from 'next/link';
 
 export const NavBar = () => {
     const router = useRouter();
@@ -41,10 +42,9 @@ export const NavBar = () => {
                     <Link href="/career" alignSelf="center">
                         Karriere
                     </Link>
-
-                    <Button variant="brand">
-                        <Link href="/estimate">Estimer projekt</Link>
-                    </Button>
+                    <Link href="/estimate">
+                        <Button variant="brand">Estimer projekt</Button>
+                    </Link>
                 </Stack>
             </NavBarContainer>
         </nav>
