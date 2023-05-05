@@ -11,7 +11,11 @@ const brandHighlight = defineStyle({
     fontWeight: '700',
 });
 
+const quote = defineStyle({
+    fontStyle: 'italic',
+});
+
 export const textTheme = defineStyleConfig({
     baseStyle,
-    variants: { brandHighlight },
+    variants: { brandHighlight, quote },
 });

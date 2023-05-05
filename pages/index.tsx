@@ -1,16 +1,22 @@
-import { Box, Button, Center, Flex, Grid, GridItem, Heading, Icon, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Card, Center, Flex, Grid, GridItem, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import FAQ from '../components/FAQ/FAQ';
-import computerPic from '../public/hero-comp.png';
+import HeroComp from '../public/hero-comp.png';
 import logoWireframe from '../public/logo-wireframe.png';
-
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { VscSymbolMisc } from 'react-icons/vsc';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
+import { CaseCard } from '../components/CaseCard/CaseCard';
+import PlaceholderCardImage from '../public/placeholder-card-image.png';
+import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
+import SegesLogo from '../public/logos/seges.png';
+import DigisenseLogo from '../public/logos/digisense.png';
+import MicrotechLogo from '../public/logos/microtech.jpg';
+import { ContactCard } from '../components/ContactCard/ContactCard';
 
 const Home: NextPage = () => {
     return (
@@ -50,7 +56,9 @@ const Home: NextPage = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack justifyContent="center" alignItems="end" height={'100%'}>
-                                <img src={'/hero-comp.png'} alt="Computer image" width="80%" />
+                                <Box w="80%">
+                                    <Image src={HeroComp} alt="Computer image" />
+                                </Box>
                             </Stack>
                         </SectionItem>
                     </Section>
@@ -127,20 +135,57 @@ const Home: NextPage = () => {
                     </SectionItem>
                 </Section>
 
-                <Section
-                    py={32}
-                    bgColor="brand.800"
-                    backgroundSize="cover"
-                    width="100%"
-                    height="100%"
-                    clipPath="polygon(0px 20%, 100% 0px, 100% 80%, 0px 100%)">
-                    <SectionItem colStart={2} colSpan={4}>
+                <Section position="relative" py={16}>
+                    <SectionItem px={0} colSpan={6} position="absolute" h="100%" w="100%">
+                        <Box
+                            bgColor="#303D4D"
+                            backgroundSize="cover"
+                            width="100%"
+                            height="100%"
+                            position="absolute"
+                            clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
+                        />
+                    </SectionItem>
+                    <SectionItem colStart={2} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
-                            <Grid gridTemplateColumns="repeat(3,1fr)" height={200} borderRadius="20px 0 20px 0" overflow="hidden" gap="1px">
-                                <Box backgroundColor="white" />
-                                <Box backgroundColor="white" />
-                                <Box backgroundColor="white" />
+                            <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
+                                <CaseCardPreview title="Seges Innovation" image={SegesLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
+                                <CaseCardPreview title="Digisense A/S" image={DigisenseLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
+                                <CaseCardPreview title="Microtech A/S" image={MicrotechLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
                             </Grid>
                         </Stack>
                     </SectionItem>
@@ -148,25 +193,49 @@ const Home: NextPage = () => {
                         <Heading color="white">Det siger andre</Heading>
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={1}>
-                        <Box backgroundColor="white" height={100} />
+                        <ContactCard
+                            name="John Doe"
+                            title="Lead developer"
+                            quote={
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                            }
+                        />
                     </SectionItem>
                     <SectionItem>
-                        <Box backgroundColor="white" height={100} />
+                        <ContactCard
+                            name="John Doe"
+                            title="Lead developer"
+                            quote={
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                            }
+                        />
                     </SectionItem>
                     <SectionItem>
-                        <Box backgroundColor="white" height={100} />
+                        <ContactCard
+                            name="John Doe"
+                            title="Lead developer"
+                            quote={
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                            }
+                        />
                     </SectionItem>
                     <SectionItem>
-                        <Box backgroundColor="white" height={100} />
+                        <ContactCard
+                            name="John Doe"
+                            title="Lead developer"
+                            quote={
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                            }
+                        />
                     </SectionItem>
                 </Section>
 
-                <Section py={8}>
+                <Section py={48}>
                     <SectionItem colStart={3} colEnd={5}>
                         <FAQ />
                     </SectionItem>
                 </Section>
-                <Section py={24}>
+                <Section py={12}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center">Er du overbevist? Så lad os føre din idé ud i livet.</Heading>
                     </SectionItem>
