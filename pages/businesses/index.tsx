@@ -1,17 +1,13 @@
-import { Box, Button, Card, CardBody, CardHeader, Center, Flex, Grid, GridItem, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { CaseCard } from '../../components/CaseCard/CaseCard';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import cases from '../cases';
 import HeroComp from '../../public/hero-comp.png';
 import WebAppTemplate from '../../public/web-app-template.svg';
-import WebAppTemplateNav from '../../public/web-app-template-navbar.svg';
 import { MdAgriculture } from 'react-icons/md';
 import { IoPeople, IoDocumentText } from 'react-icons/io5';
 import { SiWebmoney } from 'react-icons/si';
 import { RiGovernmentFill } from 'react-icons/ri';
-import { AnimatedArrow } from '../../components/AnimatedArrow/AnimatedArrow';
 import { useState } from 'react';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 

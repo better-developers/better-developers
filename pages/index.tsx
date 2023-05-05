@@ -13,8 +13,6 @@ import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 
 const Home: NextPage = () => {
-    console.log({ computerPic });
-
     return (
         <>
             <Flex flexDir="column">

@@ -9,9 +9,9 @@ import { SectionItem } from '../SectionItem/SectionItem';
 
 export const Footer = () => {
     return (
-        <Section>
+        <Section py={12}>
             <SectionItem colStart={2} colSpan={4}>
-                <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
+                <Stack direction="row" spacing="24px" alignItems="center">
                     <BetterDevelopersLogo />
                     <Heading size="md">Better Developers</Heading>
                 </Stack>

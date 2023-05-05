@@ -6,6 +6,7 @@ const brand = defineStyle({
     color: 'white',
     transition: 'background-position 500ms, box-shadow 500ms',
     boxShadow: '0',
+    fontWeight: 700,
     _hover: {
         textDecoration: 'underline',
         backgroundPositionX: 'right',

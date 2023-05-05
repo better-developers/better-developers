@@ -18,7 +18,7 @@ export const NavBar = () => {
 
     return (
         <nav>
-            <NavBarContainer isTop={isTop} zIndex="100">
+            <NavBarContainer $isTop={isTop} zIndex="100">
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
                     <Heading size="md" color="inherit">

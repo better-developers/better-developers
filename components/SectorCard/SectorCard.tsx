@@ -1,6 +1,4 @@
 import { Card, CardBody, CardHeader, Flex, Heading, Icon } from '@chakra-ui/react';
-import { IoDocumentText } from 'react-icons/io5';
-import { AnimatedArrow } from '../AnimatedArrow/AnimatedArrow';
 import { FC } from 'react';
 import { IconType } from 'react-icons/lib';
 
