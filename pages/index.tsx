@@ -17,6 +17,7 @@ import SegesLogo from '../public/logos/seges.png';
 import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
 import { ContactCard } from '../components/ContactCard/ContactCard';
+import { Gradient } from '../components/Gradient/Gradient';
 
 const Home: NextPage = () => {
     return (
@@ -24,14 +25,13 @@ const Home: NextPage = () => {
             <Flex flexDir="column">
                 <Flex height="650px" alignItems="end" position="relative">
                     <Box
-                        bgImage="url('/hero.png')"
-                        backgroundSize="cover"
                         width="100%"
                         height="100%"
                         position="absolute"
                         zIndex="-1"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                    />
+                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
+                        <Gradient />
+                    </Box>
 
                     <Section>
                         <SectionItem colStart={2} colEnd={4} mb={24}>
