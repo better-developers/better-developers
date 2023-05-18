@@ -1,9 +1,9 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
-import { buttonTheme } from './button';
 import { Open_Sans } from 'next/font/google';
-import { textTheme } from './text';
-import { headingTheme } from './heading';
+import { buttonTheme } from './button';
 import { cardTheme } from './card';
+import { headingTheme } from './heading';
+import { textTheme } from './text';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
 

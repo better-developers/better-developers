@@ -1,5 +1,4 @@
-import { Avatar, Card, CardBody, Grid, Heading, Stack, Text } from '@chakra-ui/react';
-import { StaticImageData } from 'next/image';
+import { Avatar, Card, CardBody, Heading, Stack, Text } from '@chakra-ui/react';
 import { FC, PropsWithChildren } from 'react';
 
 type ContactCardProps = {

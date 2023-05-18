@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, GridItemProps, ResponsiveValue } from '@chakra-ui/react';
+import { GridItem, GridItemProps } from '@chakra-ui/react';
 import { FC, PropsWithChildren } from 'react';
 
 export const SectionItem: FC<PropsWithChildren<GridItemProps>> = ({ children, ...props }) => (

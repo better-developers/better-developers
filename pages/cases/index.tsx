@@ -1,12 +1,12 @@
-import { Flex, Stack, Heading, Button, Center, Text, Box, Link, Card, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { CaseCard } from '../../components/CaseCard/CaseCard';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
-import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 import HeroComp from '../../public/hero-comp.png';
-import { CaseCard } from '../../components/CaseCard/CaseCard';
+import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [

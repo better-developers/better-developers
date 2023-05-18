@@ -1,9 +1,5 @@
-﻿import { Button, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+﻿import { Heading, Link, Stack, Text } from '@chakra-ui/react';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
-import { Variants, backIn, motion, useScroll, useViewportScroll } from 'framer-motion';
-import { useState } from 'react';
-import NextLink from 'next/link';
 import { Section } from '../Section/Section';
 import { SectionItem } from '../SectionItem/SectionItem';
 

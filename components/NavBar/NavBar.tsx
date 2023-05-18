@@ -1,20 +1,16 @@
-﻿import { Button, Flex, Heading, Link, Stack } from '@chakra-ui/react';
+﻿import { Button, Heading, Link, Stack } from '@chakra-ui/react';
+import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
-import { Variants, backIn, motion, useScroll, useViewportScroll } from 'framer-motion';
 import { useState } from 'react';
+import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
 import { NavBarContainer } from './NavBar.styles';
-import NextLink from 'next/link';
 
 export const NavBar = () => {
     const router = useRouter();
     const { scrollY } = useScroll();
     const [isTop, setIsTop] = useState<boolean>(true);
 
-    scrollY.on('change', (y) => {
-        if (y <= 0) setIsTop(true);
-        else setIsTop(false);
-    });
+    scrollY.on('change', (y) => setIsTop(y <= 0));
 
     return (
         <nav>

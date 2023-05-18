@@ -1,8 +1,4 @@
-﻿import { Button, Flex, Heading, Link, Stack } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
-import { Variants, backIn, motion, useScroll, useViewportScroll } from 'framer-motion';
-import { useState } from 'react';
+﻿import { Flex } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
 export const NavBarContainer = styled(Flex)<{ $isTop: boolean }>`

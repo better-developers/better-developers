@@ -1,15 +1,15 @@
 import { Box, Button, Center, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useState } from 'react';
+import { IoDocumentText, IoPeople } from 'react-icons/io5';
+import { MdAgriculture } from 'react-icons/md';
+import { RiGovernmentFill } from 'react-icons/ri';
+import { SiWebmoney } from 'react-icons/si';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
+import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 import HeroComp from '../../public/hero-comp.png';
 import WebAppTemplate from '../../public/web-app-template.svg';
-import { MdAgriculture } from 'react-icons/md';
-import { IoPeople, IoDocumentText } from 'react-icons/io5';
-import { SiWebmoney } from 'react-icons/si';
-import { RiGovernmentFill } from 'react-icons/ri';
-import { useState } from 'react';
-import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 
 const sectors: readonly Sector[] = [
     {

@@ -1,5 +1,5 @@
-import { Box, BoxProps, Grid, GridItem } from '@chakra-ui/react';
-import { FC, PropsWithChildren } from 'react';
+import { Box, BoxProps, Grid } from '@chakra-ui/react';
+import { FC } from 'react';
 
 export const Section: FC<BoxProps> = ({ children, ...props }) => (
     <Box {...props} position={props.position ?? 'relative'} width="100%">

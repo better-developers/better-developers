@@ -1,6 +1,5 @@
 import {
     Box,
-    Button,
     Card,
     CardBody,
     CardHeader,
@@ -13,17 +12,12 @@ import {
     Heading,
     Input,
     Link,
-    List,
     ListItem,
-    Stack,
     Text,
     UnorderedList,
 } from '@chakra-ui/react';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import { BsFillRocketTakeoffFill } from 'react-icons/bs';
-import HeroComp from '../../public/hero-comp.png';
-import Image from 'next/image';
 
 const Services: React.FC = () => {
     return (

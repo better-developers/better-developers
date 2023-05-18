@@ -1,9 +1,8 @@
-import { Box, Button, Center, Flex, Grid, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import HeroComp from '../../public/hero-comp.png';
-import Image from 'next/image';
 
 const Services: React.FC = () => {
     return (

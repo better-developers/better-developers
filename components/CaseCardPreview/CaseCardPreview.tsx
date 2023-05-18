@@ -1,4 +1,4 @@
-import { Card, CardHeader, Grid, Heading, Stack } from '@chakra-ui/react';
+import { Card, Heading, Stack } from '@chakra-ui/react';
 import { Variants, motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { FC, PropsWithChildren, useState } from 'react';

@@ -1,23 +1,21 @@
-import { Box, Button, Card, Center, Flex, Grid, GridItem, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import FAQ from '../components/FAQ/FAQ';
-import HeroComp from '../public/hero-comp.png';
-import logoWireframe from '../public/logo-wireframe.png';
+import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
-import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { VscSymbolMisc } from 'react-icons/vsc';
+import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
+import { ContactCard } from '../components/ContactCard/ContactCard';
+import FAQ from '../components/FAQ/FAQ';
+import { Gradient } from '../components/Gradient/Gradient';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
-import { CaseCard } from '../components/CaseCard/CaseCard';
-import PlaceholderCardImage from '../public/placeholder-card-image.png';
-import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
-import SegesLogo from '../public/logos/seges.png';
+import HeroComp from '../public/hero-comp.png';
+import logoWireframe from '../public/logo-wireframe.png';
 import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
-import { ContactCard } from '../components/ContactCard/ContactCard';
-import { Gradient } from '../components/Gradient/Gradient';
+import SegesLogo from '../public/logos/seges.png';
 
 const Home: NextPage = () => {
     return (

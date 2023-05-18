@@ -1,16 +1,16 @@
-import { Flex, Stack, Heading, Button, Center, Text, Box, Grid, Icon, Card, Link } from '@chakra-ui/react';
+import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { IoPersonAdd } from 'react-icons/io5';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import Image from 'next/image';
 import HeroComp from '../../public/hero-comp.png';
+import Linkedin1 from '../../public/img/linkedin-1.jpg';
+import Linkedin2 from '../../public/img/linkedin-2.jpg';
 import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
-import Linkedin1 from '../../public/img/linkedin-1.jpg';
-import Linkedin2 from '../../public/img/linkedin-2.jpg';
-import { IoPersonAdd } from 'react-icons/io5';
-import { useRouter } from 'next/router';
 
 const About: React.FC = () => {
     const router = useRouter();
