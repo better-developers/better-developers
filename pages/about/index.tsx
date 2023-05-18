@@ -1,6 +1,5 @@
 import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { IoPersonAdd } from 'react-icons/io5';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
@@ -13,8 +12,6 @@ import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
 
 const About: React.FC = () => {
-    const router = useRouter();
-
     return (
         <>
             <Flex flexDir="column">
@@ -74,6 +71,7 @@ const About: React.FC = () => {
                                         Vi er{' '}
                                         <Box
                                             display="inline"
+                                            lineHeight={1}
                                             background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                             backgroundClip="text"
                                             textColor="transparent"
@@ -85,9 +83,6 @@ const About: React.FC = () => {
 
                                 <Text lineHeight="1.5" w="80%" color="black">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
-                                </Text>
-                                <Text w="80%">
-                                    Donec porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.{' '}
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
