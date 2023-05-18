@@ -5,6 +5,7 @@ import { IoDocumentText, IoPeople } from 'react-icons/io5';
 import { MdAgriculture } from 'react-icons/md';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { SiWebmoney } from 'react-icons/si';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
@@ -191,7 +192,7 @@ const Businesses: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>
-                            <Button variant="brand">Kontakt os</Button>
+                            <ContactButton></ContactButton>
                         </Center>
                     </SectionItem>
                 </Section>

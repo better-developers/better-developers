@@ -1,9 +1,10 @@
-﻿import { Button, Flex, Heading, Link, Stack } from '@chakra-ui/react';
+﻿import { Flex, Heading, Link, Stack } from '@chakra-ui/react';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import { NavBarContext } from '../../contexts/NavBarContext';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
+import { ContactButton } from '../ContactButton/ContactButton';
 
 export const NavBar = () => {
     const router = useRouter();
@@ -53,9 +54,8 @@ export const NavBar = () => {
                     <Link href="/career" alignSelf="center">
                         Karriere
                     </Link>
-                    <Link href="/estimate">
-                        <Button variant="brand">Estimer projekt</Button>
-                    </Link>
+
+                    <ContactButton></ContactButton>
                 </Stack>
             </Flex>
         </nav>

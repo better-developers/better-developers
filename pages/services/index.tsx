@@ -1,5 +1,6 @@
 import { Box, Button, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import HeroComp from '../../public/hero-comp.png';
@@ -150,7 +151,7 @@ const Services: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>
-                            <Button variant="brand">Estimer projekt</Button>
+                            <ContactButton></ContactButton>
                         </Center>
                     </SectionItem>
                 </Section>

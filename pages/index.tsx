@@ -8,6 +8,7 @@ import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { VscSymbolMisc } from 'react-icons/vsc';
 import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
+import { ContactButton } from '../components/ContactButton/ContactButton';
 import { ContactCard } from '../components/ContactCard/ContactCard';
 import FAQ from '../components/FAQ/FAQ';
 import { Gradient } from '../components/Gradient/Gradient';
@@ -71,7 +72,7 @@ const Home: NextPage = () => {
                 </Flex>
 
                 <Section pt={24} pb={16}>
-                    <SectionItem colStart={2} colSpan={1}>
+                    <SectionItem px={8} colStart={2} colSpan={1}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
@@ -84,7 +85,7 @@ const Home: NextPage = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem>
+                    <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Icon as={IoPeopleCircle} fontSize="5xl" />
@@ -97,7 +98,7 @@ const Home: NextPage = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem>
+                    <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Icon as={HiChatBubbleLeftRight} fontSize="5xl" />
@@ -110,7 +111,7 @@ const Home: NextPage = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem>
+                    <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Icon as={VscSymbolMisc} fontSize="5xl" />
@@ -247,7 +248,7 @@ const Home: NextPage = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>
-                            <Button variant="brand">Estimer projekt</Button>
+                            <ContactButton></ContactButton>
                         </Center>
                     </SectionItem>
                 </Section>
