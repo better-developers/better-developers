@@ -9,7 +9,7 @@ import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
-import HeroComp from '../../public/hero-comp.png';
+import BusinessesHero from '../../public/businesses-hero.svg';
 import WebAppTemplate from '../../public/web-app-template.svg';
 
 const sectors: readonly Sector[] = [
@@ -141,9 +141,9 @@ const Businesses: React.FC = () => {
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
-                            <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
+                            <Stack alignItems="center" height={'100%'}>
+                                <Box w="40%">
+                                    <Image src={BusinessesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
                         </SectionItem>
