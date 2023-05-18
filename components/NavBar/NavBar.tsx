@@ -1,20 +1,35 @@
-﻿import { Button, Heading, Link, Stack } from '@chakra-ui/react';
+﻿import { Button, Flex, Heading, Link, Stack } from '@chakra-ui/react';
 import { useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { NavBarContext } from '../../contexts/NavBarContext';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
-import { NavBarContainer } from './NavBar.styles';
 
 export const NavBar = () => {
     const router = useRouter();
+    const [color] = useContext(NavBarContext);
     const { scrollY } = useScroll();
     const [isTop, setIsTop] = useState<boolean>(true);
+
+    const contextColor = color === 'light' ? 'white' : color === 'dark' ? 'primary' : 'primary';
+    const fontColor = isTop ? contextColor : 'primary';
 
     scrollY.on('change', (y) => setIsTop(y <= 0));
 
     return (
         <nav>
-            <NavBarContainer $isTop={isTop} zIndex="100">
+            <Flex
+                pos="fixed"
+                align="center"
+                justify="space-between"
+                w="100%"
+                p="48px 11vw"
+                bgColor={isTop ? 'transparent' : 'white'}
+                color={fontColor}
+                borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
+                boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}
+                transition="background-color 300ms, color 500ms, box-shadow 300ms, border-bottom 500ms 500ms"
+                zIndex="100">
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
                     <Heading size="md" color="inherit">
@@ -42,7 +57,7 @@ export const NavBar = () => {
                         <Button variant="brand">Estimer projekt</Button>
                     </Link>
                 </Stack>
-            </NavBarContainer>
+            </Flex>
         </nav>
     );
 };

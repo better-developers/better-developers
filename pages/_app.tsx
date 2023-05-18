@@ -7,6 +7,7 @@ import { Footer } from '../components/Footer/Footer';
 import { GoogleAnalytcs } from '../components/GoogleAnalytics/GoogleAnalytcs';
 import { HubspotPixel } from '../components/HubspotPixel/HubspotPixel';
 import { NavBar } from '../components/NavBar/NavBar';
+import { NavBarProvider } from '../contexts/NavBarContext';
 import '../styles/index.scss';
 import theme from '../theme';
 
@@ -18,9 +19,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Head>
 
             <ChakraProvider theme={theme}>
-                <NavBar />
-                <Component {...pageProps} />
-                <Footer />
+                <NavBarProvider>
+                    <NavBar />
+                    <Component {...pageProps} />
+                    <Footer />
+                </NavBarProvider>
             </ChakraProvider>
 
             {/* Analytics */}

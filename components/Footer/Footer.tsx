@@ -51,7 +51,7 @@ export const Footer = () => {
                 <Link href="/career">
                     <Text>Karriere</Text>
                 </Link>
-                <Link>
+                <Link href="/contact">
                     <Text>Kontakt</Text>
                 </Link>
             </SectionItem>

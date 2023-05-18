@@ -16,10 +16,17 @@ import {
     Text,
     UnorderedList,
 } from '@chakra-ui/react';
+import { useContext, useEffect } from 'react';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
+import { NavBarContext } from '../../contexts/NavBarContext';
 
 const Services: React.FC = () => {
+    const [_context, setContext] = useContext(NavBarContext);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => setContext('light'), []);
+
     return (
         <>
             <Flex flexDir="column">

@@ -1,5 +1,5 @@
+'use client';
 import Script from 'next/script';
-('use client');
 
 export const Gradient = () => {
     return (

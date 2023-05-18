@@ -1,6 +1,8 @@
+'use client';
 import { Box, Button, Center, Flex, Grid, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
@@ -11,6 +13,7 @@ import FAQ from '../components/FAQ/FAQ';
 import { Gradient } from '../components/Gradient/Gradient';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
+import { NavBarContext } from '../contexts/NavBarContext';
 import HeroComp from '../public/hero-comp.png';
 import logoWireframe from '../public/logo-wireframe.png';
 import DigisenseLogo from '../public/logos/digisense.png';
@@ -18,6 +21,11 @@ import MicrotechLogo from '../public/logos/microtech.jpg';
 import SegesLogo from '../public/logos/seges.png';
 
 const Home: NextPage = () => {
+    const [_context, setContext] = useContext(NavBarContext);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => setContext('light'), []);
+
     return (
         <>
             <Flex flexDir="column">
