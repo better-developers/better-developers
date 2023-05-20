@@ -12,6 +12,14 @@ const brand = defineStyle({
         backgroundPositionX: 'right',
         boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
     },
+    _loading: {
+        opacity: 1,
+        _hover: {
+            bgGradient: 'linear(to-r, #F7A55A, #F8E969, #F7A55A,)',
+            bgSize: '200% 100%',
+            opacity: 1,
+        },
+    },
 });
 
 export const buttonTheme = defineStyleConfig({
