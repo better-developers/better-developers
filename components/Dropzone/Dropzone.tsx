@@ -1,4 +1,4 @@
-import { Flex, Input, Text } from '@chakra-ui/react';
+import { Box, Flex, Input, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useDrop } from 'react-dnd';
@@ -25,32 +25,42 @@ export const Dropzone: React.FC = () => {
     }, [canDrop, isOver]);
 
     const animationState = canDrop ? 'running' : 'paused';
+    const borderBg = `
+        linear-gradient(90deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
+        linear-gradient(90deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
+        linear-gradient(0deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
+        linear-gradient(0deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
+        #f8f8ff`;
 
     useEffect(() => {
         console.log(files);
     }, [files]);
 
     return (
-        <Flex
-            borderRadius={6}
-            background="linear-gradient(90deg, #384EB7, transparent 25%), linear-gradient(90deg, #384EB7, transparent 25%), linear-gradient(0deg, #384EB7, transparent 25%), linear-gradient(0deg, #384EB7, transparent 25%);"
-            backgroundRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
-            backgroundSize="4px 2px, 4px 2px, 2px 4px, 2px 4px"
-            animation="7s infinite linear"
-            style={{ animationName: styles.borderDance, animationPlayState: animationState }}
+        <Box
             h={200}
             w="100%"
-            alignItems="center"
-            justifyContent="center"
-            direction="column"
-            gap={4}
-            cursor="pointer"
-            onClick={() => fileRef.current?.click()}
-            ref={drop}>
-            <Image src="upload-icon.svg" alt="Upload" width={96} height={96}></Image>
-            <Text>{text}</Text>
+            borderRadius={6}
+            background={borderBg}
+            backgroundRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            backgroundSize="8px 2px, 8px 2px, 2px 8px, 2px 8px"
+            animation="7s infinite linear"
+            style={{ animationName: styles.borderDance, animationPlayState: animationState }}>
+            <Flex
+                h="100%"
+                w="100%"
+                alignItems="center"
+                justifyContent="center"
+                direction="column"
+                gap={4}
+                cursor="pointer"
+                onClick={() => fileRef.current?.click()}
+                ref={drop}>
+                <Image src="upload-icon.svg" alt="Upload" width={96} height={96}></Image>
+                <Text>{text}</Text>
 
-            <Input type="file" multiple display="none" ref={fileRef} onChangeCapture={onBrowse} />
-        </Flex>
+                <Input type="file" multiple display="none" ref={fileRef} onChangeCapture={onBrowse} />
+            </Flex>
+        </Box>
     );
 };
