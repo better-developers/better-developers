@@ -5,12 +5,17 @@ import { useDrop } from 'react-dnd';
 import { NativeTypes } from 'react-dnd-html5-backend';
 import styles from './Dropzone.module.scss';
 
-export const Dropzone: React.FC = () => {
+export interface DropzoneProps {
+    onFilesChanged?: (files: File[]) => void;
+}
+
+export const Dropzone: React.FC<DropzoneProps> = ({ onFilesChanged }) => {
     const fileRef = useRef<HTMLInputElement>(null);
-    const [files, setFiles] = useState<File[]>();
+    const [files, setFiles] = useState<File[]>([]);
 
     const onDrop = (ev: React.DragEvent<HTMLDivElement>) => setFiles([...(ev.dataTransfer?.files || [])]);
     const onBrowse = (ev: React.ChangeEvent<HTMLInputElement>) => setFiles([...(ev.target.files || [])]);
+    useEffect(() => onFilesChanged?.(files), [files, onFilesChanged]);
 
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: [NativeTypes.FILE],
@@ -19,8 +24,8 @@ export const Dropzone: React.FC = () => {
     }));
 
     const text = useMemo(() => {
-        if (isOver) return 'Yes, right here';
-        if (canDrop) return 'Drop it here';
+        if (isOver) return '👇 Yes, right here 👇';
+        if (canDrop) return '👉 Drop it here 👈';
         return 'Drag & drop files or Browse';
     }, [canDrop, isOver]);
 
@@ -31,10 +36,6 @@ export const Dropzone: React.FC = () => {
         linear-gradient(0deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
         linear-gradient(0deg, rgba(56, 78, 183, 30%) 50%, transparent 50%), 
         #f8f8ff`;
-
-    useEffect(() => {
-        console.log(files);
-    }, [files]);
 
     return (
         <Box
