@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useDrop } from 'react-dnd';
 import { NativeTypes } from 'react-dnd-html5-backend';
+import styles from './Dropzone.module.scss';
 
 export const Dropzone: React.FC = () => {
     const fileRef = useRef<HTMLInputElement>(null);
@@ -23,6 +24,8 @@ export const Dropzone: React.FC = () => {
         return 'Drag & drop files or Browse';
     }, [canDrop, isOver]);
 
+    const animationState = canDrop ? 'running' : 'paused';
+
     useEffect(() => {
         console.log(files);
     }, [files]);
@@ -30,7 +33,11 @@ export const Dropzone: React.FC = () => {
     return (
         <Flex
             borderRadius={6}
-            bgColor="white"
+            background="linear-gradient(90deg, #384EB7, transparent 25%), linear-gradient(90deg, #384EB7, transparent 25%), linear-gradient(0deg, #384EB7, transparent 25%), linear-gradient(0deg, #384EB7, transparent 25%);"
+            backgroundRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
+            backgroundSize="4px 2px, 4px 2px, 2px 4px, 2px 4px"
+            animation="7s infinite linear"
+            style={{ animationName: styles.borderDance, animationPlayState: animationState }}
             h={200}
             w="100%"
             alignItems="center"

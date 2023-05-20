@@ -3,7 +3,7 @@ import { Dropzone } from '../Dropzone/Dropzone';
 
 export const JobApplication: React.FC = () => {
     return (
-        <Card px={8} pt={6} pb={8} bgColor="#535266" color="white" w="80%">
+        <Card px={8} pt={6} pb={8} bgColor="white" color="white" w="80%">
             <Flex direction="column">
                 <FormControl>
                     <FormLabel>Fulde navn</FormLabel>
