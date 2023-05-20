@@ -2,6 +2,7 @@
 import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
+import { JobApplication } from '../../components/JobApplication/JobApplication';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import HeroComp from '../../public/hero-comp.png';
@@ -234,6 +235,16 @@ const Career: React.FC = () => {
                                 Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
                             </Text>
                         </Flex>
+                    </SectionItem>
+                </Section>
+
+                <Section pt={24} pb={16}>
+                    <SectionItem colStart={2} colSpan={2}>
+                        <Heading>Send ansøgning</Heading>
+                    </SectionItem>
+
+                    <SectionItem colStart={4} colSpan={2} display="flex" justifyContent="center">
+                        <JobApplication></JobApplication>
                     </SectionItem>
                 </Section>
             </Flex>

@@ -1,6 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { ActiveCampaign } from '../components/ActiveCampaign/ActiveCampaign';
 import { FacebookPixel } from '../components/FacebookPixel/FacebookPixel';
 import { Footer } from '../components/Footer/Footer';
@@ -26,11 +28,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Head>
 
             <ChakraProvider theme={theme}>
-                <NavBarProvider>
-                    <NavBar />
-                    <Component {...pageProps} />
-                    <Footer />
-                </NavBarProvider>
+                <DndProvider backend={HTML5Backend}>
+                    <NavBarProvider>
+                        <NavBar />
+                        <Component {...pageProps} />
+                        <Footer />
+                    </NavBarProvider>
+                </DndProvider>
             </ChakraProvider>
 
             {/* Analytics */}
