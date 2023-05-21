@@ -1,8 +1,9 @@
-import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea } from '@chakra-ui/react';
+import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea, useStyleConfig } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
 import { SendEmailRequest } from '../../pages/api/sendgrid';
+import { ApplicationFormVariant } from '../../theme/application-form';
 import { ArrayElement } from '../../types/array-element';
 import { toBase64 } from '../../utils/toBase64';
 import { Dropzone } from '../Dropzone/Dropzone';
@@ -10,13 +11,19 @@ import { EmailTemplate } from './EmailTemplate';
 
 export type Attachment = Promise<ArrayElement<NonNullable<SendEmailRequest['attachments']>>>;
 
-export const ApplicationForm: React.FC = () => {
+export interface ApplicationFormProps {
+    variant?: ApplicationFormVariant;
+}
+
+export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { variant: 'light' }) => {
     const { performFetch, loading } = usePost('/api/sendgrid');
     const [name, setName] = useState('');
     const [about, setAbout] = useState('');
     const [files, setFiles] = useState<File[]>([]);
 
-    const onSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
+    const styles = useStyleConfig('ApplicationForm', { variant });
+
+    const onSubmit = async (e: React.FormEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
         const html = render(<EmailTemplate name={name} about={about} />);
@@ -38,33 +45,30 @@ export const ApplicationForm: React.FC = () => {
     };
 
     return (
-        <Card px={8} pt={6} pb={8} bgColor="#535266" color="white" w="80%">
-            <form onSubmit={onSubmit}>
-                <Flex direction="column" gap={4}>
-                    <FormControl>
-                        <FormLabel>Fulde navn</FormLabel>
-                        <Input type="text" placeholder="Dohn Joe" bgColor="white" color="black" onChange={(e) => setName(e.target.value)} />
-                    </FormControl>
+        <Card __css={styles} as="form" onSubmit={onSubmit} px={8} pt={6} pb={8} w="80%">
+            <Flex direction="column" gap={4}>
+                <FormControl>
+                    <FormLabel>Fulde navn</FormLabel>
+                    <Input __css={styles} type="text" placeholder="Dohn Joe" onChange={(e) => setName(e.target.value)} />
+                </FormControl>
 
-                    <FormControl>
-                        <FormLabel>Om dig</FormLabel>
-                        <Textarea
-                            placeholder="Sæt nogle ord på, hvorfor vi er et godt match"
-                            bgColor="white"
-                            color="black"
-                            onChange={(e) => setAbout(e.target.value)}
-                        />
-                    </FormControl>
+                <FormControl>
+                    <FormLabel>Om dig</FormLabel>
+                    <Textarea
+                        __css={styles}
+                        placeholder="Sæt nogle ord på, hvorfor vi er et godt match"
+                        onChange={(e) => setAbout(e.target.value)}
+                    />
+                </FormControl>
 
-                    <FormControl>
-                        <Dropzone onFilesChanged={setFiles}></Dropzone>
-                    </FormControl>
+                <FormControl>
+                    <Dropzone onFilesChanged={setFiles}></Dropzone>
+                </FormControl>
 
-                    <Button type="submit" variant="brand" onClick={onSubmit} isLoading={loading}>
-                        Send
-                    </Button>
-                </Flex>
-            </form>
+                <Button type="submit" variant="brand" onClick={onSubmit} isLoading={loading}>
+                    Send
+                </Button>
+            </Flex>
         </Card>
     );
 };

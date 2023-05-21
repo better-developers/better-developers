@@ -244,7 +244,7 @@ const Career: React.FC = () => {
                     </SectionItem>
 
                     <SectionItem colStart={4} colSpan={2} display="flex" justifyContent="center">
-                        <ApplicationForm></ApplicationForm>
+                        <ApplicationForm variant="dark"></ApplicationForm>
                     </SectionItem>
                 </Section>
             </Flex>
