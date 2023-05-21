@@ -1,22 +1,6 @@
-import {
-    Box,
-    Card,
-    CardBody,
-    CardHeader,
-    Center,
-    Flex,
-    FormControl,
-    FormLabel,
-    Grid,
-    GridItem,
-    Heading,
-    Input,
-    Link,
-    ListItem,
-    Text,
-    UnorderedList,
-} from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
+import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { NavBarContext } from '../../contexts/NavBarContext';
@@ -116,39 +100,7 @@ const Services: React.FC = () => {
                         </UnorderedList>
                     </SectionItem>
                     <SectionItem colSpan={2}>
-                        <Card>
-                            <CardHeader>
-                                <Heading size="md" fontWeight="semibold">
-                                    Skriv til os
-                                </Heading>
-                            </CardHeader>
-                            <CardBody>
-                                <Grid gridTemplateColumns="1fr 1fr" gap={4}>
-                                    <FormControl>
-                                        <FormLabel>Navn</FormLabel>
-                                        <Input />
-                                    </FormControl>
-                                    <FormControl>
-                                        <FormLabel>Efternavn</FormLabel>
-                                        <Input />
-                                    </FormControl>
-                                    <FormControl>
-                                        <FormLabel>Email</FormLabel>
-                                        <Input />
-                                    </FormControl>
-                                    <FormControl>
-                                        <FormLabel>Telefonnummer</FormLabel>
-                                        <Input />
-                                    </FormControl>
-                                    <GridItem colSpan={2}>
-                                        <FormControl>
-                                            <FormLabel>Besked</FormLabel>
-                                            <Input />
-                                        </FormControl>
-                                    </GridItem>
-                                </Grid>
-                            </CardBody>
-                        </Card>
+                        <ContactForm></ContactForm>
                     </SectionItem>
                 </Section>
             </Flex>

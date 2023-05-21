@@ -1,0 +1,78 @@
+import { Button, Card, CardBody, CardHeader, FormControl, FormLabel, Grid, GridItem, Heading, Input, Textarea } from '@chakra-ui/react';
+import { render } from '@react-email/render';
+import { useState } from 'react';
+import { usePost } from '../../hooks/api/usePost';
+import { EmailTemplate } from './EmailTemplate';
+
+export const ContactForm: React.FC = () => {
+    const { performFetch, loading } = usePost('/api/sendgrid');
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+
+    const onSubmit = (e: React.FormEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        const html = render(<EmailTemplate firstName={firstName} lastName={lastName} email={email} phone={phone} message={message} />);
+
+        performFetch({
+            subject: 'Ny henvendelse',
+            html,
+        });
+    };
+
+    return (
+        <Card as="form" onSubmit={onSubmit}>
+            <CardHeader>
+                <Heading size="md" fontWeight="semibold">
+                    Skriv til os
+                </Heading>
+            </CardHeader>
+
+            <CardBody>
+                <Grid gridTemplateColumns="1fr 1fr" gap={4}>
+                    <FormControl>
+                        <FormLabel>Navn</FormLabel>
+                        <Input type="text" placeholder="Dohn" onChange={(e) => setFirstName(e.target.value)} />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Efternavn</FormLabel>
+                        <Input type="text" placeholder="Joe" onChange={(e) => setLastName(e.target.value)} />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Email</FormLabel>
+                        <Input type="email" placeholder="joe@dohn.com" onChange={(e) => setEmail(e.target.value)} />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Telefonnummer</FormLabel>
+                        <Input type="phone" placeholder="+45 12 34 56 78" onChange={(e) => setPhone(e.target.value)} />
+                    </FormControl>
+
+                    <GridItem colSpan={2}>
+                        <FormControl>
+                            <FormLabel>Besked</FormLabel>
+                            <Textarea
+                                color="primaryFontColor"
+                                bgColor="white"
+                                placeholder="Vi vil mega gerne snakke med jer!"
+                                onChange={(e) => setMessage(e.target.value)}
+                            />
+                        </FormControl>
+                    </GridItem>
+
+                    <GridItem colSpan={2}>
+                        <Button type="submit" w="100%" variant="brand" onClick={onSubmit} isLoading={loading}>
+                            Send
+                        </Button>
+                    </GridItem>
+                </Grid>
+            </CardBody>
+        </Card>
+    );
+};
