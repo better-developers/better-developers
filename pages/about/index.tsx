@@ -10,6 +10,9 @@ import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const About: React.FC = () => {
     return (
@@ -82,7 +85,9 @@ const About: React.FC = () => {
                                 </Flex>
 
                                 <Text lineHeight="1.5" w="80%" color="black">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
+                                    Better Developers blev grundlagt i Aarhus i 2023 med en klar vision for at levere ekstraordinære
+                                    softwareløsninger. Vi arbejder hver dag på at udvikle de bedste og mest innovative løsninger indenfor
+                                    software.
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
@@ -92,9 +97,14 @@ const About: React.FC = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
-                                </Box>
+                                <ReactPlayer
+                                    url="https://vimeo.com/828776466"
+                                    controls
+                                    width="80%"
+                                    style={{
+                                        filter: 'drop-shadow(5px 5px 10px #666)',
+                                    }}
+                                />
                             </Stack>
                         </SectionItem>
                     </Section>
@@ -107,8 +117,13 @@ const About: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
-                            porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                            Vores team af dygtige konsulenter hos Better Developers er stolte af deres skarpe kompetencer og evnen til at
+                            levere fremragende resultater. Vi tror på betydningen af fællesskabet og trækker på hinandens styrker for at
+                            opnå enestående succes. Vores konsulenter er specialiserede inden for forskellige områder af softwareudvikling,
+                            hvilket giver os en bred vifte af ekspertise og mulighed for at tackle selv de mest komplekse udfordringer. Vi
+                            arbejder tæt sammen med vores kunder for at forstå deres behov og levere skræddersyede løsninger, der overgår
+                            forventningerne. Vores fokus er altid at skabe værdi, drive innovation og opbygge langvarige partnerskaber med
+                            vores kunder.
                         </Text>
                     </SectionItem>
                 </Section>
@@ -157,41 +172,43 @@ const About: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={2}>
                         <Text textAlign="justify">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra feugiat sapien cursus pharetra. Etiam
-                            egestas vehicula vulputate.
+                            Det at skabe noget større i fællesskab med andre har altid været en drivkraft. Og når muligheden opstår, så er
+                            det med at gribe dem.
                             <br />
                             <br />
-                            Curabitur faucibus in ex et venenatis. Praesent a dictum lacus, id aliquet ipsum. Quisque elementum posuere nibh
-                            nec maximus. Sed commodo lacinia tellus, sit amet maximus risus mattis nec. Fusce pretium viverra lacus, at
-                            placerat dolor fringilla quis.
+                            Better Developers er opstået i fællesskab, på baggrund af et ønske om at skabe den ideelle arbejdsplads, hvor
+                            der er fokus på det gode håndværk og et stærkt sammenhold. For at skabe dette miljø, satte vi tidligt i
+                            processen et mål om at 50% af virksomheden skulle være ejet af medarbejderne.
                         </Text>
                     </SectionItem>
                     <SectionItem>
                         <Text textAlign="justify">
-                            Proin vehicula lectus eu neque ultricies dictum. Vivamus magna arcu, mollis vitae laoreet a, egestas elementum
-                            nunc. Mauris et sagittis neque, nec lobortis ipsum.
+                            Således at vi i fællesskab kan drive visionen i mål og for at skabe mere end “bare” en arbejdsplads. Vores
+                            antagelse er at det der driver os - at være del af projekter i vækst - også må være gældende for andre.
                             <br />
                             <br />
-                            Sed at nisl quis tellus malesuada finibus. Nunc et leo diam. Suspendisse faucibus blandit quam, at euismod metus
-                            vestibulum hendrerit. Duis nec posuere nulla. Proin finibus velit quis molestie ultrices. Nunc imperdiet metus
-                            nec velit rutrum posuere.
+                            En vision kan være nok så god, men uden eksekvering er den ingenting. Det var derfor vigtigt fra start af at få
+                            etableret et hold med kompetencer der komplimenterer hinanden. Men lige så vigtigt har det været at være en flok
+                            af mennesker som kan have det sjovt og grine sammen.
                         </Text>
                     </SectionItem>
                     <SectionItem>
                         <Text textAlign="justify">
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tempor ante
-                            lorem, in viverra mauris porttitor a. Vivamus pharetra, lacus a rutrum sodales, diam diam vestibulum lacus, vel
-                            vestibulum dolor augue quis ligula.
+                            Først blev der lagt et fundament af forretningserfaring gennem Søren. Han bidrog med sin erfaring gennem egen
+                            virksomhed BetterCompliance og sit arbejde som Risk & Security Director ved Visma.
                             <br />
                             <br />
-                            Donec eu metus convallis dolor tristique lacinia sed quis dolor. Morbi sit amet euismod turpis, a fringilla
-                            lectus.
+                            Fundamentet for virksomheden var lagt, men vi kom ikke bredt nok ud til virksomhederne. Her kom Anders ind i
+                            billedet, med et speciale i den ene hånd og Better Developers i den anden,
                         </Text>
                     </SectionItem>
                     <SectionItem>
                         <Text textAlign="justify">
-                            Duis sagittis risus ut lorem rutrum tristique nec ut neque. Proin interdum pretium viverra. Morbi sodales metus
-                            in lacus luctus, quis sagittis ante ullamcorper. Sed nec laoreet lorem.
+                            formåede han at transformere og strømline salgsprocessen. Herfra tog det fart og det var tydeligt, at vi
+                            manglede yderligere kompetencer. Vi skulle bruge en dedikeret og dygtig CTO, til at drive visionen om at være på
+                            forkant med de nyeste teknologier og lave det bedste håndværk. Her kom Mikkel ind og tog ejerskab fra
+                            begyndelsen og har været med til at forme det teknologiske fundament for forretningen og udvide vores
+                            værktøjskasse.
                             <br />
                             <br />- Viktor Lundsgaard Andersen, CEO
                         </Text>
@@ -223,7 +240,7 @@ const About: React.FC = () => {
                 </Section>
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4} px={16}>
-                        <Heading textAlign="center">Vil du høre mere? Vi elsker at fortælle!</Heading>
+                        <Heading textAlign="center">Ønsker du at lære os bedre at kende? Kom forbi til en kop kaffe i Aarhus</Heading>
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>

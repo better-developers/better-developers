@@ -83,7 +83,9 @@ const Career: React.FC = () => {
                                 </Flex>
 
                                 <Text lineHeight="1.5" w="80%" color="black">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
+                                    Bliv en del af Better Developers og få muligheden for at arbejde sammen med et passioneret team af
+                                    dygtige udviklere. Vi tilbyder spændende karrieremuligheder og en inspirerende arbejdsplads, hvor du kan
+                                    udfolde dit potentiale og bidrage til at skabe innovative softwareløsninger.
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
@@ -108,8 +110,11 @@ const Career: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
-                            porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                            Bliv en del af et varmt og indbydende fællesskab hos Better Developers, hvor vi deler et fælles mål og fejrer
+                            vores succeser sammen. Vi værdsætter vores medarbejdere som en del af vores udvidede familie og tilbyder endda
+                            muligheden for medejerskab af vores virksomhed. Som en del af vores team vil du opleve den unikke fornemmelse af
+                            fællesskab, hvor vi støtter hinanden, dyrker kreativitet og skaber en fantastisk arbejdsplads. Kom og bliv en
+                            del af Better Developers, hvor vi skaber både professionel vækst og en glædelig arbejdsoplevelse.
                         </Text>
                     </SectionItem>
                 </Section>
@@ -186,12 +191,15 @@ const Career: React.FC = () => {
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
-                                    Vi har et skide godt fællesskab og hygger.
+                                    Virksomhedskultur
                                 </Heading>
                             </Flex>
                             <Text textAlign="justify">
-                                Vi har mange års erfaring med produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den gode dialog
-                                og åbenhed.
+                                Hos Better Developers tilbyder vi mere end bare et job - vi skaber et fællesskab, hvor samarbejde, åbenhed
+                                og positivitet er i fokus. Vi tror på værdien af et stærkt sammenhold, hvor medarbejdere støtter hinanden og
+                                fejrer succeser sammen. Vi har skabt en arbejdsplads, hvor alle føler sig velkomne og respekterede, og hvor
+                                der er plads til sjov og latter. Hos Better Developers bliver du en del af et fællesskab, hvor du kan trives
+                                og vokse både personligt og fagligt.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -200,12 +208,19 @@ const Career: React.FC = () => {
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
-                                    Vi har et skide godt fællesskab og hygger.
+                                    Karrieremuligheder
                                 </Heading>
                             </Flex>
                             <Text textAlign="justify">
-                                Vi har et hold af skarpe konsulenter der står klar til at hjælpe med lige netop jeres opgaver. En vigtig del
-                                af vores opgave er at fnde lige netop den kandidat der passer bedst til jeres virksomhed.
+                                Hos Better Developers tror vi på at investere i vores medarbejderes karriereudvikling. Vi tilbyder et
+                                stimulerende og udfordrende arbejdsmiljø, hvor du kan udforske nye teknologier og udvide dine færdigheder.{' '}
+                                <br />
+                                <br />
+                                Vi tilbyder også regelmæssig træning og faglig udvikling for at sikre, at vores medarbejdere forbliver
+                                opdaterede med de nyeste branchetrends og bedste praksis. Vi lægger vægt på at skabe en vej for
+                                karriereudvikling og vækst, hvor medarbejdere kan avancere og påtage sig større ansvar og udfordringer over
+                                tid. Vi er forpligtede til at støtte vores medarbejdere i at nå deres professionelle mål og skabe en
+                                meningsfuld karriere inden for softwareudvikling.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -214,11 +229,19 @@ const Career: React.FC = () => {
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
-                                    Vi har et skide godt fællesskab og hygger.
+                                    God work-life balance
                                 </Heading>
                             </Flex>
                             <Text textAlign="justify">
-                                Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
+                                Vi sætter en høj værdi på trivsel og velvære for vores medarbejdere. Vi forstår vigtigheden af at have en
+                                balance mellem arbejde og privatliv, og vi stræber efter at skabe et miljø, der støtter og fremmer dette. Vi
+                                tilbyder fleksible arbejdstider, muligheden for fjernarbejde og en afslappet og behagelig arbejdskultur.
+                                <br />
+                                <br />
+                                Samtidig arbejder vi aktivt på at skabe en sund work-life balance gennem projekthåndtering og
+                                ressourceallokering, så vores medarbejdere kan være produktive og opretholde en god balance i deres liv. Hos
+                                Better Developers prioriterer vi vores medarbejderes trivsel og sikrer, at de har den rette støtte og
+                                fleksibilitet til at opnå en sund og tilfredsstillende arbejds-balance.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -227,11 +250,22 @@ const Career: React.FC = () => {
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
-                                    Vi har et skide godt fællesskab og hygger.
+                                    Belønning og anerkendelse
                                 </Heading>
                             </Flex>
                             <Text textAlign="justify">
-                                Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
+                                Hos Better Developers anerkender og belønner vi vores medarbejdere for deres bidrag og dedikation. Vi mener,
+                                at det er vigtigt at fejre succeser og værdsætte det hårde arbejde, der lægges i projekterne. Vi tilbyder
+                                konkurrencedygtige lønpakker og gode arbejdsforhold for vores medarbejdere. Men vi går ud over det
+                                traditionelle og tilbyder også muligheden for medejerskab i virksomheden. Vi tror på, at når vores
+                                medarbejdere er medejere, føler de sig endnu mere engagerede og motiverede til at skabe succes for både sig
+                                selv og virksomheden.
+                                <br />
+                                <br />
+                                Derudover har vi et anerkendelsesprogram, hvor vi fremhæver og belønner medarbejderes fremragende
+                                præstationer og bidrag til vores fælles succes. Hos Better Developers bliver vores medarbejdere ikke kun
+                                belønnet økonomisk, men de får også mulighed for at være en del af et fælles mål og føle sig værdsat og
+                                anerkendt for deres indsats.
                             </Text>
                         </Flex>
                     </SectionItem>
