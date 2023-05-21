@@ -2,7 +2,7 @@
 import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
-import { JobApplication } from '../../components/JobApplication/JobApplication';
+import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import HeroComp from '../../public/hero-comp.png';
@@ -244,7 +244,7 @@ const Career: React.FC = () => {
                     </SectionItem>
 
                     <SectionItem colStart={4} colSpan={2} display="flex" justifyContent="center">
-                        <JobApplication></JobApplication>
+                        <ApplicationForm></ApplicationForm>
                     </SectionItem>
                 </Section>
             </Flex>

@@ -1,24 +1,24 @@
 import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
+import { usePost } from '../../hooks/api/usePost';
 import { SendEmailRequest } from '../../pages/api/sendgrid';
 import { toBase64 } from '../../utils/toBase64';
 import { Dropzone } from '../Dropzone/Dropzone';
-import { EmailTemplate } from './Emailtemplate';
+import { EmailTemplate } from './EmailTemplate';
 
 type Attachment = Promise<NonNullable<SendEmailRequest['attachments']>[number]>;
 
-export const JobApplication: React.FC = () => {
+export const ApplicationForm: React.FC = () => {
+    const { performFetch, loading } = usePost('/api/sendgrid');
     const [name, setName] = useState('');
     const [about, setAbout] = useState('');
     const [files, setFiles] = useState<File[]>([]);
-    const [isSending, setIsSending] = useState(false);
-
-    const onFilesChanged = (files: File[]) => setFiles(files);
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
-        setIsSending(true);
         e.preventDefault();
+
+        const html = render(<EmailTemplate name={name} about={about} />);
 
         const attachmentsPromises = files.map<Attachment>(async (file) => ({
             content: await toBase64(file),
@@ -30,19 +30,11 @@ export const JobApplication: React.FC = () => {
 
         const attachments = await Promise.all(attachmentsPromises);
 
-        const body: SendEmailRequest = {
+        performFetch({
             subject: 'Ny jobansøgning',
-            html: render(<EmailTemplate name={name} about={about} />),
-            attachments: attachments,
-        };
-
-        fetch('/api/sendgrid', {
-            method: 'POST',
-            body: JSON.stringify(body),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        }).finally(() => setIsSending(false));
+            html,
+            attachments,
+        });
     };
 
     return (
@@ -65,10 +57,10 @@ export const JobApplication: React.FC = () => {
                     </FormControl>
 
                     <FormControl>
-                        <Dropzone onFilesChanged={onFilesChanged}></Dropzone>
+                        <Dropzone onFilesChanged={setFiles}></Dropzone>
                     </FormControl>
 
-                    <Button type="submit" variant="brand" onClick={onSubmit} isLoading={isSending}>
+                    <Button type="submit" variant="brand" onClick={onSubmit} isLoading={loading}>
                         Send
                     </Button>
                 </Flex>
