@@ -26,7 +26,6 @@ export const ApplicationForm: React.FC = () => {
             filename: file.name,
             type: file.type,
             disposition: 'attachment',
-            content_id: 'myId',
         }));
 
         const attachments = await Promise.all(attachmentsPromises);
