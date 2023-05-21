@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
                                 <Heading size="md">Forretningsforståelse</Heading>
                             </Flex>
-                            <Text textAlign="justify">
+                            <Text>
                                 Alle vores dygtige udviklere er partnere i Better Developers og har derfor en dyb forretningsforståelse. Det
                                 betyder i får mere end bare en udvikler til jeres team når i arbejder sammen med os, da jeres forretning
                                 altid vil være i centrum.
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                                 <Icon as={IoPeopleCircle} fontSize="5xl" />
                                 <Heading size="md">IT-Konsulenter</Heading>
                             </Flex>
-                            <Text textAlign="justify">
+                            <Text>
                                 Kvalitet og højt faglige kompetencer er garanteret når i arbejder sammen med os. Vores team af skarpe
                                 konsulenter er ekstremt talentfulde og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
                                 mål for hvert eneste linje kode vi levere til vores kunder.
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
 
                                 <Heading size="md">Samarbejdspartner</Heading>
                             </Flex>
-                            <Text textAlign="justify">
+                            <Text>
                                 Når i arbejder sammen med Better Developers får i samtidigt en samarbejdspartner der involverer sig aktivt i
                                 jeres forretning. Vi ved at der ligger flere tanker bagved de systemer i gerne vil have udviklet.
                                 Partnerskabsstrukturen gør det nemt for alle vores udviklere at dele deres tanker på en specifik opgave, så
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
 
                                 <Heading size="md">OpenAI API</Heading>
                             </Flex>
-                            <Text textAlign="justify">
+                            <Text>
                                 Kunstig intelligens er kommet for at blive og derfor har vi specialiseret os indenfor dette område. Vi
                                 hjælper vores kunder ved at styrke deres konkurrenceevne ved at udnytte potentialet af kunstig intelligens.
                                 Vi tilbyder ikke kun teknisk ekspertise, men også rådgivning om strategisk implementering af AI-løsninger,
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
                             clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
                         />
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={4} pt={36}>
+                    {/* <SectionItem colStart={2} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
                             <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
@@ -238,7 +238,7 @@ const Home: NextPage = () => {
                                 </CaseCardPreview>
                             </Grid>
                         </Stack>
-                    </SectionItem>
+                    </SectionItem> */}
                     <SectionItem colStart={2} colSpan={4} pt={12} pb={4}>
                         <Heading color="white">Det siger andre</Heading>
                     </SectionItem>

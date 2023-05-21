@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, GridItem, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { CaseCard } from '../../components/CaseCard/CaseCard';
@@ -19,8 +19,9 @@ const Cases: NextPage = () => {
                     forekommer ét match om dagen. Derfor var det vigtigt at skabe en platform der var meget interaktiv da det var med til at
                     holde brugerne engagerede i PWA&apos;en.
                     <br />
-                    <br />
                     <i>Projektet er et koncept udviklet i React med en .NET core backend.</i>
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
@@ -32,13 +33,10 @@ const Cases: NextPage = () => {
                 <Text textAlign="justify">
                     Mange institutioner har et behov for at kende befolkningstætheden eller personers bevægelse igennem en bygning. Ved
                     hjælp af wifi-signaler kunne folks bevægelser estimeres hvorefter der på frontend kunne skabes et heatmap af tæthederne.
-                    Projektet var derfor en kombination af hardware, software, embedded og web udvikling. Systemet var lavet således at tre
-                    Raspberry Pi&apos;s blev brugt til at triangulere WiFi transmissioner. Disse blev derefter omdannet til lokations data
-                    ved en knn-algoritme. Herefter blev de sendt til en backend der kunne levere data til en frontend, som i sidste ende
-                    viste brugeren et heatmap over befolkningstætheden.
-                    <br />
                     <br />
                     <i>Projektet er et koncept udviklet i Vue med en .NET core backend med RaspBerry Pi baserede wifi sniffers.</i>
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
@@ -59,24 +57,23 @@ const Cases: NextPage = () => {
                     Ved at kombinere agrofaglig viden med tilgængelig landbrugs og geodata, så var det muligt at skabe en web platform der
                     kunne hjælpe landmændende med at beregne mængden af næringsstoffer og vand. Dette har både en økonomisk og en mijømæssig
                     gevinst for landmændene og vores samfund.
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
-        {
-            image: PlaceholderCardImage,
-            title: 'Forsikringssystem',
-            content: <Text textAlign="justify"></Text>,
-        },
+        // {
+        //     image: PlaceholderCardImage,
+        //     title: 'Forsikringssystem',
+        //     content: <Text textAlign="justify"></Text>,
+        // },
         {
             image: PlaceholderCardImage,
             title: 'Web Assembly og SignalR gør det lettere at samarbejde om LaTeX dokumenter',
             content: (
                 <Text textAlign="justify">
                     Hvad der før i tiden skulle køres lokalt på enkelte maskiner, kan nu ved hjælp af Web Assembly og SignalR gøres i en
-                    webbrowser uden komplicerede installationer. Papyrus er et projekt der bringer de nyeste teknologier sammen i fin
-                    forening og skaber noget der er større end de enkelte dele. Ved at bringe selve dokument genereringen ud til klienterne,
-                    så kunne hastigheden øges med 900% ift. konkurenterne.
-                    <br />
+                    webbrowser uden komplicerede installationer.
                     <br />
                     <i>
                         Projektet er skrevet i React med en .NET core backend. Pga. projektets høje kompleksitet og lange levetid, så er
