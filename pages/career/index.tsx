@@ -1,7 +1,8 @@
 'use client';
-import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Card, Center, Flex, Heading, Icon, Link, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
+import { MdCheckCircle, MdSettings } from 'react-icons/md';
 import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
@@ -169,7 +170,7 @@ const Career: React.FC = () => {
 
                 <Section pt={24} pb={16}>
                     <SectionItem px={8} py={16} colStart={2} colSpan={2}>
-                        <Heading>
+                        <Heading size="2xl">
                             Hvorfor{' '}
                             <Box
                                 display="inline"
@@ -239,8 +240,31 @@ const Career: React.FC = () => {
                 </Section>
 
                 <Section pt={24} pb={16}>
-                    <SectionItem colStart={2} colSpan={2}>
-                        <Heading>Send ansøgning</Heading>
+                    <SectionItem colStart={2} colSpan={2} display="flex" flexDirection="column" gap={24}>
+                        <Heading size="2xl">Send ansøgning</Heading>
+
+                        <Flex marginLeft={4} direction="column" gap={4}>
+                            <Heading size="md">Ansøgningen må gerne indeholde</Heading>
+
+                            <List spacing={3} marginLeft={6}>
+                                <ListItem>
+                                    <ListIcon as={MdCheckCircle} color="green.500" />
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                                </ListItem>
+                                <ListItem>
+                                    <ListIcon as={MdCheckCircle} color="green.500" />
+                                    Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                                </ListItem>
+                                <ListItem>
+                                    <ListIcon as={MdCheckCircle} color="green.500" />
+                                    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                                </ListItem>
+                                <ListItem>
+                                    <ListIcon as={MdSettings} color="green.500" />
+                                    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                                </ListItem>
+                            </List>
+                        </Flex>
                     </SectionItem>
 
                     <SectionItem colStart={4} colSpan={2} display="flex" justifyContent="center">
