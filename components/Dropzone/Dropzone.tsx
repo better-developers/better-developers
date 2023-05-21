@@ -24,9 +24,9 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesChanged }) => {
     }));
 
     const text = useMemo(() => {
-        if (files.length) return files.map((file) => file.name).join(', ');
         if (isOver) return '👇 Yes, right here 👇';
         if (canDrop) return '👉 Drop it here 👈';
+        if (files.length) return files.map((file) => file.name).join(', ');
         return 'Drag & drop files or Browse';
     }, [files, canDrop, isOver]);
 
