@@ -74,7 +74,7 @@ const Businesses: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
+                <Flex height="700px" alignItems="end" position="relative">
                     <Section position="absolute" height="100%">
                         <SectionItem px={0} colSpan={6}>
                             <Box

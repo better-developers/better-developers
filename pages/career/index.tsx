@@ -18,7 +18,7 @@ const Career: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
+                <Flex height="700px" alignItems="end" position="relative">
                     <Section position="absolute" height="100%">
                         <SectionItem px={0} colSpan={6}>
                             <Box
@@ -281,19 +281,15 @@ const Career: React.FC = () => {
                             <List spacing={3} marginLeft={6}>
                                 <ListItem>
                                     <ListIcon as={MdCheckCircle} color="green.500" />
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                                    Beskrivelse af dig selv
                                 </ListItem>
                                 <ListItem>
                                     <ListIcon as={MdCheckCircle} color="green.500" />
-                                    Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                                    Relevante arbejdsinformationer
                                 </ListItem>
                                 <ListItem>
                                     <ListIcon as={MdCheckCircle} color="green.500" />
-                                    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-                                </ListItem>
-                                <ListItem>
-                                    <ListIcon as={MdSettings} color="green.500" />
-                                    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                                    CV
                                 </ListItem>
                             </List>
                         </Flex>

@@ -100,33 +100,33 @@ const Services: React.FC = () => {
                         <Text>
                             Vores kerne tjenester inden for softwareudvikling omfatter:
                             <br /> <br />
-                            <OrderedList textAlign="left" spacing={4}>
-                                <ListItem>
-                                    <b>Webudvikling</b>: Vi leverer skræddersyede webapplikationer og websites, der er optimeret til at
-                                    opfylde dine specifikke behov og levere en god brugeroplevelse.
-                                </ListItem>
-                                <ListItem>
-                                    <b>Mobilapp-udvikling</b>: Vi udvikler innovative og brugervenlige mobilapplikationer til både iOS og
-                                    Android-platforme, der hjælper dig med at nå ud til din målgruppe og skabe værdi.
-                                </ListItem>
-
-                                <ListItem>
-                                    <b>AI-integrationer</b>: Vi har ekspertise i at integrere kunstig intelligens (AI) i dine eksisterende
-                                    systemer eller udvikle nye AI-baserede løsninger. Dette omfatter chatbots, maskinlæringsalgoritmer,
-                                    billedgenkendelse, naturlig sprogbehandling og meget mere.
-                                </ListItem>
-                                <ListItem>
-                                    <b>Cloud-løsninger</b>: Vi hjælper med at migrere dine applikationer og data til sikre og skalerbare
-                                    cloud-platforme som f.eks. Amazon Web Services (AWS) eller Microsoft Azure, hvilket giver dig
-                                    fleksibilitet og mulighed for at udnytte fordelene ved skyen.
-                                </ListItem>
-                                <ListItem>
-                                    <b>Softwarevedligeholdelse og support</b>: Vi tilbyder vedligeholdelse og support af din eksisterende
-                                    softwareapplikation, herunder fejlrettelser, ydeevneoptimering og opdateringer for at sikre, at den
-                                    forbliver stabil og opdateret over tid.
-                                </ListItem>
-                            </OrderedList>
                         </Text>
+                        <OrderedList textAlign="left" spacing={4}>
+                            <ListItem>
+                                <b>Webudvikling</b>: Vi leverer skræddersyede webapplikationer og websites, der er optimeret til at opfylde
+                                dine specifikke behov og levere en god brugeroplevelse.
+                            </ListItem>
+                            <ListItem>
+                                <b>Mobilapp-udvikling</b>: Vi udvikler innovative og brugervenlige mobilapplikationer til både iOS og
+                                Android-platforme, der hjælper dig med at nå ud til din målgruppe og skabe værdi.
+                            </ListItem>
+
+                            <ListItem>
+                                <b>AI-integrationer</b>: Vi har ekspertise i at integrere kunstig intelligens (AI) i dine eksisterende
+                                systemer eller udvikle nye AI-baserede løsninger. Dette omfatter chatbots, maskinlæringsalgoritmer,
+                                billedgenkendelse, naturlig sprogbehandling og meget mere.
+                            </ListItem>
+                            <ListItem>
+                                <b>Cloud-løsninger</b>: Vi hjælper med at migrere dine applikationer og data til sikre og skalerbare
+                                cloud-platforme som f.eks. Amazon Web Services (AWS) eller Microsoft Azure, hvilket giver dig fleksibilitet
+                                og mulighed for at udnytte fordelene ved skyen.
+                            </ListItem>
+                            <ListItem>
+                                <b>Softwarevedligeholdelse og support</b>: Vi tilbyder vedligeholdelse og support af din eksisterende
+                                softwareapplikation, herunder fejlrettelser, ydeevneoptimering og opdateringer for at sikre, at den
+                                forbliver stabil og opdateret over tid.
+                            </ListItem>
+                        </OrderedList>
                     </SectionItem>
                 </Section>
 
@@ -139,39 +139,40 @@ const Services: React.FC = () => {
                                 vores kunder. Vi ser os selv som en forlængelse af jeres team og arbejder sammen med jer for at sikre, at
                                 projektet opfylder jeres forventninger og forretningsmål. Her er nogle af de måder, vi samarbejder med jer
                                 som en troværdig partner:
-                                <OrderedList>
-                                    <ListItem>
-                                        Behovsanalyse og kravafklaring: Vi starter med en grundig behovsanalyse, hvor vi lytter til jeres
-                                        mål, forretningsprocesser og krav. Vi arbejder sammen med jer for at definere klare og specifikke
-                                        krav til projektet, så vi har en fælles forståelse af jeres behov og mål.
-                                    </ListItem>
-                                    <ListItem>
-                                        Tæt kommunikation og regelmæssig rapportering: Vi prioriterer åben kommunikation og regelmæssig
-                                        rapportering for at holde jer opdaterede på projektets fremskridt. Vi arrangerer møder,
-                                        fremskridtsrapporter og feedback-sessioner, hvor vi sikrer, at vi er på samme side, og eventuelle
-                                        ændringer eller tilpasninger kan diskuteres og implementeres effektivt.
-                                    </ListItem>
-                                    <ListItem>
-                                        Iterativ udviklingsproces: Vi følger en iterativ udviklingsproces, der giver mulighed for hyppige
-                                        feedback-loops. Dette giver jer mulighed for at give input undervejs og sikrer, at projektet
-                                        udvikler sig i den rigtige retning. Vi vægter jeres input og tilpasser vores tilgang og løsninger
-                                        for at imødekomme jeres behov.
-                                    </ListItem>
-                                    <ListItem>
-                                        Fleksibilitet og tilpasningsevne: Vi er fleksible og tilpasningsdygtige i vores tilgang til at
-                                        arbejde med jer som samarbejdspartner. Vi forstår, at behov og krav kan ændre sig undervejs, og vi
-                                        er parate til at tilpasse os og levere de nødvendige ændringer eller tilføjelser til projektet.
-                                    </ListItem>
-                                    <ListItem>
-                                        Langsigtet support: Vores partnerskab stopper ikke, når projektet er afsluttet. Vi tilbyder
-                                        langsigtet support og vedligeholdelse af den udviklede software. Vi er der for at hjælpe med
-                                        eventuelle spørgsmål, fejlrettelser eller ydeevneoptimeringer og sikre, at jeres software fungerer
-                                        optimalt over tid. Ved at arbejde som en samarbejdspartner er vores mål at opbygge et tillidsfuldt
-                                        forhold, hvor vi forstår jeres behov, lytter til jeres ønsker og leverer skræddersyede løsninger,
-                                        der hjælper jer med at opnå succes. Vi stræber efter at være en pålidelig og langsigtet partner, der
-                                        er dedikeret til jeres succes og vækst.
-                                    </ListItem>
-                                </OrderedList>
+                            </Text>
+                            <OrderedList color="white" spacing={4}>
+                                <ListItem>
+                                    Behovsanalyse og kravafklaring: Vi starter med en grundig behovsanalyse, hvor vi lytter til jeres mål,
+                                    forretningsprocesser og krav. Vi arbejder sammen med jer for at definere klare og specifikke krav til
+                                    projektet, så vi har en fælles forståelse af jeres behov og mål.
+                                </ListItem>
+                                <ListItem>
+                                    Tæt kommunikation og regelmæssig rapportering: Vi prioriterer åben kommunikation og regelmæssig
+                                    rapportering for at holde jer opdaterede på projektets fremskridt. Vi arrangerer møder,
+                                    fremskridtsrapporter og feedback-sessioner, hvor vi sikrer, at vi er på samme side, og eventuelle
+                                    ændringer eller tilpasninger kan diskuteres og implementeres effektivt.
+                                </ListItem>
+                                <ListItem>
+                                    Iterativ udviklingsproces: Vi følger en iterativ udviklingsproces, der giver mulighed for hyppige
+                                    feedback-loops. Dette giver jer mulighed for at give input undervejs og sikrer, at projektet udvikler
+                                    sig i den rigtige retning. Vi vægter jeres input og tilpasser vores tilgang og løsninger for at
+                                    imødekomme jeres behov.
+                                </ListItem>
+                                <ListItem>
+                                    Fleksibilitet og tilpasningsevne: Vi er fleksible og tilpasningsdygtige i vores tilgang til at arbejde
+                                    med jer som samarbejdspartner. Vi forstår, at behov og krav kan ændre sig undervejs, og vi er parate til
+                                    at tilpasse os og levere de nødvendige ændringer eller tilføjelser til projektet.
+                                </ListItem>
+                                <ListItem>
+                                    Langsigtet support: Vores partnerskab stopper ikke, når projektet er afsluttet. Vi tilbyder langsigtet
+                                    support og vedligeholdelse af den udviklede software. Vi er der for at hjælpe med eventuelle spørgsmål,
+                                    fejlrettelser eller ydeevneoptimeringer og sikre, at jeres software fungerer optimalt over tid. Ved at
+                                    arbejde som en samarbejdspartner er vores mål at opbygge et tillidsfuldt forhold, hvor vi forstår jeres
+                                    behov, lytter til jeres ønsker og leverer skræddersyede løsninger, der hjælper jer med at opnå succes.
+                                    Vi stræber efter at være en pålidelig og langsigtet partner, der er dedikeret til jeres succes og vækst.
+                                </ListItem>
+                            </OrderedList>
+                            <Text>
                                 <br />
                                 <Link color="white">Se processen</Link>
                                 <br />
@@ -181,18 +182,14 @@ const Services: React.FC = () => {
                     </SectionItem>
                     <SectionItem colSpan={2}>
                         <Center h="100%">
-                            <Box w="70%">
-                                <Image src={HeroComp} alt="Computer image" />
-                            </Box>
+                            <Box w="70%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
                         </Center>
                     </SectionItem>
                 </Section>
                 <Section py={32} id="consultants">
                     <SectionItem colStart={2} colSpan={2}>
                         <Center h="100%">
-                            <Box w="70%">
-                                <Image src={HeroComp} alt="Computer image" />
-                            </Box>
+                            <Box w="70%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
                         </Center>
                     </SectionItem>
                     <SectionItem colSpan={2}>

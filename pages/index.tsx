@@ -244,37 +244,37 @@ const Home: NextPage = () => {
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={1}>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Hans Nikolajsen"
+                            title="Direktør"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Better Developers har på kort tid imponeret os med deres tekniske ekspertise. Deres skræddersyede softwareløsninger har transformeret vores forretning og leveres altid til tiden. Vi anbefaler dem varmt til andre virksomheder.                                '
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Mark Henriksen"
+                            title="IT-Udvikler"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Vi er begejstrede for resultatet af vores samarbejde med Better Developers. Deres evne til at forstå vores behov og levere brugervenlige softwareløsninger er imponerende. Deres innovative tilgang og brug af avancerede teknologier som OpenAI API har været afgørende for vores succes. Vi ser frem til at fortsætte samarbejdet og udvikle endnu mere banebrydende løsninger sammen.                               '
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Hanne Ulrichsen"
+                            title="Lead Developer"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Vi er virkelig imponerede over Better Developers indsats. Deres talentfulde konsulenter har leveret softwareløsninger, der har øget vores produktivitet og konkurrenceevne. Vi er utroligt tilfredse med deres indsats og anbefaler dem uden tøven.'
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Martin Tranbjerg"
+                            title="Direktør"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Utroligt dygtige udviklere der kan deres tech-stacks og er hurtige til at forstå vores kode og forretning. Vi vil klart fortsætte vores samarbejde med dem.'
                             }
                         />
                     </SectionItem>
