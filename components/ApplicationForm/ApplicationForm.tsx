@@ -28,7 +28,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { 
         const attachmentsPromises = files.map<Promise<Attachment>>(async (file) => ({
             content: await toBase64(file),
             filename: file.name,
-            type: file.type,
+            type: file.type || 'plain/text',
             disposition: 'attachment',
         }));
 

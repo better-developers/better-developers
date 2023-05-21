@@ -24,10 +24,11 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesChanged }) => {
     }));
 
     const text = useMemo(() => {
+        if (files.length) return files.map((file) => file.name).join(', ');
         if (isOver) return '👇 Yes, right here 👇';
         if (canDrop) return '👉 Drop it here 👈';
         return 'Drag & drop files or Browse';
-    }, [canDrop, isOver]);
+    }, [files, canDrop, isOver]);
 
     const animationState = canDrop ? 'running' : 'paused';
     const borderBg = `
