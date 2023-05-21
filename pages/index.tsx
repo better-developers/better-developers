@@ -16,7 +16,7 @@ import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { NavBarContext } from '../contexts/NavBarContext';
 import HeroComp from '../public/hero-comp.png';
-import logoWireframe from '../public/logo-wireframe.png';
+import logoWireframe from '../public/logo-wireframe.svg';
 import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
 import SegesLogo from '../public/logos/seges.png';
@@ -177,8 +177,10 @@ const Home: NextPage = () => {
                         </Flex>
                     </SectionItem>
                     <SectionItem colStart={4} colSpan={2}>
-                        <Center>
-                            <Image src={logoWireframe} alt="Logo wireframe" />
+                        <Center h="100%">
+                            <Box w="70%">
+                                <Image src={logoWireframe} alt="Logo wireframe" />
+                            </Box>
                         </Center>
                     </SectionItem>
                 </Section>
