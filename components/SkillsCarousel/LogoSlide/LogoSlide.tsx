@@ -1,9 +1,6 @@
-﻿import { IconButton, Tooltip } from '@mui/material';
+﻿import { IconButton, Tooltip } from '@chakra-ui/react';
 import Image from 'next/image';
-import AngularIcon from '../../../public/logos/angular.svg';
 import { FC } from 'react';
-import styles from './LogoSlide.module.scss';
-import { SwiperSlide } from 'swiper/react';
 
 type LogoSlideProps = {
     src: string;
@@ -12,8 +9,8 @@ type LogoSlideProps = {
 
 export const LogoSlide: FC<LogoSlideProps> = ({ tooltip, src }) => (
     <Tooltip title={tooltip}>
-        <IconButton color="secondary">
-            <Image src={src} />
+        <IconButton aria-label="" color="secondary">
+            <Image src={src} alt="" />
         </IconButton>
     </Tooltip>
 );

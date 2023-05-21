@@ -1,8 +1,6 @@
-﻿import styles from './LineDivider.module.scss';
-import React, { FC } from 'react';
+﻿import React, { FC } from 'react';
+import styles from './LineDivider.module.scss';
 
 interface LineDividerProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const LineDivider: FC<LineDividerProps> = (props) => (
-    <div {...props} className={styles.divider}></div>
-);
+export const LineDivider: FC<LineDividerProps> = (props) => <div {...props} className={styles.divider}></div>;

@@ -1,5 +1,5 @@
-﻿import styles from './WaveDivider.module.scss';
-import React, { FC } from 'react';
+﻿import React, { FC } from 'react';
+import styles from './WaveDivider.module.scss';
 
 interface WaveDividerProps extends React.HTMLAttributes<HTMLDivElement> {}
 

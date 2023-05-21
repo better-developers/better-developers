@@ -1,5 +1,4 @@
-@import "theme";
-@import "fonts";
+@import 'fonts';
 
 html {
     scroll-behavior: smooth;
@@ -7,48 +6,21 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: $color-background;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: $font-family;
     line-height: 2;
 }
 
-p, h1, h2, h3, h4 {
-    color: $color-white;
+a {
+    text-decoration: none;
 }
 
-h1 {
-    font-size: $font-size-h1;
-    font-weight: $font-weight-semibold;
-    text-align: center;
-    
-    @media only screen
-    and (max-device-width: 736px)
-    and (orientation: portrait) {
-        font-size: $font-size-h1-mobile;
-    }
-}
-
-h2 {
-    font-size: $font-size-h2;
-    text-align: left;
-    @media only screen
-    and (max-device-width: 736px)
-    and (orientation: portrait) {
-        font-size: $font-size-h2-mobile;
-    }
-}
-
-h3 {
-    font-size: $font-size-h3;
-    text-align: left;
-    @media only screen
-    and (max-device-width: 736px)
-    and (orientation: portrait) {
-        font-size: $font-size-h3-mobile;
-    }
+#gradient-canvas {
+    --gradient-color-1: #6ec3f4;
+    --gradient-color-2: #3a3aff;
+    --gradient-color-3: #ff61ab;
+    --gradient-color-4: #e63946;
 }

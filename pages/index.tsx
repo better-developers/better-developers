@@ -1,267 +1,304 @@
+'use client';
+import { Box, Button, Center, Flex, Grid, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import styles from '../styles/home.module.scss';
-import { SectionContent } from '../components/SectionContent/SectionContent';
-import { SkillsCarousel } from '../components/SkillsCarousel/SkillsCarousel';
-import { WaveDivider } from '../components/WaveDivider/WaveDivider';
-import { blue } from '@mui/material/colors';
 import Image from 'next/image';
-import FutureImage from 'next/future/image';
-import { LineDivider } from '../components/LineDivider/LineDivider';
-import Link from 'next/link';
-import { Button, IconButton } from '@mui/material';
-import WireframeLogo from '../public/bd-wireframe.svg';
-import { UilAngleDoubleDown } from '@iconscout/react-unicons';
-import WebBrowserGraphic from '../public/web_browser.svg';
-import ConsultantGraphic from '../public/consultant.svg';
-import DatingAppMockup from '../public/dating-app.svg';
-import PapyrusSystem from '../public/papyrus.png';
-import { Box, Stack } from '@mui/system';
-import { ContactSection } from '../components/ContactSection/ContactSection';
-import VisualElementOne from '../public/assets/asset-1.svg';
-import VisualElementTwo from '../public/assets/asset-3.svg';
-import VisualElementThree from '../public/assets/asset-7.svg';
-import VisualElementFour from '../public/assets/asset-12.svg';
-import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useContext, useEffect } from 'react';
+import { BsFillRocketTakeoffFill } from 'react-icons/bs';
+import { HiChatBubbleLeftRight } from 'react-icons/hi2';
+import { IoPeopleCircle } from 'react-icons/io5';
+import { VscSymbolMisc } from 'react-icons/vsc';
+import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
+import { ContactButton } from '../components/ContactButton/ContactButton';
+import { ContactCard } from '../components/ContactCard/ContactCard';
+import FAQ from '../components/FAQ/FAQ';
+import { Gradient } from '../components/Gradient/Gradient';
+import { Section } from '../components/Section/Section';
+import { SectionItem } from '../components/SectionItem/SectionItem';
+import { NavBarContext } from '../contexts/NavBarContext';
+import HeroComp from '../public/hero-comp.png';
+import logoWireframe from '../public/logo-wireframe.svg';
+import DigisenseLogo from '../public/logos/digisense.png';
+import MicrotechLogo from '../public/logos/microtech.jpg';
+import SegesLogo from '../public/logos/seges.png';
+import dynamic from 'next/dynamic';
 
-const useParallax = (value: MotionValue<number>, distance: number) => {
-    return useTransform(value, [0, 1], [-distance, distance]);
-};
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const Home: NextPage = () => {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y1 = useParallax(scrollYProgress, 300);
-    const y2 = useParallax(scrollYProgress, 400);
-    const y3 = useParallax(scrollYProgress, 200);
+    const [_context, setContext] = useContext(NavBarContext);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => setContext('light'), []);
 
     return (
-        <div ref={ref}>
-            <video className={styles.bannerVideo} src="/video/jellyfish.mp4" loop autoPlay muted />
+        <>
+            <Flex flexDir="column">
+                <Flex height="650px" alignItems="end" position="relative">
+                    <Box
+                        width="100%"
+                        height="100%"
+                        position="absolute"
+                        zIndex="-1"
+                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
+                        <Gradient />
+                    </Box>
 
-            <motion.div className={styles.visualElementContainer} style={{ y: y1 }}>
-                <FutureImage src={VisualElementOne} className={styles.visualElementOne} />
-            </motion.div>
-            <motion.div className={styles.visualElementContainer} style={{ y: y2 }}>
-                <FutureImage src={VisualElementTwo} className={styles.visualElementTwo} />
-            </motion.div>
-            <motion.div className={styles.visualElementContainer} style={{ y: y3 }}>
-                <FutureImage src={VisualElementThree} className={styles.visualElementThree} />
-            </motion.div>
-            <motion.div className={styles.visualElementContainer} style={{ y: y3 }}>
-                <FutureImage src={VisualElementFour} className={styles.visualElementFour} />
-            </motion.div>
+                    <Section>
+                        <SectionItem colStart={2} colEnd={4} mb={24}>
+                            <Stack gap={8}>
+                                <Flex flexDir="column">
+                                    <Heading fontSize="4em" fontWeight="400" mixBlendMode="overlay" color="black">
+                                        Et konsulenthus af
+                                    </Heading>
+                                    <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">
+                                        udviklere.
+                                    </Heading>
+                                </Flex>
 
-            <section
-                className={styles.bannerSection}
-                style={{
-                    minHeight: '100vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                }}>
-                <section className={styles.bannerSection} style={{ height: '500px' }}>
-                    <SectionContent className={styles.mainSection}>
-                        <h1>Fra idé til forretningsværdi</h1>
-                        <p>
-                            Vi hjælper med at omdanne idéer til konkrete professionelle
-                            IT-projekter, der skaber <b>værdi</b> for jer.
-                        </p>
-                    </SectionContent>
-                </section>
+                                <Text lineHeight="1.5" color="black">
+                                    Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redifinerer det traditionelle
+                                    it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur til hvordan
+                                    vi arbejder med vores kunder.
+                                </Text>
 
-                <section className={styles.bannerSection}>
-                    <SectionContent>
-                        <h3>Hvad kan vi?</h3>
-                        <p>
-                            Vi har kompetencer inden for et bredt udvalg af teknologier, frameworks
-                            og sprog - primært inden for web.
-                        </p>
-                        <SkillsCarousel />
-                    </SectionContent>
-                </section>
+                                <Button variant="brand" w="fit-content">
+                                    Kontakt os
+                                </Button>
+                            </Stack>
+                        </SectionItem>
+                        <SectionItem colStart={4} colEnd={6}>
+                            <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
+                                <ReactPlayer
+                                    url="https://vimeo.com/828777583"
+                                    controls
+                                    width="80%"
+                                    style={{
+                                        filter: 'drop-shadow(5px 5px 10px #666)',
+                                    }}
+                                />
+                            </Stack>
+                        </SectionItem>
+                    </Section>
+                </Flex>
 
-                <Box textAlign={'center'}>
-                    <IconButton href={'#who-are-we'}>
-                        <UilAngleDoubleDown color={'white'} size={80} />
-                    </IconButton>
-                </Box>
-            </section>
-            <section className={styles.section} id="who-are-we">
-                <LineDivider />
-                <SectionContent>
-                    <div className={styles.splitBox}>
-                        <div className={styles.image}>
-                            <Image src={WireframeLogo} height={200} />
-                        </div>
-                        <span className={styles.text}>
-                            <h2>
-                                {'Vi er '}
-                                <span className={styles.highlightBetterDevelopers}>
-                                    Better Developers.
-                                </span>
-                            </h2>
-                            <p>
-                                <span>
-                                    Better Developers består af dygtige og specialiserede
-                                    softwareudviklere med fokus på web. Derudover har vi kontakt til
-                                    et stort netværk af freelance konsulenter, som vi kan trække på,
-                                    alt efter hvad opgaven kræver.
-                                </span>
-                            </p>
-                        </span>
-                    </div>
-                </SectionContent>
-            </section>
-            <section className={styles.section}>
-                <LineDivider />
-                <SectionContent>
-                    <h2>Services</h2>
-                    <div className={styles.splitBox}>
-                        <span className={styles.text}>
-                            <h3>End-to-End Projekter</h3>
-                            <p>
-                                <span>
-                                    Går du med et projekt i tankerne? En idé der kan skabe værdi for
-                                    din virsomhed? Så lad os hjælpe dig med at tage den idé og føre
-                                    den ud i vireligheden. Vi har mange års erfaring med
-                                    produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den
-                                    gode dialog og åbenhed.
-                                </span>
-                            </p>
-                        </span>
-                        <div className={styles.image}>
-                            <Image src={WebBrowserGraphic} />
-                        </div>
-                    </div>
-                    <div className={styles.splitBoxReverse}>
-                        <div className={styles.image}>
-                            <Image src={ConsultantGraphic} height={300} width={300} />
-                        </div>
-                        <span className={styles.text}>
-                            <h3>Konsulenter</h3>
-                            <p>
-                                <span>
-                                    Vi har et hold af skarpe konsulenter der står klar til at hjælpe
-                                    med lige netop jeres opgaver. En vigtig del af vores opgave er
-                                    at fnde lige netop den kandidat der passer bedst til jeres
-                                    virksomhed.
-                                </span>
-                            </p>
-                        </span>
-                    </div>
-                    <div className={styles.splitBox}>
-                        <div className={styles.image}></div>
-                        <span className={styles.text}>
-                            <h3>Rådgivning</h3>
-                            <p>
-                                <span>
-                                    Vi har meget erfaring med de nyeste teknologier indenfor WEB og
-                                    vi deler meget gerne ud af viden.
-                                </span>
-                            </p>
-                        </span>
-                    </div>
-                </SectionContent>
-            </section>
-            <section className={styles.section}>
-                <LineDivider />
-                <SectionContent>
-                    <h2>Cases</h2>
-                    <div className={styles.splitBox}>
-                        <div className={styles.image}>
-                            <Image className={styles.imageHover} src={PapyrusSystem} />
-                        </div>
-                        <span className={styles.text}>
-                            <h3>
-                                Web Assembly og SignalR gør det lettere at samarbejde om LaTeX
-                                dokumenter
-                            </h3>
-                            <p>
-                                <span>
-                                    Hvad der før i tiden skulle køres lokalt på enkelte maskiner,
-                                    kan nu ved hjælp af Web Assembly og SignalR gøres i en
-                                    webbrowser uden komplicerede installationer. Papyrus er et
-                                    projekt der bringer de nyeste teknologier sammen i fin forening
-                                    og skaber noget der er større end de enkelte dele. Ved at bringe
-                                    selve dokument genereringen ud til klienterne, så kunne
-                                    hastigheden øges med 900% ift. konkurenterne. Dette forbedrede
-                                    brugeroplevelsen og dermed produktiviteten for brugerne af
-                                    Papyrus.
-                                </span>
-                                <br />
-                                <br />
-                                <i>
-                                    Projektet er skrevet i React med en .NET core backend. Pga.
-                                    projektets høje kompleksitet og lange levetid, så er backenden
-                                    baseret på en onion arkitektur med mediator pattern for at følge
-                                    SOLID og clean code principperne.
-                                </i>
-                            </p>
-                        </span>
-                    </div>
-                    <div className={styles.splitBoxReverse}>
-                        <div className={styles.image}>
-                            <Image
-                                className={styles.imageHover}
-                                src={DatingAppMockup}
-                                height={500}
-                            />
-                        </div>
-                        <span className={styles.text}>
-                            <h3>Interaktiv frontend skaber højere engagement på dating PWA</h3>
-                            <p>
-                                <span>
-                                    Markedet er mættet med dating apps, derfor er det vigtigt at
-                                    skille sig ud. Konceptet bag denne dating app er at der kun
-                                    forekommer ét match om dagen. Derfor var det vigtigt at skabe en
-                                    platform der var meget interaktiv da det var med til at holde
-                                    brugerne engagerede i PWA’en.
-                                </span>
-                                <br />
-                                <br />
-                                <i>
-                                    Projektet er et koncept udviklet i React med en .NET core
-                                    backend.
-                                </i>
-                            </p>
-                        </span>
-                    </div>
-                    <div className={styles.splitBox}>
-                        <div className={styles.image}></div>
-                        <span className={styles.text}>
-                            <h3>
-                                Triangulering af offentlige wifi-signaler skaber heatmap af
-                                befolkningstæthed
-                            </h3>
-                            <p>
-                                <span>
-                                    {`Mange institutioner har et behov for at kende
-                                        befolkningstætheden eller personers bevægelse igennem en
-                                        bygning. Ved hjælp af wifi-signaler kunne folks bevægelser
-                                        estimeres hvorefter der på frontend kunne skabes et heatmap af
-                                        tæthederne. Projektet var derfor en kombination af hardware,
-                                        software, embedded og web udvikling. Systemet var lavet således
-                                        at tre Raspberry Pi's blev brugt til at triangulere WiFi
-                                        transmissioner. Disse blev derefter omdannet til lokations data
-                                        ved en knn-algoritme. Herefter blev de sendt til en backend der
-                                        kunne levere data til en frontend, som i sidste ende viste
-                                        brugeren et heatmap over befolkningstætheden.`}
-                                </span>
-                                <br />
-                                <br />
-                                <i>
-                                    Projektet er et koncept udviklet i Vue med en .NET core backend
-                                    med RaspBerry Pi baserede wifi sniffers.
-                                </i>
-                            </p>
-                        </span>
-                    </div>
-                </SectionContent>
-            </section>
+                <Section pt={24} pb={16}>
+                    <SectionItem px={8} colStart={2} colSpan={1}>
+                        <Flex flexDir="column" gap="1em" flex="1">
+                            <Flex gap={2} alignItems="center">
+                                <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
+                                <Heading size="md">Forretningsforståelse</Heading>
+                            </Flex>
+                            <Text>
+                                Alle vores dygtige udviklere er partnere i Better Developers og har derfor en dyb forretningsforståelse. Det
+                                betyder i får mere end bare en udvikler til jeres team når i arbejder sammen med os, da jeres forretning
+                                altid vil være i centrum.
+                            </Text>
+                        </Flex>
+                    </SectionItem>
 
-            <ContactSection />
-        </div>
+                    <SectionItem px={8}>
+                        <Flex flexDir="column" gap="1em" flex="1">
+                            <Flex gap={2} alignItems="center">
+                                <Icon as={IoPeopleCircle} fontSize="5xl" />
+                                <Heading size="md">IT-Konsulenter</Heading>
+                            </Flex>
+                            <Text>
+                                Kvalitet og højt faglige kompetencer er garanteret når i arbejder sammen med os. Vores team af skarpe
+                                konsulenter er ekstremt talentfulde og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
+                                mål for hvert eneste linje kode vi levere til vores kunder.
+                            </Text>
+                        </Flex>
+                    </SectionItem>
+
+                    <SectionItem px={8}>
+                        <Flex flexDir="column" gap="1em" flex="1">
+                            <Flex gap={2} alignItems="center">
+                                <Icon as={HiChatBubbleLeftRight} fontSize="5xl" />
+
+                                <Heading size="md">Samarbejdspartner</Heading>
+                            </Flex>
+                            <Text>
+                                Når i arbejder sammen med Better Developers får i samtidigt en samarbejdspartner der involverer sig aktivt i
+                                jeres forretning. Vi ved at der ligger flere tanker bagved de systemer i gerne vil have udviklet.
+                                Partnerskabsstrukturen gør det nemt for alle vores udviklere at dele deres tanker på en specifik opgave, så
+                                i får den bedst mulige rådgivning hver gang.
+                            </Text>
+                        </Flex>
+                    </SectionItem>
+
+                    <SectionItem px={8}>
+                        <Flex flexDir="column" gap="1em" flex="1">
+                            <Flex gap={2} alignItems="center">
+                                <Icon as={VscSymbolMisc} fontSize="5xl" />
+
+                                <Heading size="md">OpenAI API</Heading>
+                            </Flex>
+                            <Text>
+                                Kunstig intelligens er kommet for at blive og derfor har vi specialiseret os indenfor dette område. Vi
+                                hjælper vores kunder ved at styrke deres konkurrenceevne ved at udnytte potentialet af kunstig intelligens.
+                                Vi tilbyder ikke kun teknisk ekspertise, men også rådgivning om strategisk implementering af AI-løsninger,
+                                dataprivatlivets betydning og overholdelse af gældende lovgivning.
+                            </Text>
+                        </Flex>
+                    </SectionItem>
+                </Section>
+
+                <Section py={24}>
+                    <SectionItem colStart={2} colSpan={2}>
+                        <Flex flexDir="column" gap="4">
+                            <Heading>Derfor skal du arbejde sammen med os.</Heading>
+                            <Text>
+                                Better Developers: Din pålidelige samarbejdspartner indenfor softwareudvikling og IT-konsulentydelser. Vi
+                                kombinerer vores dygtige IT-konsulenter, forretningsforståelse og ekspertise inden for b.la. OpenAI API for
+                                at levere skræddersyede løsninger til jeres behov.
+                                <br />
+                                <br />
+                                Vores team af erfarne udviklere forstår, at teknisk ekspertise alene ikke er nok. Vi fokuserer på at forstå
+                                dine forretningsmål og udfordringer for at skabe software, der driver jeres virksomhed fremad. Vi tilbyder
+                                dygtige IT-konsulenter med omfattende erfaring inden for forskellige teknologier og brancher. Uanset om i
+                                har brug for udvikling af en webapplikation, en mobilapp eller en skræddersyet softwareløsning, kan vi
+                                levere kvalitetskode og innovative løsninger.
+                                <br />
+                                <br />
+                                Som jeres samarbejdspartner prioriterer vi transparent kommunikation, rettidig levering og et agilt
+                                samarbejde. Vi ser os selv som en del af dit team og arbejder tæt sammen med dig for at sikre succesfulde
+                                resultater. Vores ekspertise inden for b.la. OpenAI API gør os i stand til at integrere avancerede kunstig
+                                intelligens-funktioner i jeres applikationer, såsom naturlig sprogbehandling og automatiseret dataanalyse.
+                                <br />
+                                <br />
+                                Arbejd sammen med Better Developers, og oplev fordelene ved at have en pålidelig partner, der forstår dine
+                                forretningsmål, leverer dygtige IT-konsulenter og udnytter de nyeste teknologier som OpenAI API. Lad os
+                                hjælpe dig med at skabe innovative og effektive softwareløsninger, der giver din virksomhed en
+                                konkurrencemæssig fordel.
+                                <br />
+                                <br />
+                                <Link href="/services">Se vores services her</Link>
+                            </Text>
+                        </Flex>
+                    </SectionItem>
+                    <SectionItem colStart={4} colSpan={2}>
+                        <Center h="100%">
+                            <Box w="70%">
+                                <Image src={logoWireframe} alt="Logo wireframe" />
+                            </Box>
+                        </Center>
+                    </SectionItem>
+                </Section>
+
+                <Section position="relative" py={16}>
+                    <SectionItem px={0} colSpan={6} position="absolute" h="100%" w="100%">
+                        <Box
+                            bgColor="#303D4D"
+                            backgroundSize="cover"
+                            width="100%"
+                            height="100%"
+                            position="absolute"
+                            clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
+                        />
+                    </SectionItem>
+                    {/* <SectionItem colStart={2} colSpan={4} pt={36}>
+                        <Stack>
+                            <Heading color="white">Cases</Heading>
+                            <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
+                                <CaseCardPreview title="Seges Innovation" image={SegesLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
+                                <CaseCardPreview title="Digisense A/S" image={DigisenseLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
+                                <CaseCardPreview title="Microtech A/S" image={MicrotechLogo}>
+                                    <Text color="white">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id
+                                        fermentum risus pretium. Phasellus in ligula non.
+                                        <br />
+                                        <br />
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta.
+                                        <br />
+                                        <br />
+                                        <Link fontWeight={700}>Læs mere...</Link>
+                                    </Text>
+                                </CaseCardPreview>
+                            </Grid>
+                        </Stack>
+                    </SectionItem> */}
+                    <SectionItem colStart={2} colSpan={4} pt={12} pb={4}>
+                        <Heading color="white">Det siger andre</Heading>
+                    </SectionItem>
+                    <SectionItem colStart={2} colSpan={1}>
+                        <ContactCard
+                            name="Hans Nikolajsen"
+                            title="Direktør"
+                            quote={
+                                'Better Developers har på kort tid imponeret os med deres tekniske ekspertise. Deres skræddersyede softwareløsninger har transformeret vores forretning og leveres altid til tiden. Vi anbefaler dem varmt til andre virksomheder.                                '
+                            }
+                        />
+                    </SectionItem>
+                    <SectionItem>
+                        <ContactCard
+                            name="Mark Henriksen"
+                            title="IT-Udvikler"
+                            quote={
+                                'Vi er begejstrede for resultatet af vores samarbejde med Better Developers. Deres evne til at forstå vores behov og levere brugervenlige softwareløsninger er imponerende. Deres innovative tilgang og brug af avancerede teknologier som OpenAI API har været afgørende for vores succes. Vi ser frem til at fortsætte samarbejdet og udvikle endnu mere banebrydende løsninger sammen.                               '
+                            }
+                        />
+                    </SectionItem>
+                    <SectionItem>
+                        <ContactCard
+                            name="Hanne Ulrichsen"
+                            title="Lead Developer"
+                            quote={
+                                'Vi er virkelig imponerede over Better Developers indsats. Deres talentfulde konsulenter har leveret softwareløsninger, der har øget vores produktivitet og konkurrenceevne. Vi er utroligt tilfredse med deres indsats og anbefaler dem uden tøven.'
+                            }
+                        />
+                    </SectionItem>
+                    <SectionItem>
+                        <ContactCard
+                            name="Martin Tranbjerg"
+                            title="Direktør"
+                            quote={
+                                'Utroligt dygtige udviklere der kan deres tech-stacks og er hurtige til at forstå vores kode og forretning. Vi vil klart fortsætte vores samarbejde med dem.'
+                            }
+                        />
+                    </SectionItem>
+                </Section>
+
+                <Section py={48}>
+                    <SectionItem colStart={3} colEnd={5}>
+                        <FAQ />
+                    </SectionItem>
+                </Section>
+                <Section py={12}>
+                    <SectionItem colStart={3} colSpan={2} py={4}>
+                        <Heading textAlign="center">
+                            Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
+                        </Heading>
+                    </SectionItem>
+                    <SectionItem colStart={3} colSpan={2} py={4}>
+                        <Center>
+                            <ContactButton></ContactButton>
+                        </Center>
+                    </SectionItem>
+                </Section>
+            </Flex>
+        </>
     );
 };
 
