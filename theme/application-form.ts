@@ -1,19 +1,13 @@
 import { defineStyle, defineStyleConfig } from '@chakra-ui/react';
 
 const light = defineStyle({
-    color: 'black',
+    color: 'primaryFontColor',
     bgColor: 'white',
-    _placeholder: {
-        color: 'black',
-    },
 });
 
 const dark = defineStyle({
     color: 'white',
     bgColor: '#535266',
-    _placeholder: {
-        color: 'white',
-    },
 });
 
 export const applicationFormTheme = defineStyleConfig({

@@ -46,13 +46,13 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { 
             <Flex direction="column" gap={4}>
                 <FormControl>
                     <FormLabel>Fulde navn</FormLabel>
-                    <Input __css={styles} type="text" placeholder="Dohn Joe" onChange={(e) => setName(e.target.value)} />
+                    <Input bgColor="white" type="text" placeholder="Dohn Joe" onChange={(e) => setName(e.target.value)} />
                 </FormControl>
 
                 <FormControl>
                     <FormLabel>Om dig</FormLabel>
                     <Textarea
-                        __css={styles}
+                        bgColor="white"
                         placeholder="Sæt nogle ord på, hvorfor vi er et godt match"
                         onChange={(e) => setAbout(e.target.value)}
                     />
