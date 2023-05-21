@@ -4,6 +4,7 @@ import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import HeroComp from '../../public/hero-comp.png';
+import ServicesHero from '../../public/services-hero.svg';
 
 const Services: React.FC = () => {
     return (
@@ -76,9 +77,9 @@ const Services: React.FC = () => {
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
-                            <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
+                            <Stack alignItems="center" height={'100%'}>
+                                <Box w="70%">
+                                    <Image src={ServicesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
                         </SectionItem>

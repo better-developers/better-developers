@@ -1,8 +1,10 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 import { Open_Sans } from 'next/font/google';
+import { applicationFormTheme } from './application-form';
 import { buttonTheme } from './button';
 import { cardTheme } from './card';
 import { headingTheme } from './heading';
+import { listItemTheme } from './list-item';
 import { textTheme } from './text';
 
 const openSans = Open_Sans({ subsets: ['latin'] });
@@ -34,7 +36,14 @@ const theme = extendTheme({
             900: '#1e0a00',
         },
     },
-    components: { Button: buttonTheme, Text: textTheme, Heading: headingTheme, Card: cardTheme },
+    components: {
+        Button: buttonTheme,
+        Text: textTheme,
+        Heading: headingTheme,
+        Card: cardTheme,
+        ListItem: listItemTheme,
+        ApplicationForm: applicationFormTheme,
+    },
 });
 
 export default theme;

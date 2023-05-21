@@ -5,8 +5,8 @@ import { CaseCard } from '../../components/CaseCard/CaseCard';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
-import HeroComp from '../../public/hero-comp.png';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
+import CasesHero from '../../public/cases-hero.svg';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [
@@ -150,7 +150,7 @@ const Cases: NextPage = () => {
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
                                 <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
+                                    <Image src={CasesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
                         </SectionItem>
