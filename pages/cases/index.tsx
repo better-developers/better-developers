@@ -17,7 +17,7 @@ const Cases: NextPage = () => {
                 <Text textAlign="justify">
                     Markedet er mættet med dating apps, derfor er det vigtigt at skille sig ud. Konceptet bag denne dating app er at der kun
                     forekommer ét match om dagen. Derfor var det vigtigt at skabe en platform der var meget interaktiv da det var med til at
-                    holde brugerne engagerede i PWA'en.
+                    holde brugerne engagerede i PWA&apos;en.
                     <br />
                     <br />
                     <i>Projektet er et koncept udviklet i React med en .NET core backend.</i>
@@ -33,9 +33,9 @@ const Cases: NextPage = () => {
                     Mange institutioner har et behov for at kende befolkningstætheden eller personers bevægelse igennem en bygning. Ved
                     hjælp af wifi-signaler kunne folks bevægelser estimeres hvorefter der på frontend kunne skabes et heatmap af tæthederne.
                     Projektet var derfor en kombination af hardware, software, embedded og web udvikling. Systemet var lavet således at tre
-                    Raspberry Pi's blev brugt til at triangulere WiFi transmissioner. Disse blev derefter omdannet til lokations data ved en
-                    knn-algoritme. Herefter blev de sendt til en backend der kunne levere data til en frontend, som i sidste ende viste
-                    brugeren et heatmap over befolkningstætheden.
+                    Raspberry Pi&apos;s blev brugt til at triangulere WiFi transmissioner. Disse blev derefter omdannet til lokations data
+                    ved en knn-algoritme. Herefter blev de sendt til en backend der kunne levere data til en frontend, som i sidste ende
+                    viste brugeren et heatmap over befolkningstætheden.
                     <br />
                     <br />
                     <i>Projektet er et koncept udviklet i Vue med en .NET core backend med RaspBerry Pi baserede wifi sniffers.</i>
