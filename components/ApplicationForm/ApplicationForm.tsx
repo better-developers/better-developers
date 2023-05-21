@@ -45,7 +45,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { 
     };
 
     return (
-        <Card __css={styles} as="form" onSubmit={onSubmit} px={8} pt={6} pb={8} w="80%">
+        <Card __css={styles} as="form" px={8} pt={6} pb={8} w="80%" borderRadius={8} onSubmit={onSubmit}>
             <Flex direction="column" gap={4}>
                 <FormControl>
                     <FormLabel>Fulde navn</FormLabel>
