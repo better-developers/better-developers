@@ -1,0 +1,28 @@
+<svg width="380" height="689" viewBox="0 0 380 689" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_193_109)">
+<rect width="380" height="689" rx="10" fill="#FFA6F1" fill-opacity="0.4"/>
+<rect x="1.5" y="1.5" width="377" height="686" rx="8.5" stroke="url(#paint0_linear_193_109)" stroke-width="3"/>
+</g>
+<rect x="24" y="35" width="331" height="31" rx="10" fill="white"/>
+<rect x="40" y="479" width="36" height="181" rx="10" fill="#39CEF3"/>
+<rect x="104" y="588" width="36" height="72" rx="10" fill="#98D85E"/>
+<rect x="168" y="256" width="36" height="404" rx="10" fill="#FF642A"/>
+<rect x="198" y="102" width="20" height="174" rx="10" transform="rotate(90 198 102)" fill="#DAB7E1"/>
+<rect x="284" y="140" width="20" height="260" rx="10" transform="rotate(90 284 140)" fill="#DAB7E1"/>
+<rect x="104" y="178" width="20" height="80" rx="10" transform="rotate(90 104 178)" fill="#DAB7E1"/>
+<rect x="297" y="102" width="20" height="80" rx="10" transform="rotate(90 297 102)" fill="#DAB7E1"/>
+<rect x="232" y="409" width="36" height="251" rx="10" fill="#39CEF3"/>
+<rect x="296" y="458" width="36" height="202" rx="10" fill="#39CEF3"/>
+<defs>
+<filter id="filter0_b_193_109" x="-70" y="-70" width="520" height="829" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="35"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_193_109"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_193_109" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_193_109" x1="368.5" y1="-1.29593e-06" x2="117" y2="344" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
