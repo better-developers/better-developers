@@ -21,15 +21,15 @@ const FAQ: React.FC = () => {
                         </FAQItem>
 
                         <FAQItem heading="Hvordan er jeres tilgang til udvikling?">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.
+                            Vi har en passion for arkitektur, design og clean code og er en engageret samarbejdspartner drevet af
+                            nysgerrighed og forståelse Interesseret i ny teknologi og state-of-the-art. Du får derfor en kompetent partner
+                            med ombord når du hyrer en af vores dygtige konsulenter.
                         </FAQItem>
 
                         <FAQItem heading="Hvad er jeres kernekompetencer inden for softwareudvikling?">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.
+                            Better Developers specialiserer sig i en bred vifte af softwareudviklingstjenester, herunder webudvikling,
+                            mobilapp-udvikling, databasedesign, cloud-løsninger, systemintegration og mere. Vi har erfaring med forskellige
+                            teknologier og programmeringssprog.
                         </FAQItem>
 
                         <FAQItem heading="Hvordan samarbejder I med jeres kunder?">
