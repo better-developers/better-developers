@@ -126,12 +126,12 @@ const Businesses: React.FC = () => {
                             <Stack gap={8}>
                                 <Flex flexDir="column">
                                     <Text variant="brandHighlight">Brancher</Text>
-                                    <Heading fontSize="4em" fontWeight="400" color="black">
+                                    <Heading fontSize="3em" fontWeight="400" color="black">
                                         Erfaringsbaserede softwareløsninger skræddersyet til din branche
                                     </Heading>
                                 </Flex>
 
-                                <Text lineHeight="1.5" w="60%" color="black">
+                                <Text lineHeight="1.5" color="black">
                                     Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche.
                                     Vi leverer skræddersyede softwareløsninger, der er specifikt designet til at imødekomme de udfordringer
                                     og behov din branche står over for.

@@ -84,7 +84,7 @@ const Career: React.FC = () => {
                                     </Heading>
                                 </Flex>
 
-                                <Text lineHeight="1.5" w="80%" color="black">
+                                <Text lineHeight="1.5" color="black">
                                     Bliv en del af Better Developers og få muligheden for at arbejde sammen med et passioneret team af
                                     dygtige udviklere. Vi tilbyder spændende karrieremuligheder og en inspirerende arbejdsplads, hvor du kan
                                     udfolde dit potentiale og bidrage til at skabe innovative softwareløsninger.
@@ -97,9 +97,7 @@ const Career: React.FC = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
-                                </Box>
+                                <Box w="80%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
                             </Stack>
                         </SectionItem>
                     </Section>
