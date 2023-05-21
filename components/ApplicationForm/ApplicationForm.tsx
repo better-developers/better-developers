@@ -3,11 +3,12 @@ import { render } from '@react-email/render';
 import { useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
 import { SendEmailRequest } from '../../pages/api/sendgrid';
+import { ArrayElement } from '../../types/array-element';
 import { toBase64 } from '../../utils/toBase64';
 import { Dropzone } from '../Dropzone/Dropzone';
 import { EmailTemplate } from './EmailTemplate';
 
-type Attachment = Promise<NonNullable<SendEmailRequest['attachments']>[number]>;
+export type Attachment = Promise<ArrayElement<NonNullable<SendEmailRequest['attachments']>>>;
 
 export const ApplicationForm: React.FC = () => {
     const { performFetch, loading } = usePost('/api/sendgrid');
