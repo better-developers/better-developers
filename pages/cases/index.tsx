@@ -6,8 +6,7 @@ import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
-import WebStats from '../../public/assets/web-stats.svg';
-import AppStats from '../../public/assets/app-stats.svg';
+import CasesHero from '../../public/cases-hero.svg';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [
@@ -150,23 +149,8 @@ const Cases: NextPage = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%" position="relative">
-                                    <Image
-                                        src={WebStats}
-                                        alt="Computer image"
-                                        style={{ backdropFilter: 'blur(7px)', position: 'absolute', height: '300px', top: 25 }}
-                                    />
-                                    <Image
-                                        src={AppStats}
-                                        alt="Computer image"
-                                        style={{
-                                            backdropFilter: 'blur(7px)',
-                                            position: 'absolute',
-                                            width: '200px',
-                                            top: -100,
-                                            left: -100,
-                                        }}
-                                    />
+                                <Box w="80%">
+                                    <Image src={CasesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
                         </SectionItem>

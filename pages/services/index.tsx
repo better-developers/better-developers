@@ -77,8 +77,8 @@ const Services: React.FC = () => {
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
-                            <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
+                            <Stack alignItems="center" height={'100%'}>
+                                <Box w="70%">
                                     <Image src={ServicesHero} alt="Computer image" />
                                 </Box>
                             </Stack>

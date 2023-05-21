@@ -142,7 +142,7 @@ const Businesses: React.FC = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="center" height={'100%'}>
-                                <Box w="40%">
+                                <Box w="50%">
                                     <Image src={BusinessesHero} alt="Computer image" />
                                 </Box>
                             </Stack>

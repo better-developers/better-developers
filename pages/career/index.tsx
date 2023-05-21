@@ -71,7 +71,7 @@ const Career: React.FC = () => {
                                 <Flex flexDir="column">
                                     <Text variant="brandHighlight">Karriere</Text>
                                     <Heading fontSize="4em" fontWeight="400" color="black">
-                                        Bliv en del af{' '}
+                                        Bliv en del af <br />
                                         <Box
                                             display="inline"
                                             lineHeight={1}
