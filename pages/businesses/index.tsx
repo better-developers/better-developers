@@ -74,7 +74,7 @@ const Businesses: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
+                <Flex height="700px" alignItems="end" position="relative">
                     <Section position="absolute" height="100%">
                         <SectionItem px={0} colSpan={6}>
                             <Box
@@ -126,17 +126,19 @@ const Businesses: React.FC = () => {
                             <Stack gap={8}>
                                 <Flex flexDir="column">
                                     <Text variant="brandHighlight">Brancher</Text>
-                                    <Heading fontSize="4em" fontWeight="400" color="black">
-                                        Baseret på erfaring indenfor din branche
+                                    <Heading fontSize="3em" fontWeight="400" color="black">
+                                        Erfaringsbaserede softwareløsninger skræddersyet til din branche
                                     </Heading>
                                 </Flex>
 
-                                <Text lineHeight="1.5" w="60%" color="black">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
+                                <Text lineHeight="1.5" color="black">
+                                    Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche.
+                                    Vi leverer skræddersyede softwareløsninger, der er specifikt designet til at imødekomme de udfordringer
+                                    og behov din branche står over for.
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
-                                    Call to action
+                                    Kontakt os
                                 </Button>
                             </Stack>
                         </SectionItem>
@@ -157,8 +159,13 @@ const Businesses: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
-                            porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                            Vores omfattende erfaring inden for din branche gør os til den ideelle partner til at løse dine
+                            softwareudviklingsbehov. Vi har arbejdet med virksomheder i en række sektorer og forstår de unikke udfordringer
+                            og krav der er forbundet med de forskellige brancher. Vores dygtige team af konsulenter og udviklere er
+                            fortrolige med de seneste tendenser og teknologier inden for din sektor, hvilket giver os en unik fordel ved at
+                            levere skræddersyede løsninger, der er specifikt tilpasset til at imødekomme dine branchespecifikke behov. Med
+                            vores ekspertise og erfaring er vi klar til at hjælpe dig med at nå dine forretningsmål og forblive
+                            konkurrencedygtig i din branche.
                         </Text>
                     </SectionItem>
                 </Section>
@@ -188,7 +195,7 @@ const Businesses: React.FC = () => {
 
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4} px={16}>
-                        <Heading textAlign="center">Vil du høre mere? Vi elsker at fortælle!</Heading>
+                        <Heading textAlign="center">Ønsker du at høre mere? Vi brænder for at dele vores viden!</Heading>
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>

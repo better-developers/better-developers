@@ -65,7 +65,7 @@ const Services: React.FC = () => {
                     <Section>
                         <SectionItem colStart={2} colSpan={4}>
                             <Center>
-                                <Link>
+                                <Link href="tel:+4542661028">
                                     <Heading
                                         size="4xl"
                                         background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"

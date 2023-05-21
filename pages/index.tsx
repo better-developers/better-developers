@@ -16,10 +16,13 @@ import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { NavBarContext } from '../contexts/NavBarContext';
 import HeroComp from '../public/hero-comp.png';
-import logoWireframe from '../public/logo-wireframe.png';
+import logoWireframe from '../public/logo-wireframe.svg';
 import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
 import SegesLogo from '../public/logos/seges.png';
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const Home: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -52,20 +55,27 @@ const Home: NextPage = () => {
                                     </Heading>
                                 </Flex>
 
-                                <Text lineHeight="1.5" w="60%" color="black">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
+                                <Text lineHeight="1.5" color="black">
+                                    Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redifinerer det traditionelle
+                                    it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur til hvordan
+                                    vi arbejder med vores kunder.
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
-                                    Call to action
+                                    Kontakt os
                                 </Button>
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
-                            <Stack justifyContent="center" alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={HeroComp} alt="Computer image" />
-                                </Box>
+                            <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
+                                <ReactPlayer
+                                    url="https://vimeo.com/828777583"
+                                    controls
+                                    width="80%"
+                                    style={{
+                                        filter: 'drop-shadow(5px 5px 10px #666)',
+                                    }}
+                                />
                             </Stack>
                         </SectionItem>
                     </Section>
@@ -74,52 +84,60 @@ const Home: NextPage = () => {
                 <Section pt={24} pb={16}>
                     <SectionItem px={8} colStart={2} colSpan={1}>
                         <Flex flexDir="column" gap="1em" flex="1">
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
-                                <Heading>Konsulenter</Heading>
+                                <Heading size="md">Forretningsforståelse</Heading>
                             </Flex>
-                            <Text textAlign="justify">
-                                Vi har mange års erfaring med produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den gode dialog
-                                og åbenhed.
+                            <Text>
+                                Alle vores dygtige udviklere er partnere i Better Developers og har derfor en dyb forretningsforståelse. Det
+                                betyder i får mere end bare en udvikler til jeres team når i arbejder sammen med os, da jeres forretning
+                                altid vil være i centrum.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems="center">
                                 <Icon as={IoPeopleCircle} fontSize="5xl" />
-                                <Heading>Konsulenter</Heading>
+                                <Heading size="md">IT-Konsulenter</Heading>
                             </Flex>
-                            <Text textAlign="justify">
-                                Vi har et hold af skarpe konsulenter der står klar til at hjælpe med lige netop jeres opgaver. En vigtig del
-                                af vores opgave er at fnde lige netop den kandidat der passer bedst til jeres virksomhed.
+                            <Text>
+                                Kvalitet og højt faglige kompetencer er garanteret når i arbejder sammen med os. Vores team af skarpe
+                                konsulenter er ekstremt talentfulde og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
+                                mål for hvert eneste linje kode vi levere til vores kunder.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems="center">
                                 <Icon as={HiChatBubbleLeftRight} fontSize="5xl" />
 
-                                <Heading>Rådgivning</Heading>
+                                <Heading size="md">Samarbejdspartner</Heading>
                             </Flex>
-                            <Text textAlign="justify">
-                                Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
+                            <Text>
+                                Når i arbejder sammen med Better Developers får i samtidigt en samarbejdspartner der involverer sig aktivt i
+                                jeres forretning. Vi ved at der ligger flere tanker bagved de systemer i gerne vil have udviklet.
+                                Partnerskabsstrukturen gør det nemt for alle vores udviklere at dele deres tanker på en specifik opgave, så
+                                i får den bedst mulige rådgivning hver gang.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
                         <Flex flexDir="column" gap="1em" flex="1">
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems="center">
                                 <Icon as={VscSymbolMisc} fontSize="5xl" />
 
-                                <Heading>Andet</Heading>
+                                <Heading size="md">OpenAI API</Heading>
                             </Flex>
-                            <Text textAlign="justify">
-                                Vi har meget erfaring med de nyeste teknologier indenfor WEB og vi deler meget gerne ud af viden.
+                            <Text>
+                                Kunstig intelligens er kommet for at blive og derfor har vi specialiseret os indenfor dette område. Vi
+                                hjælper vores kunder ved at styrke deres konkurrenceevne ved at udnytte potentialet af kunstig intelligens.
+                                Vi tilbyder ikke kun teknisk ekspertise, men også rådgivning om strategisk implementering af AI-løsninger,
+                                dataprivatlivets betydning og overholdelse af gældende lovgivning.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -128,16 +146,41 @@ const Home: NextPage = () => {
                 <Section py={24}>
                     <SectionItem colStart={2} colSpan={2}>
                         <Flex flexDir="column" gap="4">
-                            <Heading>Længere titel til at beskrive fordelene ved BD </Heading>
+                            <Heading>Derfor skal du arbejde sammen med os.</Heading>
                             <Text>
-                                Vi har mange års erfaring med produktudviklng indenfor IT-systemer, hvor vi lægger vægt på den gode dialog
-                                og åbenhed.
+                                Better Developers: Din pålidelige samarbejdspartner indenfor softwareudvikling og IT-konsulentydelser. Vi
+                                kombinerer vores dygtige IT-konsulenter, forretningsforståelse og ekspertise inden for b.la. OpenAI API for
+                                at levere skræddersyede løsninger til jeres behov.
+                                <br />
+                                <br />
+                                Vores team af erfarne udviklere forstår, at teknisk ekspertise alene ikke er nok. Vi fokuserer på at forstå
+                                dine forretningsmål og udfordringer for at skabe software, der driver jeres virksomhed fremad. Vi tilbyder
+                                dygtige IT-konsulenter med omfattende erfaring inden for forskellige teknologier og brancher. Uanset om i
+                                har brug for udvikling af en webapplikation, en mobilapp eller en skræddersyet softwareløsning, kan vi
+                                levere kvalitetskode og innovative løsninger.
+                                <br />
+                                <br />
+                                Som jeres samarbejdspartner prioriterer vi transparent kommunikation, rettidig levering og et agilt
+                                samarbejde. Vi ser os selv som en del af dit team og arbejder tæt sammen med dig for at sikre succesfulde
+                                resultater. Vores ekspertise inden for b.la. OpenAI API gør os i stand til at integrere avancerede kunstig
+                                intelligens-funktioner i jeres applikationer, såsom naturlig sprogbehandling og automatiseret dataanalyse.
+                                <br />
+                                <br />
+                                Arbejd sammen med Better Developers, og oplev fordelene ved at have en pålidelig partner, der forstår dine
+                                forretningsmål, leverer dygtige IT-konsulenter og udnytter de nyeste teknologier som OpenAI API. Lad os
+                                hjælpe dig med at skabe innovative og effektive softwareløsninger, der giver din virksomhed en
+                                konkurrencemæssig fordel.
+                                <br />
+                                <br />
+                                <Link href="/services">Se vores services her</Link>
                             </Text>
                         </Flex>
                     </SectionItem>
                     <SectionItem colStart={4} colSpan={2}>
-                        <Center>
-                            <Image src={logoWireframe} alt="Logo wireframe" />
+                        <Center h="100%">
+                            <Box w="70%">
+                                <Image src={logoWireframe} alt="Logo wireframe" />
+                            </Box>
                         </Center>
                     </SectionItem>
                 </Section>
@@ -153,7 +196,7 @@ const Home: NextPage = () => {
                             clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
                         />
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={4} pt={36}>
+                    {/* <SectionItem colStart={2} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
                             <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
@@ -195,43 +238,43 @@ const Home: NextPage = () => {
                                 </CaseCardPreview>
                             </Grid>
                         </Stack>
-                    </SectionItem>
+                    </SectionItem> */}
                     <SectionItem colStart={2} colSpan={4} pt={12} pb={4}>
                         <Heading color="white">Det siger andre</Heading>
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={1}>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Hans Nikolajsen"
+                            title="Direktør"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Better Developers har på kort tid imponeret os med deres tekniske ekspertise. Deres skræddersyede softwareløsninger har transformeret vores forretning og leveres altid til tiden. Vi anbefaler dem varmt til andre virksomheder.                                '
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Mark Henriksen"
+                            title="IT-Udvikler"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Vi er begejstrede for resultatet af vores samarbejde med Better Developers. Deres evne til at forstå vores behov og levere brugervenlige softwareløsninger er imponerende. Deres innovative tilgang og brug af avancerede teknologier som OpenAI API har været afgørende for vores succes. Vi ser frem til at fortsætte samarbejdet og udvikle endnu mere banebrydende løsninger sammen.                               '
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Hanne Ulrichsen"
+                            title="Lead Developer"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Vi er virkelig imponerede over Better Developers indsats. Deres talentfulde konsulenter har leveret softwareløsninger, der har øget vores produktivitet og konkurrenceevne. Vi er utroligt tilfredse med deres indsats og anbefaler dem uden tøven.'
                             }
                         />
                     </SectionItem>
                     <SectionItem>
                         <ContactCard
-                            name="John Doe"
-                            title="Lead developer"
+                            name="Martin Tranbjerg"
+                            title="Direktør"
                             quote={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt dui quis massa porta, id fermentum risus pretium. Phasellus in ligula non. '
+                                'Utroligt dygtige udviklere der kan deres tech-stacks og er hurtige til at forstå vores kode og forretning. Vi vil klart fortsætte vores samarbejde med dem.'
                             }
                         />
                     </SectionItem>
@@ -244,7 +287,9 @@ const Home: NextPage = () => {
                 </Section>
                 <Section py={12}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
-                        <Heading textAlign="center">Er du overbevist? Så lad os føre din idé ud i livet.</Heading>
+                        <Heading textAlign="center">
+                            Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
+                        </Heading>
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>

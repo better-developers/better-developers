@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Grid, GridItem, Heading, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Grid, GridItem, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { CaseCard } from '../../components/CaseCard/CaseCard';
@@ -12,67 +12,79 @@ const Cases: NextPage = () => {
     const cases: Case[] = [
         {
             image: PlaceholderCardImage,
-            title: 'Digisense A/S',
+            title: 'Interaktiv frontend skaber højere engagement på dating PWA',
             content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
+                <Text textAlign="justify">
+                    Markedet er mættet med dating apps, derfor er det vigtigt at skille sig ud. Konceptet bag denne dating app er at der kun
+                    forekommer ét match om dagen. Derfor var det vigtigt at skabe en platform der var meget interaktiv da det var med til at
+                    holde brugerne engagerede i PWA&apos;en.
+                    <br />
+                    <br />
+                    <i>Projektet er et koncept udviklet i React med en .NET core backend.</i>
+                    <br />
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
+
         {
             image: PlaceholderCardImage,
-            title: 'Digisense A/S',
+            title: 'Triangulering af offentlige wifi-signaler skaber heatmap af befolkningstæthed',
             content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
+                <Text textAlign="justify">
+                    Mange institutioner har et behov for at kende befolkningstætheden eller personers bevægelse igennem en bygning. Ved
+                    hjælp af wifi-signaler kunne folks bevægelser estimeres hvorefter der på frontend kunne skabes et heatmap af tæthederne.
+                    <br />
+                    <br />
+                    <i>Projektet er et koncept udviklet i Vue med en .NET core backend med RaspBerry Pi baserede wifi sniffers.</i>
+                    <br />
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
+        // {
+        //     image: PlaceholderCardImage,
+        //     title: 'Automatiseret udfyldelse af bogføringsprocedure forsimpler implementering af ny lovgivning',
+        //     content: (
+        //         <Text textAlign="justify">
+        //             Ved at automatisere
+        //         </Text>
+        //     ),
+        // },
         {
             image: PlaceholderCardImage,
-            title: 'Digisense A/S',
+            title: 'Agro faglig viden og landbrugsdata forenes i værdiskabende web app',
             content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
+                <Text textAlign="justify">
+                    Ved at kombinere agrofaglig viden med tilgængelig landbrugs og geodata, så var det muligt at skabe en web platform der
+                    kunne hjælpe landmændende med at beregne mængden af næringsstoffer og vand. Dette har både en økonomisk og en mijømæssig
+                    gevinst for landmændene og vores samfund.
+                    <br />
+                    <br />
+                    <Link>Læs mere...</Link>
                 </Text>
             ),
         },
+        // {
+        //     image: PlaceholderCardImage,
+        //     title: 'Forsikringssystem',
+        //     content: <Text textAlign="justify"></Text>,
+        // },
         {
             image: PlaceholderCardImage,
-            title: 'Digisense A/S',
+            title: 'Web Assembly og SignalR gør det lettere at samarbejde om LaTeX dokumenter',
             content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
-                </Text>
-            ),
-        },
-        {
-            image: PlaceholderCardImage,
-            title: 'Digisense A/S',
-            content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
-                </Text>
-            ),
-        },
-        {
-            image: PlaceholderCardImage,
-            title: 'Digisense A/S',
-            content: (
-                <Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas quam eu turpis dignissim convallis. Donec vitae ex
-                    vitae dolor posuere vehicula. Fusce rutrum id ligula id scelerisque. Suspendisse dignissim felis nulla, quis bibendum
-                    neque egestas eu.
+                <Text textAlign="justify">
+                    Hvad der før i tiden skulle køres lokalt på enkelte maskiner, kan nu ved hjælp af Web Assembly og SignalR gøres i en
+                    webbrowser uden komplicerede installationer.
+                    <br />
+                    <br />
+                    <i>
+                        Projektet er skrevet i React med en .NET core backend. Pga. projektets høje kompleksitet og lange levetid, så er
+                        backenden baseret på en onion arkitektur med mediator pattern for at følge SOLID og clean code principperne.
+                    </i>
                 </Text>
             ),
         },
@@ -139,11 +151,13 @@ const Cases: NextPage = () => {
                                 </Flex>
 
                                 <Text lineHeight="1.5" w="60%" color="black">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor diam sed tristique dictum.
+                                    Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
+                                    digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative
+                                    tilgang har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
                                 </Text>
 
                                 <Button variant="brand" w="fit-content">
-                                    Call to action
+                                    Kontakt os
                                 </Button>
                             </Stack>
                         </SectionItem>
@@ -163,9 +177,13 @@ const Cases: NextPage = () => {
                         </Heading>
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
-                        <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec
-                            porta laoreet neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                        <Text textAlign="justify">
+                            Se vores virksomhedscases og opdag hvordan Better Developers har udnyttet den nyeste teknologi til at levere
+                            skræddersyede softwareløsninger til vores kunder. Vores dygtige konsulenter har anvendt avancerede teknologier
+                            som kunstig intelligens, maskinlæring, cloud computing og blockchain for at skabe innovative og effektive
+                            løsninger. Uanset om det er inden for sundhedssektoren, finansverdenen eller detailhandlen, har vores løsninger
+                            transformeret vores kunders forretning og sikret dem en konkurrencemæssig fordel. Udforsk vores cases for at se,
+                            hvordan vi har skabt digital succes og tilfredse kunder gennem vores teknologiske ekspertise.
                         </Text>
                     </SectionItem>
                 </Section>

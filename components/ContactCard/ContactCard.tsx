@@ -12,7 +12,7 @@ export const ContactCard: FC<PropsWithChildren<ContactCardProps>> = ({ quote, na
         <CardBody p={12} pb={4}>
             <Stack gap={12}>
                 <Text variant="quote">&quot; {quote} &quot;</Text>
-                <Stack gap={1}>
+                <Stack gap={1} justifySelf="end">
                     <Avatar />
                     <Heading size="md" lineHeight={1}>
                         {name}
