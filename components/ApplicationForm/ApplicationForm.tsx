@@ -2,14 +2,11 @@ import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea, useStyleCo
 import { render } from '@react-email/render';
 import { useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
-import { SendEmailRequest } from '../../pages/api/sendgrid';
+import { Attachment } from '../../models/email-request';
 import { ApplicationFormVariant } from '../../theme/application-form';
-import { ArrayElement } from '../../types/array-element';
 import { toBase64 } from '../../utils/toBase64';
 import { Dropzone } from '../Dropzone/Dropzone';
 import { EmailTemplate } from './EmailTemplate';
-
-export type Attachment = Promise<ArrayElement<NonNullable<SendEmailRequest['attachments']>>>;
 
 export interface ApplicationFormProps {
     variant?: ApplicationFormVariant;
@@ -28,7 +25,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { 
 
         const html = render(<EmailTemplate name={name} about={about} />);
 
-        const attachmentsPromises = files.map<Attachment>(async (file) => ({
+        const attachmentsPromises = files.map<Promise<Attachment>>(async (file) => ({
             content: await toBase64(file),
             filename: file.name,
             type: file.type,
