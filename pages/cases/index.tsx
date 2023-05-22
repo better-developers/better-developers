@@ -141,7 +141,7 @@ const Cases: NextPage = () => {
                     </Section>
 
                     <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24}>
+                        <SectionItem colStart={2} colEnd={4} mb={24} display="flex" alignItems="end">
                             <Stack gap={8}>
                                 <Flex flexDir="column">
                                     <Text variant="brandHighlight">Cases</Text>
