@@ -98,7 +98,7 @@ const About: React.FC = () => {
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
                                 <ReactPlayer
-                                    url="https://vimeo.com/828776466"
+                                    url="https://vimeo.com/828819281"
                                     controls
                                     width="80%"
                                     style={{
