@@ -1,4 +1,4 @@
-import About from '.';
+import About from '../../pages/about';
 
 describe('<About />', () => {
     it('should render and display expected content', () => {
