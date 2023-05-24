@@ -71,7 +71,7 @@ const Home: NextPage = () => {
                                 <ReactPlayer
                                     url="https://vimeo.com/828777583"
                                     controls
-                                    width="80%"
+                                    width="100%"
                                     style={{
                                         filter: 'drop-shadow(5px 5px 10px #666)',
                                     }}
@@ -285,7 +285,7 @@ const Home: NextPage = () => {
                         <FAQ />
                     </SectionItem>
                 </Section>
-                <Section py={12}>
+                <Section>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.

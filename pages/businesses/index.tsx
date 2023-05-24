@@ -18,8 +18,9 @@ const sectors: readonly Sector[] = [
         sectorName: 'Landbrug',
         content: (
             <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec porta laoreet
-                neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                Vi hos Better Developers er stolte af vores bidrag til CropManager-projektet hos SEGES. Vi har leveret nøglefunktioner til
+                Angular-frontenden, herunder refaktorering af eksisterende moduler og udvikling af nye features. Vores rolle indebærer også
+                at fungere som en værdifuld sparringspartner for holdet, hvor vi deler best practices inden for Angular-udvikling.
             </Text>
         ),
     },
@@ -28,8 +29,10 @@ const sectors: readonly Sector[] = [
         sectorName: 'GDPR',
         content: (
             <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec porta laoreet
-                neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                Vi hos Better Developers er glade for at have bidraget til BetterCompliances GDPR-løsning. Med vores ekspertise inden for en
+                bred vifte af teknologier har vi udviklet en skræddersyet løsning baseret på .NET og Azure. Vores rolle har omfattet design
+                og implementering af databeskyttelsesfunktioner, rettighedsstyring og brugeradgangskontrol. Vi er stolte af at have hjulpet
+                BetterCompliance med at opfylde GDPR-kravene og sikre beskyttelse af persondata.
             </Text>
         ),
     },
@@ -38,8 +41,11 @@ const sectors: readonly Sector[] = [
         sectorName: 'Det offentlige',
         content: (
             <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec porta laoreet
-                neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                Fra juni 2022 blev et nyt team dannet hos Better Developers med ansvaret for to produkter: Publication og LetDialog. Disse
+                produkter inkluderer følgende teknologier: MVC .NET, Entity Framework, SQL. Octopus og GitHub Actions Publication er et
+                produkt målrettet primært kommuner, hvor forskellige kunder kan offentliggøre deres møder. LetDialog er en besked-app, hvor
+                socialrådgivere kan skrive og modtage beskeder fra deres klienter. Vi er stolte over at have leveret disse løsninger og
+                bidraget til deres succes.
             </Text>
         ),
     },
@@ -48,8 +54,9 @@ const sectors: readonly Sector[] = [
         sectorName: 'Fintech',
         content: (
             <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec porta laoreet
-                neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                Ved hjælp af Better Developers innovative fintech-løsning, Bogføring Simplified, har den virksomhed vi hjalp formået at
+                effektivisere deres bogføringsprocesser. Den brugervenlige platform og automatiserede funktioner har gjort det muligt for
+                dem at spare tid og minimere fejl, hvilket har resulteret i en mere strømlinet og pålidelig bogføring.
             </Text>
         ),
     },
@@ -58,8 +65,10 @@ const sectors: readonly Sector[] = [
         sectorName: 'Forsikring',
         content: (
             <Text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt diam. Sed et enim arcu. Donec porta laoreet
-                neque. Duis imperdiet massa lorem, vel efficitur purus ultrices et.
+                Better Developers har bistået MicroTech, en mindre virksomhed med forældet teknologi, med at modernisere deres
+                forsikringssoftware. Som fuldstack-udvikler og konsulent har vi rådgivet dem om de nyeste teknologier og vejledt dem i at
+                træde ind i den moderne software-landskab. Ved at implementere C#, .NET Framework, KnockoutJS, SQL, HTML, Javascript og
+                Postman har vi hjulpet MicroTech med at tage afgørende skridt mod fremtidssikret softwareløsninger.
             </Text>
         ),
     },

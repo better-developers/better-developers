@@ -1,9 +1,10 @@
-import { Box, Center, Flex, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Link, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { NavBarContext } from '../../contexts/NavBarContext';
+import { MdCheckCircle } from 'react-icons/md';
 
 const Services: React.FC = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -64,7 +65,11 @@ const Services: React.FC = () => {
 
                     <Section>
                         <SectionItem colStart={2} colSpan={4}>
-                            <Center>
+                            <Center flexDirection="column" gap={4}>
+                                <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
+                                    Sandheden er at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
+                                </Heading>
+
                                 <Link href="tel:+4542661028">
                                     <Heading
                                         size="4xl"
@@ -84,20 +89,24 @@ const Services: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={2} py={4}>
                         <Text>Vi hjælper med:</Text>
-                        <UnorderedList px={4}>
+                        <List px={4}>
                             <ListItem>
-                                <Text>Demo products of interest.</Text>
+                                <ListIcon as={MdCheckCircle} color="green.500" />
+                                Vurdering og estimering af jeres næste IT-projekt
                             </ListItem>
                             <ListItem>
-                                <Text>
-                                    Design a solution to accept and optimize payments, add new revenue streams and automate financial
-                                    workflows.
-                                </Text>
+                                <ListIcon as={MdCheckCircle} color="green.500" />
+                                Vurdering og estimering af jeres næste IT-projekt.
                             </ListItem>
                             <ListItem>
-                                <Text>Access custom pricing including cost+ pricing, volume discounts, and more.</Text>
+                                <ListIcon as={MdCheckCircle} color="green.500" />
+                                Professionel og gratis rådgivning til jeres udviklingsbehov og hvordan vi kan hjælpe jer.
                             </ListItem>
-                        </UnorderedList>
+                            <ListItem>
+                                <ListIcon as={MdCheckCircle} color="green.500" />
+                                Drift & support af nuværende it-systemer.
+                            </ListItem>
+                        </List>
                     </SectionItem>
                     <SectionItem colSpan={2}>
                         <ContactForm></ContactForm>
