@@ -3,13 +3,17 @@
     "version": "2.0.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
         "build": "next build && next export",
-        "start": "next start",
+        "cypress": "cypress open",
+        "dev": "next dev",
+        "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
         "format": "prettier --write .",
         "lint": "next lint",
-        "theme": "chakra-cli tokens ./theme/index.ts",
-        "theme:watch": "chakra-cli tokens ./theme/index.ts --watch"
+        "start": "next start",
+        "test": "cypress open --component",
+        "test:headless": "cypress run --component",
+        "theme:watch": "chakra-cli tokens ./theme/index.ts --watch",
+        "theme": "chakra-cli tokens ./theme/index.ts"
     },
     "dependencies": {
         "@chakra-ui/react": "^2.5.5",
@@ -36,6 +40,7 @@
         "@types/react": "18.0.18",
         "@types/react-dom": "18.0.6",
         "autoprefixer": "^10.4.12",
+        "cypress": "^12.13.0",
         "eslint": "8.23.0",
         "eslint-config-next": "^13.3.0",
         "postcss": "^8.4.17",
