@@ -28,7 +28,7 @@ export const ContactForm: React.FC = () => {
         <Card as="form" onSubmit={onSubmit}>
             <CardHeader>
                 <Heading size="md" fontWeight="semibold">
-                    Skriv til os
+                    Send os en besked
                 </Heading>
             </CardHeader>
 
@@ -36,33 +36,28 @@ export const ContactForm: React.FC = () => {
                 <Grid gridTemplateColumns="1fr 1fr" gap={4}>
                     <FormControl>
                         <FormLabel>Navn</FormLabel>
-                        <Input type="text" placeholder="Dohn" onChange={(e) => setFirstName(e.target.value)} />
+                        <Input type="text" onChange={(e) => setFirstName(e.target.value)} />
                     </FormControl>
 
                     <FormControl>
                         <FormLabel>Efternavn</FormLabel>
-                        <Input type="text" placeholder="Joe" onChange={(e) => setLastName(e.target.value)} />
+                        <Input type="text" onChange={(e) => setLastName(e.target.value)} />
                     </FormControl>
 
                     <FormControl>
                         <FormLabel>Email</FormLabel>
-                        <Input type="email" placeholder="joe@dohn.com" onChange={(e) => setEmail(e.target.value)} />
+                        <Input type="email" onChange={(e) => setEmail(e.target.value)} />
                     </FormControl>
 
                     <FormControl>
                         <FormLabel>Telefonnummer</FormLabel>
-                        <Input type="phone" placeholder="+45 12 34 56 78" onChange={(e) => setPhone(e.target.value)} />
+                        <Input type="phone" onChange={(e) => setPhone(e.target.value)} />
                     </FormControl>
 
                     <GridItem colSpan={2}>
                         <FormControl>
                             <FormLabel>Besked</FormLabel>
-                            <Textarea
-                                color="primaryFontColor"
-                                bgColor="white"
-                                placeholder="Vi vil mega gerne snakke med jer!"
-                                onChange={(e) => setMessage(e.target.value)}
-                            />
+                            <Textarea color="primaryFontColor" bgColor="white" onChange={(e) => setMessage(e.target.value)} />
                         </FormControl>
                     </GridItem>
 

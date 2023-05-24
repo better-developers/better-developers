@@ -10,9 +10,9 @@ type ContactCardProps = {
 export const ContactCard: FC<PropsWithChildren<ContactCardProps>> = ({ quote, name, title, children }) => (
     <Card variant="caseCard" h="100%">
         <CardBody p={12} pb={4}>
-            <Stack gap={12}>
+            <Stack gap={12} h="100%" justifyContent="space-between">
                 <Text variant="quote">&quot; {quote} &quot;</Text>
-                <Stack gap={1} justifySelf="end">
+                <Stack gap={1} justifySelf="end" py={4}>
                     <Avatar />
                     <Heading size="md" lineHeight={1}>
                         {name}

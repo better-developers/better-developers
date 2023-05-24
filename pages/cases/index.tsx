@@ -150,7 +150,7 @@ const Cases: NextPage = () => {
                                     </Heading>
                                 </Flex>
 
-                                <Text lineHeight="1.5" w="60%" color="black">
+                                <Text lineHeight="1.5" color="black">
                                     Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
                                     digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative
                                     tilgang har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
