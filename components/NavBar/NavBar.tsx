@@ -19,19 +19,19 @@ export const NavBar = () => {
     scrollY.on('change', (y) => setIsTop(y <= 0));
 
     const links = [
-        <Link color={['primary', 'primary', 'primary', fontColor]} href="/services" alignSelf="center">
+        <Link key="link-1" color={['primary', 'primary', 'primary', fontColor]} href="/services" alignSelf="center">
             Services
         </Link>,
-        <Link color={['primary', 'primary', 'primary', fontColor]} href="/cases" alignSelf="center">
+        <Link key="link-2" color={['primary', 'primary', 'primary', fontColor]} href="/cases" alignSelf="center">
             Cases
         </Link>,
-        <Link color={['primary', 'primary', 'primary', fontColor]} href="/businesses" alignSelf="center">
+        <Link key="link-3" color={['primary', 'primary', 'primary', fontColor]} href="/businesses" alignSelf="center">
             Brancher
         </Link>,
-        <Link color={['primary', 'primary', 'primary', fontColor]} href="/about" alignSelf="center">
+        <Link key="link-4" color={['primary', 'primary', 'primary', fontColor]} href="/about" alignSelf="center">
             Om os
         </Link>,
-        <Link color={['primary', 'primary', 'primary', fontColor]} href="/career" alignSelf="center">
+        <Link key="link-5" color={['primary', 'primary', 'primary', fontColor]} href="/career" alignSelf="center">
             Karriere
         </Link>,
     ];
@@ -63,8 +63,8 @@ export const NavBar = () => {
                     <Menu>
                         <MenuButton as={IconButton} aria-label="Options" icon={<HamburgerIcon />} variant="outline" color={fontColor} />
                         <MenuList>
-                            {links.map((link) => (
-                                <MenuItem>{link}</MenuItem>
+                            {links.map((link, i) => (
+                                <MenuItem key={i}>{link}</MenuItem>
                             ))}
                         </MenuList>
                     </Menu>
