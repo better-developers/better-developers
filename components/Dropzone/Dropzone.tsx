@@ -47,7 +47,8 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesChanged }) => {
             backgroundRepeat="repeat-x, repeat-x, repeat-y, repeat-y"
             backgroundSize="8px 2px, 8px 2px, 2px 8px, 2px 8px"
             animation="7s infinite linear"
-            style={{ animationName: styles.borderDance, animationPlayState: animationState }}>
+            style={{ animationName: styles.borderDance, animationPlayState: animationState }}
+        >
             <Flex
                 h="100%"
                 w="100%"
@@ -57,7 +58,8 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesChanged }) => {
                 gap={4}
                 cursor="pointer"
                 onClick={() => fileRef.current?.click()}
-                ref={drop}>
+                ref={drop}
+            >
                 <Image src="upload-icon.svg" alt="Upload" width={96} height={96}></Image>
                 <Text>{text}</Text>
 

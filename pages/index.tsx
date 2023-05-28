@@ -39,7 +39,8 @@ const Home: NextPage = () => {
                         height="100%"
                         position="absolute"
                         zIndex="-1"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
+                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
+                    >
                         <Gradient />
                     </Box>
 

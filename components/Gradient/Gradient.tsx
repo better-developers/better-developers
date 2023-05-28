@@ -8,7 +8,8 @@ export const Gradient = () => {
                 id="initialise-gradient"
                 dangerouslySetInnerHTML={{
                     __html: `var gradient = new Gradient(); gradient.initGradient('#gradient-canvas');`,
-                }}></Script>
+                }}
+            ></Script>
 
             <canvas id="gradient-canvas" style={{ width: '100%', height: '100%' }}></canvas>
         </>

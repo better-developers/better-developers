@@ -19,21 +19,11 @@ export const NavBar = () => {
     scrollY.on('change', (y) => setIsTop(y <= 0));
 
     const links = [
-        <Link key="link-1" color={['primary', 'primary', 'primary', fontColor]} href="/services" alignSelf="center">
-            Services
-        </Link>,
-        <Link key="link-2" color={['primary', 'primary', 'primary', fontColor]} href="/cases" alignSelf="center">
-            Cases
-        </Link>,
-        <Link key="link-3" color={['primary', 'primary', 'primary', fontColor]} href="/businesses" alignSelf="center">
-            Brancher
-        </Link>,
-        <Link key="link-4" color={['primary', 'primary', 'primary', fontColor]} href="/about" alignSelf="center">
-            Om os
-        </Link>,
-        <Link key="link-5" color={['primary', 'primary', 'primary', fontColor]} href="/career" alignSelf="center">
-            Karriere
-        </Link>,
+        { href: 'services', text: 'Services' },
+        { href: 'cases', text: 'Cases' },
+        { href: 'businesses', text: 'Brancher' },
+        { href: 'about', text: 'Om os' },
+        { href: 'career', text: 'Karriere' },
     ];
 
     return (
@@ -48,7 +38,8 @@ export const NavBar = () => {
                 borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
                 boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}
                 transition="background-color 300ms, color 500ms, box-shadow 300ms, border-bottom 500ms 500ms"
-                zIndex="100">
+                zIndex="100"
+            >
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
 
@@ -64,7 +55,9 @@ export const NavBar = () => {
                         <MenuButton as={IconButton} aria-label="Options" icon={<HamburgerIcon />} variant="outline" color={fontColor} />
                         <MenuList>
                             {links.map((link, i) => (
-                                <MenuItem key={i}>{link}</MenuItem>
+                                <MenuItem key={i} as="a" href={link.href}>
+                                    {link.text}
+                                </MenuItem>
                             ))}
                         </MenuList>
                     </Menu>
@@ -72,7 +65,11 @@ export const NavBar = () => {
 
                 <Hide below="lg">
                     <Stack direction="row" spacing="42px" fontWeight="bold">
-                        {...links}
+                        {links.map((link, i) => (
+                            <Link key={i} color={['primary', 'primary', 'primary', fontColor]} href={`/${link.href}`} alignSelf="center">
+                                {link.text}
+                            </Link>
+                        ))}
                         <ContactButton></ContactButton>,
                     </Stack>
                 </Hide>

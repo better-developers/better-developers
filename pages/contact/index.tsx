@@ -57,7 +57,8 @@ const Services: React.FC = () => {
                                 width="100%"
                                 height="100%"
                                 position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 80%, 0px 100%)">
+                                clipPath="polygon(0px 0px, 100% 0px, 100% 80%, 0px 100%)"
+                            >
                                 <video src="/video/casette.mp4" autoPlay muted loop width="100%" />
                             </Box>
                         </SectionItem>
@@ -75,7 +76,8 @@ const Services: React.FC = () => {
                                         size="4xl"
                                         background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                         backgroundClip="text"
-                                        textColor="transparent">
+                                        textColor="transparent"
+                                    >
                                         +45 42 66 10 28
                                     </Heading>
                                 </Link>
