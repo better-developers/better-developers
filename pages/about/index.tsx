@@ -11,6 +11,7 @@ import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
 import dynamic from 'next/dynamic';
+import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -97,14 +98,7 @@ const About: React.FC = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828819281"
-                                    controls
-                                    width="80%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828777583" />
                             </Stack>
                         </SectionItem>
                     </Section>

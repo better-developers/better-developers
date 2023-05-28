@@ -21,6 +21,7 @@ import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
 import SegesLogo from '../public/logos/seges.png';
 import dynamic from 'next/dynamic';
+import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -68,14 +69,7 @@ const Home: NextPage = () => {
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
                             <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828777583"
-                                    controls
-                                    width="100%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828819281" />
                             </Stack>
                         </SectionItem>
                     </Section>
