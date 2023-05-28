@@ -1,16 +1,16 @@
 import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import HeroComp from '../../public/hero-comp.png';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
 import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
-import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -90,9 +90,7 @@ const About: React.FC = () => {
                                     software.
                                 </Text>
 
-                                <Button variant="brand" w="fit-content">
-                                    Call to action
-                                </Button>
+                                <ContactButton></ContactButton>
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
