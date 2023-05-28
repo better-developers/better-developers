@@ -1,13 +1,13 @@
 'use client';
-import { Box, Button, Center, Flex, Grid, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { VscSymbolMisc } from 'react-icons/vsc';
-import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
 import { ContactButton } from '../components/ContactButton/ContactButton';
 import { ContactCard } from '../components/ContactCard/ContactCard';
 import FAQ from '../components/FAQ/FAQ';
@@ -15,12 +15,7 @@ import { Gradient } from '../components/Gradient/Gradient';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { NavBarContext } from '../contexts/NavBarContext';
-import HeroComp from '../public/hero-comp.png';
 import logoWireframe from '../public/logo-wireframe.svg';
-import DigisenseLogo from '../public/logos/digisense.png';
-import MicrotechLogo from '../public/logos/microtech.jpg';
-import SegesLogo from '../public/logos/seges.png';
-import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -39,8 +34,7 @@ const Home: NextPage = () => {
                         height="100%"
                         position="absolute"
                         zIndex="-1"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                    >
+                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
                         <Gradient />
                     </Box>
 
