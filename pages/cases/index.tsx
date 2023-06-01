@@ -100,9 +100,13 @@ const Cases: NextPage = () => {
                     <HeroSectionLayout
                         identifier="Cases"
                         heading={<>Reelle virksomheder med reelle udfordringer</>}
-                        paragraph="Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
-                        digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative
-                        tilgang har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher."
+                        paragraph={
+                            <>
+                                Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
+                                digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative tilgang
+                                har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
+                            </>
+                        }
                         content={
                             <Stack alignItems="end" height={'100%'}>
                                 <Box w="80%">

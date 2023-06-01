@@ -10,7 +10,7 @@ type HeroSectionProps = {
     identifier?: string;
     heading: ReactElement;
     paragraph: ReactElement;
-    content: ReactElement;
+    content?: ReactElement;
 };
 
 export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, paragraph, content }) => {

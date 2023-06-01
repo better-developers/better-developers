@@ -22,7 +22,7 @@ const Career: React.FC = () => {
             <Flex flexDir="column">
                 <HeroSection colors={{ base: '#FAFCFE', primary: '#F7A75A', secondary: '#F7C661', tertiary: '#F8E668' }}>
                     <HeroSectionLayout
-                        identifier="Services"
+                        identifier="Karriere"
                         heading={
                             <>
                                 {'Bliv en del af '}

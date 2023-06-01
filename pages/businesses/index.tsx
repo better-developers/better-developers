@@ -89,7 +89,7 @@ const Businesses: React.FC = () => {
                     <HeroSectionLayout
                         identifier="Brancher"
                         heading={
-                            <>
+                            <Text fontSize="0.8em" color="inherit" fontWeight="inherit" lineHeight="inherit">
                                 Erfarings&shy;
                                 <wbr />
                                 baserede software&shy;
@@ -97,7 +97,7 @@ const Businesses: React.FC = () => {
                                 løsninger skrædder&shy;
                                 <wbr />
                                 syet til din branche
-                            </>
+                            </Text>
                         }
                         paragraph={
                             <>
