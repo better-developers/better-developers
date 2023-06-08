@@ -58,7 +58,7 @@ const Services: React.FC = () => {
                                 height="100%"
                                 position="absolute"
                                 clipPath="polygon(0px 0px, 100% 0px, 100% 80%, 0px 100%)">
-                                <video src="/video/casette.mp4" autoPlay muted loop width="100%" />
+                                <video src="/video/casette.mp4" autoPlay muted loop width="100%" poster="/video/casette-placeholder.jpg" />
                             </Box>
                         </SectionItem>
                     </Section>
