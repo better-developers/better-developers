@@ -90,7 +90,7 @@ const About: React.FC = () => {
                                     software.
                                 </Text>
 
-                                <ContactButton></ContactButton>
+                                <ContactButton />
                             </Stack>
                         </SectionItem>
                         <SectionItem colStart={4} colEnd={6}>
