@@ -5,91 +5,37 @@ import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import HeroComp from '../../public/hero-comp.png';
 import ServicesHero from '../../public/services-hero.svg';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 
 const Services: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
-                    <Section position="absolute" height="100%">
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                top={50}
-                                bgColor="#F8CA62"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={3} colSpan={3}>
-                            <Box
-                                top={-45}
-                                bgColor="#F8E468"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={5} colSpan={1}>
-                            <Box
-                                top={-85}
-                                bgColor="brand.400"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                bgColor="brand.50"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                    </Section>
-
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24} display="flex" alignItems="end">
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Text variant="brandHighlight">Services</Text>
-                                    <Heading fontSize="3em" fontWeight="400" color="black">
-                                        Software services tilpasset dine behov
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" color="black">
-                                    Uanset om du har brug for webudvikling, mobilapp-udvikling, AI-integrationer eller andre
-                                    softwareløsninger, leverer vi jer skræddersyede tjenester, der passer til jeres krav.
-                                    <br />
-                                    <br />
-                                    Vores erfarne konsulenter arbejder tæt sammen med jer for at sikre, at vi leverer en løsning, der
-                                    opfylder jeres forventninger og giver værdi til jeres virksomhed.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Kontakt os
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
+                <HeroSection colors={{ base: 'brand.50', primary: '#F8CA62', secondary: '#F8E468', tertiary: 'brand.400' }}>
+                    <HeroSectionLayout
+                        identifier="Services"
+                        heading={<>Software services tilpasset dine behov</>}
+                        paragraph={
+                            <>
+                                Uanset om du har brug for webudvikling, mobilapp-udvikling, AI-integrationer eller andre softwareløsninger,
+                                leverer vi jer skræddersyede tjenester, der passer til jeres krav.
+                                <br />
+                                <br />
+                                Vores erfarne konsulenter arbejder tæt sammen med jer for at sikre, at vi leverer en løsning, der opfylder
+                                jeres forventninger og giver værdi til jeres virksomhed.
+                            </>
+                        }
+                        content={
                             <Stack alignItems="center" height={'100%'}>
                                 <Box w="70%">
                                     <Image src={ServicesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
+                        }
+                    />
+                </HeroSection>
+
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">

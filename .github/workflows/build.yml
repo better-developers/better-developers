@@ -1,4 +1,4 @@
-name: Build
+name: CD
 
 on:
   pull_request:
@@ -8,8 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 18
-      - run: npm ci
-      - run: npm run build
+      
+      - name: Install dependencies
+        run: npm ci
+      - name: Build application
+        run: npm run build
+      - name: Run linting
+        run: npm run lint
+      - name: Run tests
+        run: npm run test:headless

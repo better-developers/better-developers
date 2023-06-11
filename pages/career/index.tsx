@@ -13,95 +13,43 @@ import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 
 const Career: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="700px" alignItems="end" position="relative">
-                    <Section position="absolute" height="100%">
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                top={50}
-                                bgColor="#F7A75A"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={3} colSpan={3}>
-                            <Box
-                                top={-45}
-                                bgColor="#F7C661"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={5} colSpan={1}>
-                            <Box
-                                top={-85}
-                                bgColor="#F8E668"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                bgColor="#FAFCFE"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                    </Section>
+                <HeroSection colors={{ base: '#FAFCFE', primary: '#F7A75A', secondary: '#F7C661', tertiary: '#F8E668' }}>
+                    <HeroSectionLayout
+                        identifier="Karriere"
+                        heading={
+                            <>
+                                {'Bliv en del af '}
+                                <Box
+                                    display="inline"
+                                    lineHeight={1}
+                                    background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
+                                    backgroundClip="text"
+                                    textColor="transparent"
+                                    fontWeight="semibold">
+                                    Better Developers.
+                                </Box>
+                            </>
+                        }
+                        paragraph={
+                            <>
+                                Uanset om du har brug for webudvikling, mobilapp-udvikling, AI-integrationer eller andre softwareløsninger,
+                                leverer vi jer skræddersyede tjenester, der passer til jeres krav.
+                                <br />
+                                <br />
+                                Vores erfarne konsulenter arbejder tæt sammen med jer for at sikre, at vi leverer en løsning, der opfylder
+                                jeres forventninger og giver værdi til jeres virksomhed.
+                            </>
+                        }
+                    />
+                </HeroSection>
 
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24}>
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Text variant="brandHighlight">Karriere</Text>
-                                    <Heading fontSize="4em" fontWeight="400" color="black">
-                                        Bliv en del af{' '}
-                                        <Box
-                                            display="inline"
-                                            lineHeight={1}
-                                            background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
-                                            backgroundClip="text"
-                                            textColor="transparent"
-                                            fontWeight="semibold">
-                                            Better Developers.
-                                        </Box>
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" color="black">
-                                    Bliv en del af Better Developers og få muligheden for at arbejde sammen med et passioneret team af
-                                    dygtige udviklere. Vi tilbyder spændende karrieremuligheder og en inspirerende arbejdsplads, hvor du kan
-                                    udfolde dit potentiale og bidrage til at skabe innovative softwareløsninger.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Send ansøgning
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
-                            <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
-                            </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
