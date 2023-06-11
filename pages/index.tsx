@@ -1,5 +1,5 @@
 'use client';
-import { Box, Button, Center, Flex, Grid, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
@@ -7,7 +7,6 @@ import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { VscSymbolMisc } from 'react-icons/vsc';
-import { CaseCardPreview } from '../components/CaseCardPreview/CaseCardPreview';
 import { ContactButton } from '../components/ContactButton/ContactButton';
 import { ContactCard } from '../components/ContactCard/ContactCard';
 import FAQ from '../components/FAQ/FAQ';
@@ -15,17 +14,10 @@ import { Gradient } from '../components/Gradient/Gradient';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { NavBarContext } from '../contexts/NavBarContext';
-import HeroComp from '../public/hero-comp.png';
 import logoWireframe from '../public/logo-wireframe.svg';
-import DigisenseLogo from '../public/logos/digisense.png';
-import MicrotechLogo from '../public/logos/microtech.jpg';
-import SegesLogo from '../public/logos/seges.png';
-import dynamic from 'next/dynamic';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
 import { HeroSection } from '../components/HeroSection/HeroSection';
-
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const Home: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);

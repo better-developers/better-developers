@@ -9,13 +9,10 @@ import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
-import dynamic from 'next/dynamic';
 import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
-
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const About: React.FC = () => {
     return (
