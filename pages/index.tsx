@@ -21,6 +21,7 @@ import DigisenseLogo from '../public/logos/digisense.png';
 import MicrotechLogo from '../public/logos/microtech.jpg';
 import SegesLogo from '../public/logos/seges.png';
 import dynamic from 'next/dynamic';
+import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
 import { HeroSection } from '../components/HeroSection/HeroSection';
 
@@ -62,30 +63,11 @@ const Home: NextPage = () => {
                         }
                         content={
                             <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828777583"
-                                    controls
-                                    width="100%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828819281" />
                             </Stack>
                         }
                     />
                 </HeroSection>
-                {/* <Flex height="650px" alignItems="end" position="relative">
-                    <Box
-                        width="100%"
-                        height="100%"
-                        position="absolute"
-                        zIndex="-1"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
-                        <Gradient />
-                    </Box>
-
-                    <Section></Section>
-                </Flex> */}
 
                 <Section pt={24} pb={16}>
                     <SectionItem px={8} colStart={2} colSpan={1}>

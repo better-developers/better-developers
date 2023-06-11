@@ -10,6 +10,7 @@ import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
 import dynamic from 'next/dynamic';
+import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
@@ -46,14 +47,7 @@ const About: React.FC = () => {
                         }
                         content={
                             <Stack alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828819281"
-                                    controls
-                                    width="80%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828777583" />
                             </Stack>
                         }
                     />
