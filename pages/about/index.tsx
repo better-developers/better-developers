@@ -1,8 +1,6 @@
 import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
-import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
