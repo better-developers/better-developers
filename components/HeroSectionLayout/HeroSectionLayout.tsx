@@ -1,9 +1,6 @@
-import { Box, BoxProps, Button, ColorProps, Flex, Heading, Stack, Text } from '@chakra-ui/react';
-import { Section } from '../Section/Section';
+import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { SectionItem } from '../SectionItem/SectionItem';
-import { FC, PropsWithChildren, ReactElement } from 'react';
-import { color } from 'framer-motion';
-import ReactPlayer from 'react-player';
+import { FC, ReactElement } from 'react';
 import { ContactButton } from '../ContactButton/ContactButton';
 
 type HeroSectionProps = {
