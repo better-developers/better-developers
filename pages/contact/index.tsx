@@ -18,7 +18,9 @@ const Services: React.FC = () => {
             <Flex flexDir="column">
                 <HeroSection
                     colors={{ base: 'brand.50', primary: '#3E1905', secondary: '#1C1E29', tertiary: '#3B3653' }}
-                    backgroundElement={<video src="/video/casette.mp4" autoPlay muted loop width="100%" />}>
+                    backgroundElement={
+                        <video src="/video/casette.mp4" autoPlay muted loop width="100%" poster="/video/casette-placeholder.jpg" />
+                    }>
                     <SectionItem colStart={2} colSpan={4} height={750}>
                         <Center flexDirection="column" gap={4} h="60%">
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>

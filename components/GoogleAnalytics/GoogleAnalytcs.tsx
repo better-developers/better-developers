@@ -1,4 +1,5 @@
-﻿import Script from 'next/script';
+﻿/* eslint-disable @next/next/next-script-for-ga */
+import Script from 'next/script';
 
 export const GoogleAnalytcs = () => {
     return (
