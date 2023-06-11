@@ -7,6 +7,9 @@ import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 import CasesHero from '../../public/cases-hero.svg';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [
@@ -93,83 +96,27 @@ const Cases: NextPage = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="750px" alignItems="end" position="relative">
-                    <Section position="absolute" height="100%">
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                top={50}
-                                bgColor="blue.100"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={3} colSpan={3}>
-                            <Box
-                                top={-45}
-                                bgColor="blue.200"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={5} colSpan={1}>
-                            <Box
-                                top={-85}
-                                bgColor="blue.500"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                bgColor="blue.50"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                    </Section>
-
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24} display="flex" alignItems="end">
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Text variant="brandHighlight">Cases</Text>
-                                    <Heading fontSize="4em" fontWeight="400" color="black">
-                                        Reelle virksomheder med reelle udfordringer
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" color="black">
-                                    Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
-                                    digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative
-                                    tilgang har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Kontakt os
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
+                <HeroSection colors={{ base: 'blue.50', primary: 'blue.100', secondary: 'blue.200', tertiary: 'blue.500' }}>
+                    <HeroSectionLayout
+                        identifier="Cases"
+                        heading={<>Reelle virksomheder med reelle udfordringer</>}
+                        paragraph={
+                            <>
+                                Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
+                                digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative tilgang
+                                har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
+                            </>
+                        }
+                        content={
                             <Stack alignItems="end" height={'100%'}>
                                 <Box w="80%">
                                     <Image src={CasesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
+                        }
+                    />
+                </HeroSection>
+
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
@@ -208,7 +155,7 @@ const Cases: NextPage = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>
-                            <Button variant="brand">Kontakt os</Button>
+                            <ContactButton />
                         </Center>
                     </SectionItem>
                 </Section>
