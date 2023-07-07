@@ -2,6 +2,7 @@ import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } fro
 import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
+import Employee from '../../components/Employee/Employee';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
@@ -9,10 +10,10 @@ import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
-import Employee2 from '../../public/img/profile/anders.jpg';
-import Employee4 from '../../public/img/profile/mikkel.jpg';
-import Employee3 from '../../public/img/profile/soren.jpg';
-import Employee1 from '../../public/img/profile/viktor.jpg';
+import Anders from '../../public/img/profile/anders.jpg';
+import Mikkel from '../../public/img/profile/mikkel.jpg';
+import Soren from '../../public/img/profile/soren.jpg';
+import Viktor from '../../public/img/profile/viktor.jpg';
 
 const About: React.FC = () => {
     return (
@@ -74,16 +75,16 @@ const About: React.FC = () => {
                         <Heading color="white">Team Better Developers</Heading>
                     </SectionItem>
                     <SectionItem colStart={2}>
-                        <Image src={Employee1} alt="Employee" />
+                        <Employee name="Viktor Andersen" title="CEO" image={Viktor}></Employee>
                     </SectionItem>
                     <SectionItem>
-                        <Image src={Employee2} alt="Employee" />
+                        <Employee name="Anders Kristiansen" title="CSO" image={Anders}></Employee>
                     </SectionItem>
                     <SectionItem>
-                        <Image src={Employee3} alt="Employee" />
+                        <Employee name="Søren Jessen" title="CLO" image={Soren}></Employee>
                     </SectionItem>
                     <SectionItem>
-                        <Image src={Employee4} alt="Employee" />
+                        <Employee name="Mikkel Laursen" title="CTO" image={Mikkel}></Employee>
                     </SectionItem>
                     <SectionItem colSpan={6} py={12}>
                         <Center>
