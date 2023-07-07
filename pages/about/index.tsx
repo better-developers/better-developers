@@ -1,19 +1,14 @@
-import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { IoPersonAdd } from 'react-icons/io5';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
-import Employee from '../../components/Employee/Employee';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
+import TeamBetterDevelopers from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
 import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
-import Anders from '../../public/img/profile/anders.jpg';
-import Mikkel from '../../public/img/profile/mikkel.jpg';
-import Soren from '../../public/img/profile/soren.jpg';
-import Viktor from '../../public/img/profile/viktor.jpg';
 
 const About: React.FC = () => {
     return (
@@ -69,33 +64,7 @@ const About: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={8} bgColor="#535266">
-                    <SectionItem colStart={2} colSpan={2} py={8}>
-                        <Text variant="brandHighlight">Mød holdet</Text>
-                        <Heading color="white">Team Better Developers</Heading>
-                    </SectionItem>
-                    <SectionItem colStart={2}>
-                        <Employee name="Viktor Andersen" title="CEO" image={Viktor}></Employee>
-                    </SectionItem>
-                    <SectionItem>
-                        <Employee name="Anders Kristiansen" title="CSO" image={Anders}></Employee>
-                    </SectionItem>
-                    <SectionItem>
-                        <Employee name="Søren Jessen" title="CLO" image={Soren}></Employee>
-                    </SectionItem>
-                    <SectionItem>
-                        <Employee name="Mikkel Laursen" title="CTO" image={Mikkel}></Employee>
-                    </SectionItem>
-                    <SectionItem colSpan={6} py={12}>
-                        <Center>
-                            <Link href="/career">
-                                <Button variant="brand" leftIcon={<Icon as={IoPersonAdd} fontSize="xl" />}>
-                                    Tilføj person
-                                </Button>
-                            </Link>
-                        </Center>
-                    </SectionItem>
-                </Section>
+                <TeamBetterDevelopers />
 
                 <Section py={8}>
                     <SectionItem colStart={2} colSpan={2} py={8}>

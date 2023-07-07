@@ -1,20 +1,15 @@
 'use client';
-import { Box, Button, Card, Center, Flex, Heading, Icon, Link, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { IoPersonAdd } from 'react-icons/io5';
-import { MdCheckCircle, MdSettings } from 'react-icons/md';
+import { MdCheckCircle } from 'react-icons/md';
 import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
-import { Section } from '../../components/Section/Section';
-import { SectionItem } from '../../components/SectionItem/SectionItem';
-import HeroComp from '../../public/hero-comp.png';
-import Linkedin1 from '../../public/img/linkedin-1.jpg';
-import Linkedin2 from '../../public/img/linkedin-2.jpg';
-import Employee1 from '../../public/placeholder-employee-1.png';
-import Employee2 from '../../public/placeholder-employee-2.png';
-import Employee3 from '../../public/placeholder-employee-3.png';
-import Employee4 from '../../public/placeholder-employee-4.png';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
+import { Section } from '../../components/Section/Section';
+import { SectionItem } from '../../components/SectionItem/SectionItem';
+import TeamBetterDevelopers from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
+import Linkedin1 from '../../public/img/linkedin-1.jpg';
+import Linkedin2 from '../../public/img/linkedin-2.jpg';
 
 const Career: React.FC = () => {
     return (
@@ -91,33 +86,7 @@ const Career: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={8} bgColor="#535266">
-                    <SectionItem colStart={2} colSpan={2} py={8}>
-                        <Text variant="brandHighlight">Team Better Developers</Text>
-                        <Heading color="white">Mød dine kommende kolleger</Heading>
-                    </SectionItem>
-                    <SectionItem colStart={2}>
-                        <Image src={Employee1} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee2} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee3} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee4} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem colSpan={6} py={12}>
-                        <Center>
-                            <Link href="/career">
-                                <Button variant="brand" leftIcon={<Icon as={IoPersonAdd} fontSize="xl" />}>
-                                    Tilføj person
-                                </Button>
-                            </Link>
-                        </Center>
-                    </SectionItem>
-                </Section>
+                <TeamBetterDevelopers />
 
                 <Section pt={24} pb={16}>
                     <SectionItem px={8} py={16} colStart={2} colSpan={2}>
