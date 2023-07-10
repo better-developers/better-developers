@@ -1,14 +1,14 @@
 import { Button, Center, Heading, Icon, Link, Text } from '@chakra-ui/react';
 import { IoPersonAdd } from 'react-icons/io5';
-import Employee from '../../components/Employee/Employee';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import Anders from '../../public/img/profile/anders.jpg';
 import Mikkel from '../../public/img/profile/mikkel.jpg';
 import Soren from '../../public/img/profile/soren.jpg';
 import Viktor from '../../public/img/profile/viktor.jpg';
+import { Employee } from '../Employee/Employee';
 
-const TeamBetterDevelopers: React.FC = () => {
+export const TeamBetterDevelopers: React.FC = () => {
     return (
         <Section py={8} bgColor="#535266">
             <SectionItem colStart={2} colSpan={2} py={8}>
@@ -39,5 +39,3 @@ const TeamBetterDevelopers: React.FC = () => {
         </Section>
     );
 };
-
-export default TeamBetterDevelopers;

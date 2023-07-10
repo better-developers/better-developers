@@ -7,7 +7,7 @@ type EmployeeProps = {
     image: StaticImageData;
 };
 
-const Employee: React.FC<EmployeeProps> = ({ name, title, image }) => {
+export const Employee: React.FC<EmployeeProps> = ({ name, title, image }) => {
     return (
         <>
             <Image src={image} alt={name} />
@@ -26,5 +26,3 @@ const Employee: React.FC<EmployeeProps> = ({ name, title, image }) => {
         </>
     );
 };
-
-export default Employee;
