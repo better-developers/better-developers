@@ -1,11 +1,11 @@
-import { Box, Center, Flex, Heading, Link, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
+import { MdCheckCircle } from 'react-icons/md';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { NavBarContext } from '../../contexts/NavBarContext';
-import { MdCheckCircle } from 'react-icons/md';
-import { HeroSection } from '../../components/HeroSection/HeroSection';
 
 const Services: React.FC = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
                                     textColor="transparent">
-                                    +45 42 66 10 28
+                                    +45 53 80 00 54
                                 </Heading>
                             </Link>
                         </Center>
