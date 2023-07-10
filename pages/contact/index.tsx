@@ -27,7 +27,7 @@ const Services: React.FC = () => {
                                 Sandheden er at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
                             </Heading>
 
-                            <Link href="tel:+4542661028">
+                            <Link href="tel:+4553800054">
                                 <Heading
                                     size="4xl"
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
