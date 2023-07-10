@@ -24,7 +24,7 @@ const Services: React.FC = () => {
                     <SectionItem colStart={2} colSpan={4} height={750}>
                         <Center flexDirection="column" gap={4} h="60%">
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
-                                Sandheden er at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
+                                Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
                             </Heading>
 
                             <Link href="tel:+4553800054">
