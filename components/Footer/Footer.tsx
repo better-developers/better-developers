@@ -59,13 +59,13 @@ export const Footer = () => {
                 <Link href="/career">
                     <Heading fontSize="md">Karriere</Heading>
                 </Link>
-                <Link>
+                <Link href="/career">
                     <Text>Bliv en del af Better Developers</Text>
                 </Link>
-                <Link>
+                <Link href="/career">
                     <Text>Freelance</Text>
                 </Link>
-                <Link>
+                <Link href="/career">
                     <Text>Studerende</Text>
                 </Link>
             </SectionItem>
