@@ -1,5 +1,5 @@
 'use client';
-import { Box, Button, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -16,8 +16,9 @@ import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { NavBarContext } from '../contexts/NavBarContext';
 import logoWireframe from '../public/logo-wireframe.svg';
-
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
+import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
+import { HeroSection } from '../components/HeroSection/HeroSection';
 
 const Home: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -28,53 +29,38 @@ const Home: NextPage = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
-                    <Box
-                        width="100%"
-                        height="100%"
-                        position="absolute"
-                        zIndex="-1"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)">
-                        <Gradient />
-                    </Box>
-
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24}>
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Heading fontSize="4em" fontWeight="400" mixBlendMode="overlay" color="black">
-                                        Et konsulenthus af
-                                    </Heading>
-                                    <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">
-                                        udviklere.
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" color="black">
-                                    Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redifinerer det traditionelle
-                                    it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur til hvordan
-                                    vi arbejder med vores kunder.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Kontakt os
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
+                <HeroSection
+                    colors={{ base: 'white', primary: 'white', secondary: 'white', tertiary: 'white' }}
+                    backgroundElement={
+                        <Box width="100%" height="100%" zIndex="-1">
+                            <Gradient />
+                        </Box>
+                    }>
+                    <HeroSectionLayout
+                        heading={
+                            <>
+                                <Heading fontSize="1em" fontWeight="400" mixBlendMode="overlay" color="black">
+                                    Et konsulenthus af
+                                </Heading>
+                                <Heading fontSize="1em" fontWeight="700" mixBlendMode="overlay" color="black">
+                                    udviklere.
+                                </Heading>
+                            </>
+                        }
+                        paragraph={
+                            <>
+                                Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redifinerer det traditionelle
+                                it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur til hvordan vi
+                                arbejder med vores kunder.
+                            </>
+                        }
+                        content={
                             <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828777583"
-                                    controls
-                                    width="100%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828819281" />
                             </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
+                        }
+                    />
+                </HeroSection>
 
                 <Section pt={24} pb={16}>
                     <SectionItem px={8} colStart={2} colSpan={1}>

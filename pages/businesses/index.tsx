@@ -11,6 +11,8 @@ import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 import BusinessesHero from '../../public/businesses-hero.svg';
 import WebAppTemplate from '../../public/web-app-template.svg';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 
 const sectors: readonly Sector[] = [
     {
@@ -83,83 +85,37 @@ const Businesses: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="700px" alignItems="end" position="relative">
-                    <Section position="absolute" height="100%">
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                top={50}
-                                bgColor="#F5B3B3"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={3} colSpan={3}>
-                            <Box
-                                top={-45}
-                                bgColor="#F27E7E"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={5} colSpan={1}>
-                            <Box
-                                top={-85}
-                                bgColor="#D14141"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                bgColor="red.50"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                    </Section>
-
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24}>
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Text variant="brandHighlight">Brancher</Text>
-                                    <Heading fontSize="3em" fontWeight="400" color="black">
-                                        Erfaringsbaserede softwareløsninger skræddersyet til din branche
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" color="black">
-                                    Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche.
-                                    Vi leverer skræddersyede softwareløsninger, der er specifikt designet til at imødekomme de udfordringer
-                                    og behov din branche står over for.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Kontakt os
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
+                <HeroSection colors={{ base: 'red.50', primary: '#F5B3B3', secondary: '#F27E7E', tertiary: '#D14141' }}>
+                    <HeroSectionLayout
+                        identifier="Brancher"
+                        heading={
+                            <Text fontSize="0.8em" color="inherit" fontWeight="inherit" lineHeight="inherit">
+                                Erfarings&shy;
+                                <wbr />
+                                baserede software&shy;
+                                <wbr />
+                                løsninger skrædder&shy;
+                                <wbr />
+                                syet til din branche
+                            </Text>
+                        }
+                        paragraph={
+                            <>
+                                Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche. Vi
+                                leverer skræddersyede softwareløsninger, der er specifikt designet til at imødekomme de udfordringer og
+                                behov din branche står over for.
+                            </>
+                        }
+                        content={
                             <Stack alignItems="center" height={'100%'}>
                                 <Box w="50%">
                                     <Image src={BusinessesHero} alt="Computer image" />
                                 </Box>
                             </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
+                        }
+                    />
+                </HeroSection>
+
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">

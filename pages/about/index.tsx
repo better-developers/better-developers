@@ -3,113 +3,52 @@ import Image from 'next/image';
 import { IoPersonAdd } from 'react-icons/io5';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import HeroComp from '../../public/hero-comp.png';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
 import Employee1 from '../../public/placeholder-employee-1.png';
 import Employee2 from '../../public/placeholder-employee-2.png';
 import Employee3 from '../../public/placeholder-employee-3.png';
 import Employee4 from '../../public/placeholder-employee-4.png';
-import dynamic from 'next/dynamic';
-
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 
 const About: React.FC = () => {
     return (
         <>
             <Flex flexDir="column">
-                <Flex height="650px" alignItems="end" position="relative">
-                    <Section position="absolute" height="100%">
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                top={50}
-                                bgColor="#F7A75A"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={3} colSpan={3}>
-                            <Box
-                                top={-45}
-                                bgColor="#F7C661"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colStart={5} colSpan={1}>
-                            <Box
-                                top={-85}
-                                bgColor="#F8E668"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                        <SectionItem px={0} colSpan={6}>
-                            <Box
-                                bgColor="#FAFCFE"
-                                backgroundSize="cover"
-                                width="100%"
-                                height="100%"
-                                position="absolute"
-                                clipPath="polygon(0px 0px, 100% 0px, 100% 65%, 0px 100%)"
-                            />
-                        </SectionItem>
-                    </Section>
-
-                    <Section>
-                        <SectionItem colStart={2} colEnd={4} mb={24}>
-                            <Stack gap={8}>
-                                <Flex flexDir="column">
-                                    <Text variant="brandHighlight">Om os</Text>
-                                    <Heading fontSize="4em" fontWeight="400" color="black">
-                                        Vi er{' '}
-                                        <Box
-                                            display="inline"
-                                            lineHeight={1}
-                                            background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
-                                            backgroundClip="text"
-                                            textColor="transparent"
-                                            fontWeight="semibold"
-                                        >
-                                            Better Developers.
-                                        </Box>
-                                    </Heading>
-                                </Flex>
-
-                                <Text lineHeight="1.5" w="80%" color="black">
-                                    Better Developers blev grundlagt i Aarhus i 2023 med en klar vision for at levere ekstraordinære
-                                    softwareløsninger. Vi arbejder hver dag på at udvikle de bedste og mest innovative løsninger indenfor
-                                    software.
-                                </Text>
-
-                                <Button variant="brand" w="fit-content">
-                                    Call to action
-                                </Button>
-                            </Stack>
-                        </SectionItem>
-                        <SectionItem colStart={4} colEnd={6}>
+                <HeroSection colors={{ base: '#FAFCFE', primary: '#F7A75A', secondary: '#F7C661', tertiary: '#F8E668' }}>
+                    <HeroSectionLayout
+                        identifier="Om os"
+                        heading={
+                            <>
+                                {'Vi er '}
+                                <Box
+                                    display="inline"
+                                    lineHeight={1}
+                                    background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
+                                    backgroundClip="text"
+                                    textColor="transparent"
+                                    fontWeight="semibold">
+                                    Better Developers.
+                                </Box>
+                            </>
+                        }
+                        paragraph={
+                            <>
+                                Better Developers blev grundlagt i Aarhus i 2023 med en klar vision for at levere ekstraordinære
+                                softwareløsninger. Vi arbejder hver dag på at udvikle de bedste og mest innovative løsninger indenfor
+                                software.
+                            </>
+                        }
+                        content={
                             <Stack alignItems="end" height={'100%'}>
-                                <ReactPlayer
-                                    url="https://vimeo.com/828819281"
-                                    controls
-                                    width="80%"
-                                    style={{
-                                        filter: 'drop-shadow(5px 5px 10px #666)',
-                                    }}
-                                />
+                                <VimeoVideo id="828777583" />
                             </Stack>
-                        </SectionItem>
-                    </Section>
-                </Flex>
+                        }
+                    />
+                </HeroSection>
                 <Section py={24}>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
@@ -246,7 +185,7 @@ const About: React.FC = () => {
                     </SectionItem>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Center>
-                            <Button variant="brand">Kontakt os</Button>
+                            <ContactButton />
                         </Center>
                     </SectionItem>
                 </Section>
