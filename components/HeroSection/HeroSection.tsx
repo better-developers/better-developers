@@ -20,7 +20,6 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 <Box
                     top={54}
                     bgColor={colors.primary}
-                    width="100%"
                     height="100%"
                     position="absolute"
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
@@ -30,7 +29,6 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 <Box
                     top={-50}
                     bgColor={colors.secondary}
-                    width="100%"
                     height="100%"
                     position="absolute"
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
@@ -40,7 +38,6 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 <Box
                     top={-90}
                     bgColor={colors.tertiary}
-                    width="100%"
                     height="100%"
                     position="absolute"
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
@@ -51,7 +48,6 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 <Box
                     top={0}
                     bgColor={colors.base}
-                    width="100%"
                     height="100%"
                     position="absolute"
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
@@ -62,7 +58,6 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     <Box
                         top={0}
                         bgColor={colors.base}
-                        width="100%"
                         height="100%"
                         position="absolute"
                         clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)">
