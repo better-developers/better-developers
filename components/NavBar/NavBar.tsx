@@ -1,8 +1,8 @@
 ﻿import { HamburgerIcon } from '@chakra-ui/icons';
 import { Flex, Heading, Hide, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Show, Stack } from '@chakra-ui/react';
-import { useScroll } from 'framer-motion';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { NavBarContext } from '../../contexts/NavBarContext';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
 import { ContactButton } from '../ContactButton/ContactButton';
@@ -16,7 +16,7 @@ export const NavBar = () => {
     const contextColor = color === 'light' ? 'white' : color === 'dark' ? 'primary' : 'primary';
     const fontColor = isTop ? contextColor : 'primary';
 
-    useEffect(() => scrollY.on('change', (y) => setIsTop(y <= 0)), [scrollY]);
+    useMotionValueEvent(scrollY, 'change', (y) => setIsTop(y <= 0));
 
     const links = [
         { href: 'services', text: 'Services' },
