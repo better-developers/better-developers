@@ -1,8 +1,7 @@
-import { Box, BoxProps, ColorProps } from '@chakra-ui/react';
+import { Box, ColorProps } from '@chakra-ui/react';
+import { FC, PropsWithChildren } from 'react';
 import { Section } from '../Section/Section';
 import { SectionItem } from '../SectionItem/SectionItem';
-import { FC, PropsWithChildren } from 'react';
-import { color } from 'framer-motion';
 
 type HeroSectionProps = {
     colors: {
