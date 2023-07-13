@@ -28,7 +28,8 @@ export const SkillsCarousel = () => {
             spaceBetween={50}
             modules={[Autoplay]}
             slidesPerView={'auto'}
-            onSwiper={(swiper) => console.log(swiper)}>
+            onSwiper={(swiper) => console.log(swiper)}
+        >
             <SwiperSlide className={styles.slide}>
                 <LogoSlide src={ReactIcon} tooltip={'React'} />
             </SwiperSlide>

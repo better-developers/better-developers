@@ -1,6 +1,7 @@
 'use client';
 import { Box, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';

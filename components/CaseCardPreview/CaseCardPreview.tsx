@@ -33,14 +33,16 @@ export const CaseCardPreview: FC<PropsWithChildren<CaseCardPreviewProps>> = ({ i
                 }}
                 animate={hover ? 'show' : 'hidden'}
                 variants={variants}
-                style={{ height: '100%', width: '100%', position: 'absolute' }}>
+                style={{ height: '100%', width: '100%', position: 'absolute' }}
+            >
                 <Stack
                     gap={2}
                     px={8}
                     py={12}
                     background="linear-gradient(114.59deg, #F7A85B 1%, #F8E869 91.26%)"
                     height="100%"
-                    width="100%">
+                    width="100%"
+                >
                     <Heading fontSize="3xl" color="white">
                         {title}
                     </Heading>

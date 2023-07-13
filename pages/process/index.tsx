@@ -50,7 +50,8 @@ const Home: NextPage = () => {
                 style={{
                     height: 400,
                     background: 'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(teamwork.jpg)',
-                }}>
+                }}
+            >
                 <LineDivider />
 
                 <SectionContent></SectionContent>
@@ -82,7 +83,8 @@ const Home: NextPage = () => {
                                     bounce: 0.2,
                                     mass: 1,
                                     damping: 15,
-                                }}>
+                                }}
+                            >
                                 <Image src={StepOne} height={200} alt="Step one" />
                             </motion.div>
                         </div>
@@ -99,7 +101,8 @@ const Home: NextPage = () => {
                                 bounce: 0.2,
                                 mass: 1,
                                 damping: 15,
-                            }}>
+                            }}
+                        >
                             <Image src={StepTwo} height={300} alt="Step two" />
                         </motion.div>
                         <span className={styles.text}>
@@ -126,7 +129,8 @@ const Home: NextPage = () => {
                                     bounce: 0.2,
                                     mass: 1,
                                     damping: 15,
-                                }}>
+                                }}
+                            >
                                 <Image src={StepThree} height={300} alt="Step three" />
                             </motion.div>
                         </div>
@@ -153,7 +157,8 @@ const Home: NextPage = () => {
                                 bounce: 0.2,
                                 mass: 1,
                                 damping: 15,
-                            }}>
+                            }}
+                        >
                             <Image src={StepFour} height={300} width={300} alt="Step four" />
                         </motion.div>
                         <span className={styles.text}>
@@ -175,7 +180,8 @@ const Home: NextPage = () => {
                 className={styles.section}
                 style={{
                     background: 'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(teamwork.jpg)',
-                }}>
+                }}
+            >
                 <LineDivider />
 
                 <SectionContent>

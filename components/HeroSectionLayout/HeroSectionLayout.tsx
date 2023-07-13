@@ -1,7 +1,7 @@
 import { Flex, Heading, Stack, Text } from '@chakra-ui/react';
-import { SectionItem } from '../SectionItem/SectionItem';
 import { FC, ReactElement } from 'react';
 import { ContactButton } from '../ContactButton/ContactButton';
+import { SectionItem } from '../SectionItem/SectionItem';
 
 type HeroSectionProps = {
     identifier?: string;
@@ -22,7 +22,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, p
                         </Heading>
                     </Flex>
 
-                    <Text lineHeight="1.5" color="black">
+                    <Text lineHeight="1.5" color="black" maxWidth={'750px'}>
                         {paragraph}
                     </Text>
 
