@@ -1,7 +1,6 @@
 'use client';
 import { Box, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
@@ -39,7 +38,7 @@ const Home: NextPage = () => {
                     <HeroSectionLayout
                         customHeading={
                             <>
-                                <Heading fontSize="4em" fontWeight="400" mixBlendMode="overlay" color="black">
+                                <Heading fontSize={['2em', '2em', '4em', '4em']} fontWeight="400" mixBlendMode="overlay" color="black">
                                     Et konsulenthus af
                                 </Heading>
                                 <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">

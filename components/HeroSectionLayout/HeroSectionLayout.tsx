@@ -14,7 +14,7 @@ type HeroSectionProps = {
 export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, content }) => {
     return (
         <>
-            <SectionItem colStart={2} colEnd={4} mb={24}>
+            <SectionItem colStart={2} colEnd={[8, 8, 4, 4]} mb={24}>
                 <Stack gap={8}>
                     <Flex flexDir="column">
                         {identifier && <Text variant="brandHighlight">{identifier}</Text>}
@@ -35,7 +35,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                     <ContactButton />
                 </Stack>
             </SectionItem>
-            <SectionItem colStart={4} colEnd={6}>
+            <SectionItem colStart={4} colEnd={[8, 8, 6, 6]}>
                 {content}
             </SectionItem>
         </>

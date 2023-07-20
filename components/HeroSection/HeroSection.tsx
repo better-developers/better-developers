@@ -25,6 +25,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
+
             <SectionItem px={0} colStart={3} colSpan={3} h="100%" zIndex={-1}>
                 <Box
                     top={-50}
@@ -34,6 +35,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
+
             <SectionItem px={0} colStart={5} colSpan={1} h="100%" zIndex={-1}>
                 <Box
                     top={-90}
@@ -44,7 +46,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 />
             </SectionItem>
 
-            <SectionItem paddingTop={48} px={0} colSpan={6} h="100%" zIndex={-1}>
+            <SectionItem paddingTop={[0, 0, 48]} px={0} colSpan={6} h="100%" zIndex={-1}>
                 <Box
                     top={0}
                     bgColor={colors.base}
@@ -53,6 +55,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
+
             {backgroundElement && (
                 <SectionItem px={0} colSpan={6} h="100%" zIndex={-1}>
                     <Box
