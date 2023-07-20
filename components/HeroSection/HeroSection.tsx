@@ -46,7 +46,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 />
             </SectionItem>
 
-            <SectionItem paddingTop={[0, 0, 48]} px={0} colSpan={6} h="100%" zIndex={-1}>
+            <SectionItem paddingTop={[24, 24, 48]} px={0} colSpan={6} h="100%" zIndex={-1}>
                 <Box
                     top={0}
                     bgColor={colors.base}

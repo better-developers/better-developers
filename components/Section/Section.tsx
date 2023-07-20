@@ -5,7 +5,7 @@ export const Section: FC<BoxProps> = ({ children, ...props }) => (
     <Box {...props} position={props.position ?? 'relative'} width="100%">
         <Grid
             gridTemplateColumns={['1fr', '1fr', '1fr', '0.5fr repeat(4, 1fr) 0.5fr']}
-            gap={['4em', '4em', '4em', '1em']}
+            gap={['2em', '2em', '4em', '1em']}
             width="100%"
             minW={0}>
             {children}

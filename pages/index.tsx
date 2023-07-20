@@ -219,10 +219,12 @@ const Home: NextPage = () => {
                             </Grid>
                         </Stack>
                     </SectionItem> */}
-                    <SectionItem colStart={2} colSpan={4} pt={12} pb={4}>
-                        <Heading color="white">Det siger andre</Heading>
+
+                    <SectionItem colStart={2} colSpan={4} pt={12} pb={[0, 0, 4]}>
+                        <Heading color={['initial', 'initial', 'white']}>Det siger andre</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={1}>
+
+                    <SectionItem colStart={2} colSpan={[4, 4, 'auto']}>
                         <ContactCard
                             name="Hans Nikolajsen"
                             title="Direktør"
@@ -231,7 +233,8 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
-                    <SectionItem>
+
+                    <SectionItem colSpan={[4, 4, 'auto']}>
                         <ContactCard
                             name="Mark Henriksen"
                             title="IT-Udvikler"
@@ -240,7 +243,8 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
-                    <SectionItem>
+
+                    <SectionItem colSpan={[4, 4, 'auto']}>
                         <ContactCard
                             name="Hanne Ulrichsen"
                             title="Lead Developer"
@@ -249,7 +253,8 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
-                    <SectionItem>
+
+                    <SectionItem colSpan={[4, 4, 'auto']}>
                         <ContactCard
                             name="Martin Tranbjerg"
                             title="Direktør"
@@ -265,6 +270,7 @@ const Home: NextPage = () => {
                         <FAQ />
                     </SectionItem>
                 </Section>
+
                 <Section>
                     <SectionItem colStart={3} colSpan={2} py={4}>
                         <Heading textAlign="center">
