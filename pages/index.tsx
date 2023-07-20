@@ -12,13 +12,13 @@ import { ContactButton } from '../components/ContactButton/ContactButton';
 import { ContactCard } from '../components/ContactCard/ContactCard';
 import FAQ from '../components/FAQ/FAQ';
 import { Gradient } from '../components/Gradient/Gradient';
+import { HeroSection } from '../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
+import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
 import logoWireframe from '../public/logo-wireframe.svg';
-import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
-import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
-import { HeroSection } from '../components/HeroSection/HeroSection';
 
 const Home: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -37,12 +37,12 @@ const Home: NextPage = () => {
                         </Box>
                     }>
                     <HeroSectionLayout
-                        heading={
+                        customHeading={
                             <>
-                                <Heading fontSize="1em" fontWeight="400" mixBlendMode="overlay" color="black">
+                                <Heading fontSize="4em" fontWeight="400" mixBlendMode="overlay" color="black">
                                     Et konsulenthus af
                                 </Heading>
-                                <Heading fontSize="1em" fontWeight="700" mixBlendMode="overlay" color="black">
+                                <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">
                                     udviklere.
                                 </Heading>
                             </>

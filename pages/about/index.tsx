@@ -1,18 +1,14 @@
-import { Box, Button, Card, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-import { IoPersonAdd } from 'react-icons/io5';
-import { Section } from '../../components/Section/Section';
-import { SectionItem } from '../../components/SectionItem/SectionItem';
-import Linkedin1 from '../../public/img/linkedin-1.jpg';
-import Linkedin2 from '../../public/img/linkedin-2.jpg';
-import Employee1 from '../../public/placeholder-employee-1.png';
-import Employee2 from '../../public/placeholder-employee-2.png';
-import Employee3 from '../../public/placeholder-employee-3.png';
-import Employee4 from '../../public/placeholder-employee-4.png';
-import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
-import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { Section } from '../../components/Section/Section';
+import { SectionItem } from '../../components/SectionItem/SectionItem';
+import { TeamBetterDevelopers } from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
+import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
+import Linkedin1 from '../../public/img/linkedin-1.jpg';
+import Linkedin2 from '../../public/img/linkedin-2.jpg';
 
 const About: React.FC = () => {
     return (
@@ -68,33 +64,7 @@ const About: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={8} bgColor="#535266">
-                    <SectionItem colStart={2} colSpan={2} py={8}>
-                        <Text variant="brandHighlight">Mød holdet</Text>
-                        <Heading color="white">Team Better Developers</Heading>
-                    </SectionItem>
-                    <SectionItem colStart={2}>
-                        <Image src={Employee1} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee2} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee3} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem>
-                        <Image src={Employee4} alt="Employee" />
-                    </SectionItem>
-                    <SectionItem colSpan={6} py={12}>
-                        <Center>
-                            <Link href="/career">
-                                <Button variant="brand" leftIcon={<Icon as={IoPersonAdd} fontSize="xl" />}>
-                                    Tilføj person
-                                </Button>
-                            </Link>
-                        </Center>
-                    </SectionItem>
-                </Section>
+                <TeamBetterDevelopers />
 
                 <Section py={8}>
                     <SectionItem colStart={2} colSpan={2} py={8}>

@@ -5,21 +5,27 @@ import { SectionItem } from '../SectionItem/SectionItem';
 
 type HeroSectionProps = {
     identifier?: string;
-    heading: ReactElement;
+    heading?: ReactElement;
+    customHeading?: ReactElement;
     paragraph: ReactElement;
     content?: ReactElement;
 };
 
-export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, paragraph, content }) => {
+export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, content }) => {
     return (
         <>
             <SectionItem colStart={2} colEnd={4} mb={24}>
                 <Stack gap={8}>
                     <Flex flexDir="column">
                         {identifier && <Text variant="brandHighlight">{identifier}</Text>}
-                        <Heading fontSize="4em" fontWeight="400" color="black">
-                            {heading}
-                        </Heading>
+
+                        {heading && (
+                            <Heading fontSize="4em" fontWeight="400" color="black">
+                                {heading}
+                            </Heading>
+                        )}
+
+                        {customHeading}
                     </Flex>
 
                     <Text lineHeight="1.5" color="black" maxWidth={'750px'}>
