@@ -276,7 +276,7 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={48}>
-                    <SectionItem colStart={3} colEnd={5}>
+                    <SectionItem colStart={3} colEnd={5} colSpan={[6, 6, 2]}>
                         <FAQ />
                     </SectionItem>
                 </Section>
