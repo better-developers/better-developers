@@ -20,7 +20,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                         {identifier && <Text variant="brandHighlight">{identifier}</Text>}
 
                         {heading && (
-                            <Heading fontSize="4em" fontWeight="400" color="black">
+                            <Heading fontSize={['2em', '2em', '4em', '4em']} fontWeight="400" color="black">
                                 {heading}
                             </Heading>
                         )}
