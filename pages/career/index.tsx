@@ -89,7 +89,7 @@ const Career: React.FC = () => {
                 <TeamBetterDevelopers />
 
                 <Section pt={24} pb={16}>
-                    <SectionItem px={8} py={16} colStart={2} colSpan={2}>
+                    <SectionItem px={8} py={16} colStart={2} colSpan={[6, 6, 2]}>
                         <Heading size="2xl">
                             Hvorfor{' '}
                             <Box
@@ -98,14 +98,13 @@ const Career: React.FC = () => {
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
                                 textColor="transparent"
-                                fontWeight="semibold"
-                            >
+                                fontWeight="semibold">
                                 Better Developers?
                             </Box>
                         </Heading>
                     </SectionItem>
 
-                    <SectionItem px={8} colStart={2} colSpan={1}>
+                    <SectionItem px={8} colStart={2}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
