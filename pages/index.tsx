@@ -38,10 +38,20 @@ const Home: NextPage = () => {
                     <HeroSectionLayout
                         customHeading={
                             <>
-                                <Heading fontSize={['2em', '2em', '4em', '4em']} fontWeight="400" mixBlendMode="overlay" color="black">
+                                <Heading
+                                    fontSize={['2em', '2em', '4em', '4em']}
+                                    fontWeight="400"
+                                    mixBlendMode="overlay"
+                                    transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
+                                    color="black">
                                     Et konsulenthus af
                                 </Heading>
-                                <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">
+                                <Heading
+                                    fontSize="4em"
+                                    fontWeight="700"
+                                    mixBlendMode="overlay"
+                                    transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
+                                    color="black">
                                     udviklere.
                                 </Heading>
                             </>
