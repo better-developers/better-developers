@@ -67,15 +67,14 @@ const About: React.FC = () => {
                 <TeamBetterDevelopers />
 
                 <Section py={8}>
-                    <SectionItem colStart={2} colSpan={2} py={8}>
+                    <SectionItem colStart={2} colSpan={[6, 6, 2]} py={8}>
                         <Heading fontWeight={600}>
                             Historien bag{' '}
                             <Box
                                 display="inline"
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
-                                textColor="transparent"
-                            >
+                                textColor="transparent">
                                 Better Developers
                             </Box>
                         </Heading>

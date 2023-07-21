@@ -5,7 +5,7 @@ export const SectionItem: FC<PropsWithChildren<GridItemProps>> = ({ children, ..
     <GridItem
         {...props}
         colStart={[1, 1, (props.colStart as any) ?? 'auto']}
-        colSpan={props.colSpan ?? [4, 4, 'auto']}
+        colSpan={props.colSpan ?? [6, 6, 'auto']}
         minW={0}
         px={props.px ?? 4}>
         {children}
