@@ -1,15 +1,15 @@
-import { Box, Button, Center, Flex, Grid, GridItem, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Grid, GridItem, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { CaseCard } from '../../components/CaseCard/CaseCard';
+import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
-import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 import CasesHero from '../../public/cases-hero.svg';
-import { HeroSection } from '../../components/HeroSection/HeroSection';
-import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
-import { ContactButton } from '../../components/ContactButton/ContactButton';
+import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [
@@ -139,7 +139,13 @@ const Cases: NextPage = () => {
                     <SectionItem colStart={2} colSpan={4}>
                         <Grid gridTemplateColumns="repeat(4,1fr)" gridTemplateRows="1fr 0.5fr 1fr" gap={8}>
                             {cases.map((c, index) => (
-                                <GridItem key={index} colSpan={index % 5 ? 1 : 2} rowSpan={index % 5 ? 2 : 1} minW={0} minH={0} h="100%">
+                                <GridItem
+                                    key={index}
+                                    colSpan={[8, 8, index % 5 ? 1 : 2]}
+                                    rowSpan={index % 5 ? 2 : 1}
+                                    minW={0}
+                                    minH={0}
+                                    h="100%">
                                     <CaseCard image={c.image} title={c.title}>
                                         {c.content}
                                     </CaseCard>

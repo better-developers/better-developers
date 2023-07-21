@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Grid, Heading, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoDocumentText, IoPeople } from 'react-icons/io5';
@@ -6,13 +6,13 @@ import { MdAgriculture } from 'react-icons/md';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { SiWebmoney } from 'react-icons/si';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 import BusinessesHero from '../../public/businesses-hero.svg';
 import WebAppTemplate from '../../public/web-app-template.svg';
-import { HeroSection } from '../../components/HeroSection/HeroSection';
-import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 
 const sectors: readonly Sector[] = [
     {
@@ -150,7 +150,7 @@ const Businesses: React.FC = () => {
                         <SectorCard sector={sectors[1]} active={isActive(1)} side={'left'} alignment={'middle'} onClick={onClick(1)} />
                     </SectionItem>
                     <SectionItem colStart={2} colSpan={4} py={8}>
-                        <Grid gridTemplateColumns="1fr 1fr 1fr" gap={8} px={16}>
+                        <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr 1fr']} gap={8} px={16}>
                             <SectorCard sector={sectors[2]} active={isActive(2)} side={'top'} alignment={'right'} onClick={onClick(2)} />
                             <SectorCard sector={sectors[3]} active={isActive(3)} side={'top'} alignment={'middle'} onClick={onClick(3)} />
                             <SectorCard sector={sectors[4]} active={isActive(4)} side={'top'} alignment={'left'} onClick={onClick(4)} />

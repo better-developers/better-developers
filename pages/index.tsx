@@ -234,7 +234,7 @@ const Home: NextPage = () => {
                         <Heading color={['initial', 'initial', 'white']}>Det siger andre</Heading>
                     </SectionItem>
 
-                    <SectionItem colStart={2} colSpan={[4, 4, 'auto']}>
+                    <SectionItem colStart={2}>
                         <ContactCard
                             name="Hans Nikolajsen"
                             title="Direktør"
@@ -244,7 +244,7 @@ const Home: NextPage = () => {
                         />
                     </SectionItem>
 
-                    <SectionItem colSpan={[4, 4, 'auto']}>
+                    <SectionItem>
                         <ContactCard
                             name="Mark Henriksen"
                             title="IT-Udvikler"
@@ -254,7 +254,7 @@ const Home: NextPage = () => {
                         />
                     </SectionItem>
 
-                    <SectionItem colSpan={[4, 4, 'auto']}>
+                    <SectionItem>
                         <ContactCard
                             name="Hanne Ulrichsen"
                             title="Lead Developer"
@@ -264,7 +264,7 @@ const Home: NextPage = () => {
                         />
                     </SectionItem>
 
-                    <SectionItem colSpan={[4, 4, 'auto']}>
+                    <SectionItem>
                         <ContactCard
                             name="Martin Tranbjerg"
                             title="Direktør"
