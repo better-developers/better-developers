@@ -149,7 +149,7 @@ const Businesses: React.FC = () => {
                     <SectionItem colSpan={1}>
                         <SectorCard sector={sectors[1]} active={isActive(1)} side={'left'} alignment={'middle'} onClick={onClick(1)} />
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={4} py={8}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[2, 2, 4]} py={8}>
                         <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr 1fr']} gap={8} px={16}>
                             <SectorCard sector={sectors[2]} active={isActive(2)} side={'top'} alignment={'right'} onClick={onClick(2)} />
                             <SectorCard sector={sectors[3]} active={isActive(3)} side={'top'} alignment={'middle'} onClick={onClick(3)} />
