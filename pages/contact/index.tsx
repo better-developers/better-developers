@@ -21,7 +21,7 @@ const Services: React.FC = () => {
                     backgroundElement={
                         <video src="/video/casette.mp4" autoPlay muted loop width="100%" poster="/video/casette-placeholder.jpg" />
                     }>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={4} height={750}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
                         <Center flexDirection="column" gap={4} h="60%">
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
                                 Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
