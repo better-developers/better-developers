@@ -27,7 +27,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 />
             </SectionItem>
 
-            <SectionItem px={0} colStart={3} colSpan={3} h="100%" zIndex={-1}>
+            <SectionItem px={0} colStart={[1, 1, 3]} colSpan={3} h="100%" zIndex={-1}>
                 <Box
                     top={-50}
                     bgColor={colors.secondary}
@@ -38,7 +38,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 />
             </SectionItem>
 
-            <SectionItem px={0} colStart={5} colSpan={1} h="100%" zIndex={-1}>
+            <SectionItem px={0} colStart={[1, 1, 5]} colSpan={1} h="100%" zIndex={-1}>
                 <Box
                     top={-90}
                     bgColor={colors.tertiary}
