@@ -4,11 +4,11 @@ import FAQItem from './FAQItem';
 const FAQ: React.FC = () => {
     return (
         <Flex direction="column" gap="2em">
-            <Heading>Titel der introducerer FAQ</Heading>
+            <Heading>FAQ</Heading>
 
             <Text>
-                Her kan vi skrive nogle overordnede ting omkring de spørgsmål som folk stiller og at de altid er velkomne til at kontakte
-                os.
+                Her kan du få svar på nogle af de spørgsmål, som vi oftest støder på. Finder du ikke svar her, så er du meget velkommen til
+                at kontakte os.
             </Text>
 
             <Card>
