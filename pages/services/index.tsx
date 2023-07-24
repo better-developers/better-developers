@@ -77,7 +77,7 @@ const Services: React.FC = () => {
 
                 <Section py={32} bgColor="blue.800" id="end-to-end">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
-                        <Stack gap={4}>
+                        <Stack gap={4} p={4}>
                             <Heading color="white">End-to-end projekter</Heading>
                             <Text color="white">
                                 Vores tilgang til end-to-end softwareudviklingsprojekter indebærer et tæt samarbejde og partnerskab med
@@ -138,7 +138,7 @@ const Services: React.FC = () => {
                         </Center>
                     </SectionItem>
                     <SectionItem colSpan={2}>
-                        <Stack gap={4}>
+                        <Stack gap={4} p={4}>
                             <Heading>Software konsulenter</Heading>
                             <Text>
                                 Vores konsulenthus er stolt af at have et team af dygtige og erfarne konsulenter, der er dedikerede til at
