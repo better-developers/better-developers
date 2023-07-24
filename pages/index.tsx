@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                 </HeroSection>
 
                 <Section pt={24} pb={16}>
-                    <SectionItem px={8} colStart={2} colSpan={1}>
+                    <SectionItem px={8} colStart={[1, 1, 2]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
