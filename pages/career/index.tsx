@@ -46,12 +46,12 @@ const Career: React.FC = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
                             Bliv en del af et fællesskab med et fælles mål og fælles fejring!
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Bliv en del af et varmt og indbydende fællesskab hos Better Developers, hvor vi deler et fælles mål og fejrer
                             vores succeser sammen. Vi værdsætter vores medarbejdere som en del af vores udvidede familie og tilbyder endda
@@ -63,10 +63,10 @@ const Career: React.FC = () => {
                 </Section>
 
                 <Section pb={32}>
-                    <SectionItem colStart={2} colSpan={2} py={8}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={8}>
                         <Heading fontWeight={600}>Følg med i dagligdagen</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -189,7 +189,7 @@ const Career: React.FC = () => {
                 </Section>
 
                 <Section pt={24} pb={16}>
-                    <SectionItem colStart={2} colSpan={2} display="flex" flexDirection="column" gap={24}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} display="flex" flexDirection="column" gap={24}>
                         <Heading size="2xl">Send ansøgning</Heading>
 
                         <Flex marginLeft={4} direction="column" gap={4}>
@@ -212,7 +212,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem colStart={4} colSpan={2} display="flex" justifyContent="center">
+                    <SectionItem colStart={[1, 1, 4]} colSpan={2} display="flex" justifyContent="center">
                         <ApplicationForm variant="dark"></ApplicationForm>
                     </SectionItem>
                 </Section>

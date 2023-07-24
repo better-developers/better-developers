@@ -11,11 +11,11 @@ import { Employee } from '../Employee/Employee';
 export const TeamBetterDevelopers: React.FC = () => {
     return (
         <Section py={8} bgColor="#535266">
-            <SectionItem colStart={2} colSpan={2} py={8}>
+            <SectionItem colStart={[1, 1, 2]} colSpan={2} py={8}>
                 <Text variant="brandHighlight">Mød holdet</Text>
                 <Heading color="white">Team Better Developers</Heading>
             </SectionItem>
-            <SectionItem colStart={2}>
+            <SectionItem colStart={[1, 1, 2]}>
                 <Employee name="Viktor Andersen" title="CEO" image={Viktor}></Employee>
             </SectionItem>
             <SectionItem>

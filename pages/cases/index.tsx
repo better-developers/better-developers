@@ -118,12 +118,12 @@ const Cases: NextPage = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
                             Vores tidligere samarbejder indenfor softwareuvikling
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text textAlign="justify">
                             Se vores virksomhedscases og opdag hvordan Better Developers har udnyttet den nyeste teknologi til at levere
                             skræddersyede softwareløsninger til vores kunder. Vores dygtige konsulenter har anvendt avancerede teknologier
@@ -136,7 +136,7 @@ const Cases: NextPage = () => {
                 </Section>
 
                 <Section>
-                    <SectionItem colStart={2} colSpan={4}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={4}>
                         <Grid gridTemplateColumns="repeat(4,1fr)" gridTemplateRows="1fr 0.5fr 1fr" gap={8}>
                             {cases.map((c, index) => (
                                 <GridItem
@@ -156,10 +156,10 @@ const Cases: NextPage = () => {
                 </Section>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4} px={16}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} px={16}>
                         <Heading textAlign="center">Vil du høre mere? Vi elsker at fortælle!</Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton />
                         </Center>

@@ -1,12 +1,11 @@
-import { Box, Button, Center, Flex, Heading, Link, ListItem, OrderedList, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Link, ListItem, OrderedList, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
-import { Section } from '../../components/Section/Section';
-import { SectionItem } from '../../components/SectionItem/SectionItem';
-import HeroComp from '../../public/hero-comp.png';
-import ServicesHero from '../../public/services-hero.svg';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
+import { Section } from '../../components/Section/Section';
+import { SectionItem } from '../../components/SectionItem/SectionItem';
+import ServicesHero from '../../public/services-hero.svg';
 
 const Services: React.FC = () => {
     return (
@@ -37,12 +36,12 @@ const Services: React.FC = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
                             Vores kerne tjenester indenfor softwareudvikling
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Vores kerne tjenester inden for softwareudvikling omfatter:
                             <br /> <br />
@@ -77,7 +76,7 @@ const Services: React.FC = () => {
                 </Section>
 
                 <Section py={32} bgColor="blue.800" id="end-to-end">
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Stack gap={4}>
                             <Heading color="white">End-to-end projekter</Heading>
                             <Text color="white">
@@ -133,7 +132,7 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </Section>
                 <Section py={32} id="consultants">
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Center h="100%">
                             <Box w="70%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
                         </Center>
@@ -163,7 +162,7 @@ const Services: React.FC = () => {
                 </Section>
 
                 <Section py={12}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Er du klar til at omsætte din idé til virkelighed?
                             <br />
@@ -171,7 +170,7 @@ const Services: React.FC = () => {
                             Lad os bringe din vision til live sammen!
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton></ContactButton>
                         </Center>

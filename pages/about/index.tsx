@@ -46,12 +46,12 @@ const About: React.FC = () => {
                     />
                 </HeroSection>
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
                             Dygtige konsulenter, skarpe kompetencer og fællesskab
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Vores team af dygtige konsulenter hos Better Developers er stolte af deres skarpe kompetencer og evnen til at
                             levere fremragende resultater. Vi tror på betydningen af fællesskabet og trækker på hinandens styrker for at
@@ -67,7 +67,7 @@ const About: React.FC = () => {
                 <TeamBetterDevelopers />
 
                 <Section py={8}>
-                    <SectionItem colStart={2} colSpan={[6, 6, 2]} py={8}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[6, 6, 2]} py={8}>
                         <Heading fontWeight={600}>
                             Historien bag{' '}
                             <Box
@@ -80,7 +80,7 @@ const About: React.FC = () => {
                         </Heading>
                         <Heading fontWeight={600}>- fortalt af vores CEO</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2}>
+                    <SectionItem colStart={[1, 1, 2]}>
                         <Text textAlign="justify">
                             Det at skabe noget større i fællesskab med andre har altid været en drivkraft. Og når muligheden opstår, så er
                             det med at gribe dem.
@@ -126,10 +126,10 @@ const About: React.FC = () => {
                 </Section>
 
                 <Section py={8}>
-                    <SectionItem colStart={2} colSpan={2} py={8}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={8}>
                         <Heading fontWeight={600}>Følg med</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -149,10 +149,10 @@ const About: React.FC = () => {
                     </SectionItem>
                 </Section>
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4} px={16}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} px={16}>
                         <Heading textAlign="center">Ønsker du at lære os bedre at kende? Kom forbi til en kop kaffe i Aarhus</Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton />
                         </Center>

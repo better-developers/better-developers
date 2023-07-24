@@ -117,12 +117,12 @@ const Businesses: React.FC = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold">
                             Vi er klar med erfaring indenfor din branche
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text>
                             Vores omfattende erfaring inden for din branche gør os til den ideelle partner til at løse dine
                             softwareudviklingsbehov. Vi har arbejdet med virksomheder i en række sektorer og forstår de unikke udfordringer
@@ -136,7 +136,7 @@ const Businesses: React.FC = () => {
                 </Section>
 
                 <Section py={32} bgColor="#535266">
-                    <SectionItem colStart={2} colSpan={1}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={1}>
                         <SectorCard sector={sectors[0]} active={isActive(0)} side={'right'} alignment={'middle'} onClick={onClick(0)} />
                     </SectionItem>
                     <SectionItem colSpan={2}>
@@ -149,7 +149,7 @@ const Businesses: React.FC = () => {
                     <SectionItem colSpan={1}>
                         <SectorCard sector={sectors[1]} active={isActive(1)} side={'left'} alignment={'middle'} onClick={onClick(1)} />
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={4} py={8}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={4} py={8}>
                         <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr 1fr']} gap={8} px={16}>
                             <SectorCard sector={sectors[2]} active={isActive(2)} side={'top'} alignment={'right'} onClick={onClick(2)} />
                             <SectorCard sector={sectors[3]} active={isActive(3)} side={'top'} alignment={'middle'} onClick={onClick(3)} />
@@ -159,10 +159,10 @@ const Businesses: React.FC = () => {
                 </Section>
 
                 <Section py={24}>
-                    <SectionItem colStart={3} colSpan={2} py={4} px={16}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} px={16}>
                         <Heading textAlign="center">Ønsker du at høre mere? Vi brænder for at dele vores viden!</Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton></ContactButton>
                         </Center>

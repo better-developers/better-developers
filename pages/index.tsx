@@ -134,7 +134,7 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={24}>
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Flex flexDir="column" gap="4">
                             <Heading>Derfor skal du arbejde sammen med os.</Heading>
                             <Text>
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
                             </Text>
                         </Flex>
                     </SectionItem>
-                    <SectionItem colStart={4} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 4]} colSpan={2}>
                         <Center h="100%">
                             <Box w="70%">
                                 <Image src={logoWireframe} alt="Logo wireframe" />
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
                             clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
                         />
                     </SectionItem>
-                    {/* <SectionItem colStart={2} colSpan={4} pt={36}>
+                    {/* <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
                             <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
@@ -230,11 +230,11 @@ const Home: NextPage = () => {
                         </Stack>
                     </SectionItem> */}
 
-                    <SectionItem colStart={2} colSpan={4} pt={12} pb={[0, 0, 4]}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={12} pb={[0, 0, 4]}>
                         <Heading color={['initial', 'initial', 'white']}>Det siger andre</Heading>
                     </SectionItem>
 
-                    <SectionItem colStart={2}>
+                    <SectionItem colStart={[1, 1, 2]}>
                         <ContactCard
                             name="Hans Nikolajsen"
                             title="Direktør"
@@ -276,18 +276,18 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={48}>
-                    <SectionItem colStart={3} colEnd={5} colSpan={[6, 6, 2]}>
+                    <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]}>
                         <FAQ />
                     </SectionItem>
                 </Section>
 
                 <Section>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton></ContactButton>
                         </Center>
