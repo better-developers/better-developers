@@ -5,9 +5,12 @@ import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
+import { useThemeColor } from '../../hooks/useThemeColor';
 import ServicesHero from '../../public/services-hero.svg';
 
 const Services: React.FC = () => {
+    useThemeColor('#FFEED8');
+
     return (
         <>
             <Flex flexDir="column">
