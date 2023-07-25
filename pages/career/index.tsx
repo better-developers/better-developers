@@ -89,7 +89,7 @@ const Career: React.FC = () => {
                 <TeamBetterDevelopers />
 
                 <Section pt={24} pb={16}>
-                    <SectionItem px={8} py={16} colStart={2} colSpan={[6, 6, 2]}>
+                    <SectionItem px={[0, 0, 8]} py={16} colStart={2} colEnd={[6, 6, 3]}>
                         <Heading size="2xl">
                             Hvorfor{' '}
                             <Box
@@ -104,7 +104,7 @@ const Career: React.FC = () => {
                         </Heading>
                     </SectionItem>
 
-                    <SectionItem px={8} colStart={2}>
+                    <SectionItem px={8} colStart={[1, 1, 2]} colSpan={[8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -121,7 +121,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8}>
+                    <SectionItem px={8} colSpan={[8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -142,7 +142,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8}>
+                    <SectionItem px={8} colSpan={[8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -163,7 +163,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8}>
+                    <SectionItem px={8} colSpan={[8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
