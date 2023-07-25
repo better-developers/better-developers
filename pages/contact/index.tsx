@@ -34,7 +34,7 @@ const Services: React.FC = () => {
                         />
                     }>
                     <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
-                        <Center flexDirection="column" gap={4} h={['40%', '40%', '60%']}>
+                        <Center flexDirection="column" gap={4} h={['30%', '30%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
                                 Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
                             </Heading>
