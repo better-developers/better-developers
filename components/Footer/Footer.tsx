@@ -6,13 +6,13 @@ import { SectionItem } from '../SectionItem/SectionItem';
 export const Footer = () => {
     return (
         <Section py={12}>
-            <SectionItem colStart={2} colSpan={4}>
+            <SectionItem colStart={[1, 1, 2]} colSpan={4}>
                 <Stack direction="row" spacing="24px" alignItems="center">
                     <BetterDevelopersLogo />
                     <Heading size="md">Better Developers</Heading>
                 </Stack>
             </SectionItem>
-            <SectionItem colStart={3}>
+            <SectionItem colStart={[1, 1, 3]}>
                 <Stack gap={2}>
                     <section>
                         <Link href="/services">
@@ -69,7 +69,7 @@ export const Footer = () => {
                     <Text>Studerende</Text>
                 </Link>
             </SectionItem>
-            <SectionItem colStart={2}>
+            <SectionItem colStart={[1, 1, 2]}>
                 <Text>© 2023 Better Developers Aps</Text>
             </SectionItem>
         </Section>

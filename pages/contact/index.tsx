@@ -19,17 +19,25 @@ const Services: React.FC = () => {
                 <HeroSection
                     colors={{ base: 'brand.50', primary: '#3E1905', secondary: '#1C1E29', tertiary: '#3B3653' }}
                     backgroundElement={
-                        <video src="/video/casette.mp4" autoPlay muted loop width="100%" poster="/video/casette-placeholder.jpg" />
+                        <video
+                            src="/video/casette.mp4"
+                            autoPlay
+                            muted
+                            loop
+                            width="100%"
+                            poster="/video/casette-placeholder.jpg"
+                            style={{ objectFit: 'cover', height: '100%' }}
+                        />
                     }>
-                    <SectionItem colStart={2} colSpan={4} height={750}>
-                        <Center flexDirection="column" gap={4} h="60%">
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
+                        <Center flexDirection="column" gap={4} h={['40%', '40%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
                                 Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
                             </Heading>
 
                             <Link href="tel:+4553800054">
                                 <Heading
-                                    size="4xl"
+                                    size={['2xl', '2xl', '4xl']}
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
                                     textColor="transparent">
@@ -41,10 +49,10 @@ const Services: React.FC = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={2} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={4}>
                         <Heading fontWeight="semibold">Tal med en ekspert</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={4}>
                         <Text>Vi hjælper med:</Text>
                         <List px={4}>
                             <ListItem>

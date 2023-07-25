@@ -1,8 +1,7 @@
-import { Box, BoxProps, ColorProps } from '@chakra-ui/react';
+import { Box, ColorProps } from '@chakra-ui/react';
+import { FC, PropsWithChildren } from 'react';
 import { Section } from '../Section/Section';
 import { SectionItem } from '../SectionItem/SectionItem';
-import { FC, PropsWithChildren } from 'react';
-import { color } from 'framer-motion';
 
 type HeroSectionProps = {
     colors: {
@@ -27,7 +26,8 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
-            <SectionItem px={0} colStart={3} colSpan={3} h="100%" zIndex={-1}>
+
+            <SectionItem px={0} colStart={[1, 1, 3]} colSpan={3} h="100%" zIndex={-1}>
                 <Box
                     top={-50}
                     bgColor={colors.secondary}
@@ -37,7 +37,8 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
-            <SectionItem px={0} colStart={5} colSpan={1} h="100%" zIndex={-1}>
+
+            <SectionItem px={0} colStart={[1, 1, 5]} colSpan={1} h="100%" zIndex={-1}>
                 <Box
                     top={-90}
                     bgColor={colors.tertiary}
@@ -48,7 +49,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                 />
             </SectionItem>
 
-            <SectionItem paddingTop={48} px={0} colSpan={6} h="100%" zIndex={-1}>
+            <SectionItem paddingTop={[24, 24, 48]} px={0} colSpan={6} h="100%" zIndex={-1}>
                 <Box
                     top={0}
                     bgColor={colors.base}
@@ -58,6 +59,7 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                     clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
                 />
             </SectionItem>
+
             {backgroundElement && (
                 <SectionItem px={0} colSpan={6} h="100%" zIndex={-1}>
                     <Box

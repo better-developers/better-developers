@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Flex, Heading, Icon } from '@chakra-ui/react';
+import { Card, CardBody, CardHeader, Flex, Heading, Icon, useBreakpointValue } from '@chakra-ui/react';
 import { FC } from 'react';
 import { IconType } from 'react-icons/lib';
 
@@ -18,9 +18,14 @@ type SectorCardProps = {
 
 export const SectorCard: FC<SectorCardProps> = ({ active, alignment, side, sector, onClick }) => {
     const activeVariant = getVariant(side, alignment);
+    const variantBreakpointValue = useBreakpointValue({
+        base: 'sectorCard',
+        sm: 'sectorCard',
+        md: activeVariant,
+    });
 
     return (
-        <Card variant={active ? activeVariant : 'sectorCard'} onClick={onClick}>
+        <Card variant={active ? variantBreakpointValue : 'sectorCard'} onClick={onClick}>
             <CardHeader>
                 <Flex alignItems="center" gap={4}>
                     <Icon as={sector.icon} fontSize="3xl" color={'primaryFontColor'} />

@@ -38,10 +38,20 @@ const Home: NextPage = () => {
                     <HeroSectionLayout
                         customHeading={
                             <>
-                                <Heading fontSize="4em" fontWeight="400" mixBlendMode="overlay" color="black">
+                                <Heading
+                                    fontSize={['2em', '2em', '4em', '4em']}
+                                    fontWeight="400"
+                                    mixBlendMode="overlay"
+                                    transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
+                                    color="black">
                                     Et konsulenthus af
                                 </Heading>
-                                <Heading fontSize="4em" fontWeight="700" mixBlendMode="overlay" color="black">
+                                <Heading
+                                    fontSize="4em"
+                                    fontWeight="700"
+                                    mixBlendMode="overlay"
+                                    transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
+                                    color="black">
                                     udviklere.
                                 </Heading>
                             </>
@@ -62,7 +72,7 @@ const Home: NextPage = () => {
                 </HeroSection>
 
                 <Section pt={24} pb={16}>
-                    <SectionItem px={8} colStart={2} colSpan={1}>
+                    <SectionItem px={8} colStart={[1, 1, 2]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
@@ -124,7 +134,7 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={24}>
-                    <SectionItem colStart={2} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Flex flexDir="column" gap="4">
                             <Heading>Derfor skal du arbejde sammen med os.</Heading>
                             <Text>
@@ -156,7 +166,7 @@ const Home: NextPage = () => {
                             </Text>
                         </Flex>
                     </SectionItem>
-                    <SectionItem colStart={4} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 4]} colSpan={2}>
                         <Center h="100%">
                             <Box w="70%">
                                 <Image src={logoWireframe} alt="Logo wireframe" />
@@ -176,7 +186,7 @@ const Home: NextPage = () => {
                             clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
                         />
                     </SectionItem>
-                    {/* <SectionItem colStart={2} colSpan={4} pt={36}>
+                    {/* <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
                             <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
@@ -219,10 +229,12 @@ const Home: NextPage = () => {
                             </Grid>
                         </Stack>
                     </SectionItem> */}
-                    <SectionItem colStart={2} colSpan={4} pt={12} pb={4}>
-                        <Heading color="white">Det siger andre</Heading>
+
+                    <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={12} pb={[0, 0, 4]}>
+                        <Heading color={['initial', 'initial', 'white']}>Det siger andre</Heading>
                     </SectionItem>
-                    <SectionItem colStart={2} colSpan={1}>
+
+                    <SectionItem colStart={[1, 1, 2]}>
                         <ContactCard
                             name="Hans Nikolajsen"
                             title="Direktør"
@@ -231,6 +243,7 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
+
                     <SectionItem>
                         <ContactCard
                             name="Mark Henriksen"
@@ -240,6 +253,7 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
+
                     <SectionItem>
                         <ContactCard
                             name="Hanne Ulrichsen"
@@ -249,6 +263,7 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
+
                     <SectionItem>
                         <ContactCard
                             name="Martin Tranbjerg"
@@ -261,17 +276,18 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={48}>
-                    <SectionItem colStart={3} colEnd={5}>
+                    <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]}>
                         <FAQ />
                     </SectionItem>
                 </Section>
+
                 <Section>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={3} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Center>
                             <ContactButton></ContactButton>
                         </Center>

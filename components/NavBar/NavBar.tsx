@@ -1,5 +1,6 @@
-﻿import { Flex, Heading, Link, Stack } from '@chakra-ui/react';
-import { useScroll } from 'framer-motion';
+﻿import { HamburgerIcon } from '@chakra-ui/icons';
+import { Flex, Heading, Hide, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Show, Stack } from '@chakra-ui/react';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import { NavBarContext } from '../../contexts/NavBarContext';
@@ -15,7 +16,15 @@ export const NavBar = () => {
     const contextColor = color === 'light' ? 'white' : color === 'dark' ? 'primary' : 'primary';
     const fontColor = isTop ? contextColor : 'primary';
 
-    scrollY.on('change', (y) => setIsTop(y <= 0));
+    useMotionValueEvent(scrollY, 'change', (y) => setIsTop(y <= 0));
+
+    const links = [
+        { href: 'services', text: 'Services' },
+        { href: 'cases', text: 'Cases' },
+        { href: 'businesses', text: 'Brancher' },
+        { href: 'about', text: 'Om os' },
+        { href: 'career', text: 'Karriere' },
+    ];
 
     return (
         <nav>
@@ -24,39 +33,55 @@ export const NavBar = () => {
                 align="center"
                 justify="space-between"
                 w="100%"
-                p="48px 11vw"
+                p={['32px 11vw', '32px 11vw', '48px 11vw']}
                 bgColor={isTop ? 'transparent' : 'white'}
-                color={fontColor}
                 borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
                 boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}
                 transition="background-color 300ms, color 500ms, box-shadow 300ms, border-bottom 500ms 500ms"
                 zIndex="100">
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
-                    <Heading size="md" color="inherit">
-                        Better Developers
-                    </Heading>
+
+                    <Hide below="xl">
+                        <Heading color={fontColor} size="md">
+                            Better Developers
+                        </Heading>
+                    </Hide>
                 </Stack>
 
-                <Stack direction="row" spacing="42px" fontWeight="bold">
-                    <Link href="/services" alignSelf="center">
-                        Services
-                    </Link>
-                    <Link href="/cases" alignSelf="center">
-                        Cases
-                    </Link>
-                    <Link href="/businesses" alignSelf="center">
-                        Brancher
-                    </Link>
-                    <Link href="/about" alignSelf="center">
-                        Om os
-                    </Link>
-                    <Link href="/career" alignSelf="center">
-                        Karriere
-                    </Link>
+                <Show below="lg">
+                    <Menu>
+                        <MenuButton as={IconButton} aria-label="Options" icon={<HamburgerIcon />} variant="outline" color={fontColor} />
+                        <MenuList>
+                            {links.map((link, i) => (
+                                <MenuItem key={i} as="a" href={link.href}>
+                                    {link.text}
+                                </MenuItem>
+                            ))}
 
-                    <ContactButton></ContactButton>
-                </Stack>
+                            <MenuItem
+                                as="a"
+                                href="/contact"
+                                background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
+                                backgroundClip="text"
+                                textColor="transparent"
+                                fontWeight="bold">
+                                Kontakt os
+                            </MenuItem>
+                        </MenuList>
+                    </Menu>
+                </Show>
+
+                <Hide below="lg">
+                    <Stack direction="row" spacing="42px" fontWeight="bold">
+                        {links.map((link, i) => (
+                            <Link key={i} color={['primary', 'primary', 'primary', fontColor]} href={`/${link.href}`} alignSelf="center">
+                                {link.text}
+                            </Link>
+                        ))}
+                        <ContactButton></ContactButton>
+                    </Stack>
+                </Hide>
             </Flex>
         </nav>
     );
