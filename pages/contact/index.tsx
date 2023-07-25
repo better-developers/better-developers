@@ -2,6 +2,7 @@ import { Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@ch
 import { useContext, useEffect } from 'react';
 import { MdCheckCircle } from 'react-icons/md';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
@@ -15,6 +16,8 @@ const Services: React.FC = () => {
 
     return (
         <>
+            <DynamicThemeColor color="brand.50" />
+
             <Flex flexDir="column">
                 <HeroSection
                     colors={{ base: 'brand.50', primary: '#3E1905', secondary: '#1C1E29', tertiary: '#3B3653' }}

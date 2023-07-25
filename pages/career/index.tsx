@@ -3,6 +3,7 @@ import { Box, Card, Center, Flex, Heading, Link, List, ListIcon, ListItem, Text 
 import Image from 'next/image';
 import { MdCheckCircle } from 'react-icons/md';
 import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
@@ -14,6 +15,8 @@ import Linkedin2 from '../../public/img/linkedin-2.jpg';
 const Career: React.FC = () => {
     return (
         <>
+            <DynamicThemeColor color="#FAFCFE" />
+
             <Flex flexDir="column">
                 <HeroSection colors={{ base: '#FAFCFE', primary: '#F7A75A', secondary: '#F7C661', tertiary: '#F8E668' }}>
                     <HeroSectionLayout
