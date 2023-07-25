@@ -96,7 +96,7 @@ const Cases: NextPage = () => {
 
     return (
         <>
-            <DynamicThemeColor color="blue.200" />
+            <DynamicThemeColor color="blue.50" />
 
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'blue.50', primary: 'blue.100', secondary: 'blue.200', tertiary: 'blue.500' }}>
