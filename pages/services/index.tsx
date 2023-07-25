@@ -5,14 +5,18 @@ import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import { useThemeColor } from '../../hooks/useThemeColor';
+import { useIsTop } from '../../hooks/useIsTop';
 import ServicesHero from '../../public/services-hero.svg';
 
 const Services: React.FC = () => {
-    useThemeColor('#FFEED8');
+    const isTop = useIsTop();
+    const themeColor = isTop ? '#FFEED8' : '#FFF';
 
     return (
         <>
+            {/* <Head>
+                <meta name="theme-color" content={themeColor}></meta>
+            </Head> */}
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'brand.50', primary: '#F8CA62', secondary: '#F8E468', tertiary: 'brand.400' }}>
                     <HeroSectionLayout
