@@ -1,22 +1,18 @@
 import { Box, Center, Flex, Heading, Link, ListItem, OrderedList, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import { useIsTop } from '../../hooks/useIsTop';
 import ServicesHero from '../../public/services-hero.svg';
 
 const Services: React.FC = () => {
-    const isTop = useIsTop();
-    const themeColor = isTop ? '#FFEED8' : '#FFF';
-
     return (
         <>
-            {/* <Head>
-                <meta name="theme-color" content={themeColor}></meta>
-            </Head> */}
+            <DynamicThemeColor color="#F8CA62" />
+
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'brand.50', primary: '#F8CA62', secondary: '#F8E468', tertiary: 'brand.400' }}>
                     <HeroSectionLayout
