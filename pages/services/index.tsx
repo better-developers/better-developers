@@ -11,7 +11,7 @@ import ServicesHero from '../../public/services-hero.svg';
 const Services: React.FC = () => {
     return (
         <>
-            <DynamicThemeColor color="#F8CA62" />
+            <DynamicThemeColor color="#F8E468" />
 
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'brand.50', primary: '#F8CA62', secondary: '#F8E468', tertiary: 'brand.400' }}>

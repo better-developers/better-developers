@@ -9,7 +9,7 @@ type DynamicThemeColorProps = {
 };
 
 export const DynamicThemeColor: React.FC<DynamicThemeColorProps> = ({ color }) => {
-    const [themeColor] = useToken('colors', color);
+    const themeColor = useToken('colors', color);
     const isTop = useIsTop();
 
     const isHexColor = color.startsWith('#');
