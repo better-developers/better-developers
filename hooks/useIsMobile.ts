@@ -1,8 +1,10 @@
-import { useBreakpoint } from '@chakra-ui/react';
+import { useBreakpointValue } from '@chakra-ui/react';
 
 export const useIsMobile = () => {
-    const breakpoint = useBreakpoint();
-    const isMobile = breakpoint === 'sm' || breakpoint === 'md';
+    const isMobile = useBreakpointValue({
+        base: true,
+        md: false,
+    });
 
     return isMobile;
 };
