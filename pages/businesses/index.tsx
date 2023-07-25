@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Grid, Heading, Stack, Text, useBreakpoint } from '@chakra-ui/react';
+import { Box, Center, Flex, Grid, Heading, Hide, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoDocumentText, IoPeople } from 'react-icons/io5';
@@ -82,9 +82,6 @@ const Businesses: React.FC = () => {
     const isActive = (index: number) => selectedIndex === index;
     const onClick = (index: number) => () => setSelectedIndex(index);
 
-    const breakpoint = useBreakpoint();
-    const isDesktop = breakpoint !== 'base' && breakpoint !== 'sm';
-
     return (
         <>
             <Flex flexDir="column">
@@ -142,19 +139,22 @@ const Businesses: React.FC = () => {
                     <SectionItem colStart={[1, 1, 2]} colSpan={[2, 2, 1]}>
                         <SectorCard sector={sectors[0]} active={isActive(0)} side={'right'} alignment={'middle'} onClick={onClick(0)} />
                     </SectionItem>
-                    <SectionItem colSpan={2}>
-                        {isDesktop && (
+
+                    <Hide below="md">
+                        <SectionItem colSpan={2}>
                             <Center>
                                 <Flex flexDir="column">
                                     <Image src={WebAppTemplate} alt="web applikation" />
                                 </Flex>
                             </Center>
-                        )}
-                    </SectionItem>
+                        </SectionItem>
+                    </Hide>
+
                     <SectionItem colSpan={[2, 2, 1]}>
                         <SectorCard sector={sectors[1]} active={isActive(1)} side={'left'} alignment={'middle'} onClick={onClick(1)} />
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={[2, 2, 4]} py={8}>
+
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[2, 2, 4]} py={[0, 0, 8]}>
                         <Grid gridTemplateColumns={['1fr', '1fr', '1fr 1fr 1fr']} gap={8} px={[0, 0, 16]}>
                             <SectorCard sector={sectors[2]} active={isActive(2)} side={'top'} alignment={'right'} onClick={onClick(2)} />
                             <SectorCard sector={sectors[3]} active={isActive(3)} side={'top'} alignment={'middle'} onClick={onClick(3)} />
