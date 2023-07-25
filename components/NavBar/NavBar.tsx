@@ -58,6 +58,16 @@ export const NavBar = () => {
                                     {link.text}
                                 </MenuItem>
                             ))}
+
+                            <MenuItem
+                                as="a"
+                                href="/contact"
+                                background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
+                                backgroundClip="text"
+                                textColor="transparent"
+                                fontWeight="bold">
+                                Kontakt os
+                            </MenuItem>
                         </MenuList>
                     </Menu>
                 </Show>
@@ -69,7 +79,7 @@ export const NavBar = () => {
                                 {link.text}
                             </Link>
                         ))}
-                        <ContactButton></ContactButton>,
+                        <ContactButton></ContactButton>
                     </Stack>
                 </Hide>
             </Flex>
