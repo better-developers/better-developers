@@ -39,7 +39,7 @@ export const NavBar = () => {
                     bgColor={isTop ? 'transparent' : 'white'}
                     borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
                     boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}
-                    transition="background-color 300ms, color 500ms, box-shadow 300ms, border-bottom 500ms 500ms"
+                    transition="color 500ms, box-shadow 300ms, border-bottom 500ms 500ms"
                     zIndex="100">
                     <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                         <BetterDevelopersLogo />
