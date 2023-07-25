@@ -8,6 +8,7 @@ const caseCard = definePartsStyle({
         borderRadius: '20px 0 20px 0',
         overflow: 'hidden',
         filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));',
+        backdropFilter: 'blur(0)',
     },
 });
 
