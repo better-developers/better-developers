@@ -16,7 +16,8 @@ const Services: React.FC = () => {
 
     return (
         <>
-            <DynamicThemeColor color="brand.50" />
+            {/* Average color of top of video */}
+            <DynamicThemeColor color="#131c22" />
 
             <Flex flexDir="column">
                 <HeroSection
