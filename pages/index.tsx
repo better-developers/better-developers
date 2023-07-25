@@ -9,6 +9,7 @@ import { IoPeopleCircle } from 'react-icons/io5';
 import { VscSymbolMisc } from 'react-icons/vsc';
 import { ContactButton } from '../components/ContactButton/ContactButton';
 import { ContactCard } from '../components/ContactCard/ContactCard';
+import { DynamicThemeColor } from '../components/DynamicThemeColor/DynamicThemeColor';
 import FAQ from '../components/FAQ/FAQ';
 import { Gradient } from '../components/Gradient/Gradient';
 import { HeroSection } from '../components/HeroSection/HeroSection';
@@ -27,6 +28,8 @@ const Home: NextPage = () => {
 
     return (
         <>
+            <DynamicThemeColor color="#ac86bc" />
+
             <Flex flexDir="column">
                 <HeroSection
                     colors={{ base: 'white', primary: 'white', secondary: 'white', tertiary: 'white' }}
