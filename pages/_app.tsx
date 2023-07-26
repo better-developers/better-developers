@@ -25,6 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"></link>
                 <meta name="msapplication-TileColor" content="#da532c"></meta>
                 <meta name="theme-color" content="#ffffff"></meta>
+                <meta
+                    name="description"
+                    content="Corporate website for BetterDevelopers - a consultant company with home in Aarhus, Denmark"></meta>
             </Head>
 
             <ChakraProvider theme={theme}>
