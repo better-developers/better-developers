@@ -5,8 +5,9 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <Script id="gradient-animation" strategy="beforeInteractive" src="/scripts/gradient-animation.js"></Script>
+                <Script id="gradient-animation" strategy="beforeInteractive" src="/scripts/gradient-animation.min.js"></Script>
             </Head>
+
             <body>
                 <Main />
                 <NextScript />
