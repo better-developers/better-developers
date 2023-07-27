@@ -45,7 +45,7 @@ export const Footer = () => {
                 <Link href="/about">
                     <Text>Om Better Developers</Text>
                 </Link>
-                <Link>
+                <Link href="#">
                     <Text>BD processen</Text>
                 </Link>
                 <Link href="/career">

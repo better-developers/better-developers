@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
 import Script from 'next/script';
-import { type } from 'os';
 import { FC } from 'react';
 
 type VimeoVideoProps = {
@@ -23,6 +22,7 @@ export const VimeoVideo: FC<VimeoVideoProps> = ({ id }) => (
                 }}
                 title="Better Developers"></iframe>
         </Box>
-        <Script src="https://player.vimeo.com/api/player.js"></Script>
+
+        <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload"></Script>
     </>
 );
