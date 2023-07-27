@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { CaseCard } from '../../components/CaseCard/CaseCard';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
@@ -95,6 +96,8 @@ const Cases: NextPage = () => {
 
     return (
         <>
+            <DynamicThemeColor color="blue.50" />
+
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'blue.50', primary: 'blue.100', secondary: 'blue.200', tertiary: 'blue.500' }}>
                     <HeroSectionLayout

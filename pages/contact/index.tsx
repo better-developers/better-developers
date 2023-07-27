@@ -2,6 +2,7 @@ import { Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@ch
 import { useContext, useEffect } from 'react';
 import { MdCheckCircle } from 'react-icons/md';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
@@ -15,6 +16,9 @@ const Services: React.FC = () => {
 
     return (
         <>
+            {/* From screenshot of top of video */}
+            <DynamicThemeColor color="#111b1d" />
+
             <Flex flexDir="column">
                 <HeroSection
                     colors={{ base: 'brand.50', primary: '#3E1905', secondary: '#1C1E29', tertiary: '#3B3653' }}
@@ -30,7 +34,7 @@ const Services: React.FC = () => {
                         />
                     }>
                     <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
-                        <Center flexDirection="column" gap={4} h={['40%', '40%', '60%']}>
+                        <Center flexDirection="column" gap={4} h={['30%', '30%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
                                 Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
                             </Heading>

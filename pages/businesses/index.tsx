@@ -6,6 +6,7 @@ import { MdAgriculture } from 'react-icons/md';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { SiWebmoney } from 'react-icons/si';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
+import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
@@ -84,6 +85,8 @@ const Businesses: React.FC = () => {
 
     return (
         <>
+            <DynamicThemeColor color="red.50" />
+
             <Flex flexDir="column">
                 <HeroSection colors={{ base: 'red.50', primary: '#F5B3B3', secondary: '#F27E7E', tertiary: '#D14141' }}>
                     <HeroSectionLayout
