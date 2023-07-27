@@ -7,7 +7,6 @@ import { ActiveCampaign } from '../components/ActiveCampaign/ActiveCampaign';
 import { FacebookPixel } from '../components/FacebookPixel/FacebookPixel';
 import { Footer } from '../components/Footer/Footer';
 import { GoogleAnalytcs } from '../components/GoogleAnalytics/GoogleAnalytcs';
-import { HubspotPixel } from '../components/HubspotPixel/HubspotPixel';
 import { NavBar } from '../components/NavBar/NavBar';
 import { NavBarProvider } from '../contexts/NavBarContext';
 import '../styles/index.scss';
@@ -43,7 +42,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             {/* Analytics */}
             <GoogleAnalytcs />
             <FacebookPixel />
-            <HubspotPixel />
             <ActiveCampaign />
         </>
     );
