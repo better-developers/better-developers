@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
     return (
         <>
-            <DynamicThemeColor color="#6bace3" />
+            <DynamicThemeColor color="#fff" />
 
             <Flex flexDir="column">
                 <HeroSection
