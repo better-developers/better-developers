@@ -1,4 +1,5 @@
-﻿import { Heading, Link, Stack, Text } from '@chakra-ui/react';
+﻿import { Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { BsBuildingsFill, BsFillPostageHeartFill, BsFillPostcardFill } from 'react-icons/bs';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
 import { Section } from '../Section/Section';
 import { SectionItem } from '../SectionItem/SectionItem';
@@ -12,7 +13,35 @@ export const Footer = () => {
                     <Heading size="md">Better Developers</Heading>
                 </Stack>
             </SectionItem>
-            <SectionItem colStart={[1, 1, 3]}>
+
+            <SectionItem colStart={[1, 1, 2]}>
+                <Stack>
+                    <section>
+                        <Link href="https://datacvr.virk.dk/enhed/virksomhed/43791370" isExternal>
+                            <Text>
+                                <Icon as={BsFillPostcardFill} fontSize="xl" marginRight={2} verticalAlign="text-top" />
+                                CVR 43791370
+                            </Text>
+                        </Link>
+
+                        <Link href="http://maps.google.com/?q=Rosenkrantzgade 19B, 8000 Aarhus C" isExternal>
+                            <Text>
+                                <Icon as={BsBuildingsFill} fontSize="xl" marginRight={2} verticalAlign="text-top" />
+                                Rosenkrantzgade 19B
+                            </Text>
+                        </Link>
+
+                        <Link href="http://maps.google.com/?q=Rosenkrantzgade 19B, 8000 Aarhus C" isExternal>
+                            <Text>
+                                <Icon as={BsFillPostageHeartFill} fontSize="xl" marginRight={2} verticalAlign="text-top" />
+                                8000, Aarhus C
+                            </Text>
+                        </Link>
+                    </section>
+                </Stack>
+            </SectionItem>
+
+            <SectionItem>
                 <Stack gap={2}>
                     <section>
                         <Link href="/services">
@@ -38,6 +67,7 @@ export const Footer = () => {
                     </section>
                 </Stack>
             </SectionItem>
+
             <SectionItem>
                 <Link href="/about">
                     <Heading fontSize="md">Om os</Heading>
@@ -55,6 +85,7 @@ export const Footer = () => {
                     <Text>Kontakt</Text>
                 </Link>
             </SectionItem>
+
             <SectionItem>
                 <Link href="/career">
                     <Heading fontSize="md">Karriere</Heading>
@@ -69,6 +100,7 @@ export const Footer = () => {
                     <Text>Studerende</Text>
                 </Link>
             </SectionItem>
+
             <SectionItem colStart={[1, 1, 2]}>
                 <Text>© 2023 Better Developers Aps</Text>
             </SectionItem>
