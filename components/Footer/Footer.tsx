@@ -29,9 +29,7 @@ export const Footer = () => {
                                 <Icon as={BsBuildingsFill} fontSize="xl" marginRight={2} verticalAlign="text-top" />
                                 Rosenkrantzgade 19B
                             </Text>
-                        </Link>
 
-                        <Link href="http://maps.google.com/?q=Rosenkrantzgade 19B, 8000 Aarhus C" isExternal>
                             <Text>
                                 <Icon as={BsFillPostageHeartFill} fontSize="xl" marginRight={2} verticalAlign="text-top" />
                                 8000, Aarhus C
