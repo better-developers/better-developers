@@ -61,8 +61,8 @@ const Home: NextPage = () => {
                         }
                         paragraph={
                             <>
-                                Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redifinerer det traditionelle
-                                it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur til hvordan vi
+                                Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redefinerer det traditionelle
+                                it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur, til hvordan vi
                                 arbejder med vores kunder.
                             </>
                         }
@@ -82,9 +82,9 @@ const Home: NextPage = () => {
                                 <Heading size="md">Forretningsforståelse</Heading>
                             </Flex>
                             <Text>
-                                Alle vores dygtige udviklere er partnere i Better Developers og har derfor en dyb forretningsforståelse. Det
-                                betyder i får mere end bare en udvikler til jeres team når i arbejder sammen med os, da jeres forretning
-                                altid vil være i centrum.
+                                Alle vores dygtige udviklere er partnere i Better Developers, og har derfor en dyb forretningsforståelse.
+                                Det betyder, at I får mere end bare en udvikler til jeres team, når I arbejder sammen med os. Jeres
+                                forretning vil altid være i centrum.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -96,9 +96,9 @@ const Home: NextPage = () => {
                                 <Heading size="md">IT-Konsulenter</Heading>
                             </Flex>
                             <Text>
-                                Kvalitet og højt faglige kompetencer er garanteret når i arbejder sammen med os. Vores team af skarpe
-                                konsulenter er ekstremt talentfulde og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
-                                mål for hvert eneste linje kode vi levere til vores kunder.
+                                Kvalitet og højt faglige kompetencer er garanteret, når I arbejder sammen med os. Vores team af skarpe
+                                konsulenter er ekstremt talentfulde, og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
+                                mål for hvert eneste linje kode, som vi leverer til vores kunder.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -111,10 +111,10 @@ const Home: NextPage = () => {
                                 <Heading size="md">Samarbejdspartner</Heading>
                             </Flex>
                             <Text>
-                                Når i arbejder sammen med Better Developers får i samtidigt en samarbejdspartner der involverer sig aktivt i
-                                jeres forretning. Vi ved at der ligger flere tanker bagved de systemer i gerne vil have udviklet.
+                                Når I arbejder sammen med Better Developers, får I samtidigt en samarbejdspartner, der involverer sig aktivt
+                                i jeres forretning. Vi ved, at der ligger flere tanker bagved de systemer, som I gerne vil have udviklet.
                                 Partnerskabsstrukturen gør det nemt for alle vores udviklere at dele deres tanker på en specifik opgave, så
-                                i får den bedst mulige rådgivning hver gang.
+                                I får den bedst mulige rådgivning hver gang.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -127,7 +127,7 @@ const Home: NextPage = () => {
                                 <Heading size="md">OpenAI API</Heading>
                             </Flex>
                             <Text>
-                                Kunstig intelligens er kommet for at blive og derfor har vi specialiseret os indenfor dette område. Vi
+                                Kunstig intelligens er kommet for at blive, og derfor har vi specialiseret os indenfor dette område. Vi
                                 hjælper vores kunder ved at styrke deres konkurrenceevne ved at udnytte potentialet af kunstig intelligens.
                                 Vi tilbyder ikke kun teknisk ekspertise, men også rådgivning om strategisk implementering af AI-løsninger,
                                 dataprivatlivets betydning og overholdelse af gældende lovgivning.
@@ -142,21 +142,22 @@ const Home: NextPage = () => {
                             <Heading>Derfor skal du arbejde sammen med os.</Heading>
                             <Text>
                                 Better Developers: Din pålidelige samarbejdspartner indenfor softwareudvikling og IT-konsulentydelser. Vi
-                                kombinerer vores dygtige IT-konsulenter, forretningsforståelse og ekspertise inden for b.la. OpenAI API for
+                                kombinerer vores dygtige IT-konsulenter, forretningsforståelse og ekspertise inden for bl.a. OpenAI API for
                                 at levere skræddersyede løsninger til jeres behov.
                                 <br />
                                 <br />
                                 Vores team af erfarne udviklere forstår, at teknisk ekspertise alene ikke er nok. Vi fokuserer på at forstå
                                 dine forretningsmål og udfordringer for at skabe software, der driver jeres virksomhed fremad. Vi tilbyder
-                                dygtige IT-konsulenter med omfattende erfaring inden for forskellige teknologier og brancher. Uanset om i
+                                dygtige IT-konsulenter med omfattende erfaring inden for forskellige teknologier og brancher. Uanset om I
                                 har brug for udvikling af en webapplikation, en mobilapp eller en skræddersyet softwareløsning, kan vi
                                 levere kvalitetskode og innovative løsninger.
                                 <br />
                                 <br />
                                 Som jeres samarbejdspartner prioriterer vi transparent kommunikation, rettidig levering og et agilt
-                                samarbejde. Vi ser os selv som en del af dit team og arbejder tæt sammen med dig for at sikre succesfulde
-                                resultater. Vores ekspertise inden for b.la. OpenAI API gør os i stand til at integrere avancerede kunstig
-                                intelligens-funktioner i jeres applikationer, såsom naturlig sprogbehandling og automatiseret dataanalyse.
+                                samarbejde. Vi ser os selv som en del af dit team, og vi arbejder tæt sammen med dig for at sikre
+                                succesfulde resultater. Vores ekspertise inden for bl.a. OpenAI API gør os i stand til at integrere
+                                avancerede kunstig intelligens-funktioner i jeres applikationer, såsom naturlig sprogbehandling og
+                                automatiseret dataanalyse.
                                 <br />
                                 <br />
                                 Arbejd sammen med Better Developers, og oplev fordelene ved at have en pålidelig partner, der forstår dine
