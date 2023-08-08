@@ -15,7 +15,7 @@ export const Footer = () => {
             </SectionItem>
 
             <SectionItem colStart={[1, 1, 2]}>
-                <Stack>
+                <Stack justifyContent="center" height="100%">
                     <section>
                         <Link href="https://datacvr.virk.dk/enhed/virksomhed/43791370" isExternal>
                             <Text>
