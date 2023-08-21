@@ -36,7 +36,7 @@ const Services: React.FC = () => {
                     <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
                         <Center flexDirection="column" gap={4} h={['30%', '30%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
-                                Sandheden er, at telefonopkald ofte er mere meningsfyldte end tekstbeskeder.
+                                Lad os starte med et opkald...
                             </Heading>
 
                             <Link href="tel:+4553800054">
@@ -53,28 +53,13 @@ const Services: React.FC = () => {
                 </HeroSection>
 
                 <Section py={24}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={4}>
-                        <Heading fontWeight="semibold">Tal med en ekspert</Heading>
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
+                        <Heading textAlign="center" size="lg">
+                            Lad os sammen afdække behovene til jeres næste projekt.
+                        </Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={4}>
-                        <Text>Vi hjælper med:</Text>
-                        <List px={4}>
-                            <ListItem>
-                                <ListIcon as={MdCheckCircle} color="green.500" />
-                                Vurdering og estimering af jeres næste IT-projekt.
-                            </ListItem>
-                            <ListItem>
-                                <ListIcon as={MdCheckCircle} color="green.500" />
-                                Professionel og gratis rådgivning til jeres udviklingsbehov og hvordan vi kan hjælpe jer.
-                            </ListItem>
-                            <ListItem>
-                                <ListIcon as={MdCheckCircle} color="green.500" />
-                                Drift & support af nuværende it-systemer.
-                            </ListItem>
-                        </List>
-                    </SectionItem>
-                    <SectionItem colSpan={2}>
-                        <ContactForm></ContactForm>
+                    <SectionItem colSpan={2} colStart={3} py={8}>
+                        <ContactForm />
                     </SectionItem>
                 </Section>
             </Flex>

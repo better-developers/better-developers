@@ -1,5 +1,5 @@
 'use client';
-import { Box, Card, Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import { MdCheckCircle } from 'react-icons/md';
 import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
@@ -11,6 +11,10 @@ import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { TeamBetterDevelopers } from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
+import Linkedin31 from '../../public/img/linkedin-3-1.jpeg';
+import Linkedin32 from '../../public/img/linkedin-3-2.jpeg';
+import Linkedin4 from '../../public/img/linkedin-4.jpeg';
+import illustration9 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
 
 const Career: React.FC = () => {
     return (
@@ -44,6 +48,13 @@ const Career: React.FC = () => {
                                 Vores erfarne konsulenter arbejder tæt sammen med jer for at sikre, at vi leverer en løsning, der opfylder
                                 jeres forventninger og giver værdi til jeres virksomhed.
                             </>
+                        }
+                        content={
+                            <Stack alignItems="center" justifyContent="center" height={'100%'}>
+                                <Box w="90%">
+                                    <Image src={illustration9} alt="illustration" />
+                                </Box>
+                            </Stack>
                         }
                     />
                 </HeroSection>
@@ -87,12 +98,39 @@ const Career: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
+                    <SectionItem colSpan={2} colStart={2} rowSpan={2}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin31} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
+                    <SectionItem colSpan={2}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin32} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
+                    <SectionItem colSpan={2} colStart={4}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7099412445344997376">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin4} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
                 </Section>
 
                 <TeamBetterDevelopers />
 
                 <Section pt={24} pb={16}>
-                    <SectionItem px={[0, 0, 8]} py={16} colStart={2} colEnd={[6, 6, 3]}>
+                    <SectionItem px={[0, 0, 8]} py={16} colStart={2} colSpan={2}>
                         <Heading size="2xl">
                             Hvorfor{' '}
                             <Box

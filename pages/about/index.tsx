@@ -10,6 +10,9 @@ import { TeamBetterDevelopers } from '../../components/TeamBetterDevelopers/Team
 import { VimeoVideo } from '../../components/VimeoVideo/VimeoVideo';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
+import Linkedin31 from '../../public/img/linkedin-3-1.jpeg';
+import Linkedin32 from '../../public/img/linkedin-3-2.jpeg';
+import Linkedin4 from '../../public/img/linkedin-4.jpeg';
 
 const About: React.FC = () => {
     return (
@@ -54,15 +57,10 @@ const About: React.FC = () => {
                             Dygtige konsulenter, skarpe kompetencer og fællesskab
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="justify">
                         <Text>
-                            Vores team af dygtige konsulenter hos Better Developers er stolte af deres skarpe kompetencer og evnen til at
-                            levere fremragende resultater. Vi tror på betydningen af fællesskabet og trækker på hinandens styrker for at
-                            opnå enestående succes. Vores konsulenter er specialiserede inden for forskellige områder af softwareudvikling,
-                            hvilket giver os en bred vifte af ekspertise og mulighed for at tackle selv de mest komplekse udfordringer. Vi
-                            arbejder tæt sammen med vores kunder for at forstå deres behov og levere skræddersyede løsninger, der overgår
-                            forventningerne. Vores fokus er altid at skabe værdi, drive innovation og opbygge langvarige partnerskaber med
-                            vores kunder.
+                            Vores konsulenter er specialiserede inden for forskellige områder af softwareudvikling, hvilket giver os en bred
+                            vifte af ekspertise og mulighed for at tackle selv de mest komplekse udfordringer.
                         </Text>
                     </SectionItem>
                 </Section>
@@ -146,6 +144,33 @@ const About: React.FC = () => {
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
                                     <Image src={Linkedin2} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
+                    <SectionItem colSpan={2} colStart={2} rowSpan={2}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin31} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
+                    <SectionItem colSpan={2}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin32} alt="linkedin" />
+                                </Card>
+                            </Center>
+                        </Link>
+                    </SectionItem>
+                    <SectionItem colSpan={2} colStart={4}>
+                        <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7099412445344997376">
+                            <Center>
+                                <Card w="80%" variant={'sectorCard'} overflow="hidden">
+                                    <Image src={Linkedin4} alt="linkedin" />
                                 </Card>
                             </Center>
                         </Link>

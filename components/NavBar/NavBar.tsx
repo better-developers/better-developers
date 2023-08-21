@@ -20,7 +20,7 @@ export const NavBar = () => {
 
     const links = [
         { href: 'services', text: 'Services' },
-        { href: 'cases', text: 'Cases' },
+        // { href: 'cases', text: 'Cases' },
         { href: 'businesses', text: 'Brancher' },
         { href: 'about', text: 'Om os' },
         { href: 'career', text: 'Karriere' },
@@ -33,7 +33,7 @@ export const NavBar = () => {
                 align="center"
                 justify="space-between"
                 w="100%"
-                p={['32px 11vw', '32px 11vw', '48px 11vw']}
+                p={['32px 4vw', '32px 2.5vw', '48px 25.5vw']}
                 bgColor={isTop ? 'transparent' : 'white'}
                 borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
                 boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}

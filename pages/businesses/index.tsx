@@ -14,6 +14,7 @@ import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
 import BusinessesHero from '../../public/businesses-hero.svg';
 import WebAppTemplate from '../../public/web-app-template.svg';
+import illustration2 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-2.png';
 
 const sectors: readonly Sector[] = [
     {
@@ -21,9 +22,8 @@ const sectors: readonly Sector[] = [
         sectorName: 'Landbrug',
         content: (
             <Text>
-                Vi hos Better Developers er stolte af vores bidrag til CropManager-projektet hos SEGES. Vi har leveret nøglefunktioner til
-                Angular-frontenden, herunder refaktorering af eksisterende moduler og udvikling af nye features. Vores rolle indebærer også
-                at fungere som en værdifuld sparringspartner for holdet, hvor vi deler best practices inden for Angular-udvikling.
+                Gennem konsulentarbejde hos en større landbrugs virksomhed har vores konsulenter tilegnet sig viden indenfor landbrug. En
+                domæne viden som indbefatter blandt andet brugen af geo data og højdedata.
             </Text>
         ),
     },
@@ -32,40 +32,35 @@ const sectors: readonly Sector[] = [
         sectorName: 'GDPR',
         content: (
             <Text>
-                Vi hos Better Developers er glade for at have bidraget til BetterCompliances GDPR-løsning. Med vores ekspertise inden for en
-                bred vifte af teknologier har vi udviklet en skræddersyet løsning baseret på .NET og Azure. Vores rolle har omfattet design
-                og implementering af databeskyttelsesfunktioner, rettighedsstyring og brugeradgangskontrol. Vi er stolte af at have hjulpet
-                BetterCompliance med at opfylde GDPR-kravene og sikre beskyttelse af persondata.
+                Opbevaring og databehandling af persondata er i stigende grad en realitet for de fleste software virksomheder. Hos Better
+                Developers har vi erfaring og eksperter indenfor lige netop GDPR compliance.
             </Text>
         ),
     },
     {
         icon: RiGovernmentFill,
         sectorName: 'Det offentlige',
-        content: <Text></Text>,
+        content: (
+            <Text>
+                For vores konsulenter er det ikke fjernt at arbejde med offentlige instanser, vi har været drivende i flere offentlige
+                projekter. Disse projekter spænder alt fra sundhedssektoren til kommunalt arbejde.
+            </Text>
+        ),
     },
     {
         icon: SiWebmoney,
         sectorName: 'Fintech',
         content: (
             <Text>
-                Ved hjælp af Better Developers innovative fintech-løsning, Bogføring Simplified, har den virksomhed vi hjalp formået at
-                effektivisere deres bogføringsprocesser. Den brugervenlige platform og automatiserede funktioner har gjort det muligt for
-                dem at spare tid og minimere fejl, hvilket har resulteret i en mere strømlinet og pålidelig bogføring.
+                Gennem vores konsulentarbejde og vores fokus på forretningsforståelse har vi fået omfattende kendskab til fintech og de
+                lovgivninger der styre den finansielle sektor.
             </Text>
         ),
     },
     {
         icon: IoDocumentText,
         sectorName: 'Forsikring',
-        content: (
-            <Text>
-                Better Developers har bistået MicroTech, en mindre virksomhed med forældet teknologi, med at modernisere deres
-                forsikringssoftware. Som fuldstack-udvikler og konsulent har vi rådgivet dem om de nyeste teknologier og vejledt dem i at
-                træde ind i den moderne software-landskab. Ved at implementere C#, .NET Framework, KnockoutJS, SQL, HTML, Javascript og
-                Postman har vi hjulpet MicroTech med at tage afgørende skridt mod fremtidssikret softwareløsninger.
-            </Text>
-        ),
+        content: <Text>Gennem et stærkt kundesamarbejde har vi fået dyb indsigt og domænekendskab til forsikringsverdenen.</Text>,
     },
 ];
 
@@ -85,9 +80,7 @@ const Businesses: React.FC = () => {
                         identifier="Brancher"
                         heading={
                             <Text fontSize="0.8em" color="inherit" fontWeight="inherit" lineHeight="inherit">
-                                Erfarings&shy;
-                                <wbr />
-                                baserede software&shy;
+                                Software&shy;
                                 <wbr />
                                 løsninger skrædder&shy;
                                 <wbr />
@@ -95,16 +88,12 @@ const Businesses: React.FC = () => {
                             </Text>
                         }
                         paragraph={
-                            <>
-                                Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche. Vi
-                                leverer skræddersyede softwareløsninger, der er specifikt designet til at imødekomme de udfordringer og
-                                behov din branche står over for.
-                            </>
+                            <>Vores erfaringsbaserede tilgang inden for softwareudvikling giver os en unik forståelse af din branche.</>
                         }
                         content={
-                            <Stack alignItems="center" height={'100%'}>
-                                <Box w="50%">
-                                    <Image src={BusinessesHero} alt="Computer image" />
+                            <Stack alignItems="center" justifyContent="center" height={'100%'}>
+                                <Box w="80%">
+                                    <Image src={illustration2} alt="Computer image" />
                                 </Box>
                             </Stack>
                         }
@@ -117,7 +106,7 @@ const Businesses: React.FC = () => {
                             Vi er klar med erfaring indenfor din branche
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
+                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="justify">
                         <Text>
                             Vores omfattende erfaring inden for din branche gør os til den ideelle partner til at løse dine
                             softwareudviklingsbehov. Vi har arbejdet med virksomheder i en række sektorer og forstår de unikke udfordringer

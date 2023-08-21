@@ -1,4 +1,4 @@
-import { AccordionButton, AccordionIcon, AccordionItem, AccordionItemProps, AccordionPanel, Box } from '@chakra-ui/react';
+import { AccordionButton, AccordionIcon, AccordionItem, AccordionItemProps, AccordionPanel, Text, Heading } from '@chakra-ui/react';
 
 interface FAQItemProps {
     heading: string;
@@ -11,14 +11,16 @@ const FAQItem: React.FC<FAQItemProps> = (props) => {
     return (
         <AccordionItem {...props}>
             <h2>
-                <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
+                <AccordionButton justifyContent="space-between">
+                    <Text fontSize="md" fontWeight="semibold">
                         {props.heading}
-                    </Box>
+                    </Text>
                     <AccordionIcon />
                 </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>{props.children}</AccordionPanel>
+            <AccordionPanel pb={4}>
+                <Text fontSize="sm">{props.children}</Text>
+            </AccordionPanel>
         </AccordionItem>
     );
 };

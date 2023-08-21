@@ -1,5 +1,5 @@
 'use client';
-import { Box, Center, Flex, Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useContext, useEffect } from 'react';
@@ -18,7 +18,30 @@ import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
-import logoWireframe from '../public/logo-wireframe.svg';
+import illustration7 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-7.png';
+import illustration1 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-1.png';
+import illustration9 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
+import { StaggerIn } from '../components/StaggerIn/StaggerIn';
+
+type LogoObject = {
+    tooltip: string;
+    src: string;
+};
+
+export const CompanyLogosImgSrc: LogoObject[] = [
+    { src: 'android logo.svg', tooltip: 'Android' },
+    { src: 'angular.svg', tooltip: 'Angular' },
+    { src: 'csharp.svg', tooltip: 'C#' },
+    { src: 'css.svg', tooltip: 'CSS' },
+    { src: 'dotnet.svg', tooltip: '.NET' },
+    { src: 'graphql.svg', tooltip: 'GraphQL' },
+    { src: 'html.svg', tooltip: 'HTML' },
+    { src: 'java.svg', tooltip: 'Java' },
+    { src: 'javascript.svg', tooltip: 'Javascript' },
+    { src: 'python.svg', tooltip: 'Python' },
+    { src: 'react.svg', tooltip: 'React' },
+    { src: 'typescript.svg', tooltip: 'Typescript' },
+];
 
 const Home: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);
@@ -59,78 +82,92 @@ const Home: NextPage = () => {
                                 </Heading>
                             </>
                         }
-                        paragraph={
-                            <>
-                                Better Developers er et konsulenthus, skabt af udviklere for udviklere. Vi redefinerer det traditionelle
-                                it-konsulenthus i Danmark ved at have udvikling i hovedsædet helt fra vores ejerskabstruktur, til hvordan vi
-                                arbejder med vores kunder.
-                            </>
+                        customParagraph={
+                            <Text mixBlendMode="color-dodge">
+                                Vi redefinerer det traditionelle it-konsulenthus i Danmark ved at have fokus på udviklerne helt fra vores
+                                ejerskabstruktur, til hvordan vi arbejder med vores kunder.
+                            </Text>
                         }
                         content={
-                            <Stack justifyContent="flex-start" alignItems="end" height={'100%'}>
+                            <Stack justifyContent="flex-start" alignItems="end">
                                 <VimeoVideo id="828819281" />
                             </Stack>
                         }
                     />
                 </HeroSection>
 
-                <Section pt={24} pb={16}>
+                <StaggerIn.Parent animate="show">
+                    <Section py={16}>
+                        {CompanyLogosImgSrc.map(({ tooltip, src }, idx) => (
+                            <SectionItem colStart={(idx % 4) + 2} colSpan={1}>
+                                <StaggerIn.Child>
+                                    <Center py={4}>
+                                        <Tooltip label={tooltip} fontSize="md">
+                                            <Image width={60} height={60} key={src} src={`logos/${src}`} alt="Picture of the author" />
+                                        </Tooltip>
+                                    </Center>
+                                </StaggerIn.Child>
+                            </SectionItem>
+                        ))}
+                    </Section>
+                </StaggerIn.Parent>
+
+                <Section></Section>
+
+                <Section py={16} backgroundColor={'red.50'}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={[1, 1, 2]} px={8}>
+                        <Text variant={'brandHighlight'}>Vores ydelser</Text>
+                    </SectionItem>
                     <SectionItem px={8} colStart={[1, 1, 2]}>
-                        <Flex flexDir="column" gap="1em" flex="1">
+                        <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
                                 <Heading size="md">Forretningsforståelse</Heading>
                             </Flex>
                             <Text>
-                                Alle vores dygtige udviklere er partnere i Better Developers, og har derfor en dyb forretningsforståelse.
-                                Det betyder, at I får mere end bare en udvikler til jeres team, når I arbejder sammen med os. Jeres
-                                forretning vil altid være i centrum.
+                                Hos Better Developers er vi ikke blot udviklere, men også partnere. Derfor har vi en unik indsigt og
+                                forståelse for hvad der skaber værdi for jeres forretning.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
-                        <Flex flexDir="column" gap="1em" flex="1">
+                        <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={IoPeopleCircle} fontSize="5xl" />
                                 <Heading size="md">IT-Konsulenter</Heading>
                             </Flex>
                             <Text>
-                                Kvalitet og højt faglige kompetencer er garanteret, når I arbejder sammen med os. Vores team af skarpe
-                                konsulenter er ekstremt talentfulde, og er alle blevet godkendt af vores kvalitetsproces, så vi kan stå på
-                                mål for hvert eneste linje kode, som vi leverer til vores kunder.
+                                Kvalitet og det gode håndværk er i højsædet når vi skal udvikle IT systemer for vores kunder. Vi bruger
+                                meget tid på faglig sparring og udvikling så vi altid kan levere de bedste resultater.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
-                        <Flex flexDir="column" gap="1em" flex="1">
+                        <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={HiChatBubbleLeftRight} fontSize="5xl" />
 
                                 <Heading size="md">Samarbejdspartner</Heading>
                             </Flex>
                             <Text>
-                                Når I arbejder sammen med Better Developers, får I samtidigt en samarbejdspartner, der involverer sig aktivt
-                                i jeres forretning. Vi ved, at der ligger flere tanker bagved de systemer, som I gerne vil have udviklet.
-                                Partnerskabsstrukturen gør det nemt for alle vores udviklere at dele deres tanker på en specifik opgave, så
-                                I får den bedst mulige rådgivning hver gang.
+                                Vi har ikke kunder, vi har samarbejdspartnere. Vi involverer os aktivt i jeres forretning og giver nye
+                                perspektiver på gængse problemer.
                             </Text>
                         </Flex>
                     </SectionItem>
 
                     <SectionItem px={8}>
-                        <Flex flexDir="column" gap="1em" flex="1">
+                        <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={VscSymbolMisc} fontSize="5xl" />
 
                                 <Heading size="md">OpenAI API</Heading>
                             </Flex>
                             <Text>
-                                Kunstig intelligens er kommet for at blive, og derfor har vi specialiseret os indenfor dette område. Vi
-                                hjælper vores kunder ved at styrke deres konkurrenceevne ved at udnytte potentialet af kunstig intelligens.
-                                Vi tilbyder ikke kun teknisk ekspertise, men også rådgivning om strategisk implementering af AI-løsninger,
-                                dataprivatlivets betydning og overholdelse af gældende lovgivning.
+                                Lad os hjælpe jer med at skabe værdi gennem kunstig intelligens. Vi kan identificere behovet for en
+                                AI-løsning og understøtte en integration heraf.
                             </Text>
                         </Flex>
                     </SectionItem>
@@ -170,16 +207,16 @@ const Home: NextPage = () => {
                             </Text>
                         </Flex>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 4]} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 4]} colSpan={3}>
                         <Center h="100%">
-                            <Box w="70%">
-                                <Image src={logoWireframe} alt="Logo wireframe" />
+                            <Box w="90%">
+                                <Image src={illustration7} alt="Logo wireframe" />
                             </Box>
                         </Center>
                     </SectionItem>
                 </Section>
 
-                <Section position="relative" py={16}>
+                {/* <Section position="relative" py={16}>
                     <SectionItem px={0} colSpan={6} position="absolute" h="100%" w="100%">
                         <Box
                             bgColor="#303D4D"
@@ -190,7 +227,7 @@ const Home: NextPage = () => {
                             clipPath="polygon(0 10%, 100% 0px, 100% 90%, 0px 100%)"
                         />
                     </SectionItem>
-                    {/* <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={36}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={36}>
                         <Stack>
                             <Heading color="white">Cases</Heading>
                             <Grid gridTemplateColumns="repeat(3,1fr)" borderRadius="20px 0 20px 0" overflow="hidden" gap={4}>
@@ -232,7 +269,7 @@ const Home: NextPage = () => {
                                 </CaseCardPreview>
                             </Grid>
                         </Stack>
-                    </SectionItem> */}
+                    </SectionItem>
 
                     <SectionItem colStart={[1, 1, 2]} colSpan={4} pt={12} pb={[0, 0, 4]}>
                         <Heading color={['initial', 'initial', 'white']}>Det siger andre</Heading>
@@ -277,15 +314,29 @@ const Home: NextPage = () => {
                             }
                         />
                     </SectionItem>
-                </Section>
+                </Section> */}
 
-                <Section py={48}>
+                <Section>
+                    <SectionItem colSpan={2}>
+                        <Flex h="100%" alignItems="flex-end" justifyContent="flex-end">
+                            <Box w="50%">
+                                <Image src={illustration1} alt="Illustration" />
+                            </Box>
+                        </Flex>
+                    </SectionItem>
                     <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]}>
                         <FAQ />
                     </SectionItem>
+                    <SectionItem colSpan={2}>
+                        <Flex h="100%" alignItems="flex-end">
+                            <Box pl={8} w="40%">
+                                <Image style={{ transform: 'scaleX(-1) rotate(-25deg)' }} src={illustration9} alt="Illustration" />
+                            </Box>
+                        </Flex>
+                    </SectionItem>
                 </Section>
 
-                <Section>
+                <Section py={24}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
