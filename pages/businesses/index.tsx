@@ -42,15 +42,7 @@ const sectors: readonly Sector[] = [
     {
         icon: RiGovernmentFill,
         sectorName: 'Det offentlige',
-        content: (
-            <Text>
-                Fra juni 2022 blev et nyt team dannet hos Better Developers med ansvaret for to produkter: Publication og LetDialog. Disse
-                produkter inkluderer følgende teknologier: MVC .NET, Entity Framework, SQL. Octopus og GitHub Actions Publication er et
-                produkt målrettet primært kommuner, hvor forskellige kunder kan offentliggøre deres møder. LetDialog er en besked-app, hvor
-                socialrådgivere kan skrive og modtage beskeder fra deres klienter. Vi er stolte over at have leveret disse løsninger og
-                bidraget til deres succes.
-            </Text>
-        ),
+        content: <Text></Text>,
     },
     {
         icon: SiWebmoney,
