@@ -52,6 +52,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                             )}
                         </Animation>
 
+                        {/* Hack for the front page to set blend mode here */}
                         <Animation style={{ mixBlendMode: 'overlay' }}>{customHeading}</Animation>
                     </Flex>
 
