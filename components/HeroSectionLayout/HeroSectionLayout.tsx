@@ -69,7 +69,15 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
             </SectionItem>
 
             <SectionItem colStart={[1, 1, 4]} colEnd={[8, 8, 6, 6]}>
-                {content}
+                <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{
+                        scale: 1,
+                        opacity: 1,
+                    }}
+                    transition={{ duration: 1, ease }}>
+                    {content}
+                </motion.div>
             </SectionItem>
         </>
     );
