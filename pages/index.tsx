@@ -1,6 +1,6 @@
 'use client';
 import { Image } from '@chakra-ui/next-js';
-import { Box, Center, Image as ChakraImage, Flex, Grid, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Center, Image as ChakraImage, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
@@ -96,12 +96,17 @@ const Home: NextPage = () => {
                 </HeroSection>
 
                 <StaggerIn.Parent animate="show">
-                    <Grid
+                    <Section
                         py={16}
-                        gridTemplateColumns={['repeat(4, 1fr)', 'repeat(4, 1fr)', 'repeat(4, 1fr)', '2fr repeat(4, 1fr) 2fr']}
-                        gap="2em">
+                        gridTemplateColumns={[
+                            '0.5fr repeat(4, 1fr) 0.5fr',
+                            '0.5fr repeat(4, 1fr) 0.5fr',
+                            '0.5fr repeat(4, 1fr) 0.5fr',
+                            '2fr repeat(4, 1fr) 2fr',
+                        ]}
+                        gap="0">
                         {CompanyLogosImgSrc.map(({ tooltip, src }, idx) => (
-                            <SectionItem key={idx} colStart={[(idx % 4) + 1, (idx % 4) + 1, (idx % 4) + 1, (idx % 4) + 2]} colSpan={1}>
+                            <SectionItem key={idx} colStart={(idx % 4) + 2} colSpan={1}>
                                 <StaggerIn.Child>
                                     <Center py={4}>
                                         <Tooltip label={tooltip} fontSize="md">
@@ -117,7 +122,7 @@ const Home: NextPage = () => {
                                 </StaggerIn.Child>
                             </SectionItem>
                         ))}
-                    </Grid>
+                    </Section>
                 </StaggerIn.Parent>
 
                 <Section py={16} backgroundColor={'red.50'}>
