@@ -84,7 +84,7 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section pt={8} pb={24}>
+                <Section pt={8} pb={[12, 12, 12, 24]}>
                     {services.map(({ src, title, description }, idx) => (
                         <SectionItem key={idx} colStart={[0, 0, 0, ((idx * 2) % 4) + 2]} colSpan={2} justifyContent="stretch">
                             <motion.div
@@ -128,7 +128,7 @@ const Services: React.FC = () => {
                     ))}
                 </Section>
 
-                <Section py={32} bgColor="blue.800" id="end-to-end">
+                <Section py={[8, 8, 8, 32]} bgColor="blue.800" id="end-to-end">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Stack gap={4} p={4}>
                             <Heading color="white">End-to-end projekter</Heading>
@@ -155,7 +155,8 @@ const Services: React.FC = () => {
                         </Center>
                     </SectionItem>
                 </Section>
-                <Section py={32} id="consultants">
+
+                <Section py={[16, 16, 16, 32]} id="consultants">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Center h="100%">
                             <Box w="70%">
@@ -187,7 +188,7 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={12}>
+                <Section py={[0, 0, 0, 12]}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">Er du klar til at omsætte din idé til virkelighed?</Heading>
                         <Heading textAlign="center" fontSize="2xl">
