@@ -78,7 +78,7 @@ const Services: React.FC = () => {
                 </HeroSection>
                 <Section pt={24}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
-                        <Heading textAlign="center" fontWeight="semibold">
+                        <Heading textAlign="center" fontWeight="semibold" px={4}>
                             Vores kerne tjenester indenfor softwareudvikling
                         </Heading>
                     </SectionItem>
@@ -86,8 +86,7 @@ const Services: React.FC = () => {
 
                 <Section pt={8} pb={24}>
                     {services.map(({ src, title, description }, idx) => (
-                        // <SectionItem colStart={((idx * 2) % 4) + 2} colSpan={2}>
-                        <SectionItem key={idx} colStart={((idx * 2) % 4) + 2} colSpan={2} justifyContent="stretch">
+                        <SectionItem key={idx} colStart={[0, 0, 0, ((idx * 2) % 4) + 2]} colSpan={2} justifyContent="stretch">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{
@@ -101,18 +100,21 @@ const Services: React.FC = () => {
                                 }}
                                 viewport={{
                                     once: true,
-                                }}
-                            >
+                                }}>
                                 <Center>
-                                    <Card variant="outline" h="100%">
-                                        <Stack p={8} alignItems="center" gap={4} h="100%">
+                                    <Card variant="outline" h="100%" w="100%">
+                                        <Stack py={8} px={[4, 4, 4, 8]} alignItems="center" gap={4} h="100%">
                                             <Image
                                                 src={`assets/consultancy-pack/Icons/Dark/${src}`}
                                                 width={50}
                                                 height={50}
                                                 alt="illustration"
                                             />
-                                            <Text fontSize="xl" fontWeight="bold">
+                                            <Text
+                                                fontSize={['md', 'md', 'md', 'xl']}
+                                                fontWeight="bold"
+                                                textAlign={['center', 'center', 'center', 'left']}
+                                                css={{ hyphens: 'auto' }}>
                                                 {title}
                                             </Text>
                                             <Text textAlign="justify" fontSize="sm">
@@ -136,38 +138,7 @@ const Services: React.FC = () => {
                                 projektet opfylder jeres forventninger og forretningsmål. Her er nogle af de måder, vi samarbejder med jer
                                 som en troværdig partner:
                             </Text>
-                            {/* <OrderedList color="white" spacing={4}>
-                                <ListItem>
-                                    Behovsanalyse og kravafklaring: Vi starter med en grundig behovsanalyse, hvor vi lytter til jeres mål,
-                                    forretningsprocesser og krav. Vi arbejder sammen med jer for at definere klare og specifikke krav til
-                                    projektet, så vi har en fælles forståelse af jeres behov og mål.
-                                </ListItem>
-                                <ListItem>
-                                    Tæt kommunikation og regelmæssig rapportering: Vi prioriterer åben kommunikation og regelmæssig
-                                    rapportering for at holde jer opdaterede på projektets fremskridt. Vi arrangerer møder,
-                                    fremskridtsrapporter og feedback-sessioner, hvor vi sikrer, at vi er på samme side, og eventuelle
-                                    ændringer eller tilpasninger kan diskuteres og implementeres effektivt.
-                                </ListItem>
-                                <ListItem>
-                                    Iterativ udviklingsproces: Vi følger en iterativ udviklingsproces, der giver mulighed for hyppige
-                                    feedback-loops. Dette giver jer mulighed for at give input undervejs og sikrer, at projektet udvikler
-                                    sig i den rigtige retning. Vi vægter jeres input og tilpasser vores tilgang og løsninger for at
-                                    imødekomme jeres behov.
-                                </ListItem>
-                                <ListItem>
-                                    Fleksibilitet og tilpasningsevne: Vi er fleksible og tilpasningsdygtige i vores tilgang til at arbejde
-                                    med jer som samarbejdspartner. Vi forstår, at behov og krav kan ændre sig undervejs, og vi er parate til
-                                    at tilpasse os og levere de nødvendige ændringer eller tilføjelser til projektet.
-                                </ListItem>
-                                <ListItem>
-                                    Langsigtet support: Vores partnerskab stopper ikke, når projektet er afsluttet. Vi tilbyder langsigtet
-                                    support og vedligeholdelse af den udviklede software. Vi er der for at hjælpe med eventuelle spørgsmål,
-                                    fejlrettelser eller ydeevneoptimeringer og sikre, at jeres software fungerer optimalt over tid. Ved at
-                                    arbejde som en samarbejdspartner er vores mål at opbygge et tillidsfuldt forhold, hvor vi forstår jeres
-                                    behov, lytter til jeres ønsker og leverer skræddersyede løsninger, der hjælper jer med at opnå succes.
-                                    Vi stræber efter at være en pålidelig og langsigtet partner, der er dedikeret til jeres succes og vækst.
-                                </ListItem>
-                            </OrderedList> */}
+
                             <Text>
                                 <br />
                                 <Link color="white">Se processen</Link>
