@@ -1,6 +1,5 @@
-import { Center, Flex, Heading, Link, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
+import { Center, Flex, Heading, Link } from '@chakra-ui/react';
 import { useContext, useEffect } from 'react';
-import { MdCheckCircle } from 'react-icons/md';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
 import { HeroSection } from '../../components/HeroSection/HeroSection';
@@ -32,8 +31,7 @@ const Services: React.FC = () => {
                             poster="/video/casette-placeholder.jpg"
                             style={{ objectFit: 'cover', height: '100%' }}
                         />
-                    }
-                >
+                    }>
                     <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
                         <Center flexDirection="column" gap={4} h={['30%', '30%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
@@ -45,8 +43,7 @@ const Services: React.FC = () => {
                                     size={['2xl', '2xl', '4xl']}
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
-                                    textColor="transparent"
-                                >
+                                    textColor="transparent">
                                     +45 53 80 00 54
                                 </Heading>
                             </Link>
@@ -54,13 +51,13 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </HeroSection>
 
-                <Section py={24}>
-                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
+                <Section pt={24}>
+                    <SectionItem colStart={[1, 1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" size="lg">
                             Lad os sammen afdække behovene til jeres næste projekt.
                         </Heading>
                     </SectionItem>
-                    <SectionItem colSpan={2} colStart={3} py={8}>
+                    <SectionItem colSpan={2} colStart={[1, 1, 1, 3]} py={8}>
                         <ContactForm />
                     </SectionItem>
                 </Section>
