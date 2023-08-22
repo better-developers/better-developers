@@ -1,8 +1,9 @@
 'use client';
 import { Image } from '@chakra-ui/next-js';
 import { Box, Center, Image as ChakraImage, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
+import { AnimatePresence } from 'framer-motion';
 import type { NextPage } from 'next';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
@@ -16,6 +17,7 @@ import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLa
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { StaggerIn } from '../components/StaggerIn/StaggerIn';
+import { TechCard } from '../components/TechCard/TechCard';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
 import illustration1 from '../public/assets/consultancy-pack/illustrations/consultant-illustrations-1.png';
@@ -47,6 +49,8 @@ const Home: NextPage = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => setContext('light'), []);
+
+    const [selectedId, setSelectedId] = useState<string | null>(null);
 
     return (
         <>
@@ -106,8 +110,13 @@ const Home: NextPage = () => {
                         ]}
                         gap="0">
                         {CompanyLogosImgSrc.map(({ tooltip, src }, idx) => (
-                            <SectionItem key={idx} colStart={(idx % 4) + 2} colSpan={1}>
-                                <StaggerIn.Child>
+                            <SectionItem
+                                key={idx}
+                                colStart={(idx % 4) + 2}
+                                colSpan={1}
+                                onClick={() => setSelectedId(idx.toString())}
+                                cursor="pointer">
+                                <StaggerIn.Child layoutId={idx.toString()}>
                                     <Center py={4}>
                                         <Tooltip label={tooltip} fontSize="md">
                                             <ChakraImage
@@ -122,6 +131,14 @@ const Home: NextPage = () => {
                                 </StaggerIn.Child>
                             </SectionItem>
                         ))}
+
+                        <AnimatePresence>
+                            {selectedId && (
+                                <Box position="absolute" paddingLeft="22vw" w="77vw" h="500px" top="80px">
+                                    <TechCard layoutId={selectedId} onClose={() => setSelectedId(null)} />
+                                </Box>
+                            )}
+                        </AnimatePresence>
                     </Section>
                 </StaggerIn.Parent>
 
