@@ -59,7 +59,8 @@ const Home: NextPage = () => {
                         <Box width="100%" height="100%" zIndex="-1">
                             <Gradient />
                         </Box>
-                    }>
+                    }
+                >
                     <HeroSectionLayout
                         customHeading={
                             <>
@@ -68,7 +69,8 @@ const Home: NextPage = () => {
                                     fontWeight="400"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
-                                    color="black">
+                                    color="black"
+                                >
                                     Et konsulenthus af
                                 </Heading>
                                 <Heading
@@ -76,7 +78,8 @@ const Home: NextPage = () => {
                                     fontWeight="700"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
-                                    color="black">
+                                    color="black"
+                                >
                                     udviklere.
                                 </Heading>
                             </>

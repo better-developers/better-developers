@@ -32,7 +32,8 @@ const Services: React.FC = () => {
                             poster="/video/casette-placeholder.jpg"
                             style={{ objectFit: 'cover', height: '100%' }}
                         />
-                    }>
+                    }
+                >
                     <SectionItem colStart={[1, 1, 2]} colSpan={[5, 5, 4]} height={750}>
                         <Center flexDirection="column" gap={4} h={['30%', '30%', '60%']}>
                             <Heading color="#F7A75A" size="sm" opacity={0.5} fontWeight={300}>
@@ -44,7 +45,8 @@ const Services: React.FC = () => {
                                     size={['2xl', '2xl', '4xl']}
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
-                                    textColor="transparent">
+                                    textColor="transparent"
+                                >
                                     +45 53 80 00 54
                                 </Heading>
                             </Link>

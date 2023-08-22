@@ -101,7 +101,8 @@ const Services: React.FC = () => {
                                 }}
                                 viewport={{
                                     once: true,
-                                }}>
+                                }}
+                            >
                                 <Center>
                                     <Card variant="outline" h="100%">
                                         <Stack p={8} alignItems="center" gap={4} h="100%">

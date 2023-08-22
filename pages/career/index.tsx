@@ -34,7 +34,8 @@ const Career: React.FC = () => {
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
                                     textColor="transparent"
-                                    fontWeight="semibold">
+                                    fontWeight="semibold"
+                                >
                                     Better Developers.
                                 </Box>
                             </>
@@ -139,7 +140,8 @@ const Career: React.FC = () => {
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
                                 textColor="transparent"
-                                fontWeight="semibold">
+                                fontWeight="semibold"
+                            >
                                 Better Developers?
                             </Box>
                         </Heading>

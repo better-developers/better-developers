@@ -32,7 +32,8 @@ const About: React.FC = () => {
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
                                     textColor="transparent"
-                                    fontWeight="semibold">
+                                    fontWeight="semibold"
+                                >
                                     Better Developers.
                                 </Box>
                             </>
@@ -75,7 +76,8 @@ const About: React.FC = () => {
                                 display="inline"
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
-                                textColor="transparent">
+                                textColor="transparent"
+                            >
                                 Better Developers
                             </Box>
                         </Heading>

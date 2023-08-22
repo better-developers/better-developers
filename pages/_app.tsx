@@ -26,7 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <meta name="theme-color" content="#ffffff"></meta>
                 <meta
                     name="description"
-                    content="Corporate website for BetterDevelopers - a consultant company with home in Aarhus, Denmark"></meta>
+                    content="Corporate website for BetterDevelopers - a consultant company with home in Aarhus, Denmark"
+                ></meta>
             </Head>
 
             <ChakraProvider theme={theme}>

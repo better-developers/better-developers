@@ -8,7 +8,8 @@ export const Section: FC<BoxProps> = ({ children, backgroundColor, ...props }) =
             gridTemplateColumns={['1fr', '1fr', '1fr', '2fr repeat(4, 1fr) 2fr']}
             gap={['2em', '2em', '4em', '1em']}
             width="100%"
-            minW={0}>
+            minW={0}
+        >
             {children}
         </Grid>
         <Grid
@@ -18,7 +19,8 @@ export const Section: FC<BoxProps> = ({ children, backgroundColor, ...props }) =
             top="0"
             position="absolute"
             zIndex={-2}
-            backgroundColor={backgroundColor}>
+            backgroundColor={backgroundColor}
+        >
             <Box width="1px" background="blackAlpha.50" />
             <Box width="1px" background="blackAlpha.50" />
             <Box width="1px" background="blackAlpha.50" />

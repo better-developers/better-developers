@@ -38,7 +38,8 @@ export const NavBar = () => {
                 borderBottom={isTop ? 'none' : '1px solid rgba(0,0,0, 0.1)'}
                 boxShadow={isTop ? 'none' : 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;'}
                 transition={`${transitionMobile} color 500ms, box-shadow 300ms, border-bottom 500ms 500ms`}
-                zIndex="100">
+                zIndex="100"
+            >
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
 
@@ -65,7 +66,8 @@ export const NavBar = () => {
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
                                 textColor="transparent"
-                                fontWeight="bold">
+                                fontWeight="bold"
+                            >
                                 Kontakt os
                             </MenuItem>
                         </MenuList>

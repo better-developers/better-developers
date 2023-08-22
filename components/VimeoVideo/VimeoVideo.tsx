@@ -20,7 +20,8 @@ export const VimeoVideo: FC<VimeoVideoProps> = ({ id }) => (
                     height: '100%',
                     filter: 'drop-shadow(rgba(0, 0, 0, 0.24) 0px 3px 8px)',
                 }}
-                title="Better Developers"></iframe>
+                title="Better Developers"
+            ></iframe>
         </Box>
 
         <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload"></Script>
