@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
                             undervejs.
                         </FAQItem>
 
-                        <FAQItem heading="Hvordan håndterer I beskyttelse af fortrolige oplysninger og data?">
+                        <FAQItem heading="Hvordan håndterer I beskyttelse af fortrolige oplysninger og data?" borderBottom="none">
                             Vi tager databeskyttelse og fortrolighed meget alvorligt. Vi implementerer sikre udviklingspraksisser, herunder
                             adgangskontrol, datakryptering og overholdelse af relevante sikkerhedsstandarder. Vi indgår også
                             fortrolighedsaftaler med vores kunder for at beskytte deres følsomme oplysninger. Det hele er samtidigt sikret
