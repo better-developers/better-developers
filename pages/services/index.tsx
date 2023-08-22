@@ -7,9 +7,9 @@ import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import illustration5 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-5.png';
-import illustration6 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-6.png';
-import illustration8 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-8.png';
+import illustration5 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-5.png';
+import illustration6 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-6.png';
+import illustration8 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-8.png';
 
 type Service = {
     src: string;
