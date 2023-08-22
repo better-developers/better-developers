@@ -129,7 +129,7 @@ const Career: React.FC = () => {
 
                 <TeamBetterDevelopers />
 
-                <Section pt={[4, 4, 4, 24]} pb={[0, 0, 0, 16]}>
+                <Section pt={[4, 4, 4, 24]}>
                     <SectionItem px={[0, 0, 8]} py={16} colStart={2} colSpan={2}>
                         <Heading size="2xl">
                             Hvorfor{' '}
