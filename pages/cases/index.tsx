@@ -9,9 +9,8 @@ import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectio
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
-import CasesHero from '../../public/cases-hero.svg';
+import illustration2 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-2.png';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
-import illustration2 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-2.png';
 
 const Cases: NextPage = () => {
     const cases: Case[] = [

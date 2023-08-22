@@ -18,9 +18,9 @@ import { SectionItem } from '../components/SectionItem/SectionItem';
 import { StaggerIn } from '../components/StaggerIn/StaggerIn';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
-import illustration1 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-1.png';
-import illustration7 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-7.png';
-import illustration9 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
+import illustration1 from '../public/assets/consultancy-pack/illustrations/consultant-illustrations-1.png';
+import illustration7 from '../public/assets/consultancy-pack/illustrations/consultant-illustrations-7.png';
+import illustration9 from '../public/assets/consultancy-pack/illustrations/consultant-illustrations-9.png';
 
 type LogoObject = {
     tooltip: string;

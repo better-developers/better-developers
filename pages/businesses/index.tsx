@@ -12,9 +12,8 @@ import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectio
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Sector, SectorCard } from '../../components/SectorCard/SectorCard';
-import BusinessesHero from '../../public/businesses-hero.svg';
+import illustration2 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-2.png';
 import WebAppTemplate from '../../public/web-app-template.svg';
-import illustration2 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-2.png';
 
 const sectors: readonly Sector[] = [
     {

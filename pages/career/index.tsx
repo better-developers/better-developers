@@ -9,7 +9,7 @@ import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectio
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { TeamBetterDevelopers } from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
-import illustration9 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
+import illustration9 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-9.png';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
 import Linkedin31 from '../../public/img/linkedin-3-1.jpeg';
