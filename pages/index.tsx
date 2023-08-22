@@ -27,7 +27,7 @@ type LogoObject = {
     src: string;
 };
 
-export const CompanyLogosImgSrc: LogoObject[] = [
+const CompanyLogosImgSrc: LogoObject[] = [
     { src: 'android logo.svg', tooltip: 'Android' },
     { src: 'angular.svg', tooltip: 'Angular' },
     { src: 'csharp.svg', tooltip: 'C#' },
@@ -59,8 +59,7 @@ const Home: NextPage = () => {
                         <Box width="100%" height="100%" zIndex="-1">
                             <Gradient />
                         </Box>
-                    }
-                >
+                    }>
                     <HeroSectionLayout
                         customHeading={
                             <>
@@ -69,8 +68,7 @@ const Home: NextPage = () => {
                                     fontWeight="400"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
-                                    color="black"
-                                >
+                                    color="black">
                                     Et konsulenthus af
                                 </Heading>
                                 <Heading
@@ -78,14 +76,13 @@ const Home: NextPage = () => {
                                     fontWeight="700"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
-                                    color="black"
-                                >
+                                    color="black">
                                     udviklere.
                                 </Heading>
                             </>
                         }
                         customParagraph={
-                            <Text mixBlendMode="color-dodge">
+                            <Text color="black">
                                 Vi redefinerer det traditionelle it-konsulenthus i Danmark ved at have fokus på udviklerne helt fra vores
                                 ejerskabstruktur, til hvordan vi arbejder med vores kunder.
                             </Text>
