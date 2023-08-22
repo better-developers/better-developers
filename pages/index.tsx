@@ -185,7 +185,7 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section py={24}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 2]} colSpan={2} px={8}>
                         <Flex flexDir="column" gap="8">
                             <Heading>Derfor skal du arbejde sammen med os.</Heading>
 
@@ -219,6 +219,7 @@ const Home: NextPage = () => {
                             </Text>
                         </Flex>
                     </SectionItem>
+
                     <SectionItem colStart={[1, 1, 4]} colSpan={3}>
                         <Center h="100%">
                             <Box w="90%" paddingTop={[16, 16, 16, 0]}>
@@ -237,7 +238,7 @@ const Home: NextPage = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]}>
+                    <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]} px={8}>
                         <FAQ />
                     </SectionItem>
 
@@ -250,7 +251,7 @@ const Home: NextPage = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={24}>
+                <Section py={[8, 8, 8, 24]}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center">
                             Lyder det spændende? Så lad os tage en snak om hvordan vi kan føre din idé ud i livet.
