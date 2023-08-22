@@ -27,7 +27,8 @@ export const SkillsCarousel = () => {
             }}
             spaceBetween={50}
             modules={[Autoplay]}
-            slidesPerView={'auto'}>
+            slidesPerView={'auto'}
+        >
             <SwiperSlide className={styles.slide}>
                 <LogoSlide src={ReactIcon} tooltip={'React'} />
             </SwiperSlide>

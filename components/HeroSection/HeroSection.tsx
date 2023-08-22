@@ -68,7 +68,8 @@ export const HeroSection: FC<PropsWithChildren<HeroSectionProps>> = ({ colors, b
                         width="100%"
                         height="100%"
                         position="absolute"
-                        clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)">
+                        clipPath="polygon(0px 0px, 100% 0px, 100% calc(100% - 250px), 0px 100%)"
+                    >
                         {backgroundElement}
                     </Box>
                 </SectionItem>

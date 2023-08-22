@@ -9,7 +9,7 @@ import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectio
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { Case } from '../../models/case';
-import CasesHero from '../../public/cases-hero.svg';
+import illustration2 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-2.png';
 import PlaceholderCardImage from '../../public/placeholder-card-image.png';
 
 const Cases: NextPage = () => {
@@ -19,14 +19,6 @@ const Cases: NextPage = () => {
             title: 'Interaktiv frontend skaber højere engagement på dating PWA',
             content: (
                 <Text textAlign="justify">
-                    Markedet er mættet med dating apps, derfor er det vigtigt at skille sig ud. Konceptet bag denne dating app er at der kun
-                    forekommer ét match om dagen. Derfor var det vigtigt at skabe en platform der var meget interaktiv da det var med til at
-                    holde brugerne engagerede i PWA&apos;en.
-                    <br />
-                    <br />
-                    <i>Projektet er et koncept udviklet i React med en .NET core backend.</i>
-                    <br />
-                    <br />
                     <Link>Læs mere...</Link>
                 </Text>
             ),
@@ -48,15 +40,11 @@ const Cases: NextPage = () => {
                 </Text>
             ),
         },
-        // {
-        //     image: PlaceholderCardImage,
-        //     title: 'Automatiseret udfyldelse af bogføringsprocedure forsimpler implementering af ny lovgivning',
-        //     content: (
-        //         <Text textAlign="justify">
-        //             Ved at automatisere
-        //         </Text>
-        //     ),
-        // },
+        {
+            image: PlaceholderCardImage,
+            title: 'Automatiseret udfyldelse af bogføringsprocedure forsimpler implementering af ny lovgivning',
+            content: <Text textAlign="justify">Ved at automatisere</Text>,
+        },
         {
             image: PlaceholderCardImage,
             title: 'Agro faglig viden og landbrugsdata forenes i værdiskabende web app',
@@ -71,11 +59,11 @@ const Cases: NextPage = () => {
                 </Text>
             ),
         },
-        // {
-        //     image: PlaceholderCardImage,
-        //     title: 'Forsikringssystem',
-        //     content: <Text textAlign="justify"></Text>,
-        // },
+        {
+            image: PlaceholderCardImage,
+            title: 'Forsikringssystem',
+            content: <Text textAlign="justify"></Text>,
+        },
         {
             image: PlaceholderCardImage,
             title: 'Web Assembly og SignalR gør det lettere at samarbejde om LaTeX dokumenter',
@@ -106,14 +94,17 @@ const Cases: NextPage = () => {
                         paragraph={
                             <>
                                 Udforsk vores virksomhedscases og opdag, hvordan Better Developers har hjulpet vores kunder med at opnå
-                                digitale succeser gennem skræddersyede softwareløsninger. Vores dygtige konsulenter og innovative tilgang
-                                har skabt mærkbare resultater og tilfredse kunder inden for forskellige brancher.
+                                digitale succeser gennem skræddersyede softwareløsninger.
+                                <br />
+                                <br />
+                                Vores dygtige konsulenter og innovative tilgang har skabt mærkbare resultater og tilfredse kunder inden for
+                                forskellige brancher.
                             </>
                         }
                         content={
-                            <Stack alignItems="end" height={'100%'}>
-                                <Box w="80%">
-                                    <Image src={CasesHero} alt="Computer image" />
+                            <Stack alignItems="center" justifyContent="center" height={'100%'}>
+                                <Box w="70%">
+                                    <Image src={illustration2} alt="Computer image" />
                                 </Box>
                             </Stack>
                         }
@@ -128,10 +119,7 @@ const Cases: NextPage = () => {
                     </SectionItem>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
                         <Text textAlign="justify">
-                            Se vores virksomhedscases og opdag hvordan Better Developers har udnyttet den nyeste teknologi til at levere
-                            skræddersyede softwareløsninger til vores kunder. Vores dygtige konsulenter har anvendt avancerede teknologier
-                            som kunstig intelligens, maskinlæring, cloud computing og blockchain for at skabe innovative og effektive
-                            løsninger. Uanset om det er inden for sundhedssektoren, finansverdenen eller detailhandlen, har vores løsninger
+                            Uanset om det er inden for sundhedssektoren, finansverdenen eller detailhandlen, har vores løsninger
                             transformeret vores kunders forretning og sikret dem en konkurrencemæssig fordel. Udforsk vores cases for at se,
                             hvordan vi har skabt digital succes og tilfredse kunder gennem vores teknologiske ekspertise.
                         </Text>
@@ -142,13 +130,7 @@ const Cases: NextPage = () => {
                     <SectionItem colStart={[1, 1, 2]} colSpan={4}>
                         <Grid gridTemplateColumns="repeat(4,1fr)" gridTemplateRows="1fr 0.5fr 1fr" gap={8}>
                             {cases.map((c, index) => (
-                                <GridItem
-                                    key={index}
-                                    colSpan={[8, 8, index % 5 ? 1 : 2]}
-                                    rowSpan={index % 5 ? 2 : 1}
-                                    minW={0}
-                                    minH={0}
-                                    h="100%">
+                                <GridItem key={index} colSpan={[8, 8, 2]} rowSpan={index % 5 ? 2 : 1} minW={0} minH={0} h="100%">
                                     <CaseCard image={c.image} title={c.title}>
                                         {c.content}
                                     </CaseCard>

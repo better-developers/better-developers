@@ -1,6 +1,6 @@
 {
     "name": "better-developers",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "private": true,
     "scripts": {
         "build": "next build && next export",
@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@chakra-ui/icons": "^2.0.19",
+        "@chakra-ui/next-js": "^2.1.5",
         "@chakra-ui/react": "^2.5.5",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",

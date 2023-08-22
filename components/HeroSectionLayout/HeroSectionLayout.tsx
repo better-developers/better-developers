@@ -7,11 +7,12 @@ type HeroSectionProps = {
     identifier?: string;
     heading?: ReactElement;
     customHeading?: ReactElement;
-    paragraph: ReactElement;
+    paragraph?: ReactElement;
+    customParagraph?: ReactElement;
     content?: ReactElement;
 };
 
-export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, content }) => {
+export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, customParagraph, content }) => {
     return (
         <>
             <SectionItem colStart={[1, 1, 2]} colEnd={[8, 8, 4, 4]} mb={24}>
@@ -20,7 +21,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                         {identifier && <Text variant="brandHighlight">{identifier}</Text>}
 
                         {heading && (
-                            <Heading fontSize={['2em', '2em', '4em', '4em']} fontWeight="400" color="black">
+                            <Heading fontSize={['2em', '2em', '3em', '3em']} fontWeight="600" color="black">
                                 {heading}
                             </Heading>
                         )}
@@ -28,9 +29,13 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                         {customHeading}
                     </Flex>
 
-                    <Text lineHeight="1.5" color="black" maxWidth={'750px'}>
-                        {paragraph}
-                    </Text>
+                    {paragraph && (
+                        <Text lineHeight="2" color="black" maxWidth={'750px'}>
+                            {paragraph}
+                        </Text>
+                    )}
+
+                    {customParagraph}
 
                     <ContactButton />
                 </Stack>
