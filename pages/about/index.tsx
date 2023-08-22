@@ -121,7 +121,10 @@ const About: React.FC = () => {
                             begyndelsen og har været med til at forme det teknologiske fundament for forretningen og udvide vores
                             værktøjskasse.
                             <br />
-                            <br />- Viktor Lundsgaard Andersen, CEO
+                            <br />- Viktor Lundsgaard Andersen,{' '}
+                            <Text variant="brandHighlight" display="inline">
+                                CEO
+                            </Text>
                         </Text>
                     </SectionItem>
                 </Section>
