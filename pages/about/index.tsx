@@ -114,17 +114,17 @@ const About: React.FC = () => {
                         </Text>
                     </SectionItem>
                     <SectionItem>
-                        <Text textAlign="justify">
+                        <Text textAlign="justify" pb={8}>
                             formåede han at transformere og strømline salgsprocessen. Herfra tog det fart og det var tydeligt, at vi
                             manglede yderligere kompetencer. Vi skulle bruge en dedikeret og dygtig CTO, til at drive visionen om at være på
                             forkant med de nyeste teknologier og lave det bedste håndværk. Her kom Mikkel ind og tog ejerskab fra
                             begyndelsen og har været med til at forme det teknologiske fundament for forretningen og udvide vores
                             værktøjskasse.
-                            <br />
-                            <br />- Viktor Lundsgaard Andersen,{' '}
-                            <Text variant="brandHighlight" display="inline">
-                                CEO
-                            </Text>
+                        </Text>
+
+                        <Text display="inline">- Viktor Lundsgaard Andersen, </Text>
+                        <Text variant="brandHighlight" display="inline">
+                            CEO
                         </Text>
                     </SectionItem>
                 </Section>
