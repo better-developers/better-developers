@@ -127,10 +127,12 @@ const About: React.FC = () => {
                 </Section>
 
                 <Section py={8}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={8}>
-                        <Heading fontWeight={600}>Følg med</Heading>
+                    <SectionItem colStart={[1, 1, 1, 2]} colSpan={[12, 12, 12, 2]} py={8}>
+                        <Heading fontWeight={600} textAlign={['center', 'center', 'center', 'left']}>
+                            Følg med
+                        </Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 1, 2]} colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -139,7 +141,7 @@ const About: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -148,7 +150,7 @@ const About: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2} colStart={2} rowSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]} colStart={[0, 0, 0, 2]} rowSpan={2}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -157,7 +159,7 @@ const About: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -166,7 +168,7 @@ const About: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2} colStart={4}>
+                    <SectionItem colSpan={[12, 12, 12, 2]} colStart={[0, 0, 0, 4]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7099412445344997376">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
