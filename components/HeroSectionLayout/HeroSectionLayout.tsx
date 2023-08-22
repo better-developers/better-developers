@@ -12,9 +12,18 @@ type HeroSectionProps = {
     paragraph?: ReactElement;
     customParagraph?: ReactElement;
     content?: ReactElement;
+    shake?: boolean;
 };
 
-export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, customParagraph, content }) => {
+export const HeroSectionLayout: FC<HeroSectionProps> = ({
+    identifier,
+    heading,
+    customHeading,
+    paragraph,
+    customParagraph,
+    content,
+    shake = true,
+}) => {
     const duration = 0.75;
     const ease = [0.5, 0.5, 0.21, 1];
     const animationDelayOffset = 0;
@@ -73,7 +82,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                 </Stack>
             </SectionItem>
 
-            <SectionItem colStart={[1, 1, 4]} colEnd={[8, 8, 6, 6]}>
+            <SectionItem colStart={[1, 1, 4]} colEnd={[8, 8, 6, 6]} zIndex={200}>
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{
@@ -81,7 +90,16 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                         opacity: 1,
                     }}
                     transition={{ duration: 1, ease }}>
-                    {content}
+                    {shake && (
+                        <motion.div
+                            whileHover={{
+                                rotate: ['0deg', '6deg', '-8deg', '10deg', '-2deg', '0deg'],
+                                transition: { duration: 0.4 },
+                            }}>
+                            {content}
+                        </motion.div>
+                    )}
+                    {!shake && <>{content}</>}
                 </motion.div>
             </SectionItem>
         </>
