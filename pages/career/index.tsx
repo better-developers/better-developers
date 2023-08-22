@@ -9,12 +9,12 @@ import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectio
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import { TeamBetterDevelopers } from '../../components/TeamBetterDevelopers/TeamBetterDevelopers';
+import illustration9 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
 import Linkedin1 from '../../public/img/linkedin-1.jpg';
 import Linkedin2 from '../../public/img/linkedin-2.jpg';
 import Linkedin31 from '../../public/img/linkedin-3-1.jpeg';
 import Linkedin32 from '../../public/img/linkedin-3-2.jpeg';
 import Linkedin4 from '../../public/img/linkedin-4.jpeg';
-import illustration9 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
 
 const Career: React.FC = () => {
     return (
@@ -34,8 +34,7 @@ const Career: React.FC = () => {
                                     background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                     backgroundClip="text"
                                     textColor="transparent"
-                                    fontWeight="semibold"
-                                >
+                                    fontWeight="semibold">
                                     Better Developers.
                                 </Box>
                             </>
@@ -78,10 +77,10 @@ const Career: React.FC = () => {
                 </Section>
 
                 <Section pb={32}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2} py={8}>
+                    <SectionItem colStart={[1, 1, 1, 2]} colSpan={[12, 12, 12, 2]} py={8}>
                         <Heading fontWeight={600}>Følg med i dagligdagen</Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2}>
+                    <SectionItem colStart={[1, 1, 1, 2]} colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -90,7 +89,7 @@ const Career: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7038197349411647488">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -99,7 +98,7 @@ const Career: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2} colStart={2} rowSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]} colStart={[0, 0, 0, 2]} rowSpan={2}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -108,7 +107,7 @@ const Career: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2}>
+                    <SectionItem colSpan={[12, 12, 12, 2]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7095391933170114560">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -117,7 +116,7 @@ const Career: React.FC = () => {
                             </Center>
                         </Link>
                     </SectionItem>
-                    <SectionItem colSpan={2} colStart={4}>
+                    <SectionItem colSpan={[12, 12, 12, 2]} colStart={[0, 0, 0, 4]}>
                         <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7099412445344997376">
                             <Center>
                                 <Card w="80%" variant={'sectorCard'} overflow="hidden">
@@ -130,7 +129,7 @@ const Career: React.FC = () => {
 
                 <TeamBetterDevelopers />
 
-                <Section pt={24} pb={16}>
+                <Section pt={[4, 4, 4, 24]} pb={[0, 0, 0, 16]}>
                     <SectionItem px={[0, 0, 8]} py={16} colStart={2} colSpan={2}>
                         <Heading size="2xl">
                             Hvorfor{' '}
@@ -140,8 +139,7 @@ const Career: React.FC = () => {
                                 background="linear-gradient(90.77deg, #F7A75A 21.3%, #F8E869 71.67%);"
                                 backgroundClip="text"
                                 textColor="transparent"
-                                fontWeight="semibold"
-                            >
+                                fontWeight="semibold">
                                 Better Developers?
                             </Box>
                         </Heading>
