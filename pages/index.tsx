@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                                 <StaggerIn.Child>
                                     <Center py={4}>
                                         <Tooltip label={tooltip} fontSize="md">
-                                            <Image width={60} height={60} key={src} src={`logos/${src}`} alt="Picture of the author" />
+                                            <Image width={60} height={60} key={src} src={`logos/${src}`} alt={tooltip} />
                                         </Tooltip>
                                     </Center>
                                 </StaggerIn.Child>
