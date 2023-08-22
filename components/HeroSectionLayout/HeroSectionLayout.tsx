@@ -9,11 +9,12 @@ type HeroSectionProps = {
     identifier?: string;
     heading?: ReactElement;
     customHeading?: ReactElement;
-    paragraph: ReactElement;
+    paragraph?: ReactElement;
+    customParagraph?: ReactElement;
     content?: ReactElement;
 };
 
-export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, content }) => {
+export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, customHeading, paragraph, customParagraph, content }) => {
     const duration = 0.75;
     const ease = [0.5, 0.5, 0.21, 1];
     const animationDelayOffset = 0;
@@ -46,7 +47,7 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
 
                         <Animation index={1}>
                             {heading && (
-                                <Heading fontSize={['2em', '2em', '4em', '4em']} fontWeight="400" color="black">
+                                <Heading fontSize={['2em', '2em', '3em', '3em']} fontWeight="600" color="black">
                                     {heading}
                                 </Heading>
                             )}
@@ -56,11 +57,15 @@ export const HeroSectionLayout: FC<HeroSectionProps> = ({ identifier, heading, c
                         <Animation style={{ mixBlendMode: 'overlay' }}>{customHeading}</Animation>
                     </Flex>
 
-                    <Animation index={2}>
-                        <Text lineHeight="1.5" color="black" maxWidth={'750px'}>
-                            {paragraph}
-                        </Text>
-                    </Animation>
+                    {paragraph && (
+                        <Animation index={2}>
+                            <Text lineHeight="2" color="black" maxWidth={'750px'}>
+                                {paragraph}
+                            </Text>
+                        </Animation>
+                    )}
+
+                    {customParagraph && <Animation index={2}>{customParagraph}</Animation>}
 
                     <Animation index={3}>
                         <ContactButton />

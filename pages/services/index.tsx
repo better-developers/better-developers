@@ -1,4 +1,5 @@
-import { Box, Center, Flex, Heading, Link, ListItem, OrderedList, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
@@ -6,7 +7,49 @@ import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import ServicesHero from '../../public/services-hero.svg';
+import illustration5 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-5.png';
+import illustration6 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-6.png';
+import illustration8 from '../../public/assets/consultancy-pack/illustrations/consultant-illustrations-8.png';
+
+type Service = {
+    src: string;
+    title: string;
+    description: string;
+};
+
+const services: Service[] = [
+    {
+        src: 'consultant-icon-1.png',
+        title: 'Webudvikling',
+        description: `Vi leverer skræddersyede webapplikationer og websites, der er optimeret til at opfylde
+        dine specifikke behov og levere en god brugeroplevelse.`,
+    },
+    {
+        src: 'consultant-icon-2.png',
+        title: 'App-udvikling',
+        description: `Vi udvikler innovative og brugervenlige applikationer til både iOS og
+        Android-platforme.`,
+    },
+    {
+        src: 'consultant-icon-3.png',
+        title: 'AI-integrationer',
+        description: `Vi har ekspertise i at integrere kunstig intelligens (AI) i dine eksisterende
+        systemer eller udvikle nye AI-baserede løsninger.`,
+    },
+    {
+        src: 'consultant-icon-4.png',
+        title: 'Cloud-løsninger',
+        description: `Vi hjælper med at migrere dine applikationer og data til sikre og skalerbare
+        cloud-platforme som f.eks. Amazon Web Services (AWS) eller Microsoft Azure.`,
+    },
+    {
+        src: 'consultant-icon-5.png',
+        title: 'Vedligeholdelse',
+        description: `Vi tilbyder vedligeholdelse og support af din eksisterende
+        softwareapplikation, herunder fejlrettelser, ydeevneoptimering og opdateringer for at sikre, at den
+        forbliver stabil og opdateret over tid.`,
+    },
+];
 
 const Services: React.FC = () => {
     return (
@@ -22,63 +65,70 @@ const Services: React.FC = () => {
                             <>
                                 Uanset om du har brug for webudvikling, mobilapp-udvikling, AI-integrationer eller andre softwareløsninger,
                                 leverer vi jer skræddersyede tjenester, der passer til jeres krav.
-                                <br />
-                                <br />
-                                Vores erfarne konsulenter arbejder tæt sammen med jer for at sikre, at vi leverer en løsning, der opfylder
-                                jeres forventninger og giver værdi til jeres virksomhed.
                             </>
                         }
                         content={
-                            <Stack alignItems="center" height={'100%'}>
+                            <Stack alignItems="center" justifyContent="center" height={'100%'}>
                                 <Box w="70%">
-                                    <Image src={ServicesHero} alt="Computer image" />
+                                    <Image src={illustration8} alt="illustration" />
                                 </Box>
                             </Stack>
                         }
                     />
                 </HeroSection>
-
-                <Section py={24}>
+                <Section pt={24}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
-                        <Heading textAlign="center" fontWeight="semibold">
+                        <Heading textAlign="center" fontWeight="semibold" px={4}>
                             Vores kerne tjenester indenfor softwareudvikling
                         </Heading>
                     </SectionItem>
-                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} textAlign="center">
-                        <Text>
-                            Vores kerne tjenester inden for softwareudvikling omfatter:
-                            <br /> <br />
-                        </Text>
-                        <OrderedList textAlign="left" spacing={4}>
-                            <ListItem>
-                                <b>Webudvikling</b>: Vi leverer skræddersyede webapplikationer og websites, der er optimeret til at opfylde
-                                dine specifikke behov og levere en god brugeroplevelse.
-                            </ListItem>
-                            <ListItem>
-                                <b>Mobilapp-udvikling</b>: Vi udvikler innovative og brugervenlige mobilapplikationer til både iOS og
-                                Android-platforme, der hjælper dig med at nå ud til din målgruppe og skabe værdi.
-                            </ListItem>
-
-                            <ListItem>
-                                <b>AI-integrationer</b>: Vi har ekspertise i at integrere kunstig intelligens (AI) i dine eksisterende
-                                systemer eller udvikle nye AI-baserede løsninger. Dette omfatter chatbots, maskinlæringsalgoritmer,
-                                billedgenkendelse, naturlig sprogbehandling og meget mere.
-                            </ListItem>
-                            <ListItem>
-                                <b>Cloud-løsninger</b>: Vi hjælper med at migrere dine applikationer og data til sikre og skalerbare
-                                cloud-platforme som f.eks. Amazon Web Services (AWS) eller Microsoft Azure, hvilket giver dig fleksibilitet
-                                og mulighed for at udnytte fordelene ved skyen.
-                            </ListItem>
-                            <ListItem>
-                                <b>Softwarevedligeholdelse og support</b>: Vi tilbyder vedligeholdelse og support af din eksisterende
-                                softwareapplikation, herunder fejlrettelser, ydeevneoptimering og opdateringer for at sikre, at den
-                                forbliver stabil og opdateret over tid.
-                            </ListItem>
-                        </OrderedList>
-                    </SectionItem>
                 </Section>
 
-                <Section py={32} bgColor="blue.800" id="end-to-end">
+                <Section pt={8} pb={[12, 12, 12, 24]}>
+                    {services.map(({ src, title, description }, idx) => (
+                        <SectionItem key={idx} colStart={[0, 0, 0, ((idx * 2) % 4) + 2]} colSpan={2} justifyContent="stretch">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        type: 'spring',
+                                        bounce: 0.3,
+                                        delay: 0.3 * idx,
+                                    },
+                                }}
+                                viewport={{
+                                    once: true,
+                                }}>
+                                <Center>
+                                    <Card variant="outline" h="100%" w="100%">
+                                        <Stack py={8} px={[4, 4, 4, 8]} alignItems="center" gap={4} h="100%">
+                                            <Image
+                                                src={`assets/consultancy-pack/Icons/Dark/${src}`}
+                                                width={50}
+                                                height={50}
+                                                alt="illustration"
+                                            />
+                                            <Text
+                                                fontSize={['md', 'md', 'md', 'xl']}
+                                                fontWeight="bold"
+                                                textAlign={['center', 'center', 'center', 'left']}
+                                                css={{ hyphens: 'auto' }}>
+                                                {title}
+                                            </Text>
+                                            <Text textAlign="justify" fontSize="sm">
+                                                {description}
+                                            </Text>
+                                        </Stack>
+                                    </Card>
+                                </Center>
+                            </motion.div>
+                        </SectionItem>
+                    ))}
+                </Section>
+
+                <Section py={[8, 8, 8, 32]} bgColor="blue.800" id="end-to-end">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Stack gap={4} p={4}>
                             <Heading color="white">End-to-end projekter</Heading>
@@ -88,38 +138,7 @@ const Services: React.FC = () => {
                                 projektet opfylder jeres forventninger og forretningsmål. Her er nogle af de måder, vi samarbejder med jer
                                 som en troværdig partner:
                             </Text>
-                            <OrderedList color="white" spacing={4}>
-                                <ListItem>
-                                    Behovsanalyse og kravafklaring: Vi starter med en grundig behovsanalyse, hvor vi lytter til jeres mål,
-                                    forretningsprocesser og krav. Vi arbejder sammen med jer for at definere klare og specifikke krav til
-                                    projektet, så vi har en fælles forståelse af jeres behov og mål.
-                                </ListItem>
-                                <ListItem>
-                                    Tæt kommunikation og regelmæssig rapportering: Vi prioriterer åben kommunikation og regelmæssig
-                                    rapportering for at holde jer opdaterede på projektets fremskridt. Vi arrangerer møder,
-                                    fremskridtsrapporter og feedback-sessioner, hvor vi sikrer, at vi er på samme side, og eventuelle
-                                    ændringer eller tilpasninger kan diskuteres og implementeres effektivt.
-                                </ListItem>
-                                <ListItem>
-                                    Iterativ udviklingsproces: Vi følger en iterativ udviklingsproces, der giver mulighed for hyppige
-                                    feedback-loops. Dette giver jer mulighed for at give input undervejs og sikrer, at projektet udvikler
-                                    sig i den rigtige retning. Vi vægter jeres input og tilpasser vores tilgang og løsninger for at
-                                    imødekomme jeres behov.
-                                </ListItem>
-                                <ListItem>
-                                    Fleksibilitet og tilpasningsevne: Vi er fleksible og tilpasningsdygtige i vores tilgang til at arbejde
-                                    med jer som samarbejdspartner. Vi forstår, at behov og krav kan ændre sig undervejs, og vi er parate til
-                                    at tilpasse os og levere de nødvendige ændringer eller tilføjelser til projektet.
-                                </ListItem>
-                                <ListItem>
-                                    Langsigtet support: Vores partnerskab stopper ikke, når projektet er afsluttet. Vi tilbyder langsigtet
-                                    support og vedligeholdelse af den udviklede software. Vi er der for at hjælpe med eventuelle spørgsmål,
-                                    fejlrettelser eller ydeevneoptimeringer og sikre, at jeres software fungerer optimalt over tid. Ved at
-                                    arbejde som en samarbejdspartner er vores mål at opbygge et tillidsfuldt forhold, hvor vi forstår jeres
-                                    behov, lytter til jeres ønsker og leverer skræddersyede løsninger, der hjælper jer med at opnå succes.
-                                    Vi stræber efter at være en pålidelig og langsigtet partner, der er dedikeret til jeres succes og vækst.
-                                </ListItem>
-                            </OrderedList>
+
                             <Text>
                                 <br />
                                 <Link color="white">Se processen</Link>
@@ -130,14 +149,19 @@ const Services: React.FC = () => {
                     </SectionItem>
                     <SectionItem colSpan={2}>
                         <Center h="100%">
-                            <Box w="70%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
+                            <Box w="70%">
+                                <Image src={illustration6} alt="Computer image" />
+                            </Box>
                         </Center>
                     </SectionItem>
                 </Section>
-                <Section py={32} id="consultants">
+
+                <Section py={[16, 16, 16, 32]} id="consultants">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
                         <Center h="100%">
-                            <Box w="70%">{/* <Image src={HeroComp} alt="Computer image" /> */}</Box>
+                            <Box w="70%">
+                                <Image src={illustration5} alt="Computer image" />
+                            </Box>
                         </Center>
                     </SectionItem>
                     <SectionItem colSpan={2}>
@@ -164,10 +188,10 @@ const Services: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section py={12}>
+                <Section py={[0, 0, 0, 12]}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
-                        <Heading textAlign="center">
-                            Er du klar til at omsætte din idé til virkelighed?
+                        <Heading textAlign="center">Er du klar til at omsætte din idé til virkelighed?</Heading>
+                        <Heading textAlign="center" fontSize="2xl">
                             <br />
                             <br />
                             Lad os bringe din vision til live sammen!
