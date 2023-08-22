@@ -178,7 +178,8 @@ const About: React.FC = () => {
                         </Link>
                     </SectionItem>
                 </Section>
-                <Section py={24}>
+
+                <Section py={8}>
                     <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4} px={16}>
                         <Heading textAlign="center">Ønsker du at lære os bedre at kende? Kom forbi til en kop kaffe i Aarhus</Heading>
                     </SectionItem>
