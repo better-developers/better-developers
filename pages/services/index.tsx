@@ -1,4 +1,5 @@
-import { Box, Card, Center, Flex, Heading, Link, ListItem, OrderedList, Stack, Text } from '@chakra-ui/react';
+import { Box, Card, Center, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ContactButton } from '../../components/ContactButton/ContactButton';
 import { DynamicThemeColor } from '../../components/DynamicThemeColor/DynamicThemeColor';
@@ -6,12 +7,9 @@ import { HeroSection } from '../../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import ServicesHero from '../../public/services-hero.svg';
-import illustration8 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-8.png';
-import { StaggerIn } from '../../components/StaggerIn/StaggerIn';
-import illustration6 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-6.png';
 import illustration5 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-5.png';
-import { motion } from 'framer-motion';
+import illustration6 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-6.png';
+import illustration8 from '../../public/assets/consultancy-pack/Illustrations/consultant-illustrations-8.png';
 
 type Service = {
     src: string;
@@ -89,7 +87,7 @@ const Services: React.FC = () => {
                 <Section pt={8} pb={24}>
                     {services.map(({ src, title, description }, idx) => (
                         // <SectionItem colStart={((idx * 2) % 4) + 2} colSpan={2}>
-                        <SectionItem colStart={((idx * 2) % 4) + 2} colSpan={2} justifyContent="stretch">
+                        <SectionItem key={idx} colStart={((idx * 2) % 4) + 2} colSpan={2} justifyContent="stretch">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{

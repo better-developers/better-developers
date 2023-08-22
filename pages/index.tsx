@@ -8,7 +8,6 @@ import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
 import { VscSymbolMisc } from 'react-icons/vsc';
 import { ContactButton } from '../components/ContactButton/ContactButton';
-import { ContactCard } from '../components/ContactCard/ContactCard';
 import { DynamicThemeColor } from '../components/DynamicThemeColor/DynamicThemeColor';
 import FAQ from '../components/FAQ/FAQ';
 import { Gradient } from '../components/Gradient/Gradient';
@@ -16,12 +15,12 @@ import { HeroSection } from '../components/HeroSection/HeroSection';
 import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLayout';
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
+import { StaggerIn } from '../components/StaggerIn/StaggerIn';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
-import illustration7 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-7.png';
 import illustration1 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-1.png';
+import illustration7 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-7.png';
 import illustration9 from '../public/assets/consultancy-pack/Illustrations/consultant-illustrations-9.png';
-import { StaggerIn } from '../components/StaggerIn/StaggerIn';
 
 type LogoObject = {
     tooltip: string;
@@ -99,7 +98,7 @@ const Home: NextPage = () => {
                 <StaggerIn.Parent animate="show">
                     <Section py={16}>
                         {CompanyLogosImgSrc.map(({ tooltip, src }, idx) => (
-                            <SectionItem colStart={(idx % 4) + 2} colSpan={1}>
+                            <SectionItem key={idx} colStart={(idx % 4) + 2} colSpan={1}>
                                 <StaggerIn.Child>
                                     <Center py={4}>
                                         <Tooltip label={tooltip} fontSize="md">
