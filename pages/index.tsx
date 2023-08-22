@@ -224,9 +224,11 @@ const Home: NextPage = () => {
                             </Box>
                         </Flex>
                     </SectionItem>
+
                     <SectionItem colStart={[1, 1, 3]} colEnd={5} colSpan={[6, 6, 2]}>
                         <FAQ />
                     </SectionItem>
+
                     <SectionItem colSpan={2}>
                         <Flex h="100%" alignItems="flex-end">
                             <Box pl={8} w="40%">
