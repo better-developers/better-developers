@@ -216,7 +216,7 @@ const Home: NextPage = () => {
                     </SectionItem>
                     <SectionItem colStart={[1, 1, 4]} colSpan={3}>
                         <Center h="100%">
-                            <Box w="90%">
+                            <Box w="90%" paddingTop={[16, 16, 16, 0]}>
                                 <Image src={illustration7} alt="Logo wireframe" />
                             </Box>
                         </Center>
@@ -224,7 +224,7 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section>
-                    <SectionItem colSpan={2} paddingTop={24}>
+                    <SectionItem colSpan={2} paddingTop={24} hideBelow={'lg'}>
                         <Flex h="100%" justifyContent="flex-end">
                             <Box w="50%">
                                 <Image src={illustration1} alt="Illustration" />
@@ -236,7 +236,7 @@ const Home: NextPage = () => {
                         <FAQ />
                     </SectionItem>
 
-                    <SectionItem colSpan={2}>
+                    <SectionItem colSpan={2} hideBelow={'lg'}>
                         <Flex h="100%" paddingTop={32}>
                             <Box pl={8} w="40%">
                                 <Image style={{ transform: 'scaleX(-1) rotate(-25deg)' }} src={illustration9} alt="Illustration" />
