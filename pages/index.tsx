@@ -120,8 +120,6 @@ const Home: NextPage = () => {
                     </Grid>
                 </StaggerIn.Parent>
 
-                <Section></Section>
-
                 <Section py={16} backgroundColor={'red.50'}>
                     <SectionItem colStart={[1, 1, 2]} colSpan={[1, 1, 2]} px={8}>
                         <Text variant={'brandHighlight'}>Vores ydelser</Text>
