@@ -174,8 +174,9 @@ const Home: NextPage = () => {
 
                 <Section py={24}>
                     <SectionItem colStart={[1, 1, 2]} colSpan={2}>
-                        <Flex flexDir="column" gap="4">
+                        <Flex flexDir="column" gap="8">
                             <Heading>Derfor skal du arbejde sammen med os.</Heading>
+
                             <Text>
                                 Better Developers: Din pålidelige samarbejdspartner indenfor softwareudvikling og IT-konsulentydelser. Vi
                                 kombinerer vores dygtige IT-konsulenter, forretningsforståelse og ekspertise inden for bl.a. OpenAI API for
