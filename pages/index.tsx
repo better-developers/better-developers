@@ -92,7 +92,6 @@ const Home: NextPage = () => {
                                 <VimeoVideo id="828819281" />
                             </Stack>
                         }
-                        shake={false}
                     />
                 </HeroSection>
 

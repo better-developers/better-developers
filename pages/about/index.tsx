@@ -49,7 +49,6 @@ const About: React.FC = () => {
                                 <VimeoVideo id="828777583" />
                             </Stack>
                         }
-                        shake={false}
                     />
                 </HeroSection>
                 <Section py={24}>
