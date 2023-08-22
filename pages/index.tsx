@@ -217,8 +217,8 @@ const Home: NextPage = () => {
                 </Section>
 
                 <Section>
-                    <SectionItem colSpan={2}>
-                        <Flex h="100%" alignItems="flex-end" justifyContent="flex-end">
+                    <SectionItem colSpan={2} paddingTop={24}>
+                        <Flex h="100%" justifyContent="flex-end">
                             <Box w="50%">
                                 <Image src={illustration1} alt="Illustration" />
                             </Box>
@@ -230,7 +230,7 @@ const Home: NextPage = () => {
                     </SectionItem>
 
                     <SectionItem colSpan={2}>
-                        <Flex h="100%" alignItems="flex-end">
+                        <Flex h="100%" paddingTop={32}>
                             <Box pl={8} w="40%">
                                 <Image style={{ transform: 'scaleX(-1) rotate(-25deg)' }} src={illustration9} alt="Illustration" />
                             </Box>
