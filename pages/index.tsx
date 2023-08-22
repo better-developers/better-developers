@@ -1,7 +1,7 @@
 'use client';
-import { Box, Center, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/next-js';
+import { Box, Center, Image as ChakraImage, Flex, Grid, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
@@ -96,19 +96,28 @@ const Home: NextPage = () => {
                 </HeroSection>
 
                 <StaggerIn.Parent animate="show">
-                    <Section py={16}>
+                    <Grid
+                        py={16}
+                        gridTemplateColumns={['repeat(4, 1fr)', 'repeat(4, 1fr)', 'repeat(4, 1fr)', '2fr repeat(4, 1fr) 2fr']}
+                        gap="2em">
                         {CompanyLogosImgSrc.map(({ tooltip, src }, idx) => (
-                            <SectionItem key={idx} colStart={(idx % 4) + 2} colSpan={1}>
+                            <SectionItem key={idx} colStart={[(idx % 4) + 1, (idx % 4) + 1, (idx % 4) + 1, (idx % 4) + 2]} colSpan={1}>
                                 <StaggerIn.Child>
                                     <Center py={4}>
                                         <Tooltip label={tooltip} fontSize="md">
-                                            <Image width={60} height={60} key={src} src={`logos/${src}`} alt={tooltip} />
+                                            <ChakraImage
+                                                width={['32px', '32px', '32px', '64px']}
+                                                height={['32px', '32px', '32px', '64px']}
+                                                key={src}
+                                                src={`logos/${src}`}
+                                                alt={tooltip}
+                                            />
                                         </Tooltip>
                                     </Center>
                                 </StaggerIn.Child>
                             </SectionItem>
                         ))}
-                    </Section>
+                    </Grid>
                 </StaggerIn.Parent>
 
                 <Section></Section>
