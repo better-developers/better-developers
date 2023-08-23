@@ -1,3 +1,4 @@
+import { builder } from '@builder.io/react';
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -11,6 +12,8 @@ import { NavBar } from '../components/NavBar/NavBar';
 import { NavBarProvider } from '../contexts/NavBarContext';
 import '../styles/index.scss';
 import theme from '../theme';
+
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -26,8 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <meta name="theme-color" content="#ffffff"></meta>
                 <meta
                     name="description"
-                    content="Corporate website for BetterDevelopers - a consultant company with home in Aarhus, Denmark"
-                ></meta>
+                    content="Corporate website for BetterDevelopers - a consultant company with home in Aarhus, Denmark"></meta>
             </Head>
 
             <ChakraProvider theme={theme}>

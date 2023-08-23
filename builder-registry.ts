@@ -2,13 +2,13 @@ import { Builder } from '@builder.io/react';
 import dynamic from 'next/dynamic';
 
 // Builder.registerComponent(
-//     dynamic(() => import('./components/Counter/Counter')),
+//     dynamic(async () => (await import('')).MyComponent),
 //     {
-//         name: 'Counter',
+//         name: 'MyComponent',
 //         inputs: [
 //             {
-//                 name: 'initialCount',
-//                 type: 'number',
+//                 name: 'title',
+//                 type: 'string',
 //             },
 //         ],
 //     }

@@ -1,9 +1,23 @@
 'use client';
+import builder, { BuilderComponent } from '@builder.io/react';
 import { Image } from '@chakra-ui/next-js';
-import { Box, Center, Image as ChakraImage, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
-import { AnimatePresence } from 'framer-motion';
-import type { NextPage } from 'next';
-import { useContext, useEffect, useState } from 'react';
+import {
+    Box,
+    Card,
+    Center,
+    Image as ChakraImage,
+    Flex,
+    Heading,
+    Icon,
+    Link,
+    Stack,
+    Text,
+    Tooltip,
+    useOutsideClick,
+} from '@chakra-ui/react';
+import { AnimatePresence, motion } from 'framer-motion';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
 import { IoPeopleCircle } from 'react-icons/io5';
@@ -17,7 +31,6 @@ import { HeroSectionLayout } from '../components/HeroSectionLayout/HeroSectionLa
 import { Section } from '../components/Section/Section';
 import { SectionItem } from '../components/SectionItem/SectionItem';
 import { StaggerIn } from '../components/StaggerIn/StaggerIn';
-import { TechCard } from '../components/TechCard/TechCard';
 import { VimeoVideo } from '../components/VimeoVideo/VimeoVideo';
 import { NavBarContext } from '../contexts/NavBarContext';
 import illustration1 from '../public/assets/consultancy-pack/illustrations/consultant-illustrations-1.png';
@@ -44,13 +57,30 @@ const CompanyLogosImgSrc: LogoObject[] = [
     { src: 'typescript.svg', tooltip: 'Typescript' },
 ];
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps<{ techCard: any }> = async ({ params }) => {
+    const urlPath = '/' + ((params?.page as string[])?.join('/') || '');
+    const techCard = await builder.get('tech-card', { userAttributes: { urlPath } }).toPromise();
+
+    return {
+        props: {
+            techCard,
+        },
+    };
+};
+
+const Home = ({ techCard }: InferGetStaticPropsType<typeof getStaticProps>) => {
     const [_context, setContext] = useContext(NavBarContext);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => setContext('light'), []);
 
     const [selectedId, setSelectedId] = useState<string | null>(null);
+
+    const techCardRef = useRef<HTMLDivElement | null>(null);
+    useOutsideClick({
+        ref: techCardRef,
+        handler: () => setSelectedId(null),
+    });
 
     return (
         <>
@@ -134,8 +164,16 @@ const Home: NextPage = () => {
 
                         <AnimatePresence>
                             {selectedId && (
-                                <Box position="absolute" paddingLeft="22vw" w="77vw" h="500px" top="80px">
-                                    <TechCard layoutId={selectedId} onClose={() => setSelectedId(null)} />
+                                <Box ref={techCardRef} position="absolute" marginLeft="22vw" w="56vw" h="500px" top="80px">
+                                    <motion.div layoutId={selectedId} style={{ height: '100%' }}>
+                                        <Card height="100%" boxShadow="2xl">
+                                            <BuilderComponent
+                                                model="tech-card"
+                                                content={techCard || undefined}
+                                                data={{ title: CompanyLogosImgSrc[Number(selectedId)].tooltip }}
+                                            />
+                                        </Card>
+                                    </motion.div>
                                 </Box>
                             )}
                         </AnimatePresence>
