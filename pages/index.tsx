@@ -64,7 +64,7 @@ const Home: NextPage = () => {
                         customHeading={
                             <>
                                 <Heading
-                                    fontSize={['2em', '2em', '4em', '4em']}
+                                    fontSize={['2em', '2em', '2vw', '2vw']}
                                     fontWeight="400"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                                     Et konsulenthus af
                                 </Heading>
                                 <Heading
-                                    fontSize="4em"
+                                    fontSize={['4em', '4em', '4vw', '4vw']}
                                     fontWeight="700"
                                     mixBlendMode="overlay"
                                     transform="translate3d(0,0,0)" // hack to make mix-blend-mode work in safari https://stackoverflow.com/questions/70891365/css-mix-blend-mode-difference-issue-in-safari
