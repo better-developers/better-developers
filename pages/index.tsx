@@ -133,7 +133,9 @@ const Home: NextPage = () => {
                         <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />
-                                <Heading size="md">Forretningsforståelse</Heading>
+                                <Heading size={['lg', 'lg', 'sm']} variant="hyphen">
+                                    Forretningsforståelse
+                                </Heading>
                             </Flex>
                             <Text>
                                 Hos Better Developers er vi ikke blot udviklere, men også partnere. Derfor har vi en unik indsigt og
@@ -146,7 +148,9 @@ const Home: NextPage = () => {
                         <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={IoPeopleCircle} fontSize="5xl" />
-                                <Heading size="md">IT-Konsulenter</Heading>
+                                <Heading size={['lg', 'lg', 'sm']} variant="hyphen">
+                                    IT-Konsulenter
+                                </Heading>
                             </Flex>
                             <Text>
                                 Kvalitet og det gode håndværk er i højsædet når vi skal udvikle IT systemer for vores kunder. Vi bruger
@@ -160,7 +164,9 @@ const Home: NextPage = () => {
                             <Flex gap={2} alignItems="center">
                                 <Icon as={HiChatBubbleLeftRight} fontSize="5xl" />
 
-                                <Heading size="md">Samarbejdspartner</Heading>
+                                <Heading size={['lg', 'lg', 'sm']} variant="hyphen">
+                                    Samarbejdspartner
+                                </Heading>
                             </Flex>
                             <Text>
                                 Vi har ikke kunder, vi har samarbejdspartnere. Vi involverer os aktivt i jeres forretning og giver nye
@@ -174,7 +180,9 @@ const Home: NextPage = () => {
                             <Flex gap={2} alignItems="center">
                                 <Icon as={VscSymbolMisc} fontSize="5xl" />
 
-                                <Heading size="md">OpenAI API</Heading>
+                                <Heading size={['lg', 'lg', 'sm']} variant="hyphen">
+                                    OpenAI API
+                                </Heading>
                             </Flex>
                             <Text>
                                 Lad os hjælpe jer med at skabe værdi gennem kunstig intelligens. Vi kan identificere behovet for en
