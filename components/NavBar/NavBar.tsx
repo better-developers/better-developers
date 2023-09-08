@@ -1,6 +1,8 @@
-﻿import { HamburgerIcon } from '@chakra-ui/icons';
+﻿'use client';
+
+import { HamburgerIcon } from '@chakra-ui/icons';
 import { Flex, Heading, Hide, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Show, Stack } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 import { NavBarContext } from '../../contexts/NavBarContext';
 import { useIsMobile } from '../../hooks/useIsMobile';
@@ -79,6 +81,7 @@ export const NavBar = () => {
                                 {link.text}
                             </Link>
                         ))}
+
                         <ContactButton></ContactButton>
                     </Stack>
                 </Hide>

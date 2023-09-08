@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, Link } from '@chakra-ui/react';
 
 export const ContactButton: React.FC = () => {

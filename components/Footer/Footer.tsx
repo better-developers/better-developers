@@ -1,4 +1,6 @@
-﻿import { Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
+﻿'use client';
+
+import { Heading, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import { BsBuildingsFill, BsFillPostageHeartFill, BsFillPostcardFill } from 'react-icons/bs';
 import { BetterDevelopersLogo } from '../BetterDevelopersLogo/BetterDevelopersLogo';
 import { Section } from '../Section/Section';

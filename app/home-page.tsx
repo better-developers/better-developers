@@ -1,7 +1,8 @@
 'use client';
-import { Image } from '@chakra-ui/next-js';
+
 import { Box, Center, Image as ChakraImage, Flex, Heading, Icon, Link, Stack, Text, Tooltip } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { useContext, useEffect } from 'react';
 import { BsFillRocketTakeoffFill } from 'react-icons/bs';
 import { HiChatBubbleLeftRight } from 'react-icons/hi2';
@@ -42,7 +43,7 @@ const CompanyLogosImgSrc: LogoObject[] = [
     { src: 'typescript.svg', tooltip: 'Typescript' },
 ];
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
     const [_context, setContext] = useContext(NavBarContext);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -268,4 +269,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default HomePage;
