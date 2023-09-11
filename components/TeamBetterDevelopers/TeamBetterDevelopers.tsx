@@ -6,6 +6,7 @@ import Anders from '../../public/img/profile/anders.jpg';
 import Mikkel from '../../public/img/profile/mikkel.jpg';
 import Soren from '../../public/img/profile/soren.jpg';
 import Viktor from '../../public/img/profile/viktor.jpg';
+import Placeholder from '../../public/img/profile/placeholder.png';
 import { Employee } from '../Employee/Employee';
 
 export const TeamBetterDevelopers: React.FC = () => {
@@ -26,6 +27,9 @@ export const TeamBetterDevelopers: React.FC = () => {
             </SectionItem>
             <SectionItem>
                 <Employee name="Mikkel Laursen" title="CTO" image={Mikkel}></Employee>
+            </SectionItem>
+            <SectionItem colStart={[1, 1, 2]}>
+                <Employee name="Frederik Bjørn Groben Nielsen" title="Udvikler" image={Placeholder}></Employee>
             </SectionItem>
             <SectionItem colSpan={6} py={12}>
                 <Center>
