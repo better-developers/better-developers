@@ -105,7 +105,7 @@ const Services: React.FC = () => {
                                     <Card variant="outline" h="100%" w="100%">
                                         <Stack py={8} px={[4, 4, 4, 8]} alignItems="center" gap={4} h="100%">
                                             <Image
-                                                src={`assets/consultancy-pack/Icons/Dark/${src}`}
+                                                src={`assets/consultancy-pack/icons/dark/${src}`}
                                                 width={50}
                                                 height={50}
                                                 alt="illustration"
