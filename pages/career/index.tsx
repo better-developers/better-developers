@@ -229,7 +229,7 @@ const Career: React.FC = () => {
                     </SectionItem>
                 </Section>
 
-                <Section pt={24} pb={16}>
+                <Section pt={24} pb={16} id="send-application">
                     <SectionItem colStart={[1, 1, 2]} colSpan={2} display="flex" flexDirection="column" gap={24}>
                         <Heading size="2xl">Send ansøgning</Heading>
 

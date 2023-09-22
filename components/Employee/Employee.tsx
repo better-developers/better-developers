@@ -10,16 +10,18 @@ type EmployeeProps = {
 export const Employee: React.FC<EmployeeProps> = ({ name, title, image }) => {
     return (
         <>
-            <Image src={image} alt={name} />
+            <Box borderRadius={12} overflow="hidden">
+                <Image src={image} alt={name} />
+            </Box>
 
             <Box color="white" textAlign="center" marginTop={2}>
-                {title && (
+                {/* {title && (
                     <Text variant="brandHighlight" display="inline" marginRight={1}>
                         {title}
                     </Text>
-                )}
+                )} */}
 
-                <Text color="white" display="inline">
+                <Text color="white" display="inline" fontWeight="bold">
                     {name}
                 </Text>
             </Box>
