@@ -1,5 +1,4 @@
 import { GridItem, GridItemProps } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 import { FC, PropsWithChildren } from 'react';
 
 export const SectionItem: FC<PropsWithChildren<GridItemProps>> = ({ children, ...props }) => (
