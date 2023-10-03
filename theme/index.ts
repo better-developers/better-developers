@@ -1,6 +1,7 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 import { Open_Sans } from 'next/font/google';
 import { applicationFormTheme } from './application-form';
+import { breakpoints } from './breakpoints';
 import { buttonTheme } from './button';
 import { cardTheme } from './card';
 import { headingTheme } from './heading';
@@ -44,6 +45,7 @@ const theme = extendTheme({
         ListItem: listItemTheme,
         ApplicationForm: applicationFormTheme,
     },
+    breakpoints: breakpoints,
 });
 
 export default theme;

@@ -42,14 +42,12 @@ export const NavBar = () => {
                 <Stack direction="row" spacing="24px" alignItems="center" cursor="pointer" onClick={() => router.push('/')}>
                     <BetterDevelopersLogo />
 
-                    <Hide below="xl">
-                        <Heading color={fontColor} size="md">
-                            Better Developers
-                        </Heading>
-                    </Hide>
+                    <Heading color={fontColor} size="md" hideBelow="3xl">
+                        Better Developers
+                    </Heading>
                 </Stack>
 
-                <Show below="lg">
+                <Show below="xl">
                     <Menu>
                         <MenuButton as={IconButton} aria-label="Options" icon={<HamburgerIcon />} variant="outline" color={fontColor} />
                         <MenuList>
@@ -72,7 +70,7 @@ export const NavBar = () => {
                     </Menu>
                 </Show>
 
-                <Hide below="lg">
+                <Hide below="xl">
                     <Stack direction="row" spacing="42px" fontWeight="bold">
                         {links.map((link, i) => (
                             <Link key={i} color={['primary', 'primary', 'primary', fontColor]} href={`/${link.href}`} alignSelf="center">
