@@ -1,11 +1,11 @@
 import { Button, Card, CardBody, CardHeader, FormControl, FormLabel, Grid, GridItem, Heading, Input, Textarea } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
-import { usePost } from '../../hooks/api/usePost';
+import { useGet } from '../../hooks/api/useGet';
 import { EmailTemplate } from './EmailTemplate';
 
 export const ContactForm: React.FC = () => {
-    const { performFetch, loading } = usePost('/api/sendgrid');
+    const { performFetch, loading } = useGet('/api/sendgrid');
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -16,12 +16,9 @@ export const ContactForm: React.FC = () => {
     const onSubmit = (e: React.FormEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
-        const html = render(<EmailTemplate firstName={firstName} lastName={lastName} email={email} phone={phone} message={message} />);
+        //const html = render(<EmailTemplate firstName={firstName} lastName={lastName} email={email} phone={phone} message={message} />);
 
-        performFetch({
-            subject: 'Ny henvendelse',
-            html,
-        });
+        performFetch();
     };
 
     return (
