@@ -3,7 +3,7 @@
     "version": "2.1.0",
     "private": true,
     "scripts": {
-        "build": "next build && next export",
+        "build": "next build",
         "cypress": "cypress open",
         "dev": "next dev",
         "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
