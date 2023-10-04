@@ -4,7 +4,7 @@ import { SendEmailRequest } from '../../models/email-request';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 
-async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
     try {
         const { subject, html, attachments } = req.body as SendEmailRequest;
 
@@ -33,5 +33,3 @@ export const config = {
         },
     },
 };
-
-export default sendEmail;
