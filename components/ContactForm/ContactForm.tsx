@@ -1,7 +1,7 @@
 import { Button, Card, CardBody, CardHeader, FormControl, FormLabel, Grid, GridItem, Heading, Input, Textarea } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
-import { useGet } from '../../hooks/api/useGet';
+import { useGet } from '../../hooks/apiHooks/useGet';
 import { EmailTemplate } from './EmailTemplate';
 
 export const ContactForm: React.FC = () => {

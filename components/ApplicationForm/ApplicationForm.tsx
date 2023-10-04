@@ -1,7 +1,7 @@
 import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea, useStyleConfig } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
-import { usePost } from '../../hooks/api/usePost';
+import { usePost } from '../../hooks/apiHooks/usePost';
 import { Attachment } from '../../models/email-request';
 import { ApplicationFormVariant } from '../../theme/application-form';
 import { toBase64 } from '../../utils/toBase64';
