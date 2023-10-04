@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 <TeamBetterDevelopers />
 
                 <Section py={8}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={[6, 6, 2]} py={8}>
+                    <SectionItem colStart={[1, 1, 1, 1, 2]} colSpan={[6, 6, 6, 6, 2]} py={8}>
                         <Heading fontWeight={600}>
                             Historien bag{' '}
                             <Box

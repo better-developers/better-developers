@@ -4,8 +4,8 @@ import { FC } from 'react';
 export const Section: FC<BoxProps> = ({ children, backgroundColor, ...props }) => (
     <Box {...props} position={props.position ?? 'relative'} width="100%">
         <Grid
-            gridTemplateColumns={['1fr', '1fr', '1fr', '2fr repeat(4, 1fr) 2fr']}
-            gap={['2em', '2em', '4em', '1em']}
+            gridTemplateColumns={['1fr', '1fr', '1fr', '1fr', '2fr repeat(4, 1fr) 2fr']}
+            gap={['2em', '2em', '2em', '1em']}
             width="100%"
             minW={0}
             {...props}>
@@ -14,6 +14,7 @@ export const Section: FC<BoxProps> = ({ children, backgroundColor, ...props }) =
 
         <Grid
             gridTemplateColumns={[
+                '0.5fr repeat(4, 1fr) 0.5fr',
                 '0.5fr repeat(4, 1fr) 0.5fr',
                 '0.5fr repeat(4, 1fr) 0.5fr',
                 '0.5fr repeat(4, 1fr) 0.5fr',

@@ -145,7 +145,7 @@ const Career: React.FC = () => {
                         </Heading>
                     </SectionItem>
 
-                    <SectionItem px={8} colStart={[1, 1, 2]} colSpan={[8, 8, 1]}>
+                    <SectionItem px={8} colStart={[1, 1, 1, 1, 2]} colSpan={[8, 8, 8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -162,7 +162,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8} colSpan={[8, 8, 1]}>
+                    <SectionItem px={8} colSpan={[8, 8, 8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -183,7 +183,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8} colSpan={[8, 8, 1]}>
+                    <SectionItem px={8} colSpan={[8, 8, 8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -204,7 +204,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem px={8} colSpan={[8, 8, 1]}>
+                    <SectionItem px={8} colSpan={[8, 8, 8, 8, 1]}>
                         <Flex flexDir="column" gap="1em" flex="1">
                             <Flex gap={2}>
                                 <Heading color="black" size="md">
@@ -230,7 +230,7 @@ const Career: React.FC = () => {
                 </Section>
 
                 <Section pt={24} pb={16} id="send-application">
-                    <SectionItem colStart={[1, 1, 2]} colSpan={2} display="flex" flexDirection="column" gap={24}>
+                    <SectionItem colStart={[1, 1, 1, 1, 2]} colSpan={2} display="flex" flexDirection="column" gap={24}>
                         <Heading size="2xl">Send ansøgning</Heading>
 
                         <Flex marginLeft={4} direction="column" gap={4}>
@@ -253,7 +253,7 @@ const Career: React.FC = () => {
                         </Flex>
                     </SectionItem>
 
-                    <SectionItem colStart={[1, 1, 4]} colSpan={2} display="flex" justifyContent="center">
+                    <SectionItem colStart={[1, 1, 1, 1, 4]} colSpan={2} display="flex" justifyContent="center">
                         <ApplicationForm variant="dark"></ApplicationForm>
                     </SectionItem>
                 </Section>

@@ -126,10 +126,10 @@ const Home: NextPage = () => {
                 </StaggerIn.Parent>
 
                 <Section py={16} backgroundColor={'red.50'}>
-                    <SectionItem colStart={[1, 1, 2]} colSpan={[1, 1, 2]} px={8}>
+                    <SectionItem colStart={[1, 1, 1, 1, 2]} colSpan={[1, 1, 1, 1, 2]} px={8}>
                         <Text variant={'brandHighlight'}>Vores ydelser</Text>
                     </SectionItem>
-                    <SectionItem px={8} colStart={[1, 1, 2]}>
+                    <SectionItem px={8} colStart={[1, 1, 1, 1, 2]}>
                         <Flex flexDir="column" gap="2em" flex="1">
                             <Flex gap={2} alignItems="center">
                                 <Icon as={BsFillRocketTakeoffFill} fontSize="5xl" />

@@ -77,7 +77,7 @@ const Services: React.FC = () => {
                     />
                 </HeroSection>
                 <Section pt={24}>
-                    <SectionItem colStart={[1, 1, 3]} colSpan={2} py={4}>
+                    <SectionItem colStart={[1, 1, 1, 1, 3]} colSpan={2} py={4}>
                         <Heading textAlign="center" fontWeight="semibold" px={4}>
                             Vores kerne tjenester indenfor softwareudvikling
                         </Heading>
