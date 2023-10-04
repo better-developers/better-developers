@@ -18,7 +18,10 @@ export const ContactForm: React.FC = () => {
 
         //const html = render(<EmailTemplate firstName={firstName} lastName={lastName} email={email} phone={phone} message={message} />);
 
-        performFetch();
+        // performFetch();
+        fetch(`/api/sendgrid`, {
+            method: "GET",
+        })
     };
 
     return (
