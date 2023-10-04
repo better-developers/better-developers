@@ -2,7 +2,7 @@ import sendgrid from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { SendEmailRequest } from '../../models/email-request';
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
+//sendgrid.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 
 async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
     /*
@@ -27,7 +27,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json({});
 }
-
+/*
 export const config = {
     api: {
         bodyParser: {
@@ -35,5 +35,6 @@ export const config = {
         },
     },
 };
+*/
 
 export default sendEmail;
