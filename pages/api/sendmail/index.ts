@@ -2,7 +2,7 @@ import { NextApiResponse, NextApiRequest } from 'next'
 
 export default function handler(
   _req: NextApiRequest,
-  res: NextApiResponse<Person[]>
+  res: NextApiResponse
 ) {
   return res.status(200).json({})
 }
