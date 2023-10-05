@@ -13,13 +13,13 @@ import {
     useToast,
 } from '@chakra-ui/react';
 import { render } from '@react-email/render';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
 import { EmailTemplate } from './EmailTemplate';
 
 export const ContactForm: React.FC = () => {
     const toast = useToast();
-    const { performFetch, loading, data, isSuccess, status } = usePost('/api/sendgrid');
+    const { performFetch, loading, isSuccess, status } = usePost('/api/sendgrid');
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -36,22 +36,27 @@ export const ContactForm: React.FC = () => {
             subject: 'Ny henvendelse',
             html,
         });
-
-        isSuccess
-            ? toast({
-                  description: 'Vi har modtaget din besked 🚀',
-                  status: 'success',
-                  duration: 9000,
-                  isClosable: true,
-              })
-            : toast({
-                  title: status,
-                  description: `Der gik et eller andet galt.. Måske giver tallet mening`,
-                  status: 'error',
-                  duration: 9000,
-                  isClosable: true,
-              });
     };
+
+    useEffect(() => {
+        if (isSuccess === true)
+            toast({
+                description: 'Vi har modtaget din besked 🚀',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+            });
+
+        if (isSuccess === false)
+            toast({
+                title: status,
+                description: `Der gik et eller andet galt.. Måske giver tallet mening`,
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isSuccess]);
 
     return (
         <Card as="form" onSubmit={onSubmit}>
