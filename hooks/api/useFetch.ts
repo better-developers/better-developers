@@ -26,7 +26,7 @@ export function useFetch<Tret, Tbody = unknown>(method: string, url: string, bod
 
         const requestBody = newBody ?? body;
 
-        fetch(url, {
+        return fetch(url, {
             method,
             headers,
             body: JSON.stringify(requestBody),
