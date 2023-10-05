@@ -1,11 +1,25 @@
-import { Button, Card, CardBody, CardHeader, FormControl, FormLabel, Grid, GridItem, Heading, Input, Textarea } from '@chakra-ui/react';
+import {
+    Button,
+    Card,
+    CardBody,
+    CardHeader,
+    FormControl,
+    FormLabel,
+    Grid,
+    GridItem,
+    Heading,
+    Input,
+    Textarea,
+    useToast,
+} from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
 import { EmailTemplate } from './EmailTemplate';
 
 export const ContactForm: React.FC = () => {
-    const { performFetch, loading } = usePost('/api/sendgrid');
+    const toast = useToast();
+    const { performFetch, loading, data, isSuccess, status } = usePost('/api/sendgrid');
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -13,15 +27,30 @@ export const ContactForm: React.FC = () => {
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
 
-    const onSubmit = (e: React.FormEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
+    const onSubmit = async (e: React.FormEvent<HTMLDivElement> | React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
         const html = render(<EmailTemplate firstName={firstName} lastName={lastName} email={email} phone={phone} message={message} />);
 
-        performFetch({
+        await performFetch({
             subject: 'Ny henvendelse',
             html,
         });
+
+        isSuccess
+            ? toast({
+                  description: 'Vi har modtaget din besked 🚀',
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+              })
+            : toast({
+                  title: status,
+                  description: `Der gik et eller andet galt.. Måske giver tallet mening`,
+                  status: 'error',
+                  duration: 9000,
+                  isClosable: true,
+              });
     };
 
     return (

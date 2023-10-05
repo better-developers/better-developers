@@ -1,4 +1,4 @@
-import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea, useStyleConfig } from '@chakra-ui/react';
+import { Button, Card, Flex, FormControl, FormLabel, Input, Textarea, useStyleConfig, useToast } from '@chakra-ui/react';
 import { render } from '@react-email/render';
 import { useState } from 'react';
 import { usePost } from '../../hooks/api/usePost';
@@ -13,7 +13,8 @@ export interface ApplicationFormProps {
 }
 
 export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { variant: 'light' }) => {
-    const { performFetch, loading } = usePost('/api/sendgrid');
+    const toast = useToast();
+    const { performFetch, loading, isSuccess, status } = usePost('/api/sendgrid');
     const [name, setName] = useState('');
     const [about, setAbout] = useState('');
     const [files, setFiles] = useState<File[]>([]);
@@ -34,11 +35,26 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ variant } = { 
 
         const attachments = await Promise.all(attachmentsPromises);
 
-        performFetch({
+        await performFetch({
             subject: 'Ny jobansøgning',
             html,
             attachments,
         });
+
+        isSuccess
+            ? toast({
+                  description: 'Vi har modtaget din ansøgning 🤘🏽',
+                  status: 'success',
+                  duration: 9000,
+                  isClosable: true,
+              })
+            : toast({
+                  title: status,
+                  description: `Der gik et eller andet galt.. Måske giver tallet mening`,
+                  status: 'error',
+                  duration: 9000,
+                  isClosable: true,
+              });
     };
 
     return (

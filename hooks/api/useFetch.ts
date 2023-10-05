@@ -2,6 +2,7 @@
 
 export function useFetch<Tret, Tbody = unknown>(method: string, url: string, body?: Tbody) {
     const [data, setData] = useState<Tret>();
+    const [isSuccess, setIsSuccess] = useState<boolean>();
     const [status, setStatus] = useState<number>();
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -11,26 +12,32 @@ export function useFetch<Tret, Tbody = unknown>(method: string, url: string, bod
         return response;
     };
 
-    const performFetch = async <TNewBody>(newBody?: TNewBody) => {
+    const setIsSuccessChainable = (response: Response) => {
+        setIsSuccess(response.ok);
+        return response;
+    };
+
+    const performFetch = async (newBody?: Tbody) => {
         setLoading(true);
 
-        const headers = {
+        const headers: HeadersInit = {
             'Content-Type': 'application/json',
-        } as const satisfies HeadersInit;
+        };
 
         const requestBody = newBody ?? body;
 
-        fetch(`${url}`, {
+        fetch(url, {
             method,
             headers,
             body: JSON.stringify(requestBody),
         })
-            .then((response) => setStatusChainable(response))
+            .then(setStatusChainable)
+            .then(setIsSuccessChainable)
             .then((response) => response.json() as Promise<Tret>)
             .then((data) => setData(data))
             .catch(() => setError(true))
             .finally(() => setLoading(false));
     };
 
-    return { data, status, error, loading, performFetch };
+    return { data, status, isSuccess, error, loading, performFetch };
 }
