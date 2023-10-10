@@ -2,11 +2,11 @@ import { Button, Center, Heading, Icon, Link, Text } from '@chakra-ui/react';
 import { IoPersonAdd } from 'react-icons/io5';
 import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
-import Anders from '../../public/img/profile/anders.jpg';
-import Mikkel from '../../public/img/profile/mikkel.jpg';
-import Soren from '../../public/img/profile/soeren.jpg';
-import Viktor from '../../public/img/profile/viktor.jpg';
-import Frederik from '../../public/img/profile/frederik.jpg';
+import Anders from '../../public/img/profile/anders.jpeg';
+import Mikkel from '../../public/img/profile/mikkel.jpeg';
+import Soren from '../../public/img/profile/soeren.jpeg';
+import Viktor from '../../public/img/profile/viktor.jpeg';
+import Frederik from '../../public/img/profile/frederik.jpeg';
 import { Employee } from '../Employee/Employee';
 
 export const TeamBetterDevelopers: React.FC = () => {
