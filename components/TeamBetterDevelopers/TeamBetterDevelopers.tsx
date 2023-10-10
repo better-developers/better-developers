@@ -4,9 +4,9 @@ import { Section } from '../../components/Section/Section';
 import { SectionItem } from '../../components/SectionItem/SectionItem';
 import Anders from '../../public/img/profile/anders.jpg';
 import Mikkel from '../../public/img/profile/mikkel.jpg';
-import Soren from '../../public/img/profile/soren.jpg';
+import Soren from '../../public/img/profile/soeren.jpg';
 import Viktor from '../../public/img/profile/viktor.jpg';
-import Frederik from '../../public/img/profile/frederik.png';
+import Frederik from '../../public/img/profile/frederik.jpg';
 import { Employee } from '../Employee/Employee';
 
 export const TeamBetterDevelopers: React.FC = () => {
